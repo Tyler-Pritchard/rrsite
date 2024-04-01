@@ -21,13 +21,13 @@ const NavBackground = styled.div`
   width: 6.7vw;
   border-radius: 50%;
   z-index: 600;
-  transform: scale(200);
+  transform: scale(0);
   transition: transform 0.8s;
 `;
 
 const Icon = styled.span`
   position: relative;
-  background-color: black;
+  background-color: transparent;
   width: 6.7vw;
   height: 2px;
   display: inline-block;
@@ -36,7 +36,7 @@ const Icon = styled.span`
   &::before,
   &::after {
     content: "";
-    background-color: white;
+    background-color: black;
     width: 6.7vw;
     height: 2px;
     display: inline-block;

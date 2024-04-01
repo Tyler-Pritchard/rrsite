@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-// background-image: url(${(props) => props.img});
+
 const HeroWrapper = styled.div`
   position: absolute;
+  background-image: url('../../images/mobile/image-hero.jpg');
   top: 0;
   width: 100%;
   height: 100%;
