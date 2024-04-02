@@ -1,13 +1,13 @@
 # Rob Rich Artist Website
 
-Official digital space of the artist/musician Rob Rich.
+Official digital space of the artist & musician Rob Rich.
 
 ## Description
 
 Includes media player, performance dates, artist biography, contact info, fan club, news and merchandise sales.
 
 ## Demo
-![Footer](./screenShots/footer.png)
+![Footer](./screenshots/footer.png)
 
 ## Getting Started
 
