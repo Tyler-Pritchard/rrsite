@@ -1,35 +1,29 @@
 # Rob Rich Artist Website
 
-Promotional website for the musician Rob Rich.
+Official digital space of the artist/musician Rob Rich.
 
 ## Description
 
 Includes media player, performance dates, artist biography, contact info, fan club, news and merchandise sales.
 
+## Demo
+![Footer](./screenShots/footer.png)
+
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 * NodeJS
+* Typescript
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-* Download right here ya skallywag
-* No.
+* Fork and clone from Github
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-* Install the node modules
-* Run the app
+* Install the node modules, run the app.
+* From the site folder, run the terminal commands:
 ```
 npm install
 npm start
@@ -44,8 +38,6 @@ command to run if program contains helper info
 Scream louder.
 
 ## Authors
-
-Contributors names and contact info
 
 Tyler Pritchard  
 [@tyler-pritchard](https://github.com/tyler-pritchard)
@@ -65,8 +57,4 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Metallica](https://www.metallica.com)
