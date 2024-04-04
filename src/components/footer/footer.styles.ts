@@ -1,39 +1,63 @@
+//TO DO: Refactor exports/attributes
 import CSS from 'csstype';
 
-const FooterWrapper: CSS.Properties = {
-    backgroundColor: 'rgb(0, 0, 0)',
+
+// FOOTER STYLES
+export const FooterWrapper: CSS.Properties = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    width: '100%',
+    backgroundColor: 'rgb(0, 0, 0)',
     height: 'auto',
+}
+
+
+// FOOTER MIDDLE STYLES
+export const MiddleFooterWrapper: CSS.Properties = {
+    border: '2px solid blue',
 };
 
-const FooterDivider: CSS.Properties = {
-    margin: '1rem',
+export const MiddleInner: CSS.Properties = {
+
+};
+
+export const MiddleMenu: CSS.Properties = {
+};
+
+
+// FOOTER BOTTOM STYLES
+export const BottomFooterWrapper: CSS.Properties = {
+    border: '2px solid red',
+};
+
+export const BottomFooterDivider: CSS.Properties = {
+    margin: '.5rem',
 }
 
-const IconsContainer: CSS.Properties = {
-    marginLeft: '25%',
-    marginRight: '20%',
-    width: 'auto',
+export const BottomIconsContainer: CSS.Properties = {
+    paddingLeft: '20%',
     flexDirection: 'row',
-    justifyContent: 'center',
+    alignItems: 'center',
+    border: '2px solid orange',
 }
 
-const Icons: CSS.Properties = {
+export const BottomIcons: CSS.Properties = {
     width: '4rem',
-    height: '4rem'
+    height: '4rem',
+    marginLeft: '.1rem',
+    marginRight: '.1rem'
 }
 
-const LinksContainer: CSS.Properties = {
+export const BottomLinksContainer: CSS.Properties = {
     flexDirection: 'row',
-    width: '80%',
+    //width: '75%',
+    //marginLeft: '15%'
+    border: '2px solid yellow',
 }
 
-const FooterLinks: CSS.Properties = {
+export const BottomFooterLinks: CSS.Properties = {
     fontSize: 'x-small',
     color: 'white',
     // TO DO: add underline on hover to active links
 }
-
-export {FooterWrapper, IconsContainer, LinksContainer, FooterDivider, FooterLinks, Icons};
