@@ -6,13 +6,10 @@ const FooterWrapper: CSS.Properties = {
     flexDirection: 'column',
     alignItems: 'center',
     height: 'auto',
-    // border: '2px solid red',
 };
 
 const FooterDivider: CSS.Properties = {
     margin: '1rem',
-    opacity: '0.8',
-    color: 'white'
 }
 
 const IconsContainer: CSS.Properties = {
@@ -21,18 +18,22 @@ const IconsContainer: CSS.Properties = {
     width: 'auto',
     flexDirection: 'row',
     justifyContent: 'center',
-    // border: '2px solid blue'
 }
 
 const Icons: CSS.Properties = {
-    width: '1%',
-    height: '1%'
+    width: '4rem',
+    height: '4rem'
 }
 
 const LinksContainer: CSS.Properties = {
     flexDirection: 'row',
     width: '80%',
-    // border: '2px solid green',
 }
 
-export {FooterWrapper, IconsContainer, LinksContainer, FooterDivider, Icons};
+const FooterLinks: CSS.Properties = {
+    fontSize: 'x-small',
+    color: 'white',
+    // TO DO: add underline on hover to active links
+}
+
+export {FooterWrapper, IconsContainer, LinksContainer, FooterDivider, FooterLinks, Icons};

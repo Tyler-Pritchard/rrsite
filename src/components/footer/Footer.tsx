@@ -1,5 +1,5 @@
 import {BottomNavigation, BottomNavigationAction, Container, Divider, Button, Stack} from '@mui/material';
-import {FooterWrapper, FooterDivider, IconsContainer, LinksContainer, Icons} from "./footer.styles";
+import {FooterWrapper, FooterDivider, IconsContainer, LinksContainer, Icons, FooterLinks} from "./footer.styles";
 import {ReactComponent as XIcon} from '../../assets/icons/x.svg';
 import {ReactComponent as FacebookIcon} from '../../assets/icons/facebook.svg';
 import {ReactComponent as YouTubeIcon} from '../../assets/icons/youtube.svg';
@@ -39,21 +39,21 @@ const Footer = () => {
             {/* Text Links Container  */}
             <Container style={LinksContainer} maxWidth={false} disableGutters={true}>
                 <Stack direction="row" spacing={2}>
-                    <Button href="#text-buttons">HELP</Button>
-                    <Divider orientation="vertical" variant="middle" flexItem />
-                    <Button href="#text-buttons">RETURNS</Button>
-                    <Divider orientation="vertical" variant="middle" flexItem />
-                    <Button href="#text-buttons">CREDITS</Button>
-                    <Divider orientation="vertical" variant="middle" flexItem />
-                    <Button href="#text-buttons">TERMS OF USE</Button>
-                    <Divider orientation="vertical" variant="middle" flexItem />
-                    <Button href="#text-buttons">PRIVACY POLICY</Button>
-                    <Divider orientation="vertical" variant="middle" flexItem />
-                    <Button>© ROB RICH</Button>
-                    <Divider orientation="vertical" variant="middle" flexItem />
-                    <Button>© UNCROSSED RECORDINGS</Button>
-                    <Divider orientation="vertical" variant="middle" flexItem />
-                    <Button>THE ROB RICH CLUB®</Button>
+                    <Button href="#text-buttons" style={FooterLinks}>HELP</Button>
+                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={FooterDivider} />
+                    <Button href="#text-buttons" style={FooterLinks}>RETURNS</Button>
+                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={FooterDivider} />
+                    <Button href="#text-buttons" style={FooterLinks}>CREDITS</Button>
+                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={FooterDivider} />
+                    <Button href="#text-buttons" style={FooterLinks}>TERMS OF USE</Button>
+                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={FooterDivider} />
+                    <Button href="#text-buttons" style={FooterLinks}>PRIVACY POLICY</Button>
+                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem />
+                    <Button disabled style={FooterLinks}>© ROB RICH</Button>
+                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={FooterDivider} />
+                    <Button disabled style={FooterLinks}>© UNCROSSED RECORDINGS</Button>
+                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={FooterDivider} />
+                    <Button disabled style={FooterLinks}>THE ROB RICH CLUB®</Button>
                 </Stack>
             </Container>
         </BottomNavigation>
