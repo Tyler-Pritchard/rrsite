@@ -7,7 +7,9 @@ Official digital space of the artist & musician Rob Rich.
 Includes media player, performance dates, media gallery, artist biography, contact info, fan club, news and merchandise sales.
 
 ## Demo
+Hero
 ![Hero](./screenshots/Hero.png)
+Footer Top
 ![Footer1](./screenshots/Footer2.png)
 Footer Bottom
 ![Footer2](./screenshots/Footer1.png)
