@@ -6,7 +6,7 @@ const FooterTop = () => {
         <Container style={TopFooterWrapper} disableGutters={true} maxWidth={false}>
             <Container style={TopFooterBody}>
                 <Container style={TopFooterBrow}>
-                <h5 style={TopFooterCounter}>3 STRONG AND COUNTING</h5>
+                <h4 style={TopFooterCounter}>3 STRONG AND COUNTING</h4>
                 </Container>
                 <h2>JOIN MY FREE FAN CLUB TO BECOME A 5TH MEMBER OF METALLICA</h2>
                 <Container style={TopFooterCta}>

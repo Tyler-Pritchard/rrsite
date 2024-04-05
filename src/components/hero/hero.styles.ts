@@ -1,24 +1,26 @@
-import styled from 'styled-components';
+import CSS from 'csstype';
+import Hero from '../../assets/images/desktop/pngtree-five-crows-perched-on-a-fence-image_2925450.jpeg';
 
-const HeroWrapper = styled.div`
-  position: absolute;
-  background-image: url('../../images/mobile/image-hero.jpg');
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-`;
-const HeroTitle = styled.div`
-  margin-top: 50%;
-  color: white;
-  border: 1px solid white;
-  padding: 5%;
-  top: 50%;
-  width: 90vw;
-  height: 40vh;
-  h1 {
-    font-size: 2.8rem;
-  }
-`;
-export { HeroWrapper, HeroTitle };
+export const HeroWrapper: CSS.Properties = {
+  // position: 'absolute',
+  backgroundImage: `url(${Hero})`,
+  top: '0',
+  width: '100%',
+  height: 'auto',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  overflow: 'hidden',
+};
+
+export const HeroTitle: CSS.Properties = {
+  marginTop: '30%',
+  color: 'white',
+  border: '1px solid white',
+  padding: '3%',
+  top: '5%',
+  width: '90vw',
+  height: '40vh',
+  // h1 {
+  //   font-size: '2.8rem',
+  // }
+};

@@ -1,14 +1,14 @@
-import React from "react";
 import { HeroWrapper, HeroTitle } from "./hero.styles";
-import heroMobileImage from "../../images/mobile/image-hero.jpg";
+import { Container } from "@mui/material";
+
 
 const Hero = () => {
   return (
-    // <HeroWrapper img={heroMobileImage}>
-      <HeroTitle className="wrapper">
-        <h1>Immersive experiences that deliver</h1>
-      </HeroTitle>
-    // </HeroWrapper>
+    <Container style={HeroWrapper} maxWidth={'xl'} disableGutters={true}>
+      <Container style={HeroTitle}>
+        <h1>Rob Rich Official Website</h1>
+      </Container>
+    </Container>
   );
 };
 export default Hero;

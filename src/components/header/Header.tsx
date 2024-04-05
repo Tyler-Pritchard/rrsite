@@ -2,7 +2,7 @@ import { Navbar, Hero } from "../index";
 const Header = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
     </>
   );

@@ -10,13 +10,13 @@ export const FooterWrapper: CSS.Properties = {
     alignItems: 'center',
     width: '100%',
     height: 'auto',
+    backgroundColor: 'black',
 };
 
 // FOOTER TOP STYLES
 export const TopFooterWrapper: CSS.Properties = {
     height: '30rem',
     width: '100%',
-    backgroundColor:  'rgba(255,255,255,0.5)',
     backgroundImage: `url(${Metal})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
