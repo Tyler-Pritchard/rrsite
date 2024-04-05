@@ -1,4 +1,4 @@
-import {BottomNavigationAction, Container, Divider, Button, Stack} from '@mui/material';
+import {BottomNavigation, BottomNavigationAction, Container, Divider, Button, Stack} from '@mui/material';
 import {
     BottomFooterWrapper, BottomFooterDivider, BottomIconsContainer, BottomLinksContainer, BottomIcons, BottomFooterLinks
 } from "./footer.styles";
@@ -13,20 +13,23 @@ import { ReactComponent as ListenIcon } from '../../assets/icons/listen.svg';
 
 const FooterBottom = () => {
     return (
-        <Container style={BottomFooterWrapper}>
+        <Container style={BottomFooterWrapper} disableGutters={true} maxWidth={false}>
             {/* Social Media Icons Container */}
-            <Container style={BottomIconsContainer} disableGutters={true} maxWidth={false}>
+            <BottomNavigation
+                showLabels style={BottomIconsContainer}>
                 <BottomNavigationAction href="https://www.instagram.com/robrichusa/" style={BottomIcons} label="Instagram" icon={<InstagramIcon />} />
                 <BottomNavigationAction href="https://www.youtube.com/@RobRichUSA" style={BottomIcons} label="Youtube" icon={<YouTubeIcon />} />
                 <BottomNavigationAction href="https://www.facebook.com/RobRichUSA" style={BottomIcons} label="Facebook" icon={<FacebookIcon />} />
                 <BottomNavigationAction href="https://www.tiktok.com/@robrichusa" style={BottomIcons} label="TikTok" icon={<TikTokIcon />} />
                 <BottomNavigationAction href="https://www.threads.net/@robrichusa" style={BottomIcons} label="Threads" icon={<ThreadsIcon />} />
                 <BottomNavigationAction href="https://twitter.com/RobRichUSA" style={BottomIcons} label="X" icon={<XIcon />} />
-                <BottomNavigationAction style={BottomIcons} label="Text" icon={<TextIcon />} />
-                <BottomNavigationAction style={BottomIcons} label="Listen" icon={<ListenIcon />} />
-            </Container>
+                <BottomNavigationAction disabled style={BottomIcons} label="Text" icon={<TextIcon />} />
+                <BottomNavigationAction disabled style={BottomIcons} label="Listen" icon={<ListenIcon />} />
+            </BottomNavigation>
 
-            <Divider variant='fullWidth' style={BottomFooterDivider} aria-hidden="true" />
+
+    {/* TO DO: Figure out why MUI dividers won't appear white */}
+            <Divider sx={{ opacity: 0.6 }} variant='fullWidth' style={BottomFooterDivider} aria-hidden="false" />
 
             {/* Text Links Container  */}
             <Container style={BottomLinksContainer} maxWidth={false} disableGutters={true}>

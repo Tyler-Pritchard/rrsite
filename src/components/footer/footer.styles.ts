@@ -1,5 +1,6 @@
 //TO DO: Refactor exports/attributes
 import CSS from 'csstype';
+import Metal from "../../assets/images/desktop/savage.svg";
 
 
 // FOOTER STYLES
@@ -8,18 +9,59 @@ export const FooterWrapper: CSS.Properties = {
     flexDirection: 'column',
     alignItems: 'center',
     width: '100%',
-    backgroundColor: 'rgb(0, 0, 0)',
     height: 'auto',
-}
+};
+
+// FOOTER TOP STYLES
+export const TopFooterWrapper: CSS.Properties = {
+    height: '30rem',
+    width: '100%',
+    backgroundColor:  'rgba(255,255,255,0.5)',
+    backgroundImage: `url(${Metal})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+};
+
+export const TopFooterBody: CSS.Properties = {
+    color: 'white',
+    height: '15rem',
+    width: '30rem',
+    float: 'right',
+    marginTop: '9rem',
+    marginRight: '4rem',
+};
+
+export const TopFooterBrow: CSS.Properties = {
+    float: 'left',
+};
+
+export const TopFooterCounter: CSS.Properties = {
+    float: 'left',
+};
+
+export const TopFooterCta: CSS.Properties = {
+    float: 'left',
+};
+
+export const TopFooterButton: CSS.Properties = {
+    color: 'white',
+    float: 'left',
+    border: '2px solid white',
+};
 
 
 // FOOTER MIDDLE STYLES
 export const MiddleFooterWrapper: CSS.Properties = {
-    border: '2px solid blue',
+    height: '23rem',
+    backgroundColor: 'rgb(0, 0, 0)',
 };
 
 export const MiddleInner: CSS.Properties = {
 
+};
+
+export const MiddleLogo: CSS.Properties = {
+    width: '30%',
 };
 
 export const MiddleMenu: CSS.Properties = {
@@ -28,32 +70,36 @@ export const MiddleMenu: CSS.Properties = {
 
 // FOOTER BOTTOM STYLES
 export const BottomFooterWrapper: CSS.Properties = {
-    border: '2px solid red',
+    justifyContent: 'center',
+    height: "15rem",
+    backgroundColor: 'rgb(0, 0, 0)',
+    paddingTop: '4rem',
 };
 
 export const BottomFooterDivider: CSS.Properties = {
-    margin: '.5rem',
+    height: '10px',
+    color: 'white',
 }
 
 export const BottomIconsContainer: CSS.Properties = {
-    paddingLeft: '20%',
-    flexDirection: 'row',
     alignItems: 'center',
-    border: '2px solid orange',
+    flexDirection: 'row',
+    backgroundColor: 'black',
+    paddingLeft: '25%',
+    paddingRight: '25%',
 }
 
 export const BottomIcons: CSS.Properties = {
-    width: '4rem',
-    height: '4rem',
-    marginLeft: '.1rem',
-    marginRight: '.1rem'
+    width: '2rem',
+    height: '2rem',
+    color: 'white'
 }
 
 export const BottomLinksContainer: CSS.Properties = {
     flexDirection: 'row',
-    //width: '75%',
-    //marginLeft: '15%'
-    border: '2px solid yellow',
+    alignItems: 'center',
+    paddingLeft: '15%',
+    paddingRight: '15%',
 }
 
 export const BottomFooterLinks: CSS.Properties = {

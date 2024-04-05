@@ -1,15 +1,17 @@
 import FooterBottom from "./FooterBottom";
 import FooterMiddle from "./FooterMiddle";
-import {BottomNavigation, Container} from '@mui/material';
+import FooterTop from "./FooterTop";
+import {Container} from '@mui/material';
 import { FooterWrapper } from "./footer.styles";
 
 
 const Footer = () => {
     return (
-        <BottomNavigation style={FooterWrapper} showLabels>
+        <Container style={FooterWrapper} maxWidth={'xl'} disableGutters={true}>
+            <FooterTop />
             <FooterMiddle />
             <FooterBottom />
-        </BottomNavigation>
+        </Container>
     );
 }
 

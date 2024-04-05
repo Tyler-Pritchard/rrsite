@@ -4,10 +4,11 @@ Official digital space of the artist & musician Rob Rich.
 
 ## Description
 
-Includes media player, performance dates, artist biography, contact info, fan club, news and merchandise sales.
+Includes media player, performance dates, media gallery, artist biography, contact info, fan club, news and merchandise sales.
 
 ## Demo
-![Footer](./screenshots/footer.png)
+![Footer1](./screenshots/footer2.png)
+![Footer2](./screenshots/footer1.png)
 
 ## Getting Started
 
@@ -31,11 +32,10 @@ npm start
 
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+Advise for common problems or issues:
 ```
 Scream louder.
+```
 
 ## Authors
 

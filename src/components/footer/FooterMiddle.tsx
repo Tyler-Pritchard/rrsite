@@ -1,16 +1,17 @@
 import {Container} from '@mui/material';
 import {MiddleFooterWrapper, MiddleInner, MiddleMenu} from './footer.styles';
+import Logo from "../../assets/images/desktop/RobRich.png";
+import { MiddleLogo } from './footer.styles';
 
 const FooterMiddle = () => {
     return (
         <Container style={MiddleFooterWrapper} disableGutters={true} maxWidth={false}>
             <Container style={MiddleInner} >
-                {/* Image */}
+                <img src={Logo} alt="Rob Rich text logo" style={MiddleLogo} />
             </Container>
             <Container style={MiddleMenu}>
                 {/* Menu */}
             </Container>
-
         </Container>
     )
 };
