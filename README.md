@@ -9,6 +9,7 @@ Includes media player, performance dates, media gallery, artist biography, conta
 ## Demo
 ![Hero](./screenshots/Hero.png)
 ![Footer1](./screenshots/Footer2.png)
+Footer Bottom
 ![Footer2](./screenshots/Footer1.png)
 
 ## Getting Started
