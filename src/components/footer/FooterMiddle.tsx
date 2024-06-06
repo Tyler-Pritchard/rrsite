@@ -1,6 +1,6 @@
 import {Container} from '@mui/material';
 import {MiddleFooterWrapper, MiddleInner, MiddleMenu} from './footer.styles';
-import Logo from "../../assets/images/desktop/RobRich.png";
+import Logo from "../../assets/images/desktop/StandingGuitar.png";
 import { MiddleLogo } from './footer.styles';
 
 const FooterMiddle = () => {
