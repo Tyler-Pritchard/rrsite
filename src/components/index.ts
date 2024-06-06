@@ -1,5 +1,5 @@
 import Header from "./header/Header";
-import Hero from "./hero/hero";
-import Navbar from "./header/primary-nav/navbar"
+import Main from "./main/main";
+import Footer from "./footer/Footer"
 
-export { Header, Hero, Navbar };
+export { Header, Main, Footer };

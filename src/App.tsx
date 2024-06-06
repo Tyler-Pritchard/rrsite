@@ -1,11 +1,11 @@
-import { Header } from "./components/index";
+import { Main, Header, Footer } from "./components/index";
 import GlobalStyle from "./globalStyles";
-import Footer from '../src/components/footer/Footer';
 export default function App() {
 
   return (
     <div className="App">
       <GlobalStyle />
+      <Main />
       <Header />
       <Footer />
     </div>
