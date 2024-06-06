@@ -1,9 +1,9 @@
-import { Navbar, Hero } from "../index";
+import Navbar from "./primary-nav/navbar";
+
 const Header = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      <Hero />
+      <Navbar />
     </>
   );
 };

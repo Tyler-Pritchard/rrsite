@@ -1,5 +1,5 @@
 import CSS from 'csstype';
-import Hero from '../../assets/images/desktop/pngtree-five-crows-perched-on-a-fence-image_2925450.jpeg';
+import Hero from '../../assets/images/desktop/TacomaCrows.png';
 
 export const HeroWrapper: CSS.Properties = {
   // position: 'absolute',
