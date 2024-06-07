@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { Container, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { ContainerStyle, OpenButtonStyle, DrawerStyle, ModalContainerStyle } from './header-left.styles';
 
 export default function HeaderLeft() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,12 +23,12 @@ export default function HeaderLeft() {
     ];
 
     return (
-        <div style={{height: "5rem"}}>
-            <IconButton onClick={toggleDrawer(true)} edge="start" color="inherit" aria-label="menu">
+        <Container style={ContainerStyle}>
+            <IconButton onClick={toggleDrawer(true)} edge="start" style={OpenButtonStyle} aria-label="menu">
                 <MenuIcon />
             </IconButton>
-            <Drawer anchor="top" open={isOpen} onClose={toggleDrawer(false)} variant="persistent">
-                <div style={{ width: '100vw', height: '100vh' }}>
+            <Drawer anchor="top" open={isOpen} onClose={toggleDrawer(false)} variant="persistent" style={DrawerStyle}>
+                <Container style={ModalContainerStyle}>
                     <IconButton onClick={toggleDrawer(false)}>
                         <CloseIcon />
                     </IconButton>
@@ -38,8 +39,8 @@ export default function HeaderLeft() {
                             </ListItem>
                         ))}
                     </List>
-                </div>
+                </Container>
             </Drawer>
-        </div>
+        </Container>
     );
 }

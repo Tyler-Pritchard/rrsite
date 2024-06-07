@@ -1,14 +1,17 @@
 import CSS from 'csstype';
 
 export const ContainerStyle: CSS.Properties = {
-    maxWidth: "md"
+    maxWidth: "md",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center"
 }
 
 export const ToolbarStyle: CSS.Properties = {
 }
 
 export const ButtonStyle: CSS.Properties = {
-    color: "inherit"
+    color: "white"
 }
 
 export const LogoStyle: CSS.Properties = {

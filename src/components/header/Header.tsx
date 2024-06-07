@@ -6,7 +6,7 @@ import { AppBarStyle } from "./header.styles";
 
 const Header = () => {
   return (
-    <AppBar style={AppBarStyle}>
+    <AppBar style={AppBarStyle} color="transparent">
       <HeaderLeft />
       <PrimaryNav />
       <Navigation />
