@@ -1,9 +1,7 @@
 import CSS from 'csstype';
 
 export const ContainerStyle: CSS.Properties = {
-    display: "flex", 
-    alignItems: "center", 
-    justifyContent: "center"
+    border: "2px solid purple"
 }
 
 export const AccountButton: CSS.Properties = {

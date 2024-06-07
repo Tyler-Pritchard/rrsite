@@ -1,14 +1,12 @@
 import React from "react";
 import Logo from "../../../assets/icons/logo4.png";
 import Container from '@mui/material/Container';
-import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import { AppbarStyle, ToolbarStyle, ContainerStyle, ButtonStyle, LogoStyle } from "./primary-nav.styles";
+import { ToolbarStyle, ContainerStyle, ButtonStyle, LogoStyle } from "./primary-nav.styles";
 
 export default function PrimaryNav() {
   return (
-    <AppBar style={AppbarStyle}>
       <Container style={ContainerStyle}>
         <Toolbar style={ToolbarStyle}>
           <Button style={ButtonStyle} href="#tour">Tour</Button>
@@ -21,6 +19,5 @@ export default function PrimaryNav() {
           <Button style={ButtonStyle} href="#shop">Shop</Button>
         </Toolbar>
       </Container>
-    </AppBar>
   );
 }

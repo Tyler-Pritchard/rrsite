@@ -22,7 +22,7 @@ export default function HeaderLeft() {
     ];
 
     return (
-        <div>
+        <div style={{height: "5rem"}}>
             <IconButton onClick={toggleDrawer(true)} edge="start" color="inherit" aria-label="menu">
                 <MenuIcon />
             </IconButton>

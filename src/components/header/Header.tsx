@@ -1,16 +1,16 @@
 import PrimaryNav from "./primary-nav/primary-nav";
 import HeaderLeft from "./header-left/header-left";
 import Navigation from "./navigation/navigation";
-import { Container } from "@mui/material";
-import { ContainerStyle } from "./header.styles";
+import { AppBar } from "@mui/material";
+import { AppBarStyle } from "./header.styles";
 
 const Header = () => {
   return (
-    <Container style={ContainerStyle}>
+    <AppBar style={AppBarStyle}>
       <HeaderLeft />
       <PrimaryNav />
       <Navigation />
-    </Container>
+    </AppBar>
   );
 };
 export default Header;
