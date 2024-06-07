@@ -1,19 +1,19 @@
-name: Rob Rich
+name: Rob Rich Official Site
 on:
   push:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '14'  # Use the Node version that matches your development environment
       - run: npm install
       - run: npm run build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./build  # Ensure this points to the directory where your build script outputs files
