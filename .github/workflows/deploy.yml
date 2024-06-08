@@ -1,21 +1,25 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main  # Ensure this matches the branch you want to trigger the deployment from.
+
+permissions:  # Add this section
+  contents: write  # Grants permission to write to the repository
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Adjust to match your project's node version
-      - run: npm install
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
+          node-version: '14'  # Adjust this to match your project's required Node.js version.
+      - run: npm install  # Use 'yarn install' if your project uses Yarn.
+      - run: npm run build  # Or 'yarn build'.
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          publish_branch: gh-pages  # Ensure this is set to create/push to gh-pages
+          publish_branch: gh-pages  # This specifies which branch to push to.
