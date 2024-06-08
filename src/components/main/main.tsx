@@ -8,7 +8,7 @@ const Main = () => {
     <Container style={MainWrapper} maxWidth={'xl'} disableGutters={true}>
       <Header />
       <Container style={MainTitle}>
-        <h1>Rob Rich Official Website</h1>
+        <h1>Rob Rich Official Website </h1>
       </Container>
     </Container>
   );
