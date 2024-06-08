@@ -1,6 +1,6 @@
 {
-  "name": "site",
-  "homepage": ".",
+  "name": "robrichofficial",
+  "homepage": "https://tyler-pritchard.github.io/rrsite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
