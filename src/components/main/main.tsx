@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from "../header/Header";
 import { MainWrapper, MainTitle } from "./main.styles";
 import { Container } from "@mui/material";

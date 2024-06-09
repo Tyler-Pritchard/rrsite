@@ -1,3 +1,4 @@
+import React from 'react';
 import {Container} from '@mui/material';
 import {MiddleFooterWrapper, MiddleInner, MiddleMenu} from './footer.styles';
 import Logo from "../../assets/images/desktop/StandingGuitar.png";

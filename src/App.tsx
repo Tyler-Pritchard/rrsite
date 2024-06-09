@@ -1,3 +1,4 @@
+import React from 'react';
 import { Main, Footer } from "./components/index";
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import GlobalStyle from "./globalStyles";

@@ -1,3 +1,4 @@
+import React from 'react';
 import {BottomNavigation, BottomNavigationAction, Container, Divider, Button, Stack} from '@mui/material';
 import {
     BottomFooterWrapper, BottomFooterDivider, BottomIconsContainer, BottomLinksContainer, BottomIcons, BottomFooterLinks
