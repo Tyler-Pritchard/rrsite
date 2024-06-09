@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/rrsite/static/css/main.e6c13ad2.css",
+    "main.js": "/rrsite/static/js/main.ea25a6bb.js",
+    "static/media/TacomaCrows.png": "/rrsite/static/media/TacomaCrows.6bada90c863405adcf8c.png",
+    "static/media/StandingGuitar.png": "/rrsite/static/media/StandingGuitar.db8f09929bca72c7f545.png",
+    "static/media/logo4.png": "/rrsite/static/media/logo4.62c2722be0be7103d3c2.png",
+    "static/media/youtube.svg": "/rrsite/static/media/youtube.808ee51dc52e1d3d2acb8c144ac48edf.svg",
+    "static/media/instagram.svg": "/rrsite/static/media/instagram.ba8e67d7cdb265096d3d18730c890a91.svg",
+    "static/media/text.svg": "/rrsite/static/media/text.b44187093a56df55de504ed745b060bd.svg",
+    "static/media/tiktok.svg": "/rrsite/static/media/tiktok.e23c1903349ed85c979ff7a0f2d6b9cd.svg",
+    "static/media/threads.svg": "/rrsite/static/media/threads.c0dceb564e80547b4f9caca2870625f4.svg",
+    "static/media/listen.svg": "/rrsite/static/media/listen.e52a17f3f999f0df26da4ba09625dc51.svg",
+    "static/media/x.svg": "/rrsite/static/media/x.fff86461d19ac90d688c84c2fa9e9cc8.svg",
+    "static/media/facebook.svg": "/rrsite/static/media/facebook.3bdb63affc8c4d4e722b4321797ccbab.svg",
+    "index.html": "/rrsite/index.html",
+    "static/media/savage.svg": "/rrsite/static/media/savage.25e5ce8bd7a32556e71f1a8db7efaadb.svg",
+    "main.e6c13ad2.css.map": "/rrsite/static/css/main.e6c13ad2.css.map",
+    "main.ea25a6bb.js.map": "/rrsite/static/js/main.ea25a6bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ea25a6bb.js"
+  ]
+}
