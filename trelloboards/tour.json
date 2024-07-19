@@ -1,0 +1,1395 @@
+{
+    "id": "667954c144609e44ef4ce4c8",
+    "nodeId": "ari:cloud:trello::board/workspace/667954c0cc125005803fe5d3/667954c144609e44ef4ce4c8",
+    "name": "Regional Dominion",
+    "desc": "",
+    "descData": null,
+    "closed": false,
+    "dateClosed": null,
+    "idOrganization": "667954c0cc125005803fe5d3",
+    "idEnterprise": null,
+    "limits": {
+      "attachments": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 36000,
+          "warnAt": 28800
+        },
+        "perCard": {
+          "status": "ok",
+          "disableAt": 1000,
+          "warnAt": 800
+        }
+      },
+      "boards": {
+        "totalMembersPerBoard": {
+          "status": "ok",
+          "disableAt": 1600,
+          "warnAt": 1280
+        },
+        "totalAccessRequestsPerBoard": {
+          "status": "ok",
+          "disableAt": 4000,
+          "warnAt": 3200
+        }
+      },
+      "cards": {
+        "openPerBoard": {
+          "status": "ok",
+          "disableAt": 5000,
+          "warnAt": 4000
+        },
+        "openPerList": {
+          "status": "ok",
+          "disableAt": 5000,
+          "warnAt": 4000
+        },
+        "totalPerBoard": {
+          "status": "ok",
+          "disableAt": 2000000,
+          "warnAt": 1600000
+        },
+        "totalPerList": {
+          "status": "ok",
+          "disableAt": 1000000,
+          "warnAt": 800000
+        }
+      },
+      "checklists": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 1800000,
+          "warnAt": 1440000
+        },
+        "perCard": {
+          "status": "ok",
+          "disableAt": 500,
+          "warnAt": 400
+        }
+      },
+      "checkItems": {
+        "perChecklist": {
+          "status": "ok",
+          "disableAt": 200,
+          "warnAt": 160
+        }
+      },
+      "customFields": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 50,
+          "warnAt": 40
+        }
+      },
+      "customFieldOptions": {
+        "perField": {
+          "status": "ok",
+          "disableAt": 50,
+          "warnAt": 40
+        }
+      },
+      "labels": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 1000,
+          "warnAt": 800
+        }
+      },
+      "lists": {
+        "openPerBoard": {
+          "status": "ok",
+          "disableAt": 500,
+          "warnAt": 400
+        },
+        "totalPerBoard": {
+          "status": "ok",
+          "disableAt": 3000,
+          "warnAt": 2400
+        }
+      },
+      "stickers": {
+        "perCard": {
+          "status": "ok",
+          "disableAt": 70,
+          "warnAt": 56
+        }
+      },
+      "reactions": {
+        "perAction": {
+          "status": "ok",
+          "disableAt": 900,
+          "warnAt": 720
+        },
+        "uniquePerAction": {
+          "status": "ok",
+          "disableAt": 17,
+          "warnAt": 14
+        }
+      }
+    },
+    "pinned": false,
+    "starred": false,
+    "url": "https://trello.com/b/kyKbO70l/regional-dominion",
+    "prefs": {
+      "permissionLevel": "org",
+      "hideVotes": false,
+      "voting": "disabled",
+      "comments": "members",
+      "invitations": "members",
+      "selfJoin": true,
+      "cardCovers": true,
+      "cardCounts": false,
+      "isTemplate": false,
+      "cardAging": "regular",
+      "calendarFeedEnabled": false,
+      "hiddenPluginBoardButtons": [],
+      "switcherViews": [
+        {
+          "viewType": "Board",
+          "enabled": true
+        },
+        {
+          "viewType": "Table",
+          "enabled": true
+        },
+        {
+          "viewType": "Calendar",
+          "enabled": false
+        },
+        {
+          "viewType": "Dashboard",
+          "enabled": false
+        },
+        {
+          "viewType": "Timeline",
+          "enabled": false
+        },
+        {
+          "viewType": "Map",
+          "enabled": false
+        }
+      ],
+      "background": "66794c6fa08f67bf010e4637",
+      "backgroundColor": null,
+      "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/8c198c3ca59b66c6a267d64e745e2078/photo-1718147155878-e2baab858e74",
+      "backgroundTile": false,
+      "backgroundBrightness": "light",
+      "sharedSourceUrl": "https://images.unsplash.com/photo-1718147155878-e2baab858e74?ixid=M3w3MDY2fDB8MXxjb2xsZWN0aW9ufDEwfDMxNzA5OXx8fHx8Mnx8MTcxOTIyNDk0Mnw&ixlib=rb-4.0.3&w=2560&h=2048&q=90",
+      "backgroundImageScaled": [
+        {
+          "width": 140,
+          "height": 93,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/140x93/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 256,
+          "height": 171,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/256x171/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 480,
+          "height": 320,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x320/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/960x640/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 1024,
+          "height": 683,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1024x683/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 1280,
+          "height": 854,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x854/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1920x1280/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 2048,
+          "height": 1366,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2048x1366/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 2400,
+          "height": 1600,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2400x1600/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        },
+        {
+          "width": 2560,
+          "height": 1707,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2560x1707/e996224d3fa4d38aaf8160d4460aa1fb/photo-1718147155878-e2baab858e74.webp"
+        }
+      ],
+      "backgroundBottomColor": "#292b21",
+      "backgroundTopColor": "#dedcda",
+      "canBePublic": true,
+      "canBeEnterprise": true,
+      "canBeOrg": true,
+      "canBePrivate": true,
+      "canInvite": true
+    },
+    "shortLink": "kyKbO70l",
+    "subscribed": false,
+    "labelNames": {
+      "green": "",
+      "yellow": "",
+      "orange": "",
+      "red": "",
+      "purple": "",
+      "blue": "",
+      "sky": "",
+      "lime": "",
+      "pink": "",
+      "black": "",
+      "green_dark": "",
+      "yellow_dark": "",
+      "orange_dark": "",
+      "red_dark": "",
+      "purple_dark": "",
+      "blue_dark": "",
+      "sky_dark": "",
+      "lime_dark": "",
+      "pink_dark": "",
+      "black_dark": "",
+      "green_light": "",
+      "yellow_light": "",
+      "orange_light": "",
+      "red_light": "",
+      "purple_light": "",
+      "blue_light": "",
+      "sky_light": "",
+      "lime_light": "",
+      "pink_light": "",
+      "black_light": ""
+    },
+    "powerUps": [],
+    "dateLastActivity": "2024-06-24T11:16:23.554Z",
+    "dateLastView": "2024-06-24T12:18:47.976Z",
+    "shortUrl": "https://trello.com/b/kyKbO70l",
+    "idTags": [],
+    "datePluginDisable": null,
+    "creationMethod": null,
+    "ixUpdate": "21",
+    "templateGallery": null,
+    "enterpriseOwned": false,
+    "idBoardSource": null,
+    "premiumFeatures": [
+      "additionalBoardBackgrounds",
+      "additionalStickers",
+      "customBoardBackgrounds",
+      "customEmoji",
+      "customStickers",
+      "plugins"
+    ],
+    "idMemberCreator": "667953fe9089831796567bab",
+    "type": null,
+    "actions": [
+      {
+        "id": "6679568eff2aadcf5afa745e",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "board": {
+            "prefs": {
+              "background": "66794c6fa08f67bf010e4637"
+            },
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          },
+          "old": {
+            "prefs": {
+              "background": "pink"
+            }
+          }
+        },
+        "appCreator": null,
+        "type": "updateBoard",
+        "date": "2024-06-24T11:20:46.395Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "6679558739f11a7da3c658c9",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "6679558739f11a7da3c658c0",
+            "name": "Maintain Calendar",
+            "idShort": 5,
+            "shortLink": "XdDWVbdz"
+          },
+          "list": {
+            "id": "667954c29d65d8d6890f2a3f",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:16:23.576Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "6679550b1b927f7414af5660",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "6679550b1b927f7414af5657",
+            "name": "Merchandise for Gigs",
+            "idShort": 4,
+            "shortLink": "IrCCAMi0"
+          },
+          "list": {
+            "id": "667954c29d65d8d6890f2a3f",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:14:19.077Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795502fb389adb5870ca01",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795502fb389adb5870c9ef",
+            "name": "Promotional Materials",
+            "idShort": 3,
+            "shortLink": "TY4Yeijv"
+          },
+          "list": {
+            "id": "667954c29d65d8d6890f2a3f",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:14:10.237Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "667954c208bab7c631685f5c",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "667954c208bab7c631685f53",
+            "name": "Book Gigs",
+            "idShort": 2,
+            "shortLink": "cpXjTyML"
+          },
+          "list": {
+            "id": "667954c29d65d8d6890f2a3f",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:13:06.977Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "667954c23aa2fb8c46df68f6",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "667954c23aa2fb8c46df68ed",
+            "name": "Research Venues",
+            "idShort": 1,
+            "shortLink": "KlC1AVkx"
+          },
+          "list": {
+            "id": "667954c29d65d8d6890f2a3f",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:13:06.771Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "667954c29d65d8d6890f2a43",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "667954c29d65d8d6890f2a3f",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:13:06.491Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "667954c231e38d169f90e48e",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "667954c231e38d169f90e48a",
+            "name": "Done"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:13:06.383Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "667954c2e9f393f54de13840",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "667954c2e9f393f54de1383b",
+            "name": "Doing"
+          },
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:13:06.263Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "667954c244609e44ef4cf895",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          },
+          "organization": {
+            "id": "667954c0cc125005803fe5d3",
+            "name": "Trello Workspace"
+          }
+        },
+        "appCreator": null,
+        "type": "addToOrganizationBoard",
+        "date": "2024-06-24T11:13:06.012Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "667954c244609e44ef4cf892",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "board": {
+            "id": "667954c144609e44ef4ce4c8",
+            "name": "Regional Dominion",
+            "shortLink": "kyKbO70l"
+          }
+        },
+        "appCreator": null,
+        "type": "createBoard",
+        "date": "2024-06-24T11:13:06.006Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      }
+    ],
+    "cards": [
+      {
+        "id": "667954c23aa2fb8c46df68ed",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": false,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:13:06.747Z",
+        "dateViewedByCreator": null,
+        "desc": "",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ouypvyid8oohxo92l+1j8pmmhsa8@boards.trello.com",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "667954c29d65d8d6890f2a3f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 1,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Research Venues",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/667954c23aa2fb8c46df68ed",
+        "pos": 1,
+        "shortLink": "KlC1AVkx",
+        "shortUrl": "https://trello.com/c/KlC1AVkx",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/KlC1AVkx/1-research-venues",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "667954c208bab7c631685f53",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": false,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:13:06.955Z",
+        "dateViewedByCreator": null,
+        "desc": "",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ouypv76rmlhgn4p5f+2qasc015s3@boards.trello.com",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "667954c29d65d8d6890f2a3f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 2,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Book Gigs",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/667954c208bab7c631685f53",
+        "pos": 2,
+        "shortLink": "cpXjTyML",
+        "shortUrl": "https://trello.com/c/cpXjTyML",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/cpXjTyML/2-book-gigs",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795502fb389adb5870c9ef",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": false,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:14:10.209Z",
+        "dateViewedByCreator": null,
+        "desc": "",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ouyww1iv9u9di1ii7+016h9enth8@boards.trello.com",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "667954c29d65d8d6890f2a3f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 3,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Promotional Materials",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795502fb389adb5870c9ef",
+        "pos": 65538,
+        "shortLink": "TY4Yeijv",
+        "shortUrl": "https://trello.com/c/TY4Yeijv",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/TY4Yeijv/3-promotional-materials",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "6679550b1b927f7414af5657",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": false,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:14:19.043Z",
+        "dateViewedByCreator": null,
+        "desc": "",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ouyxrofkw8fjvvxhz+1vqfvarueo@boards.trello.com",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "667954c29d65d8d6890f2a3f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 4,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Merchandise for Gigs",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/6679550b1b927f7414af5657",
+        "pos": 131074,
+        "shortLink": "IrCCAMi0",
+        "shortUrl": "https://trello.com/c/IrCCAMi0",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/IrCCAMi0/4-merchandise-for-gigs",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "6679558739f11a7da3c658c0",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": false,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:16:23.554Z",
+        "dateViewedByCreator": null,
+        "desc": "",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ouzb6vmfvodqe8j40+0rxe19uldz@boards.trello.com",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "667954c29d65d8d6890f2a3f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 5,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Maintain Calendar",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/6679558739f11a7da3c658c0",
+        "pos": 196610,
+        "shortLink": "XdDWVbdz",
+        "shortUrl": "https://trello.com/c/XdDWVbdz",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/XdDWVbdz/5-maintain-calendar",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      }
+    ],
+    "labels": [
+      {
+        "id": "667954c11dc51400eb251d9d",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "name": "",
+        "color": "blue",
+        "uses": 0
+      },
+      {
+        "id": "667954c11dc51400eb251d9e",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "name": "",
+        "color": "green",
+        "uses": 0
+      },
+      {
+        "id": "667954c11dc51400eb251d9b",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "name": "",
+        "color": "orange",
+        "uses": 0
+      },
+      {
+        "id": "667954c11dc51400eb251d9c",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "name": "",
+        "color": "purple",
+        "uses": 0
+      },
+      {
+        "id": "667954c11dc51400eb251da3",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "name": "",
+        "color": "red",
+        "uses": 0
+      },
+      {
+        "id": "667954c11dc51400eb251da0",
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "name": "",
+        "color": "yellow",
+        "uses": 0
+      }
+    ],
+    "lists": [
+      {
+        "id": "667954c29d65d8d6890f2a3f",
+        "name": "To Do",
+        "closed": false,
+        "color": null,
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "pos": 1,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/667954c29d65d8d6890f2a3f"
+      },
+      {
+        "id": "667954c2e9f393f54de1383b",
+        "name": "Doing",
+        "closed": false,
+        "color": null,
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "pos": 2,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/667954c2e9f393f54de1383b"
+      },
+      {
+        "id": "667954c231e38d169f90e48a",
+        "name": "Done",
+        "closed": false,
+        "color": null,
+        "idBoard": "667954c144609e44ef4ce4c8",
+        "pos": 3,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/667954c231e38d169f90e48a"
+      }
+    ],
+    "members": [
+      {
+        "id": "667953fe9089831796567bab",
+        "aaId": "712020:ddad0e00-0cef-4517-91ed-c8a5403ff914",
+        "activityBlocked": false,
+        "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+        "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+        "bio": "",
+        "bioData": null,
+        "confirmed": true,
+        "fullName": "Rob Rich",
+        "idEnterprise": null,
+        "idEnterprisesDeactivated": [],
+        "idMemberReferrer": null,
+        "idPremOrgsAdmin": [],
+        "initials": "RR",
+        "memberType": "normal",
+        "nonPublic": {
+          "fullName": "Rob Rich",
+          "initials": "RR",
+          "avatarHash": null
+        },
+        "nonPublicAvailable": true,
+        "products": [],
+        "url": "https://trello.com/robrich9",
+        "username": "robrich9",
+        "status": "disconnected"
+      }
+    ],
+    "checklists": [],
+    "customFields": [],
+    "memberships": [
+      {
+        "id": "667954c144609e44ef4ce4d2",
+        "idMember": "667953fe9089831796567bab",
+        "memberType": "admin",
+        "unconfirmed": false,
+        "deactivated": false
+      }
+    ],
+    "pluginData": []
+  }

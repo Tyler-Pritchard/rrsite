@@ -1,0 +1,2040 @@
+{
+    "id": "66795a21f75e26317c0777f2",
+    "nodeId": "ari:cloud:trello::board/workspace/667954c0cc125005803fe5d3/66795a21f75e26317c0777f2",
+    "name": "Merchandise",
+    "desc": "",
+    "descData": null,
+    "closed": false,
+    "dateClosed": null,
+    "idOrganization": "667954c0cc125005803fe5d3",
+    "idEnterprise": null,
+    "limits": {
+      "attachments": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 36000,
+          "warnAt": 28800
+        },
+        "perCard": {
+          "status": "ok",
+          "disableAt": 1000,
+          "warnAt": 800
+        }
+      },
+      "boards": {
+        "totalMembersPerBoard": {
+          "status": "ok",
+          "disableAt": 1600,
+          "warnAt": 1280
+        },
+        "totalAccessRequestsPerBoard": {
+          "status": "ok",
+          "disableAt": 4000,
+          "warnAt": 3200
+        }
+      },
+      "cards": {
+        "openPerBoard": {
+          "status": "ok",
+          "disableAt": 5000,
+          "warnAt": 4000
+        },
+        "openPerList": {
+          "status": "ok",
+          "disableAt": 5000,
+          "warnAt": 4000
+        },
+        "totalPerBoard": {
+          "status": "ok",
+          "disableAt": 2000000,
+          "warnAt": 1600000
+        },
+        "totalPerList": {
+          "status": "ok",
+          "disableAt": 1000000,
+          "warnAt": 800000
+        }
+      },
+      "checklists": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 1800000,
+          "warnAt": 1440000
+        },
+        "perCard": {
+          "status": "ok",
+          "disableAt": 500,
+          "warnAt": 400
+        }
+      },
+      "checkItems": {
+        "perChecklist": {
+          "status": "ok",
+          "disableAt": 200,
+          "warnAt": 160
+        }
+      },
+      "customFields": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 50,
+          "warnAt": 40
+        }
+      },
+      "customFieldOptions": {
+        "perField": {
+          "status": "ok",
+          "disableAt": 50,
+          "warnAt": 40
+        }
+      },
+      "labels": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 1000,
+          "warnAt": 800
+        }
+      },
+      "lists": {
+        "openPerBoard": {
+          "status": "ok",
+          "disableAt": 500,
+          "warnAt": 400
+        },
+        "totalPerBoard": {
+          "status": "ok",
+          "disableAt": 3000,
+          "warnAt": 2400
+        }
+      },
+      "stickers": {
+        "perCard": {
+          "status": "ok",
+          "disableAt": 70,
+          "warnAt": 56
+        }
+      },
+      "reactions": {
+        "perAction": {
+          "status": "ok",
+          "disableAt": 900,
+          "warnAt": 720
+        },
+        "uniquePerAction": {
+          "status": "ok",
+          "disableAt": 17,
+          "warnAt": 14
+        }
+      }
+    },
+    "pinned": false,
+    "starred": false,
+    "url": "https://trello.com/b/kuQop4Mv/merchandise",
+    "prefs": {
+      "permissionLevel": "org",
+      "hideVotes": false,
+      "voting": "disabled",
+      "comments": "members",
+      "invitations": "members",
+      "selfJoin": true,
+      "cardCovers": true,
+      "cardCounts": false,
+      "isTemplate": false,
+      "cardAging": "regular",
+      "calendarFeedEnabled": false,
+      "hiddenPluginBoardButtons": [],
+      "switcherViews": [
+        {
+          "viewType": "Board",
+          "enabled": true
+        },
+        {
+          "viewType": "Table",
+          "enabled": true
+        },
+        {
+          "viewType": "Calendar",
+          "enabled": false
+        },
+        {
+          "viewType": "Dashboard",
+          "enabled": false
+        },
+        {
+          "viewType": "Timeline",
+          "enabled": false
+        },
+        {
+          "viewType": "Map",
+          "enabled": false
+        }
+      ],
+      "background": "66795a25f75e26317c07840d",
+      "backgroundColor": null,
+      "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/45dbf8678e78d129432183198ac01198/photo-1614735241165-6756e1df61ab",
+      "backgroundTile": false,
+      "backgroundBrightness": "dark",
+      "sharedSourceUrl": "https://images.unsplash.com/photo-1614735241165-6756e1df61ab?ixid=M3w3MDY2fDB8MXxzZWFyY2h8MjB8fG1lcmNoYW5kaXNlfGVufDF8fHx8MTcxOTIyODk0NHww&ixlib=rb-4.0.3&w=2560&h=2048&q=90",
+      "backgroundImageScaled": [
+        {
+          "width": 140,
+          "height": 79,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/140x79/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 256,
+          "height": 144,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/256x144/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 480,
+          "height": 270,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x270/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 960,
+          "height": 540,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/960x540/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 1024,
+          "height": 576,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1024x576/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x720/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1920x1080/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 2048,
+          "height": 1152,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2048x1152/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2560x1440/ae17876b9c1dca10925fba5d6fc830cf/photo-1614735241165-6756e1df61ab.webp"
+        }
+      ],
+      "backgroundBottomColor": "#ac8a4a",
+      "backgroundTopColor": "#928670",
+      "canBePublic": true,
+      "canBeEnterprise": true,
+      "canBeOrg": true,
+      "canBePrivate": true,
+      "canInvite": true
+    },
+    "shortLink": "kuQop4Mv",
+    "subscribed": false,
+    "labelNames": {
+      "green": "",
+      "yellow": "",
+      "orange": "",
+      "red": "",
+      "purple": "",
+      "blue": "",
+      "sky": "",
+      "lime": "",
+      "pink": "",
+      "black": "",
+      "green_dark": "",
+      "yellow_dark": "",
+      "orange_dark": "",
+      "red_dark": "",
+      "purple_dark": "",
+      "blue_dark": "",
+      "sky_dark": "",
+      "lime_dark": "",
+      "pink_dark": "",
+      "black_dark": "",
+      "green_light": "",
+      "yellow_light": "",
+      "orange_light": "",
+      "red_light": "",
+      "purple_light": "",
+      "blue_light": "",
+      "sky_light": "",
+      "lime_light": "",
+      "pink_light": "",
+      "black_light": ""
+    },
+    "powerUps": [],
+    "dateLastActivity": "2024-06-24T11:48:01.939Z",
+    "dateLastView": "2024-06-24T12:20:28.082Z",
+    "shortUrl": "https://trello.com/b/kuQop4Mv",
+    "idTags": [],
+    "datePluginDisable": null,
+    "creationMethod": null,
+    "ixUpdate": "97",
+    "templateGallery": null,
+    "enterpriseOwned": false,
+    "idBoardSource": null,
+    "premiumFeatures": [
+      "additionalBoardBackgrounds",
+      "additionalStickers",
+      "customBoardBackgrounds",
+      "customEmoji",
+      "customStickers",
+      "plugins"
+    ],
+    "idMemberCreator": "667953fe9089831796567bab",
+    "type": null,
+    "actions": [
+      {
+        "id": "66795cf146a5b151de769419",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Develop and maintain an online store on your website\nSet up an online store using Shopify or a similar service.\nIntegrate the store with your website and promote it through your social media channels and at live shows.",
+            "id": "66795ab130403277fa784eb6",
+            "name": "Online Store Setup",
+            "idShort": 3,
+            "shortLink": "nIPmZPe9"
+          },
+          "old": {
+            "desc": "Develop and maintain an online store on your website"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:48:01.976Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795cc16bf7916cb332e18a",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Create and approve designs for t-shirts, posters, etc.\nWork with a graphic designer (or use your skills in Photoshop) to create merchandise designs. Source suppliers through websites like Printful or local print shops.",
+            "id": "66795a71ea7fd94c79c86fe1",
+            "name": "Design Concepts",
+            "idShort": 1,
+            "shortLink": "spaTDUgt"
+          },
+          "old": {
+            "desc": "Create and approve designs for t-shirts, posters, etc."
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:47:13.785Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795c4b906ff900e1091de4",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795ab130403277fa784eb6",
+            "name": "Online Store Setup",
+            "idShort": 3,
+            "shortLink": "nIPmZPe9"
+          },
+          "checklist": {
+            "id": "66795c4b906ff900e1091ddd",
+            "name": "Sales Channels"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "addChecklistToCard",
+        "date": "2024-06-24T11:45:15.903Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795c0683d90cf9c16ef4a9",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795ad5faf5f78cac6a8298",
+            "name": "Inventory Management",
+            "idShort": 4,
+            "shortLink": "1pcMwC24"
+          },
+          "checklist": {
+            "id": "66795c0683d90cf9c16ef4a2",
+            "name": "Inventory Management"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "addChecklistToCard",
+        "date": "2024-06-24T11:44:06.344Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795bec325de8b05ddca418",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795ad5faf5f78cac6a8298",
+            "name": "Inventory Management",
+            "idShort": 4,
+            "shortLink": "1pcMwC24"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "checklist": {
+            "id": "66795be645fc40b02763256a",
+            "name": "Track inventory levels"
+          }
+        },
+        "appCreator": null,
+        "type": "removeChecklistFromCard",
+        "date": "2024-06-24T11:43:40.927Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795be645fc40b027632571",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795ad5faf5f78cac6a8298",
+            "name": "Inventory Management",
+            "idShort": 4,
+            "shortLink": "1pcMwC24"
+          },
+          "checklist": {
+            "id": "66795be645fc40b02763256a",
+            "name": "Track inventory levels"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "addChecklistToCard",
+        "date": "2024-06-24T11:43:34.216Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795bbb206427ae389ce1cf",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795a71ea7fd94c79c86fe1",
+            "name": "Design Concepts",
+            "idShort": 1,
+            "shortLink": "spaTDUgt"
+          },
+          "checklist": {
+            "id": "66795bbb206427ae389ce1c8",
+            "name": "Product Design"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "addChecklistToCard",
+        "date": "2024-06-24T11:42:51.741Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795b048c45d2b9bd6c0721",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Track sales, customer feedback, and revenue",
+            "id": "66795af5be71d6abb546dd31",
+            "name": "Sales Tracking",
+            "idShort": 5,
+            "shortLink": "Zku1XqtH"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:39:48.444Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795af6be71d6abb546dd4c",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795af5be71d6abb546dd31",
+            "name": "Sales Tracking",
+            "idShort": 5,
+            "shortLink": "Zku1XqtH"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:39:34.012Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795ae59fc6fca5ccac96d0",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Monitor stock levels and reorder when necessary",
+            "id": "66795ad5faf5f78cac6a8298",
+            "name": "Inventory Management",
+            "idShort": 4,
+            "shortLink": "1pcMwC24"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:39:17.840Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795ad5faf5f78cac6a82a1",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795ad5faf5f78cac6a8298",
+            "name": "Inventory Management",
+            "idShort": 4,
+            "shortLink": "1pcMwC24"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:39:01.339Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795ac18d103711ffbd77c7",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Develop and maintain an online store on your website",
+            "id": "66795ab130403277fa784eb6",
+            "name": "Online Store Setup",
+            "idShort": 3,
+            "shortLink": "nIPmZPe9"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:38:41.345Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795ab130403277fa784ebf",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795ab130403277fa784eb6",
+            "name": "Online Store Setup",
+            "idShort": 3,
+            "shortLink": "nIPmZPe9"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:38:25.551Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a9ef814feb904d7c27b",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Track orders and communications with suppliers",
+            "id": "66795a9728f541b0c321ea95",
+            "name": "Suppliers and Production",
+            "idShort": 2,
+            "shortLink": "pwZMbzQL"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:38:06.848Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a9728f541b0c321eab3",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795a9728f541b0c321ea95",
+            "name": "Suppliers and Production",
+            "idShort": 2,
+            "shortLink": "pwZMbzQL"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:37:59.540Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a823ab19324ea3eca0d",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Create and approve designs for t-shirts, posters, etc.",
+            "id": "66795a71ea7fd94c79c86fe1",
+            "name": "Design Concepts",
+            "idShort": 1,
+            "shortLink": "spaTDUgt"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:37:38.943Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a71ea7fd94c79c87017",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795a71ea7fd94c79c86fe1",
+            "name": "Design Concepts",
+            "idShort": 1,
+            "shortLink": "spaTDUgt"
+          },
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:37:21.379Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a44d3e9520d7e5c9efb",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "66795a44d3e9520d7e5c9ef7",
+            "name": "Done"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:36:36.276Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a40de310ace2d2baf28",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "66795a40de310ace2d2baf24",
+            "name": "Doing"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:36:32.657Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a3cb1b1512a1c5854d6",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "66795a3cb1b1512a1c5854d2",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:36:28.660Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a25f75e26317c07842f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          },
+          "organization": {
+            "id": "667954c0cc125005803fe5d3",
+            "name": "Trello Workspace"
+          }
+        },
+        "appCreator": null,
+        "type": "addToOrganizationBoard",
+        "date": "2024-06-24T11:36:05.710Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795a25f75e26317c07842c",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "board": {
+            "id": "66795a21f75e26317c0777f2",
+            "name": "Merchandise",
+            "shortLink": "kuQop4Mv"
+          }
+        },
+        "appCreator": null,
+        "type": "createBoard",
+        "date": "2024-06-24T11:36:05.705Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      }
+    ],
+    "cards": [
+      {
+        "id": "66795a71ea7fd94c79c86fe1",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 2,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:47:13.764Z",
+        "dateViewedByCreator": null,
+        "desc": "Create and approve designs for t-shirts, posters, etc.\nWork with a graphic designer (or use your skills in Photoshop) to create merchandise designs. Source suppliers through websites like Printful or local print shops.",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov33b0mcvaed8ngm9+14pmp4htii@boards.trello.com",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idChecklists": [
+          "66795bbb206427ae389ce1c8"
+        ],
+        "idLabels": [],
+        "idList": "66795a3cb1b1512a1c5854d2",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 1,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Design Concepts",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795a71ea7fd94c79c86fe1",
+        "pos": 65536,
+        "shortLink": "spaTDUgt",
+        "shortUrl": "https://trello.com/c/spaTDUgt",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/spaTDUgt/1-design-concepts",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795a9728f541b0c321ea95",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:38:06.816Z",
+        "dateViewedByCreator": null,
+        "desc": "Track orders and communications with suppliers",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov37c0cqtdgt6626t+16edpgz0a4@boards.trello.com",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "66795a3cb1b1512a1c5854d2",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 2,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Suppliers and Production",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795a9728f541b0c321ea95",
+        "pos": 131072,
+        "shortLink": "pwZMbzQL",
+        "shortUrl": "https://trello.com/c/pwZMbzQL",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/pwZMbzQL/2-suppliers-and-production",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795ab130403277fa784eb6",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 3,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:48:01.939Z",
+        "dateViewedByCreator": null,
+        "desc": "Develop and maintain an online store on your website\nSet up an online store using Shopify or a similar service.\nIntegrate the store with your website and promote it through your social media channels and at live shows.",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov3a5c8ltamzo2oxi+07uh6z3t0g@boards.trello.com",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idChecklists": [
+          "66795c4b906ff900e1091ddd"
+        ],
+        "idLabels": [],
+        "idList": "66795a3cb1b1512a1c5854d2",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 3,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Online Store Setup",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795ab130403277fa784eb6",
+        "pos": 196608,
+        "shortLink": "nIPmZPe9",
+        "shortUrl": "https://trello.com/c/nIPmZPe9",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/nIPmZPe9/3-online-store-setup",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795ad5faf5f78cac6a8298",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 2,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:44:25.747Z",
+        "dateViewedByCreator": null,
+        "desc": "Monitor stock levels and reorder when necessary",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov3e4klr7zhdq00wo+22yccfwkap@boards.trello.com",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idChecklists": [
+          "66795c0683d90cf9c16ef4a2"
+        ],
+        "idLabels": [],
+        "idList": "66795a3cb1b1512a1c5854d2",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 4,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Inventory Management",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795ad5faf5f78cac6a8298",
+        "pos": 262144,
+        "shortLink": "1pcMwC24",
+        "shortUrl": "https://trello.com/c/1pcMwC24",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/1pcMwC24/4-inventory-management",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795af5be71d6abb546dd31",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:39:48.424Z",
+        "dateViewedByCreator": null,
+        "desc": "Track sales, customer feedback, and revenue",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov3hk89jgr8ngqfjl+1z3hg50dcj@boards.trello.com",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "66795a3cb1b1512a1c5854d2",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 5,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Sales Tracking",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795af5be71d6abb546dd31",
+        "pos": 327680,
+        "shortLink": "Zku1XqtH",
+        "shortUrl": "https://trello.com/c/Zku1XqtH",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/Zku1XqtH/5-sales-tracking",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      }
+    ],
+    "labels": [
+      {
+        "id": "66795a251dc51400eb4fa50a",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "name": "",
+        "color": "blue",
+        "uses": 0
+      },
+      {
+        "id": "66795a251dc51400eb4fa4fa",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "name": "",
+        "color": "green",
+        "uses": 0
+      },
+      {
+        "id": "66795a251dc51400eb4fa500",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "name": "",
+        "color": "orange",
+        "uses": 0
+      },
+      {
+        "id": "66795a251dc51400eb4fa50b",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "name": "",
+        "color": "purple",
+        "uses": 0
+      },
+      {
+        "id": "66795a251dc51400eb4fa502",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "name": "",
+        "color": "red",
+        "uses": 0
+      },
+      {
+        "id": "66795a251dc51400eb4fa4fe",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "name": "",
+        "color": "yellow",
+        "uses": 0
+      }
+    ],
+    "lists": [
+      {
+        "id": "66795a3cb1b1512a1c5854d2",
+        "name": "To Do",
+        "closed": false,
+        "color": null,
+        "idBoard": "66795a21f75e26317c0777f2",
+        "pos": 65536,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/66795a3cb1b1512a1c5854d2"
+      },
+      {
+        "id": "66795a40de310ace2d2baf24",
+        "name": "Doing",
+        "closed": false,
+        "color": null,
+        "idBoard": "66795a21f75e26317c0777f2",
+        "pos": 131072,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/66795a40de310ace2d2baf24"
+      },
+      {
+        "id": "66795a44d3e9520d7e5c9ef7",
+        "name": "Done",
+        "closed": false,
+        "color": null,
+        "idBoard": "66795a21f75e26317c0777f2",
+        "pos": 196608,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/66795a44d3e9520d7e5c9ef7"
+      }
+    ],
+    "members": [
+      {
+        "id": "667953fe9089831796567bab",
+        "aaId": "712020:ddad0e00-0cef-4517-91ed-c8a5403ff914",
+        "activityBlocked": false,
+        "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+        "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+        "bio": "",
+        "bioData": null,
+        "confirmed": true,
+        "fullName": "Rob Rich",
+        "idEnterprise": null,
+        "idEnterprisesDeactivated": [],
+        "idMemberReferrer": null,
+        "idPremOrgsAdmin": [],
+        "initials": "RR",
+        "memberType": "normal",
+        "nonPublic": {
+          "fullName": "Rob Rich",
+          "initials": "RR",
+          "avatarHash": null
+        },
+        "nonPublicAvailable": true,
+        "products": [],
+        "url": "https://trello.com/robrich9",
+        "username": "robrich9",
+        "status": "disconnected"
+      }
+    ],
+    "checklists": [
+      {
+        "id": "66795bbb206427ae389ce1c8",
+        "name": "Product Design",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idCard": "66795a71ea7fd94c79c86fe1",
+        "pos": 16384,
+        "limits": {
+          "checkItems": {
+            "perChecklist": {
+              "status": "ok",
+              "disableAt": 200,
+              "warnAt": 160
+            }
+          }
+        },
+        "checkItems": [
+          {
+            "id": "66795bc671ca4f794fa58251",
+            "name": "Brainstorm and finalize merchandise designs",
+            "nameData": {
+              "emoji": {
+  
+              }
+            },
+            "pos": 17016,
+            "state": "incomplete",
+            "due": null,
+            "dueReminder": null,
+            "idMember": null,
+            "idChecklist": "66795bbb206427ae389ce1c8"
+          },
+          {
+            "id": "66795bcff19987f7bcb66a46",
+            "name": "Source materials and suppliers",
+            "nameData": {
+              "emoji": {
+  
+              }
+            },
+            "pos": 34058,
+            "state": "incomplete",
+            "due": null,
+            "dueReminder": null,
+            "idMember": null,
+            "idChecklist": "66795bbb206427ae389ce1c8"
+          }
+        ],
+        "creationMethod": null
+      },
+      {
+        "id": "66795c0683d90cf9c16ef4a2",
+        "name": "Inventory Management",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idCard": "66795ad5faf5f78cac6a8298",
+        "pos": 16384,
+        "limits": {
+          "checkItems": {
+            "perChecklist": {
+              "status": "ok",
+              "disableAt": 200,
+              "warnAt": 160
+            }
+          }
+        },
+        "checkItems": [
+          {
+            "id": "66795c0fb394cc35680f82d3",
+            "name": "Track inventory levels",
+            "nameData": {
+              "emoji": {
+  
+              }
+            },
+            "pos": 17175,
+            "state": "incomplete",
+            "due": null,
+            "dueReminder": null,
+            "idMember": null,
+            "idChecklist": "66795c0683d90cf9c16ef4a2"
+          },
+          {
+            "id": "66795c197394648a48b17971",
+            "name": "Reorder merchandise as needed",
+            "nameData": {
+              "emoji": {
+  
+              }
+            },
+            "pos": 34298,
+            "state": "incomplete",
+            "due": null,
+            "dueReminder": null,
+            "idMember": null,
+            "idChecklist": "66795c0683d90cf9c16ef4a2"
+          }
+        ],
+        "creationMethod": null
+      },
+      {
+        "id": "66795c4b906ff900e1091ddd",
+        "name": "Sales Channels",
+        "idBoard": "66795a21f75e26317c0777f2",
+        "idCard": "66795ab130403277fa784eb6",
+        "pos": 16384,
+        "limits": {
+          "checkItems": {
+            "perChecklist": {
+              "status": "ok",
+              "disableAt": 200,
+              "warnAt": 160
+            }
+          }
+        },
+        "checkItems": [
+          {
+            "id": "66795c55fd09371b6b07fcf0",
+            "name": "Set up an online store on your website",
+            "nameData": {
+              "emoji": {
+  
+              }
+            },
+            "pos": 17145,
+            "state": "incomplete",
+            "due": null,
+            "dueReminder": null,
+            "idMember": null,
+            "idChecklist": "66795c4b906ff900e1091ddd"
+          },
+          {
+            "id": "66795c62a70edab927c47201",
+            "name": "Explore other sales platforms (Bandcamp, ReverbNation)",
+            "nameData": {
+              "emoji": {
+  
+              }
+            },
+            "pos": 33617,
+            "state": "incomplete",
+            "due": null,
+            "dueReminder": null,
+            "idMember": null,
+            "idChecklist": "66795c4b906ff900e1091ddd"
+          },
+          {
+            "id": "66795c6e11af1cb2960a1022",
+            "name": "Plan and execute sales promotions and discounts",
+            "nameData": {
+              "emoji": {
+  
+              }
+            },
+            "pos": 50906,
+            "state": "incomplete",
+            "due": null,
+            "dueReminder": null,
+            "idMember": null,
+            "idChecklist": "66795c4b906ff900e1091ddd"
+          }
+        ],
+        "creationMethod": null
+      }
+    ],
+    "customFields": [],
+    "memberships": [
+      {
+        "id": "66795a21f75e26317c0777ff",
+        "idMember": "667953fe9089831796567bab",
+        "memberType": "admin",
+        "unconfirmed": false,
+        "deactivated": false
+      }
+    ],
+    "pluginData": []
+  }

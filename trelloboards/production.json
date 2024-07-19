@@ -1,0 +1,1846 @@
+{
+    "id": "66795e367dba070ca85edc4f",
+    "nodeId": "ari:cloud:trello::board/workspace/667954c0cc125005803fe5d3/66795e367dba070ca85edc4f",
+    "name": "Production",
+    "desc": "",
+    "descData": null,
+    "closed": false,
+    "dateClosed": null,
+    "idOrganization": "667954c0cc125005803fe5d3",
+    "idEnterprise": null,
+    "limits": {
+      "attachments": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 36000,
+          "warnAt": 28800
+        },
+        "perCard": {
+          "status": "ok",
+          "disableAt": 1000,
+          "warnAt": 800
+        }
+      },
+      "boards": {
+        "totalMembersPerBoard": {
+          "status": "ok",
+          "disableAt": 1600,
+          "warnAt": 1280
+        },
+        "totalAccessRequestsPerBoard": {
+          "status": "ok",
+          "disableAt": 4000,
+          "warnAt": 3200
+        }
+      },
+      "cards": {
+        "openPerBoard": {
+          "status": "ok",
+          "disableAt": 5000,
+          "warnAt": 4000
+        },
+        "openPerList": {
+          "status": "ok",
+          "disableAt": 5000,
+          "warnAt": 4000
+        },
+        "totalPerBoard": {
+          "status": "ok",
+          "disableAt": 2000000,
+          "warnAt": 1600000
+        },
+        "totalPerList": {
+          "status": "ok",
+          "disableAt": 1000000,
+          "warnAt": 800000
+        }
+      },
+      "checklists": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 1800000,
+          "warnAt": 1440000
+        },
+        "perCard": {
+          "status": "ok",
+          "disableAt": 500,
+          "warnAt": 400
+        }
+      },
+      "checkItems": {
+        "perChecklist": {
+          "status": "ok",
+          "disableAt": 200,
+          "warnAt": 160
+        }
+      },
+      "customFields": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 50,
+          "warnAt": 40
+        }
+      },
+      "customFieldOptions": {
+        "perField": {
+          "status": "ok",
+          "disableAt": 50,
+          "warnAt": 40
+        }
+      },
+      "labels": {
+        "perBoard": {
+          "status": "ok",
+          "disableAt": 1000,
+          "warnAt": 800
+        }
+      },
+      "lists": {
+        "openPerBoard": {
+          "status": "ok",
+          "disableAt": 500,
+          "warnAt": 400
+        },
+        "totalPerBoard": {
+          "status": "ok",
+          "disableAt": 3000,
+          "warnAt": 2400
+        }
+      },
+      "stickers": {
+        "perCard": {
+          "status": "ok",
+          "disableAt": 70,
+          "warnAt": 56
+        }
+      },
+      "reactions": {
+        "perAction": {
+          "status": "ok",
+          "disableAt": 900,
+          "warnAt": 720
+        },
+        "uniquePerAction": {
+          "status": "ok",
+          "disableAt": 17,
+          "warnAt": 14
+        }
+      }
+    },
+    "pinned": false,
+    "starred": false,
+    "url": "https://trello.com/b/JUYX48xm/production",
+    "prefs": {
+      "permissionLevel": "org",
+      "hideVotes": false,
+      "voting": "disabled",
+      "comments": "members",
+      "invitations": "members",
+      "selfJoin": true,
+      "cardCovers": true,
+      "cardCounts": false,
+      "isTemplate": false,
+      "cardAging": "regular",
+      "calendarFeedEnabled": false,
+      "hiddenPluginBoardButtons": [],
+      "switcherViews": [
+        {
+          "viewType": "Board",
+          "enabled": true
+        },
+        {
+          "viewType": "Table",
+          "enabled": true
+        },
+        {
+          "viewType": "Calendar",
+          "enabled": false
+        },
+        {
+          "viewType": "Dashboard",
+          "enabled": false
+        },
+        {
+          "viewType": "Timeline",
+          "enabled": false
+        },
+        {
+          "viewType": "Map",
+          "enabled": false
+        }
+      ],
+      "background": "66795e397dba070ca85edc7d",
+      "backgroundColor": null,
+      "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/fa755363f56789cc00ae6c7003030ad3/photo-1609702847389-b8aec1b0b929",
+      "backgroundTile": false,
+      "backgroundBrightness": "dark",
+      "sharedSourceUrl": "https://images.unsplash.com/photo-1609702847389-b8aec1b0b929?ixid=M3w3MDY2fDB8MXxzZWFyY2h8MTJ8fEF1ZGlvfGVufDF8fHx8MTcxOTIyOTk5Nnww&ixlib=rb-4.0.3&w=2560&h=2048&q=90",
+      "backgroundImageScaled": [
+        {
+          "width": 140,
+          "height": 84,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/140x84/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 256,
+          "height": 154,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/256x154/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 480,
+          "height": 289,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x289/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 960,
+          "height": 579,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/960x579/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 1024,
+          "height": 617,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1024x617/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 1280,
+          "height": 772,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x772/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1157,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1920x1157/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 2048,
+          "height": 1234,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2048x1234/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        },
+        {
+          "width": 2560,
+          "height": 1543,
+          "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2560x1543/eee8219ac8cf181962b4060c7d4f92b5/photo-1609702847389-b8aec1b0b929.webp"
+        }
+      ],
+      "backgroundBottomColor": "#181818",
+      "backgroundTopColor": "#e0e0e0",
+      "canBePublic": true,
+      "canBeEnterprise": true,
+      "canBeOrg": true,
+      "canBePrivate": true,
+      "canInvite": true
+    },
+    "shortLink": "JUYX48xm",
+    "subscribed": false,
+    "labelNames": {
+      "green": "",
+      "yellow": "",
+      "orange": "",
+      "red": "",
+      "purple": "",
+      "blue": "",
+      "sky": "",
+      "lime": "",
+      "pink": "",
+      "black": "",
+      "green_dark": "",
+      "yellow_dark": "",
+      "orange_dark": "",
+      "red_dark": "",
+      "purple_dark": "",
+      "blue_dark": "",
+      "sky_dark": "",
+      "lime_dark": "",
+      "pink_dark": "",
+      "black_dark": "",
+      "green_light": "",
+      "yellow_light": "",
+      "orange_light": "",
+      "red_light": "",
+      "purple_light": "",
+      "blue_light": "",
+      "sky_light": "",
+      "lime_light": "",
+      "pink_light": "",
+      "black_light": ""
+    },
+    "powerUps": [],
+    "dateLastActivity": "2024-06-24T12:01:59.474Z",
+    "dateLastView": "2024-06-24T12:17:52.476Z",
+    "shortUrl": "https://trello.com/b/JUYX48xm",
+    "idTags": [],
+    "datePluginDisable": null,
+    "creationMethod": null,
+    "ixUpdate": "66",
+    "templateGallery": null,
+    "enterpriseOwned": false,
+    "idBoardSource": null,
+    "premiumFeatures": [
+      "additionalBoardBackgrounds",
+      "additionalStickers",
+      "customBoardBackgrounds",
+      "customEmoji",
+      "customStickers",
+      "plugins"
+    ],
+    "idMemberCreator": "667953fe9089831796567bab",
+    "type": null,
+    "actions": [
+      {
+        "id": "667960375d440791034e2f8f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Plan releases on Spotify, Apple Music, etc.\nUpload and Monetize Recordings\n\n- Distribute your music on streaming services like Spotify, Apple Music, and Bandcamp.\n- Promote new releases through social media and your website.\n- Track streaming metrics and revenue.\n\nOnce tracks are ready, use a distribution service like DistroKid or TuneCore to get your music on streaming platforms. Promote each release with a coordinated social media campaign.\n\n- Upload songs to streaming services (Spotify, Apple Music).\n- Promote new releases on social media and your website.\n- Monitor streaming analytics to gauge audience reception.",
+            "id": "66795f09b2c9cadc55563f8f",
+            "name": "Distribution Platforms",
+            "idShort": 5,
+            "shortLink": "OPxdZkyY"
+          },
+          "old": {
+            "desc": "Plan releases on Spotify, Apple Music, etc.\nUpload and Monetize Recordings\n\n- Distribute your music on streaming services like Spotify, Apple Music, and Bandcamp.\n- Promote new releases through social media and your website.\n- Track streaming metrics and revenue.\n\nOnce tracks are ready, use a distribution service like DistroKid or TuneCore to get your music on streaming platforms. Promote each release with a coordinated social media campaign."
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T12:01:59.493Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795ff88bc065c2511c74fb",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Plan releases on Spotify, Apple Music, etc.\nUpload and Monetize Recordings\n\n- Distribute your music on streaming services like Spotify, Apple Music, and Bandcamp.\n- Promote new releases through social media and your website.\n- Track streaming metrics and revenue.\n\nOnce tracks are ready, use a distribution service like DistroKid or TuneCore to get your music on streaming platforms. Promote each release with a coordinated social media campaign.",
+            "id": "66795f09b2c9cadc55563f8f",
+            "name": "Distribution Platforms",
+            "idShort": 5,
+            "shortLink": "OPxdZkyY"
+          },
+          "old": {
+            "desc": "Plan releases on Spotify, Apple Music, etc.\nUpload and Monetize Recordings\n\n- Distribute your music on streaming services like Spotify, Apple Music, and Bandcamp.\n- Promote new releases through social media and your website.\n- Track streaming metrics and revenue."
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T12:00:56.654Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795fb67c19d2fdb3ae91e8",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Plan releases on Spotify, Apple Music, etc.\nUpload and Monetize Recordings\n\n- Distribute your music on streaming services like Spotify, Apple Music, and Bandcamp.\n- Promote new releases through social media and your website.\n- Track streaming metrics and revenue.",
+            "id": "66795f09b2c9cadc55563f8f",
+            "name": "Distribution Platforms",
+            "idShort": 5,
+            "shortLink": "OPxdZkyY"
+          },
+          "old": {
+            "desc": "Plan releases on Spotify, Apple Music, etc."
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:59:50.123Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795f51e129614062deefbc",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "List tasks, progress, and feedback loops.\nMix and master recordings to prepare for distribution.",
+            "id": "66795eccd39ef589a32dd3dc",
+            "name": "Mixing and Mastering",
+            "idShort": 3,
+            "shortLink": "WQ34up0q"
+          },
+          "old": {
+            "desc": "List tasks, progress, and feedback loops."
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:58:09.155Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795f3f6ac29e1482f7f9ae",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Schedule studio time, track progress, and manage files\nSchedule recording sessions and ensure high-quality production.",
+            "id": "66795eab765e6260cf90993f",
+            "name": "Recording Sessions",
+            "idShort": 2,
+            "shortLink": "wyXXRUGw"
+          },
+          "old": {
+            "desc": "Schedule studio time, track progress, and manage files"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:57:51.920Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795f2f71dc44e4e227a814",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Track ideas, lyrics, and compositions.\nDedicate time for songwriting and composition.",
+            "id": "66795e885262c1a6fe8b5619",
+            "name": "Song Writing",
+            "idShort": 1,
+            "shortLink": "oliUbJ16"
+          },
+          "old": {
+            "desc": "Track ideas, lyrics, and compositions."
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:57:35.546Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795f172c1de3881458d081",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Plan releases on Spotify, Apple Music, etc.",
+            "id": "66795f09b2c9cadc55563f8f",
+            "name": "Distribution Platforms",
+            "idShort": 5,
+            "shortLink": "OPxdZkyY"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:57:11.609Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795f09b2c9cadc55563f98",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795f09b2c9cadc55563f8f",
+            "name": "Distribution Platforms",
+            "idShort": 5,
+            "shortLink": "OPxdZkyY"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:56:57.773Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795ef93c254c9896b05b15",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Design and finalize artwork.",
+            "id": "66795eecc888285bdc217d2d",
+            "name": "Album Artwork",
+            "idShort": 4,
+            "shortLink": "IW8a4Nk0"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:56:41.173Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795eecc888285bdc217d36",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795eecc888285bdc217d2d",
+            "name": "Album Artwork",
+            "idShort": 4,
+            "shortLink": "IW8a4Nk0"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:56:28.029Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795ed99da71df79e336b71",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "List tasks, progress, and feedback loops.",
+            "id": "66795eccd39ef589a32dd3dc",
+            "name": "Mixing and Mastering",
+            "idShort": 3,
+            "shortLink": "WQ34up0q"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:56:09.406Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795eccd39ef589a32dd3f0",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795eccd39ef589a32dd3dc",
+            "name": "Mixing and Mastering",
+            "idShort": 3,
+            "shortLink": "WQ34up0q"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:55:56.440Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795eba05861f0aa7d7bb37",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Schedule studio time, track progress, and manage files",
+            "id": "66795eab765e6260cf90993f",
+            "name": "Recording Sessions",
+            "idShort": 2,
+            "shortLink": "wyXXRUGw"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:55:38.960Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795eab765e6260cf909948",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795eab765e6260cf90993f",
+            "name": "Recording Sessions",
+            "idShort": 2,
+            "shortLink": "wyXXRUGw"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:55:23.976Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795e9a233ae6f6594218e9",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "desc": "Track ideas, lyrics, and compositions.",
+            "id": "66795e885262c1a6fe8b5619",
+            "name": "Song Writing",
+            "idShort": 1,
+            "shortLink": "oliUbJ16"
+          },
+          "old": {
+            "desc": ""
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          }
+        },
+        "appCreator": null,
+        "type": "updateCard",
+        "date": "2024-06-24T11:55:06.770Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795e895262c1a6fe8b5622",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "card": {
+            "id": "66795e885262c1a6fe8b5619",
+            "name": "Song Writing",
+            "idShort": 1,
+            "shortLink": "oliUbJ16"
+          },
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createCard",
+        "date": "2024-06-24T11:54:49.003Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795e4945fc40b02767cf0d",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "66795e4945fc40b02767cefa",
+            "name": "Done"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:53:45.376Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795e4722f10fd19c6179a3",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "66795e4722f10fd19c61799f",
+            "name": "Doing"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:53:43.877Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795e44de3968ed7ec36588",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "list": {
+            "id": "66795e44de3968ed7ec36584",
+            "name": "To Do"
+          },
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createList",
+        "date": "2024-06-24T11:53:40.864Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795e397dba070ca85edc9f",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          },
+          "organization": {
+            "id": "667954c0cc125005803fe5d3",
+            "name": "Trello Workspace"
+          }
+        },
+        "appCreator": null,
+        "type": "addToOrganizationBoard",
+        "date": "2024-06-24T11:53:29.364Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      },
+      {
+        "id": "66795e397dba070ca85edc9c",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "data": {
+          "board": {
+            "id": "66795e367dba070ca85edc4f",
+            "name": "Production",
+            "shortLink": "JUYX48xm"
+          }
+        },
+        "appCreator": null,
+        "type": "createBoard",
+        "date": "2024-06-24T11:53:29.358Z",
+        "limits": null,
+        "memberCreator": {
+          "id": "667953fe9089831796567bab",
+          "activityBlocked": false,
+          "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+          "fullName": "Rob Rich",
+          "idMemberReferrer": null,
+          "initials": "RR",
+          "nonPublic": {
+            "fullName": "Rob Rich",
+            "initials": "RR",
+            "avatarHash": null
+          },
+          "nonPublicAvailable": true,
+          "username": "robrich9"
+        }
+      }
+    ],
+    "cards": [
+      {
+        "id": "66795e885262c1a6fe8b5619",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:57:35.525Z",
+        "dateViewedByCreator": null,
+        "desc": "Track ideas, lyrics, and compositions.\nDedicate time for songwriting and composition.",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov68gq3ez33t6e42h+0tc5acym60@boards.trello.com",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "66795e44de3968ed7ec36584",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 1,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Song Writing",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795e885262c1a6fe8b5619",
+        "pos": 65536,
+        "shortLink": "oliUbJ16",
+        "shortUrl": "https://trello.com/c/oliUbJ16",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/oliUbJ16/1-song-writing",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795eab765e6260cf90993f",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:57:51.897Z",
+        "dateViewedByCreator": null,
+        "desc": "Schedule studio time, track progress, and manage files\nSchedule recording sessions and ensure high-quality production.",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov6c9j1855mb9imv3+074lvbn73t@boards.trello.com",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "66795e44de3968ed7ec36584",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 2,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Recording Sessions",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795eab765e6260cf90993f",
+        "pos": 131072,
+        "shortLink": "wyXXRUGw",
+        "shortUrl": "https://trello.com/c/wyXXRUGw",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/wyXXRUGw/2-recording-sessions",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795eccd39ef589a32dd3dc",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:58:09.134Z",
+        "dateViewedByCreator": null,
+        "desc": "List tasks, progress, and feedback loops.\nMix and master recordings to prepare for distribution.",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov6fvf0yal12j7f8c+2atd3bilny@boards.trello.com",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "66795e44de3968ed7ec36584",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 3,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Mixing and Mastering",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795eccd39ef589a32dd3dc",
+        "pos": 196608,
+        "shortLink": "WQ34up0q",
+        "shortUrl": "https://trello.com/c/WQ34up0q",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/WQ34up0q/3-mixing-and-mastering",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795eecc888285bdc217d2d",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T11:56:41.127Z",
+        "dateViewedByCreator": null,
+        "desc": "Design and finalize artwork.",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov6jbtqvfdq2lv2ul+0j1uqsosbu@boards.trello.com",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "66795e44de3968ed7ec36584",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 4,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Album Artwork",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795eecc888285bdc217d2d",
+        "pos": 262144,
+        "shortLink": "IW8a4Nk0",
+        "shortUrl": "https://trello.com/c/IW8a4Nk0",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/IW8a4Nk0/4-album-artwork",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      },
+      {
+        "id": "66795f09b2c9cadc55563f8f",
+        "address": null,
+        "badges": {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "externalSource": null,
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "attachments": 0,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "lastUpdatedByAi": false,
+          "start": null
+        },
+        "checkItemStates": [],
+        "closed": false,
+        "coordinates": null,
+        "creationMethod": null,
+        "dueComplete": false,
+        "dateLastActivity": "2024-06-24T12:01:59.474Z",
+        "dateViewedByCreator": null,
+        "desc": "Plan releases on Spotify, Apple Music, etc.\nUpload and Monetize Recordings\n\n- Distribute your music on streaming services like Spotify, Apple Music, and Bandcamp.\n- Promote new releases through social media and your website.\n- Track streaming metrics and revenue.\n\nOnce tracks are ready, use a distribution service like DistroKid or TuneCore to get your music on streaming platforms. Promote each release with a coordinated social media campaign.\n\n- Upload songs to streaming services (Spotify, Apple Music).\n- Promote new releases on social media and your website.\n- Monitor streaming analytics to gauge audience reception.",
+        "descData": {
+          "emoji": {
+  
+          }
+        },
+        "due": null,
+        "dueReminder": null,
+        "email": "robrich9+32ouy4q86yq4vjowp7v+32ov6mge6mzn0p4461b+1772b1vb01@boards.trello.com",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "idChecklists": [],
+        "idLabels": [],
+        "idList": "66795e44de3968ed7ec36584",
+        "idMemberCreator": "667953fe9089831796567bab",
+        "idMembers": [],
+        "idMembersVoted": [],
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "idShort": 5,
+        "idAttachmentCover": null,
+        "labels": [],
+        "limits": {
+          "attachments": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 1000,
+              "warnAt": 800
+            }
+          },
+          "checklists": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 500,
+              "warnAt": 400
+            }
+          },
+          "stickers": {
+            "perCard": {
+              "status": "ok",
+              "disableAt": 70,
+              "warnAt": 56
+            }
+          }
+        },
+        "locationName": null,
+        "manualCoverAttachment": false,
+        "name": "Distribution Platforms",
+        "nodeId": "ari:cloud:trello::card/workspace/667954c0cc125005803fe5d3/66795f09b2c9cadc55563f8f",
+        "pos": 327680,
+        "shortLink": "OPxdZkyY",
+        "shortUrl": "https://trello.com/c/OPxdZkyY",
+        "sourceEmail": null,
+        "staticMapUrl": null,
+        "start": null,
+        "subscribed": false,
+        "url": "https://trello.com/c/OPxdZkyY/5-distribution-platforms",
+        "cover": {
+          "idAttachment": null,
+          "color": null,
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "dark",
+          "idPlugin": null
+        },
+        "isTemplate": false,
+        "cardRole": null,
+        "attachments": [],
+        "pluginData": [],
+        "customFieldItems": []
+      }
+    ],
+    "labels": [
+      {
+        "id": "66795e391dc51400eb6f5118",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "name": "",
+        "color": "blue",
+        "uses": 0
+      },
+      {
+        "id": "66795e391dc51400eb6f5107",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "name": "",
+        "color": "green",
+        "uses": 0
+      },
+      {
+        "id": "66795e391dc51400eb6f5111",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "name": "",
+        "color": "orange",
+        "uses": 0
+      },
+      {
+        "id": "66795e391dc51400eb6f510e",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "name": "",
+        "color": "purple",
+        "uses": 0
+      },
+      {
+        "id": "66795e391dc51400eb6f5112",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "name": "",
+        "color": "red",
+        "uses": 0
+      },
+      {
+        "id": "66795e391dc51400eb6f510d",
+        "idBoard": "66795e367dba070ca85edc4f",
+        "name": "",
+        "color": "yellow",
+        "uses": 0
+      }
+    ],
+    "lists": [
+      {
+        "id": "66795e44de3968ed7ec36584",
+        "name": "To Do",
+        "closed": false,
+        "color": null,
+        "idBoard": "66795e367dba070ca85edc4f",
+        "pos": 65536,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/66795e44de3968ed7ec36584"
+      },
+      {
+        "id": "66795e4722f10fd19c61799f",
+        "name": "Doing",
+        "closed": false,
+        "color": null,
+        "idBoard": "66795e367dba070ca85edc4f",
+        "pos": 131072,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/66795e4722f10fd19c61799f"
+      },
+      {
+        "id": "66795e4945fc40b02767cefa",
+        "name": "Done",
+        "closed": false,
+        "color": null,
+        "idBoard": "66795e367dba070ca85edc4f",
+        "pos": 196608,
+        "subscribed": false,
+        "softLimit": null,
+        "creationMethod": null,
+        "idOrganization": "667954c0cc125005803fe5d3",
+        "limits": {
+          "cards": {
+            "openPerList": {
+              "status": "ok",
+              "disableAt": 5000,
+              "warnAt": 4000
+            },
+            "totalPerList": {
+              "status": "ok",
+              "disableAt": 1000000,
+              "warnAt": 800000
+            }
+          }
+        },
+        "nodeId": "ari:cloud:trello::list/workspace/667954c0cc125005803fe5d3/66795e4945fc40b02767cefa"
+      }
+    ],
+    "members": [
+      {
+        "id": "667953fe9089831796567bab",
+        "aaId": "712020:ddad0e00-0cef-4517-91ed-c8a5403ff914",
+        "activityBlocked": false,
+        "avatarHash": "1eb311c1f4db8f69abaf24f9fa82dcbe",
+        "avatarUrl": "https://trello-members.s3.amazonaws.com/667953fe9089831796567bab/1eb311c1f4db8f69abaf24f9fa82dcbe",
+        "bio": "",
+        "bioData": null,
+        "confirmed": true,
+        "fullName": "Rob Rich",
+        "idEnterprise": null,
+        "idEnterprisesDeactivated": [],
+        "idMemberReferrer": null,
+        "idPremOrgsAdmin": [],
+        "initials": "RR",
+        "memberType": "normal",
+        "nonPublic": {
+          "fullName": "Rob Rich",
+          "initials": "RR",
+          "avatarHash": null
+        },
+        "nonPublicAvailable": true,
+        "products": [],
+        "url": "https://trello.com/robrich9",
+        "username": "robrich9",
+        "status": "disconnected"
+      }
+    ],
+    "checklists": [],
+    "customFields": [],
+    "memberships": [
+      {
+        "id": "66795e367dba070ca85edc5b",
+        "idMember": "667953fe9089831796567bab",
+        "memberType": "admin",
+        "unconfirmed": false,
+        "deactivated": false
+      }
+    ],
+    "pluginData": []
+  }

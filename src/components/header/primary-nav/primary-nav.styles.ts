@@ -4,7 +4,7 @@ export const ContainerStyle: CSS.Properties = {
     maxWidth: "md",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center"
+    justifyContent: "center",
 }
 
 export const ToolbarStyle: CSS.Properties = {

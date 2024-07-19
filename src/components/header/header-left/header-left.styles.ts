@@ -6,7 +6,7 @@ export const ContainerStyle: CSS.Properties = {
 }
 
 export const OpenButtonStyle: CSS.Properties = {
-  color: "inherit"
+  color: "inherit",
 }
 
 export const DrawerStyle: CSS.Properties = {}

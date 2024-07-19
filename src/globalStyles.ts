@@ -10,8 +10,8 @@ const GlobalVariables: GlobalVariablesInterface = {
   fontSizeBig: "2.375rem",
   fontSizeSmall: "1.18rem",
   fontSizeMedium: "1.75rem",
-  titleFont: "'Josefin Sans', sans-serif;",
-  paragraphFont: "font-family: 'Alata', sans-serif;"
+  titleFont: "'Satisfy', cursive",
+  paragraphFont: "'Satisfy', cursive"
 };
 
 const GlobalStyle = createGlobalStyle`

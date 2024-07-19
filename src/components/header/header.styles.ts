@@ -14,5 +14,5 @@ export const AppBarStyle: CSS.Properties = {
     backgroundImage: "linear-gradient(180deg, #43724D 11%, #9ADBE0 61%, #f7E581 78%, #ffffff 95%)",
     opacity: "95%",
     paddingLeft: "3rem",
-    paddingRight: "3rem"
+    paddingRight: "3rem",
 }

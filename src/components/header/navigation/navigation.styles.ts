@@ -3,7 +3,7 @@ import CSS from 'csstype';
 export const ContainerStyle: CSS.Properties = {
     display: "flex",
     flexDirection: "row",
-    maxWidth: "sm"
+    maxWidth: "sm",
 }
 
 export const AccountButton: CSS.Properties = {
