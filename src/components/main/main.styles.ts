@@ -13,11 +13,11 @@ export const MainWrapper: CSS.Properties = {
 
 export const MainTitle: CSS.Properties = {
   marginBottom: '23%',
-  marginTop: '17%',
-  paddingTop: '4rem',
+  marginTop: '25%',
+  paddingTop: '6.25rem',
   color: '#C47E37',
   padding: '3%',
-  top: '5%',
+  top: '45%',
   width: '65vw',
   height: '30vh',
   textAlign: 'center',

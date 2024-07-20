@@ -18,7 +18,7 @@ export const AppBarStyle: CSS.Properties = {
 }
 
 export const HeaderLeftStyle: CSS.Properties = {
-
+    zIndex: "9999"
 }
 
 export const PrimaryNavStyle: CSS.Properties = {
@@ -27,5 +27,5 @@ export const PrimaryNavStyle: CSS.Properties = {
 }
 
 export const NavigationStyle: CSS.Properties = {
-
+    zIndex: "9999"
 }

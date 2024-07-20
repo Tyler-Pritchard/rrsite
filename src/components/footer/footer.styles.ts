@@ -28,7 +28,6 @@ export const TopFooterBody: CSS.Properties = {
     width: '30rem',
     float: 'right',
     marginTop: '9rem',
-    marginRight: '4rem',
 };
 
 export const TopFooterBrow: CSS.Properties = {

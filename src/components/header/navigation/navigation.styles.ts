@@ -7,9 +7,11 @@ export const ContainerStyle: CSS.Properties = {
 }
 
 export const AccountButton: CSS.Properties = {
-    fontSize: "large"
+    fontSize: "large",
+    color: "white"
 }
 
 export const CartButton: CSS.Properties = {
-    fontSize: "large"
+    fontSize: "large",
+    color: "white"
 }
