@@ -14,7 +14,6 @@ export const MainWrapper: CSS.Properties = {
 export const MainTitle: CSS.Properties = {
   marginBottom: '23%',
   marginTop: '25%',
-  paddingTop: '6.25rem',
   color: '#C47E37',
   padding: '3%',
   top: '45%',
@@ -22,5 +21,6 @@ export const MainTitle: CSS.Properties = {
   height: '30vh',
   textAlign: 'center',
   backgroundColor: '#FCE4AD',
-  opacity: '90%'
+  opacity: '90%',
+  paddingTop: '6.2rem',
 };

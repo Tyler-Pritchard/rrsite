@@ -34,7 +34,7 @@ export const SubmenuItems = styled.ul`
 export const SubmenuLink = styled.a`
     color: #fff;
     text-decoration: none;
-    opacity: 1;
+    opacity: 1 !important;
 
     &:hover {
         text-decoration: underline;
