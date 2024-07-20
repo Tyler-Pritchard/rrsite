@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+
 interface GlobalVariablesInterface {
   fontSizeBig: string;
   fontSizeSmall: string;
@@ -6,6 +7,7 @@ interface GlobalVariablesInterface {
   paragraphFont: string;
   titleFont: string;
 }
+
 const GlobalVariables: GlobalVariablesInterface = {
   fontSizeBig: "2.375rem",
   fontSizeSmall: "1.18rem",
