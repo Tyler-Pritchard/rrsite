@@ -18,7 +18,9 @@ import videos from "../../../assets/images/desktop/videos_thumb.png";
 import photos from "../../../assets/images/desktop/photos_thumb.png";
 import podcast from "../../../assets/images/desktop/podcast_thumb.png";
 import fans from "../../../assets/images/desktop/fan_club_thumb.png";
+import shop from "../../../assets/images/desktop/shop_thumb.png";
 import FanClubMenu from './fan-club-menu';
+import ShopMenu from './shop-menu';
 
 interface SubmenuItem {
   label: string;
@@ -27,6 +29,11 @@ interface SubmenuItem {
 }
 
 interface FanClubItem {
+  label: string;
+  link: string;
+}
+
+interface ShopItem {
   label: string;
   link: string;
 }
@@ -40,44 +47,53 @@ interface PrimaryNavProps {
 const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hideSubmenu }) => {
   const submenuItems: { [key: string]: SubmenuItem[] } = {
     band: [
-      { label: 'Timeline', link: '/band/timeline', imgSrc: timelineImg },
-      { label: 'History', link: '/history', imgSrc: historyImg },
+      { label: 'TIMELINE', link: '/band/timeline', imgSrc: timelineImg },
+      { label: 'HISTORY', link: '/history', imgSrc: historyImg },
     ],
 
     tour: [
-      { label: 'Upcoming Dates', link: '/tour', imgSrc: tour },
-      { label: 'Past Dates', link: '/tour/past', imgSrc: past },
+      { label: 'UPCOMING DATES', link: '/tour', imgSrc: tour },
+      { label: 'PAST DATES', link: '/tour/past', imgSrc: past },
     ],
     news: [
-      { label: 'News', link: '/news', imgSrc: news },
-      { label: 'In the Press', link: '/press', imgSrc: press },
-      { label: 'And on Top of That...', link: '/and-on-top-of-that', imgSrc: andOnTopOfThat },
+      { label: 'NEWS', link: '/news', imgSrc: news },
+      { label: 'IN THE PRESS', link: '/press', imgSrc: press },
+      { label: 'AND ON TOP OF THAT...', link: '/and-on-top-of-that', imgSrc: andOnTopOfThat },
     ],
     music: [
-      { label: 'Releases', link: '/releases', imgSrc: releases },
-      { label: 'Songs and Lyrics', link: '/songs', imgSrc: songs },
+      { label: 'RELEASES', link: '/releases', imgSrc: releases },
+      { label: 'SONGS AND LYRICS', link: '/songs', imgSrc: songs },
     ],
     media: [
-      { label: 'Videos', link: '/videos', imgSrc: videos },
-      { label: 'Photos', link: '/photos', imgSrc: photos },
-      { label: 'Podcast', link: '/podcast', imgSrc: podcast },
+      { label: 'VIDEOS', link: '/videos', imgSrc: videos },
+      { label: 'PHOTOS', link: '/photos', imgSrc: photos },
+      { label: 'PODCAST', link: '/podcast', imgSrc: podcast },
     ],
   };
 
   const fanClubItems: FanClubItem[] = [
-    { label: 'Sign Up', link: '/fans/join' },
-    { label: 'News', link: '/fans/benefits' },
-    { label: 'So What!', link: '/fans/events' },
-    { label: 'Contests', link: '/fans/join' },
-    { label: 'Videos', link: '/fans/benefits' },
-    { label: 'Photos', link: '/fans/events' },
-    { label: 'Forums', link: '/fans/benefits' },
-    { label: 'Local Chapters', link: '/fans/events' },
+    { label: 'SIGN UP', link: '/fans/join' },
+    { label: 'NEWS', link: '/fans/benefits' },
+    { label: 'SO WHAT!', link: '/fans/events' },
+    { label: 'CONTESTS', link: '/fans/join' },
+    { label: 'VIDEOS', link: '/fans/benefits' },
+    { label: 'PHOTOS', link: '/fans/events' },
+    { label: 'FORUMS', link: '/fans/benefits' },
+    { label: 'LOCAL CHAPTERS', link: '/fans/events' },
+  ];
+
+  const shopItems: ShopItem[] = [
+    { label: 'NEW & FEATURED', link: '/store/featured' },
+    { label: 'MEDIA', link: '/store/media' },
+    { label: 'APPAREL', link: '/store/apparel' },
+    { label: 'ACCESSORIES', link: '/store/accessories' },
+    { label: 'COLLECTIONS', link: '/store/collections' },
   ];
 
   return (
     <nav style={ContainerStyle}>
       <Toolbar style={ToolbarStyle}>
+        {/* band */}
         <NavItem
           onMouseEnter={() => showSubmenu('band')}
           onMouseLeave={hideSubmenu}
@@ -85,6 +101,7 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           <NavLink href="/band">Band</NavLink>
           {visibleSubmenu === 'band' && <Submenu items={submenuItems.band} show />}
         </NavItem>
+        {/* tour */}
         <NavItem
           onMouseEnter={() => showSubmenu('tour')}
           onMouseLeave={hideSubmenu}
@@ -92,31 +109,39 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           <NavLink href="/tour">Tour</NavLink>
           {visibleSubmenu === 'tour' && <Submenu items={submenuItems.tour} show />}
         </NavItem>
+        {/* news  */}
         <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('news')} onMouseLeave={hideSubmenu}>
           <NavLink href="/news">News</NavLink>
           {visibleSubmenu === 'news' && <Submenu items={submenuItems.news} show />}
         </NavItem>
+        {/* logo  */}
         <NavItem>
           <img src={Logo} alt="Logo" style={LogoStyle}/>
         </NavItem>
+        {/* music  */}
         <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('music')}
           onMouseLeave={hideSubmenu}>
           <NavLink href="/music">Music</NavLink>
           {visibleSubmenu === 'music' && <Submenu items={submenuItems.music} show />}
         </NavItem>
+        {/* media  */}
         <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('media')}
           onMouseLeave={hideSubmenu}>
           <NavLink href="/media">Media</NavLink>
           {visibleSubmenu === 'media' && <Submenu items={submenuItems.media} show />}
         </NavItem>
+        {/* fans  */}
         <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('fans')}
           onMouseLeave={hideSubmenu}>
           <NavLink href="/fans">Fan Club</NavLink>
             {visibleSubmenu === 'fans' && <FanClubMenu items={fanClubItems} show backgroundImage={fans} />}
         </NavItem>
-
-        {/* to do */}
-        <NavItem style={ButtonStyle}><NavLink href="/shop">Shop</NavLink></NavItem>
+        {/* shop  */}
+        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('shop')}
+          onMouseLeave={hideSubmenu}>
+          <NavLink href="/shop">Shop</NavLink>
+          {visibleSubmenu === 'shop' && <ShopMenu items={shopItems} show backgroundImage={shop} />}
+        </NavItem>
       </Toolbar>
     </nav>
   );
