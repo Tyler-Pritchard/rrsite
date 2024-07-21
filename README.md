@@ -21,6 +21,7 @@ Footer Bottom
 * NodeJS
 * Typescript
 * MaterialUI
+* Redux
 
 ### Installing
 

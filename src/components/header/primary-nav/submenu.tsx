@@ -1,5 +1,5 @@
 import React from 'react';
-import { SubmenuWrapper, SubmenuItem, SubmenuLink, SubmenuItems } from './submenu.styles';
+import { SubmenuWrapper, SubmenuItems, SubmenuItem, SubmenuLink } from './submenu.styles';
 
 interface SubmenuProps {
   items: { label: string, link: string, imgSrc: string }[];
@@ -11,10 +11,12 @@ const Submenu: React.FC<SubmenuProps> = ({ items, show }) => {
     <SubmenuWrapper show={show}>
       <SubmenuItems>
         {items.map((item, index) => (
-            <SubmenuItem key={index} style={{ backgroundImage: `url(${item.imgSrc})`}}>
-            <span>
-              <SubmenuLink href={item.link}>{item.label}</SubmenuLink>
-            </span>
+          <SubmenuItem key={index} backgroundImage={item.imgSrc}>
+            <div className="content">
+              <span>
+                <SubmenuLink href={item.link}>{item.label}</SubmenuLink>
+              </span>
+            </div>
           </SubmenuItem>
         ))}
       </SubmenuItems>

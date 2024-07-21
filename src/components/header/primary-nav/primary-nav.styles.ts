@@ -28,7 +28,8 @@ export const ContainerStyle: CSS.Properties = {
     height: "10rem",
 }
 
-export const ToolbarStyle: CSS.Properties = {}
+export const ToolbarStyle: CSS.Properties = {
+}
 
 export const ButtonStyle: CSS.Properties = {
     color: "white",

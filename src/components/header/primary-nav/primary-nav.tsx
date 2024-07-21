@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Toolbar from '@mui/material/Toolbar';
 import { NavItem, NavLink, ContainerStyle, ToolbarStyle, ButtonStyle, LogoStyle } from './primary-nav.styles';
+import { connect } from 'react-redux';
+import { showSubmenu, hideSubmenu } from '../../../store/actions/menuActions';
 import Submenu from './submenu';
 import Logo from "../../../assets/icons/logo4.png";
 import timelineImg from "../../../assets/images/desktop/robrichclassic.png";
@@ -8,41 +10,49 @@ import historyImg from "../../../assets/images/desktop/richhistory.png";
 import tour from "../../../assets/images/desktop/upcoming_dates_thumb.png";
 import past from "../../../assets/images/desktop/past_dates_thumb.png";
 
-const PrimaryNav: React.FC = () => {
-  const [showSubmenu, setShowSubmenu] = useState(false);
+interface SubmenuItem {
+  label: string;
+  link: string;
+  imgSrc: string;
+}
 
-  const handleMouseEnter = () => {
-    setShowSubmenu(true);
+interface PrimaryNavProps {
+  visibleSubmenu: string | null;
+  showSubmenu: (menu: string) => void;
+  hideSubmenu: () => void;
+}
+
+const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hideSubmenu }) => {
+  const submenuItems: { [key: string]: SubmenuItem[] } = {
+    band: [
+      { label: 'Timeline', link: '/band/timeline', imgSrc: timelineImg },
+      { label: 'History', link: '/history', imgSrc: historyImg },
+    ],
+
+    tour: [
+      { label: 'Upcoming Dates', link: '/tour', imgSrc: tour },
+      { label: 'Past Dates', link: '/tour/past', imgSrc: past },
+    ]
   };
-
-  const handleMouseLeave = () => {
-    setShowSubmenu(false);
-  };
-
-  const submenuItems1 = [
-    { label: 'Timeline', link: '/timeline', imgSrc: timelineImg },
-    { label: 'History', link: '/history', imgSrc: historyImg },
-  ];
-
-  const submenuItems2 = [
-    { label: 'Past', link: '/tour/past', imgSrc: past },
-    { label: 'Tour', link: '/tour', imgSrc: tour },
-  ];
 
   return (
     <nav style={ContainerStyle}>
       <Toolbar style={ToolbarStyle}>
 
         {/* band */}
-        <NavItem style={ButtonStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <NavItem
+          onMouseEnter={() => showSubmenu('band')}
+          onMouseLeave={hideSubmenu}
+        >
           <NavLink href="/band">Band</NavLink>
-          <Submenu items={submenuItems1} show={showSubmenu} />
+          {visibleSubmenu === 'band' && <Submenu items={submenuItems.band} show />}
         </NavItem>
-        
-        {/* tour */}
-        <NavItem style={ButtonStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <NavItem
+          onMouseEnter={() => showSubmenu('tour')}
+          onMouseLeave={hideSubmenu}
+        >
           <NavLink href="/tour">Tour</NavLink>
-          <Submenu items={submenuItems2} show={showSubmenu} />
+          {visibleSubmenu === 'tour' && <Submenu items={submenuItems.tour} show />}
         </NavItem>
 
         {/* to do */}
@@ -59,5 +69,13 @@ const PrimaryNav: React.FC = () => {
   );
 };
 
-export default PrimaryNav;
+const mapStateToProps = (state: any) => ({
+  visibleSubmenu: state.menu.visibleSubmenu,
+});
 
+const mapDispatchToProps = {
+  showSubmenu,
+  hideSubmenu,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PrimaryNav);
