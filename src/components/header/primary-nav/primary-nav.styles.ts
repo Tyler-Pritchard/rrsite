@@ -37,5 +37,5 @@ export const ButtonStyle: CSS.Properties = {
 }
     
 export const LogoStyle: CSS.Properties = {
-    height: "8.5rem"
+    height: "7.5rem"
 }
