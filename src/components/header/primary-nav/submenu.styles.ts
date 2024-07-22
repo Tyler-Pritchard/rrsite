@@ -45,10 +45,7 @@ export const SubmenuItem = styled.li.withConfig({ shouldForwardProp: (prop) => i
         z-index: -1;
     }
 
-    .content {
-        position: relative;
-        z-index: 1;
-    }
+    .content {}
 `;
     
 export const SubmenuItems = styled.ul`

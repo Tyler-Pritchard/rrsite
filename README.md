@@ -62,3 +62,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Inspiration, code snippets, etc.
 * [Metallica](https://www.metallica.com)
+
+
+### KNOWN BUGS
+
+* Submenu Dropdown Hiding Nav Links
+    - Current Behavior: Nav menu items hidden on submenu when submenu is displayed.
+    - Expected Behavior: Nav menu links should always be displayed

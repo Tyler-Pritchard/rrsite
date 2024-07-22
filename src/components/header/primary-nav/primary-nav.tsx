@@ -72,20 +72,20 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
   };
 
   const fanClubItems: FanClubItem[] = [
-    { label: 'SIGN UP', link: '/fans/join' },
-    { label: 'NEWS', link: '/fans/benefits' },
-    { label: 'SO WHAT!', link: '/fans/events' },
-    { label: 'CONTESTS', link: '/fans/join' },
-    { label: 'VIDEOS', link: '/fans/benefits' },
-    { label: 'PHOTOS', link: '/fans/events' },
-    { label: 'FORUMS', link: '/fans/benefits' },
-    { label: 'LOCAL CHAPTERS', link: '/fans/events' },
+    { label: 'SIGN UP', link: '/register' },
+    { label: 'NEWS', link: '/fans/club-news' },
+    { label: 'SO WHAT!', link: '/fans/so-what' },
+    { label: 'CONTESTS', link: '/fans/contests' },
+    { label: 'VIDEOS', link: '/videos/?category=Fifth Member Exclusives' },
+    { label: 'PHOTOS', link: '/photos/?category=Fifth Member Exclusives' },
+    { label: 'FORUMS', link: 'https://www.forums.robrich.band' },
+    { label: 'LOCAL CHAPTERS', link: '/fans/local-chapters' },
   ];
 
   const shopItems: ShopItem[] = [
     { label: 'NEW & FEATURED', link: '/store/featured' },
-    { label: 'MEDIA', link: '/store/media' },
-    { label: 'APPAREL', link: '/store/apparel' },
+    { label: 'MEDIA', link: '/store/music' },
+    { label: 'APPAREL', link: '/store/clothing' },
     { label: 'ACCESSORIES', link: '/store/accessories' },
     { label: 'COLLECTIONS', link: '/store/collections' },
   ];
@@ -98,7 +98,7 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           onMouseEnter={() => showSubmenu('band')}
           onMouseLeave={hideSubmenu}
         >
-          <NavLink href="/band">Band</NavLink>
+          <NavLink style={ButtonStyle} href="/band/timeline">Band</NavLink>
           {visibleSubmenu === 'band' && <Submenu items={submenuItems.band} show />}
         </NavItem>
         {/* tour */}
@@ -116,12 +116,14 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
         </NavItem>
         {/* logo  */}
         <NavItem>
-          <img src={Logo} alt="Logo" style={LogoStyle}/>
+          <NavLink href="/">
+            <img src={Logo} alt="Logo" style={LogoStyle}/>
+          </NavLink>
         </NavItem>
         {/* music  */}
         <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('music')}
           onMouseLeave={hideSubmenu}>
-          <NavLink href="/music">Music</NavLink>
+          <NavLink href="/releases">Music</NavLink>
           {visibleSubmenu === 'music' && <Submenu items={submenuItems.music} show />}
         </NavItem>
         {/* media  */}
@@ -137,9 +139,10 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
             {visibleSubmenu === 'fans' && <FanClubMenu items={fanClubItems} show backgroundImage={fans} />}
         </NavItem>
         {/* shop  */}
-        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('shop')}
-          onMouseLeave={hideSubmenu}>
-          <NavLink href="/shop">Shop</NavLink>
+        {/* <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('shop')}
+          onMouseLeave={hideSubmenu}> */}
+        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('shop')} onMouseLeave={hideSubmenu}>
+          <NavLink href="/store-landing-page/home">Shop</NavLink>
           {visibleSubmenu === 'shop' && <ShopMenu items={shopItems} show backgroundImage={shop} />}
         </NavItem>
       </Toolbar>

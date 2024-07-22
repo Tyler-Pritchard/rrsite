@@ -15,7 +15,6 @@ export const FanClubWrapper = styled.div.withConfig({
     color: #fff;
     width: 100%;
     height: 20rem;
-    z-index: 1000;
 `;
 
 export const FanClubItem = styled.li`
@@ -43,10 +42,7 @@ export const FanClubItem = styled.li`
         z-index: -1;
     }
         
-    .content {
-        position: relative;
-        z-index: 1;
-    }
+    .content {}
 `;
         
 export const FanClubItems = styled.ul.withConfig({shouldForwardProp: (prop) => isPropValid(prop) && prop !== 'backgroundImage'})<FanClubItemProps>`

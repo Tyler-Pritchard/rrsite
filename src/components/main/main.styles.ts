@@ -22,5 +22,5 @@ export const MainTitle: CSS.Properties = {
   textAlign: 'center',
   backgroundColor: '#FCE4AD',
   opacity: '90%',
-  paddingTop: '6.2rem',
+  paddingTop: '6rem',
 };

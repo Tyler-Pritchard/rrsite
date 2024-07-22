@@ -6,18 +6,19 @@ export const NavItem = styled.li`
     position: relative;
     padding: 10px 20px;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9999 !important;
 `;
 
 export const NavLink = styled.a`
     color: #fff;
     position: relative;
     text-decoration: none;
-    z-index: 9999;
+    display: inline !important;
+    z-index: 9999 !important;
 
     &:hover {
         text-decoration: underline;
-        }
+    }
 `;
 
 export const ContainerStyle: CSS.Properties = {
@@ -26,6 +27,7 @@ export const ContainerStyle: CSS.Properties = {
     justifyContent: "center",
     overflow: "visible",
     height: "10rem",
+    zIndex: "9999"
 }
 
 export const ToolbarStyle: CSS.Properties = {
@@ -33,7 +35,7 @@ export const ToolbarStyle: CSS.Properties = {
 
 export const ButtonStyle: CSS.Properties = {
     color: "white",
-    zIndex: "9999"
+    zIndex: "9999",
 }
     
 export const LogoStyle: CSS.Properties = {

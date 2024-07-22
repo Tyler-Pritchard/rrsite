@@ -17,8 +17,8 @@ export default function HeaderLeft() {
     const menuItems = [
         { title: 'Tour', link: '/tour' },
         { title: 'News', link: '/news' },
-        { title: 'Band', link: '/band' },
-        { title: 'Music', link: '/music' },
+        { title: 'Band', link: '/band/timeline' },
+        { title: 'Music', link: '/store/music' },
         { title: 'Media', link: '/media' },
     ];
 

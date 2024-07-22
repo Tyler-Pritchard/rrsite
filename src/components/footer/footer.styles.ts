@@ -24,10 +24,10 @@ export const TopFooterWrapper: CSS.Properties = {
 
 export const TopFooterBody: CSS.Properties = {
     color: 'white',
-    height: '15rem',
+    height: '10rem',
     width: '30rem',
     float: 'right',
-    marginTop: '9rem',
+    marginTop: '6rem',
 };
 
 export const TopFooterBrow: CSS.Properties = {
