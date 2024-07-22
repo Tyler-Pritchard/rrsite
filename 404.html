@@ -4,14 +4,12 @@
     <meta charset="utf-8">
     <title>Page Not Found</title>
     <script type="text/javascript">
-      // JavaScript to handle client-side routing redirects
       (function() {
-        var currentPath = window.location.pathname;
-        var hashIndex = window.location.href.indexOf('#');
-        var hashFragment = hashIndex === -1 ? '' : window.location.href.substr(hashIndex);
-        
-        if (!hashFragment.includes(currentPath)) {
-          var redirectTo = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + '/#' + currentPath;
+        var path = window.location.pathname;
+        var hash = window.location.hash;
+
+        if (!hash.includes(path)) {
+          var redirectTo = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + '/#' + path;
           window.location.replace(redirectTo);
         }
       })();
