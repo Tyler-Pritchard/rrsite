@@ -6,8 +6,14 @@
     <script type="text/javascript">
       // JavaScript to handle client-side routing redirects
       (function() {
-        var redirectTo = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + window.location.pathname;
-        window.location.replace(redirectTo);
+        var currentPath = window.location.pathname;
+        var hashIndex = window.location.href.indexOf('#');
+        var hashFragment = hashIndex === -1 ? '' : window.location.href.substr(hashIndex);
+        
+        if (!hashFragment.includes(currentPath)) {
+          var redirectTo = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + '/#' + currentPath;
+          window.location.replace(redirectTo);
+        }
       })();
     </script>
   </head>
