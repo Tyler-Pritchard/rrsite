@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.bbcf40bc.js",
+    "main.js": "/static/js/main.d0677d74.js",
     "static/media/press_thumb.png": "/static/media/press_thumb.d18f5632ac7356c57774.png",
     "static/media/upcoming_dates_thumb.png": "/static/media/upcoming_dates_thumb.b99570b93ebaf3c46fbd.png",
     "static/media/robrichclassic.png": "/static/media/robrichclassic.0a2d4dd65c73766e806c.png",
@@ -29,9 +29,9 @@
     "static/media/facebook.svg": "/static/media/facebook.3bdb63affc8c4d4e722b4321797ccbab.svg",
     "index.html": "/index.html",
     "static/media/savage.svg": "/static/media/savage.25e5ce8bd7a32556e71f1a8db7efaadb.svg",
-    "main.bbcf40bc.js.map": "/static/js/main.bbcf40bc.js.map"
+    "main.d0677d74.js.map": "/static/js/main.d0677d74.js.map"
   },
   "entrypoints": [
-    "static/js/main.bbcf40bc.js"
+    "static/js/main.d0677d74.js"
   ]
 }
