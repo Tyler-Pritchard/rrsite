@@ -58,7 +58,7 @@ const App: React.FC = () => {
         <Route path="/store/accessories" element={<Construction />} />
         <Route path="/store/collections" element={<Construction />} />
         {/* Fallback route */}
-        <Route element={<Construction />} />
+        <Route path="*" element={<Construction />} />
       </Routes>
       <Footer />
     </ThemeProvider>

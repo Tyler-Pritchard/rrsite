@@ -1,6 +1,6 @@
 import React from 'react';
 import Toolbar from '@mui/material/Toolbar';
-import { NavItem, NavLink, ContainerStyle, ToolbarStyle, ButtonStyle, LogoStyle } from './primary-nav.styles';
+import { NavItem, NavLink, ContainerStyle, LogoStyle } from './primary-nav.styles';
 import { connect } from 'react-redux';
 import { showSubmenu, hideSubmenu } from '../../../store/actions/menuActions';
 import Submenu from './submenu';
@@ -92,13 +92,13 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
 
   return (
     <nav style={ContainerStyle}>
-      <Toolbar style={ToolbarStyle}>
+      <Toolbar>
         {/* band */}
         <NavItem
           onMouseEnter={() => showSubmenu('band')}
           onMouseLeave={hideSubmenu}
         >
-          <NavLink style={ButtonStyle} href="/band/timeline">Band</NavLink>
+          <NavLink href="/band/timeline">Band</NavLink>
           {visibleSubmenu === 'band' && <Submenu items={submenuItems.band} show />}
         </NavItem>
         {/* tour */}
@@ -110,7 +110,7 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           {visibleSubmenu === 'tour' && <Submenu items={submenuItems.tour} show />}
         </NavItem>
         {/* news  */}
-        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('news')} onMouseLeave={hideSubmenu}>
+        <NavItem onMouseEnter={() => showSubmenu('news')} onMouseLeave={hideSubmenu}>
           <NavLink href="/news">News</NavLink>
           {visibleSubmenu === 'news' && <Submenu items={submenuItems.news} show />}
         </NavItem>
@@ -121,27 +121,27 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           </NavLink>
         </NavItem>
         {/* music  */}
-        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('music')}
+        <NavItem onMouseEnter={() => showSubmenu('music')}
           onMouseLeave={hideSubmenu}>
           <NavLink href="/releases">Music</NavLink>
           {visibleSubmenu === 'music' && <Submenu items={submenuItems.music} show />}
         </NavItem>
         {/* media  */}
-        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('media')}
+        <NavItem onMouseEnter={() => showSubmenu('media')}
           onMouseLeave={hideSubmenu}>
           <NavLink href="/media">Media</NavLink>
           {visibleSubmenu === 'media' && <Submenu items={submenuItems.media} show />}
         </NavItem>
         {/* fans  */}
-        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('fans')}
+        <NavItem onMouseEnter={() => showSubmenu('fans')}
           onMouseLeave={hideSubmenu}>
           <NavLink href="/fans">Fan Club</NavLink>
             {visibleSubmenu === 'fans' && <FanClubMenu items={fanClubItems} show backgroundImage={fans} />}
         </NavItem>
         {/* shop  */}
-        {/* <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('shop')}
-          onMouseLeave={hideSubmenu}> */}
-        <NavItem style={ButtonStyle} onMouseEnter={() => showSubmenu('shop')} onMouseLeave={hideSubmenu}>
+        <NavItem onMouseEnter={() => showSubmenu('shop')}
+          onMouseLeave={hideSubmenu}>
+        {/* <NavItem onMouseEnter={() => showSubmenu('shop')}> */}
           <NavLink href="/store-landing-page/home">Shop</NavLink>
           {visibleSubmenu === 'shop' && <ShopMenu items={shopItems} show backgroundImage={shop} />}
         </NavItem>

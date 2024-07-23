@@ -1,24 +1,14 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <script type="text/javascript">
-      // JavaScript to handle client-side routing redirects
-      (function() {
-        var currentPath = window.location.pathname;
-        var hashIndex = window.location.href.indexOf('#');
-        var hashFragment = hashIndex === -1 ? '' : window.location.href.substr(hashIndex);
-        
-        if (!hashFragment.includes(currentPath)) {
-          var redirectTo = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + '/#' + currentPath;
-          window.location.replace(redirectTo);
-        }
-      })();
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rob Rich Official</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        window.location.href = "/#" + window.location.pathname;
     </script>
-  </head>
-  <body>
-    <h1>Page Not Found</h1>
-    <p>Redirecting...</p>
-  </body>
+</body>
 </html>

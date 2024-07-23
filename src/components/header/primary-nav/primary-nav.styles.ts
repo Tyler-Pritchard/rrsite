@@ -6,7 +6,6 @@ export const NavItem = styled.li`
     position: relative;
     padding: 10px 20px;
     cursor: pointer;
-    z-index: 9999 !important;
 `;
 
 export const NavLink = styled.a`
@@ -27,17 +26,8 @@ export const ContainerStyle: CSS.Properties = {
     justifyContent: "center",
     overflow: "visible",
     height: "10rem",
-    zIndex: "9999"
 }
-
-export const ToolbarStyle: CSS.Properties = {
-}
-
-export const ButtonStyle: CSS.Properties = {
-    color: "white",
-    zIndex: "9999",
-}
-    
+ 
 export const LogoStyle: CSS.Properties = {
     height: "7.5rem"
 }

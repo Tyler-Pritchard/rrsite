@@ -16,6 +16,7 @@ export const SubmenuWrapper = styled.div.withConfig({
     width: 100%;
     height: 20rem;
     z-index: 1000;
+
 `;
 
 export const SubmenuItem = styled.li.withConfig({ shouldForwardProp: (prop) => isPropValid(prop) && prop !== 'backgroundImage'
@@ -46,6 +47,9 @@ export const SubmenuItem = styled.li.withConfig({ shouldForwardProp: (prop) => i
     }
 
     .content {}
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
 `;
     
 export const SubmenuItems = styled.ul`
