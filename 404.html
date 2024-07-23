@@ -8,7 +8,7 @@
         var path = window.location.pathname + window.location.search;
         var redirectTo = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + '/#' + path;
         
-        if (window.location.hash !== '#' + path) {
+        if (!window.location.hash.startsWith('#' + path)) {
           window.location.replace(redirectTo);
         }
       })();
