@@ -58,6 +58,4 @@ Inspiration, code snippets, etc.
 
 ### KNOWN BUGS
 
-* Submenu Dropdown Hiding Nav Links
-    - Current Behavior: Nav menu items hidden on submenu when submenu is displayed.
-    - Expected Behavior: Nav menu links should always be displayed
+* None pending
