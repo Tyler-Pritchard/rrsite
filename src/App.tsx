@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import Main from "./components/main/main";
+import Home from "./pages/Home/Home";
 import Construction from './pages/Construction/Construction';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import GlobalStyle from "./globalStyles";
@@ -28,7 +28,7 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
         <Route path="/tour" element={<Construction />} />
         <Route path="/past" element={<Construction />} />
         <Route path="/news" element={<Construction />} />

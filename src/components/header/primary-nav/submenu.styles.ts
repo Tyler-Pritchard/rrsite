@@ -46,7 +46,9 @@ export const SubmenuItem = styled.li.withConfig({ shouldForwardProp: (prop) => i
         z-index: -1;
     }
 
-    .content {}
+    .content {
+        margin-top: 3rem;
+    }
     &:hover {
         background-color: rgba(0, 0, 0, 0.85);
     }
@@ -57,6 +59,7 @@ export const SubmenuItems = styled.ul`
     flex-direction: row;
     justify-content: space-evenly;
     height: 100%;
+
 ` 
     
 export const SubmenuLink = styled.a`

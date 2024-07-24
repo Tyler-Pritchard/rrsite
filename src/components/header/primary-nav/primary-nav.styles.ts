@@ -11,9 +11,8 @@ export const NavContainer = styled.div`
 export const NavItem = styled.li`
     display: inline-block;
     position: relative;
-    padding: 10px 20px;
     cursor: pointer;
-    padding-top: 4rem;
+    padding: 4.2rem 2rem;
     @media (max-width: 480px) {
         display: none;
     }

@@ -23,7 +23,7 @@ export const FanClubItem = styled.li`
     list-style: none;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding-top: 4rem;
     color: white;
     overflow: hidden;
     width: 100%;

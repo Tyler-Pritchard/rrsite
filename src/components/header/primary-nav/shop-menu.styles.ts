@@ -24,7 +24,7 @@ export const ShopItem = styled.li`
     list-style: none;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding-top: 4rem;
     color: white;
     overflow: hidden;
     width: 100%;
@@ -60,7 +60,7 @@ export const ShopItems = styled.ul.withConfig({shouldForwardProp: (prop) => isPr
 export const ShopLink = styled.a`
     color: #fff;
     text-decoration: none;
-    margin: 0 2rem;
+    margin: 0 3rem;
 
     &:hover {
         text-decoration: underline;
