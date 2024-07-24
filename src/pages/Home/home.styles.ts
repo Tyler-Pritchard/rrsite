@@ -4,7 +4,7 @@ import MainImage from '../../assets/images/desktop/TacomaCrows.png';
 export const MainWrapper = styled.div`
   background-image: url(${MainImage});
   top: 0;
-  width: 98%;
+  width: 99%;
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,10 +13,7 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
-
-  @media (max-width: 480px) {
-  }
+  margin: .1rem .1;
 `;
 
 export const MainTitle = styled.h1`

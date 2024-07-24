@@ -45,8 +45,8 @@ export const Logo = styled.img`
     display: inline-block;
 
     @media (max-width: 480px) {
-        margin-top: 1rem;
-        height: 6rem;
+
+        height: 5rem;
         display: inline-block;
     }
 `

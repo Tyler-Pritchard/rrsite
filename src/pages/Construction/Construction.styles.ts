@@ -8,10 +8,8 @@ export const ConstructionWrapper = styled.div`
   height: 100vh;
   text-align: center;
   background-color: #f3f3f3;
-  margin-top: 20rem;
-  margin-bottom: 10rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  padding-top: 25rem;
+  padding-bottom: 1.5rem;
 `;
 
 export const ContentContainer = styled.div`
