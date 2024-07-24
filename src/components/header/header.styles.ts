@@ -29,3 +29,10 @@ export const PrimaryNavStyle: CSS.Properties = {
 export const NavigationStyle: CSS.Properties = {
     zIndex: "9999"
 }
+
+
+// @media (max-width: 480px) {}
+// @media (max-width: 768px) {}
+// @media (max-width: 992px) {}
+// @media (max-width: 1200px) {}
+// @media (max-width: 1201px) {}

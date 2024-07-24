@@ -1,10 +1,9 @@
 import React from 'react';
-import Toolbar from '@mui/material/Toolbar';
-import { NavItem, NavLink, ContainerStyle, LogoStyle } from './primary-nav.styles';
+import { NavItem, NavLink, NavContainer, LogoItem, Logo, LogoLink } from './primary-nav.styles';
 import { connect } from 'react-redux';
 import { showSubmenu, hideSubmenu } from '../../../store/actions/menuActions';
 import Submenu from './submenu';
-import Logo from "../../../assets/icons/logo4.png";
+import Logo_image from "../../../assets/icons/logo4.png";
 import timelineImg from "../../../assets/images/desktop/robrichclassic.png";
 import historyImg from "../../../assets/images/desktop/richhistory.png";
 import tour from "../../../assets/images/desktop/upcoming_dates_thumb.png";
@@ -91,8 +90,7 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
   ];
 
   return (
-    <nav style={ContainerStyle}>
-      <Toolbar>
+    <NavContainer>
         {/* band */}
         <NavItem
           onMouseEnter={() => showSubmenu('band')}
@@ -115,11 +113,11 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           {visibleSubmenu === 'news' && <Submenu items={submenuItems.news} show />}
         </NavItem>
         {/* logo  */}
-        <NavItem>
-          <NavLink href="/">
-            <img src={Logo} alt="Logo" style={LogoStyle}/>
-          </NavLink>
-        </NavItem>
+        <LogoItem>
+          <LogoLink href="/">
+            <Logo src={Logo_image} alt="Logo" />
+          </LogoLink>
+        </LogoItem>
         {/* music  */}
         <NavItem onMouseEnter={() => showSubmenu('music')}
           onMouseLeave={hideSubmenu}>
@@ -145,8 +143,7 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           <NavLink href="/store-landing-page/home">Shop</NavLink>
           {visibleSubmenu === 'shop' && <ShopMenu items={shopItems} show backgroundImage={shop} />}
         </NavItem>
-      </Toolbar>
-    </nav>
+    </NavContainer>
   );
 };
 
