@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
-import { Container, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import {
+    Container,
+    OpenButton,
+    Drawer,
+    ModalContainer,
+    ModalMenu,
+    ModalMenuItem,
+    MenuItemText
+  } from './header-left.styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { ContainerStyle, OpenButtonStyle, DrawerStyle, ModalContainerStyle } from './header-left.styles';
 
-export default function HeaderLeft() {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-        if (event.type === 'keydown' && ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')) {
-            return;
-        }
-        setIsOpen(open);
+const HeaderLeft: React.FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    const toggleModal = () => {
+      setIsModalOpen(!isModalOpen);
     };
-
+  
     const menuItems = [
         { title: 'Tour', link: '/tour' },
         { title: 'News', link: '/news' },
@@ -23,24 +28,26 @@ export default function HeaderLeft() {
     ];
 
     return (
-        <Container style={ContainerStyle}>
-            <IconButton onClick={toggleDrawer(true)} edge="start" style={OpenButtonStyle} aria-label="menu">
+        <Container>
+            <OpenButton onClick={toggleModal}>
                 <MenuIcon />
-            </IconButton>
-            <Drawer anchor="top" open={isOpen} onClose={toggleDrawer(false)} variant="persistent" style={DrawerStyle}>
-                <Container style={ModalContainerStyle}>
-                    <IconButton onClick={toggleDrawer(false)}>
-                        <CloseIcon />
-                    </IconButton>
-                    <List>
+            </OpenButton>
+            {isModalOpen && (
+                <ModalContainer>
+                    <Drawer>
+                        <OpenButton onClick={toggleModal}><CloseIcon /></OpenButton>
+                        <ModalMenu>
                         {menuItems.map((item, index) => (
-                            <ListItem button key={index} onClick={toggleDrawer(false)}>
-                                <ListItemText primary={item.title} />
-                            </ListItem>
+                            <ModalMenuItem key={index} onClick={toggleModal}>
+                                <MenuItemText>{item.title}</MenuItemText>
+                            </ModalMenuItem>
                         ))}
-                    </List>
-                </Container>
-            </Drawer>
+                        </ModalMenu>
+                    </Drawer>
+                </ModalContainer>
+            )}
         </Container>
     );
-}
+  };
+  
+  export default HeaderLeft;

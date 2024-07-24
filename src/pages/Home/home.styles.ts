@@ -34,6 +34,7 @@ export const MainTitle = styled.h1`
   opacity: 90%;
   padding-top: 6rem;
   border: .5rem double gold;
+    z-index: 0;
 
   @media (max-width: 480px) {
     top: 45%;
