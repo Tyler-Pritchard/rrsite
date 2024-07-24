@@ -13,7 +13,12 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: .1rem .1;
+
+  @media (max-width: 480px) {
+    width: 102%;
+    height: 25rem;
+    padding-top: 4.5rem;
+  }
 `;
 
 export const MainTitle = styled.h1`
@@ -28,10 +33,13 @@ export const MainTitle = styled.h1`
   background-color: #fce4ad;
   opacity: 90%;
   padding-top: 6rem;
+  border: .5rem double gold;
 
   @media (max-width: 480px) {
-    border: 1px solid red;
-    margin-top: 50%;
+    top: 45%;
+    width: 65vw;
+    height: 8rem;
+    padding-top: 2rem;
   };
 `;
 

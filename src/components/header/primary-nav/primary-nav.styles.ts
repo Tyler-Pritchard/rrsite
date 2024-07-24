@@ -38,6 +38,10 @@ export const LogoItem = styled.li`
     cursor: pointer;
     padding-top: 1rem;
     z-index: 9999;
+
+    @media (max-width: 480px) {
+        padding-top: 1.75rem;
+    }
 `;
 
 export const Logo = styled.img`
@@ -45,7 +49,6 @@ export const Logo = styled.img`
     display: inline-block;
 
     @media (max-width: 480px) {
-
         height: 5rem;
         display: inline-block;
     }
