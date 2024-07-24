@@ -2,21 +2,20 @@ import React from 'react';
 import PrimaryNav from "./primary-nav/primary-nav";
 import HeaderLeft from "./header-left/header-left";
 import Navigation from "./navigation/navigation";
-import { AppBar } from "@mui/material";
-import { AppBarStyle,  HeaderLeftStyle, PrimaryNavStyle, NavigationStyle } from "./header.styles";
+import { AppBar,  HeaderLeftContainer, PrimaryNavContainer, NavigationContainer } from "./header.styles";
 
 const Header = () => {
   return (
-    <AppBar style={AppBarStyle} color="transparent">
-        <div style={HeaderLeftStyle} >
+    <AppBar>
+      <HeaderLeftContainer>
           <HeaderLeft />
-        </div>
-        <div style={PrimaryNavStyle}>
+      </HeaderLeftContainer>
+      <PrimaryNavContainer>
           <PrimaryNav />
-        </div>
-        <div style={NavigationStyle}>
+      </PrimaryNavContainer>
+      <NavigationContainer>
           <Navigation />
-        </div>
+      </NavigationContainer>
     </AppBar>
   );
 };

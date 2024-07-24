@@ -1,34 +1,43 @@
-import CSS from 'csstype';
+import styled from 'styled-components';
 
-export const AppBarStyle: CSS.Properties = {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "nowrap",
-    position: "absolute",
-    alignItems: "center",
-    border: ".5rem groove #f7E581",
-    justifyContent: "space-between",
-    width: "100%",
-    backgroundColor:  "#21b571",
-    backgroundImage: "linear-gradient(180deg, #43724D 11%, #9ADBE0 61%, #f7E581 78%, #ffffff 95%)",
-    opacity: "97%",
-    paddingLeft: "3rem",
-    paddingRight: "3rem",
-    height: "10rem"
-}
+export const AppBar = styled.div`
+    color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    align-items: center;
+    border: .5rem groove #f7E581;
+    justify-content: space-between;
+    width: 100%;
+    background-color:  #21b571;
+    background-image: linear-gradient(180deg, #43724D 11%, #9ADBE0 61%, #f7E581 78%, #ffffff 95%);
+    opacity: 97%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 10rem;
 
-export const HeaderLeftStyle: CSS.Properties = {
-    zIndex: "9999"
-}
+    @media (max-width: 480px) {
+        height: 7rem;
+    }
+`;
 
-export const PrimaryNavStyle: CSS.Properties = {
-    overflow: "visible",
-    width: "100%"
-}
+export const HeaderLeftContainer = styled.div`
+  z-index: 9999;
+`;
 
-export const NavigationStyle: CSS.Properties = {
-    zIndex: "9999"
-}
+export const PrimaryNavContainer = styled.nav`
+    overflow: visible;
+    width: 100%;
+    
+    @media (max-width: 480px) {
+        padding-top: 1rem;
+    }
+`;
+
+export const NavigationContainer = styled.div`
+  z-index: 9999;
+`;
 
 
 // @media (max-width: 480px) {}
