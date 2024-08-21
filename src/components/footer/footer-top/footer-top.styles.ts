@@ -1,29 +1,12 @@
 import styled, { css } from 'styled-components';
 import Metal from "../../../assets/images/desktop/savage.svg";
 
-export const TopFooterWrapper = styled.div<{ maxWidth?: string; disableGutters?: boolean }>`
+export const TopFooterWrapper = styled.div`
   height: 30rem;
   width: 100%;
   background-image: url(${Metal});
   background-size: cover;
   background-position: center;
-
-  ${({ maxWidth }) =>
-    maxWidth &&
-    css`
-      max-width: ${maxWidth};
-    `}
-
-  ${({ disableGutters }) =>
-    disableGutters
-      ? css`
-          padding-left: 0;
-          padding-right: 0;
-        `
-      : css`
-          padding-left: 16px; 
-          padding-right: 16px;
-  `}
 `;
 
 export const TopFooterBody = styled.div`

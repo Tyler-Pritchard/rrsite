@@ -3,7 +3,7 @@ import { TopFooterBody, TopFooterBrow, TopFooterWrapper, TopFooterCta, TopFooter
 
 const FooterTop = () => {
     return (
-        <TopFooterWrapper disableGutters={true} maxWidth="1200px">
+        <TopFooterWrapper>
             <TopFooterBody>
                 <TopFooterBrow>
                     <TopFooterCounter>3 STRONG AND COUNTING</TopFooterCounter>

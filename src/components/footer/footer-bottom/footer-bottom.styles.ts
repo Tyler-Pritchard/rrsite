@@ -9,8 +9,9 @@ export const BottomFooterWrapper = styled.div`
     border: '2px solid red';
 `;
 
-export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; flexItem?: boolean }>`
+export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; }>`
   width: 100%;
+  display: flex;
   height: 10px;
   background-color: white;
   margin-bottom: 1rem;
@@ -32,10 +33,6 @@ export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: str
     width: 10px;
     height: 100%;
   `}
-    /* Handling flexItem */
-  ${({ flexItem }) => flexItem && css`
-    flex: 1 1 auto; /* Example of making the element a flex item */
-  `}
 `;
 
 export const BottomIconsContainer = styled.div`
@@ -55,26 +52,15 @@ export const BottomIcons = styled.img`
   color: white;
 `;
 
-export const BottomLinksContainer = styled.div<{ maxWidth?: boolean; disableGutters?: boolean }>`
+export const BottomLinksContainer = styled.div`
   display: flex;
   // justify-content: center;
   // gap: 2rem;
   // flex-wrap: wrap;
   // flex-direction: row;
   // align-items: center;
-  // padding-left: ${({ disableGutters }) => (disableGutters ? '0' : '1rem')};
-  // padding-right: ${({ disableGutters }) => (disableGutters ? '0' : '1rem')};
   padding-left: 15%;
   padding-right: 15%;
-
-    ${({ maxWidth }) =>
-    maxWidth === false
-      ? css`
-          max-width: none;
-        `
-      : css`
-          max-width: 80%;
-        `}
 `;
 
 export const BottomFooterLinks = styled.a<{ disabled?: boolean }>`

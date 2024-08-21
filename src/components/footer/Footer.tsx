@@ -7,7 +7,7 @@ import { FooterWrapper } from "./footer.styles";
 
 const Footer = () => {
     return (
-        <FooterWrapper maxWidth="1200px" disableGutters={true}>
+        <FooterWrapper>
             <FooterTop />
             <FooterMiddle />
             <FooterBottom />

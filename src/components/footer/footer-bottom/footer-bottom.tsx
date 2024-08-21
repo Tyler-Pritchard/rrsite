@@ -46,22 +46,22 @@ const FooterBottom = () => {
             <BottomFooterDivider variant='fullWidth' aria-hidden="false" />
 
             {/* Text Links Container  */}
-            <BottomLinksContainer maxWidth={false} disableGutters={true}>
+            <BottomLinksContainer>
                 <Stack direction="row" spacing={2}>
                     <BottomFooterLinks href="#text-buttons">HELP</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">RETURNS</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">CREDITS</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">TERMS OF USE</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">PRIVACY POLICY</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks disabled>© ROB RICH</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks disabled>© UNCROSSED RECORDINGS</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks disabled>THE ROB RICH CLUB®</BottomFooterLinks>
                 </Stack>
             </BottomLinksContainer>

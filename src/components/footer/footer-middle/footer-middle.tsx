@@ -5,7 +5,7 @@ import { MiddleLogo } from './footer-middle.styles';
 
 const FooterMiddle = () => {
     return (
-        <MiddleFooterWrapper disableGutters={true} maxWidth="1200px">
+        <MiddleFooterWrapper>
             <MiddleInner >
                 <MiddleLogo src={Logo} alt="Rob Rich text logo" />
             </MiddleInner>
