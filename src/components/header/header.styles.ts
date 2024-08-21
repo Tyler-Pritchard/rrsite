@@ -18,7 +18,9 @@ export const AppBar = styled.div`
     height: 10rem;
 
     @media (max-width: 480px) {
-        height: 7rem;
+      position: relative;
+      overflow: contain;
+        border: 2px solid pink;
     }
 `;
 
@@ -31,7 +33,7 @@ export const PrimaryNavContainer = styled.nav`
     width: 100%;
     
     @media (max-width: 480px) {
-        padding-top: 1rem;
+        border: 2px solid red;
     }
 `;
 

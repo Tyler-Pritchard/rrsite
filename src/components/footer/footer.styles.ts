@@ -1,108 +1,165 @@
-//TO DO: Refactor exports/attributes
-import CSS from 'csstype';
+import styled, { css } from 'styled-components';
 import Metal from "../../assets/images/desktop/savage.svg";
 
 
-// FOOTER STYLES
-export const FooterWrapper: CSS.Properties = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: '100%',
-    height: 'auto',
-    backgroundColor: 'black',
-};
+// Footer Wrapper
+export const FooterWrapper = styled.footer<{ maxWidth?: string; disableGutters?: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: black;
 
-// FOOTER TOP STYLES
-export const TopFooterWrapper: CSS.Properties = {
-    height: '30rem',
-    width: '100%',
-    backgroundImage: `url(${Metal})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-};
+    ${({ maxWidth }) =>
+    maxWidth &&
+    css`
+      max-width: ${maxWidth};
+    `}
+  
+  ${({ disableGutters }) =>
+    disableGutters &&
+    css`
+      padding-left: 0;
+      padding-right: 0;
+    `}
+`;
 
-export const TopFooterBody: CSS.Properties = {
-    color: 'white',
-    height: '10rem',
-    width: '30rem',
-    float: 'right',
-    marginTop: '6rem',
-};
+// Footer Top Styles
+export const TopFooterWrapper = styled.div`
+  height: 30rem;
+  width: 100%;
+  background-image: url(${Metal});
+  background-size: cover;
+  background-position: center;
+`;
 
-export const TopFooterBrow: CSS.Properties = {
-    float: 'left',
-};
+export const TopFooterBody = styled.div`
+  color: white;
+  height: 10rem;
+  width: 30rem;
+  float: right;
+  margin-top: 6rem;
+`;
 
-export const TopFooterCounter: CSS.Properties = {
-    float: 'left',
-};
+export const TopFooterBrow = styled.div`
+  float: left;
+`;
 
-export const TopFooterCta: CSS.Properties = {
-    float: 'left',
-};
+export const TopFooterCounter = styled.div`
+  float: left;
+`;
 
-export const TopFooterButton: CSS.Properties = {
-    color: 'white',
-    float: 'left',
-    border: '2px solid white',
-};
+export const TopFooterCta = styled.div`
+  float: left;
+`;
 
+export const TopFooterButton = styled.button`
+  color: white;
+  float: left;
+  border: 2px solid white;
+`;
 
-// FOOTER MIDDLE STYLES
-export const MiddleFooterWrapper: CSS.Properties = {
-    height: '23rem',
-    backgroundColor: 'rgb(0, 0, 0)',
-};
+// Footer Middle Styles
+export const MiddleFooterWrapper = styled.div`
+  height: 23rem;
+  background-color: rgb(0, 0, 0);
+`;
 
-export const MiddleInner: CSS.Properties = {
+export const MiddleInner = styled.div``;
 
-};
+export const MiddleLogo = styled.div`
+  width: 30%;
+`;
 
-export const MiddleLogo: CSS.Properties = {
-    width: '30%',
-};
+export const MiddleMenu = styled.div``;
 
-export const MiddleMenu: CSS.Properties = {
-};
+// Footer Bottom Styles
+export const BottomFooterWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    height: 15rem;
+    background-color: rgb(0, 0, 0);
+    padding-top: 4rem;
+    border: '2px solid red';
+`;
 
+export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; flexItem?: boolean }>`
+  width: 100%;
+  height: 10px;
+  background-color: white;
+  margin-bottom: 1rem;
+  opacity: 0.6;
 
-// FOOTER BOTTOM STYLES
-export const BottomFooterWrapper: CSS.Properties = {
-    justifyContent: 'center',
-    height: "15rem",
-    backgroundColor: 'rgb(0, 0, 0)',
-    paddingTop: '4rem',
-};
+  /* Handling variant */
+  ${({ variant }) => variant === 'outlined' && css`
+    border: 2px solid white;
+    background-color: transparent;
+  `}
 
-export const BottomFooterDivider: CSS.Properties = {
-    height: '10px',
-    color: 'white',
-}
+  /* Handling maxWidth */
+  ${({ maxWidth }) => maxWidth && css`
+    max-width: ${maxWidth};
+  `}
 
-export const BottomIconsContainer: CSS.Properties = {
-    alignItems: 'center',
-    flexDirection: 'row',
-    backgroundColor: 'black',
-    paddingLeft: '25%',
-    paddingRight: '25%',
-}
+  /* Handling orientation */
+  ${({ orientation }) => orientation === 'vertical' && css`
+    width: 10px;
+    height: 100%;
+  `}
+    /* Handling flexItem */
+  ${({ flexItem }) => flexItem && css`
+    flex: 1 1 auto; /* Example of making the element a flex item */
+  `}
+`;
 
-export const BottomIcons: CSS.Properties = {
-    width: '2rem',
-    height: '2rem',
-    color: 'white'
-}
+export const BottomIconsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: black;
+  padding-left: 25%;
+  padding-right: 25%;
+`;
 
-export const BottomLinksContainer: CSS.Properties = {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft: '15%',
-    paddingRight: '15%',
-}
+export const BottomIconLink = styled.a``;
 
-export const BottomFooterLinks: CSS.Properties = {
-    fontSize: 'x-small',
-    color: 'white',
-    // TO DO: add underline on hover to active links
-}
+export const BottomIcons = styled.div`
+  width: 2rem;
+  height: 2rem;
+  color: white;
+`;
+
+export const BottomLinksContainer = styled.div<{ maxWidth?: boolean; disableGutters?: boolean }>`
+  display: flex;
+  // justify-content: center;
+  // gap: 2rem;
+  // flex-wrap: wrap;
+  // flex-direction: row;
+  // align-items: center;
+  // padding-left: ${({ disableGutters }) => (disableGutters ? '0' : '1rem')};
+  // padding-right: ${({ disableGutters }) => (disableGutters ? '0' : '1rem')};
+  padding-left: 15%;
+  padding-right: 15%;
+
+    ${({ maxWidth }) =>
+    maxWidth === false
+      ? css`
+          max-width: none;
+        `
+      : css`
+          max-width: 80%;
+        `}
+`;
+
+export const BottomFooterLinks = styled.a<{ disabled?: boolean }>`
+  font-size: x-small;
+  color: white;
+  text-decoration: none;
+  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')}; /* Prevent click if disabled */
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)}; /* Dim the link if disabled */
+
+  &:hover {
+    text-decoration: ${({ disabled }) => (disabled ? 'none' : 'underline')}; /* No hover effect if disabled */
+  }
+`;

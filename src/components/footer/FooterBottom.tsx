@@ -1,58 +1,71 @@
 import React from 'react';
-import {BottomNavigation, BottomNavigationAction, Container, Divider, Button, Stack} from '@mui/material';
+import {Stack} from '@mui/material';
 import {
-    BottomFooterWrapper, BottomFooterDivider, BottomIconsContainer, BottomLinksContainer, BottomIcons, BottomFooterLinks
+    BottomFooterWrapper, BottomFooterDivider, BottomIconsContainer, BottomLinksContainer, BottomIconLink, BottomIcons, BottomFooterLinks
 } from "./footer.styles";
-import {ReactComponent as XIcon} from '../../assets/icons/x.svg';
-import {ReactComponent as FacebookIcon} from '../../assets/icons/facebook.svg';
-import {ReactComponent as YouTubeIcon} from '../../assets/icons/youtube.svg';
-import {ReactComponent as InstagramIcon} from '../../assets/icons/instagram.svg';
-import { ReactComponent as TikTokIcon } from '../../assets/icons/tiktok.svg';
-import { ReactComponent as ThreadsIcon } from '../../assets/icons/threads.svg';
-import { ReactComponent as TextIcon } from '../../assets/icons/text.svg';
-import { ReactComponent as ListenIcon } from '../../assets/icons/listen.svg';
+import XIcon from '../../assets/icons/x.svg';
+import FacebookIcon from '../../assets/icons/facebook.svg';
+import YouTubeIcon from '../../assets/icons/youtube.svg';
+import InstagramIcon from '../../assets/icons/instagram.svg';
+import TikTokIcon from '../../assets/icons/tiktok.svg';
+import ThreadsIcon from '../../assets/icons/threads.svg';
+import TextIcon from '../../assets/icons/text.svg';
+import ListenIcon from '../../assets/icons/listen.svg';
 
 const FooterBottom = () => {
     return (
-        <Container style={BottomFooterWrapper} disableGutters={true} maxWidth={false}>
+        <BottomFooterWrapper>
             {/* Social Media Icons Container */}
-            <BottomNavigation
-                showLabels style={BottomIconsContainer}>
-                <BottomNavigationAction href="https://www.instagram.com/robrichusa/" style={BottomIcons} label="Instagram" icon={<InstagramIcon />} />
-                <BottomNavigationAction href="https://www.youtube.com/@RobRichUSA" style={BottomIcons} label="Youtube" icon={<YouTubeIcon />} />
-                <BottomNavigationAction href="https://www.facebook.com/RobRichUSA" style={BottomIcons} label="Facebook" icon={<FacebookIcon />} />
-                <BottomNavigationAction href="https://www.tiktok.com/@robrichusa" style={BottomIcons} label="TikTok" icon={<TikTokIcon />} />
-                <BottomNavigationAction href="https://www.threads.net/@robrichusa" style={BottomIcons} label="Threads" icon={<ThreadsIcon />} />
-                <BottomNavigationAction href="https://twitter.com/RobRichUSA" style={BottomIcons} label="X" icon={<XIcon />} />
-                <BottomNavigationAction disabled style={BottomIcons} label="Text" icon={<TextIcon />} />
-                <BottomNavigationAction disabled style={BottomIcons} label="Listen" icon={<ListenIcon />} />
-            </BottomNavigation>
+            <BottomIconsContainer>
+                <BottomIconLink href="https://www.instagram.com/robrichusa/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={InstagramIcon} />
+                </BottomIconLink>
+                <BottomIconLink href="https://www.youtube.com/@RobRichUSA" aria-label="Youtube" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={YouTubeIcon} />
+                </BottomIconLink>
+                <BottomIconLink href="https://www.facebook.com/RobRichUSA" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={FacebookIcon} />
+                </BottomIconLink>
+                <BottomIconLink href="https://www.tiktok.com/@robrichusa" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={TikTokIcon} />
+                </BottomIconLink>
+                <BottomIconLink href="https://www.threads.net/@robrichusa" aria-label="Threads" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={ThreadsIcon} />
+                </BottomIconLink>
+                <BottomIconLink href="https://twitter.com/RobRichUSA" aria-label="X" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={XIcon} />
+                </BottomIconLink>
+                <BottomIconLink href="https://www.robrich.band" aria-label="Text" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={TextIcon} />
+                </BottomIconLink>
+                <BottomIconLink href="https://www.reverbnation.com/robrichusa" aria-label="Listen" target="_blank" rel="noopener noreferrer">
+                    <BottomIcons as={ListenIcon} />
+                </BottomIconLink>
+            </BottomIconsContainer>
 
-
-    {/* TO DO: Figure out why MUI dividers won't appear white */}
-            <Divider sx={{ opacity: 0.6 }} variant='fullWidth' style={BottomFooterDivider} aria-hidden="false" />
+            <BottomFooterDivider variant='fullWidth' aria-hidden="false" />
 
             {/* Text Links Container  */}
-            <Container style={BottomLinksContainer} maxWidth={false} disableGutters={true}>
+            <BottomLinksContainer maxWidth={false} disableGutters={true}>
                 <Stack direction="row" spacing={2}>
-                    <Button href="#text-buttons" style={BottomFooterLinks}>HELP</Button>
-                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={BottomFooterDivider} />
-                    <Button href="#text-buttons" style={BottomFooterLinks}>RETURNS</Button>
-                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={BottomFooterDivider} />
-                    <Button href="#text-buttons" style={BottomFooterLinks}>CREDITS</Button>
-                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={BottomFooterDivider} />
-                    <Button href="#text-buttons" style={BottomFooterLinks}>TERMS OF USE</Button>
-                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={BottomFooterDivider} />
-                    <Button href="#text-buttons" style={BottomFooterLinks}>PRIVACY POLICY</Button>
-                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem />
-                    <Button disabled style={BottomFooterLinks}>© ROB RICH</Button>
-                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={BottomFooterDivider} />
-                    <Button disabled style={BottomFooterLinks}>© UNCROSSED RECORDINGS</Button>
-                    <Divider sx={{ opacity: 0.6 }} orientation="vertical" variant="middle" flexItem style={BottomFooterDivider} />
-                    <Button disabled style={BottomFooterLinks}>THE ROB RICH CLUB®</Button>
+                    <BottomFooterLinks href="#text-buttons">HELP</BottomFooterLinks>
+                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterLinks href="#text-buttons">RETURNS</BottomFooterLinks>
+                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterLinks href="#text-buttons">CREDITS</BottomFooterLinks>
+                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterLinks href="#text-buttons">TERMS OF USE</BottomFooterLinks>
+                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterLinks href="#text-buttons">PRIVACY POLICY</BottomFooterLinks>
+                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterLinks disabled>© ROB RICH</BottomFooterLinks>
+                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterLinks disabled>© UNCROSSED RECORDINGS</BottomFooterLinks>
+                    <BottomFooterDivider orientation="vertical" variant="middle" flexItem />
+                    <BottomFooterLinks disabled>THE ROB RICH CLUB®</BottomFooterLinks>
                 </Stack>
-            </Container>
-        </Container>
+            </BottomLinksContainer>
+        </BottomFooterWrapper>
     );
 }
 export default FooterBottom;

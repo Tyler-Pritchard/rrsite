@@ -45,18 +45,41 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
-  @media (max-width: 768px) { 
+/* Global media query for small screens */
+  @media (max-width: 480px) {
     body {
+      border: 2px solid blue;
       font-size: 12px;
+      padding: 5px;
     }
-    h1, h2 {
-      font-size: 1.2rem;
+
+    .container {
+      padding: 10px;
+      width: 100%;
     }
-    h3, .h3 {
-      font-size: 1.20rem;
+
+    /* Add more global styles here */
+  }
+
+  /* Existing media queries for larger screens */
+  @media (min-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 20px;
     }
-    .wrapper {
-      margin: 0 1vw;
+  }
+
+  @media (min-width: 992px) {
+    body {
+      font-size: 18px;
+      padding: 30px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+      padding: 40px;
     }
   }
 `;
