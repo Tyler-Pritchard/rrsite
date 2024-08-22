@@ -62,14 +62,13 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  @media (min-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+      
 //   /* Existing media queries for larger screens */
-//   @media (min-width: 768px) {
-//     body {
-//       font-size: 16px;
-//       padding: 20px;
-//     }
-//   }
-
 //   @media (min-width: 992px) {
 //     body {
 //       font-size: 18px;

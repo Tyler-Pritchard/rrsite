@@ -13,7 +13,7 @@ export const NavItem = styled.li`
     position: relative;
     cursor: pointer;
     padding: 4.2rem 2rem;
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         display: none;
     }
 `;
