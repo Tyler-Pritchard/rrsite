@@ -26,7 +26,10 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-size: 15px;
-    
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
     font-family: ${GlobalVariables.paragraphFont};
   }
   h1,h2 {
@@ -40,10 +43,10 @@ const GlobalStyle = createGlobalStyle`
     font-family:${GlobalVariables.titleFont};
     font-size: ${GlobalVariables.fontSizeMedium};
   }
-//   .wrapper{
-//     margin: 0 6.2vw;
+  .wrapper{
+    margin: 0 6.2vw;
 
-//   }
+  }
 
 // /* Global media query for small screens */
 //   @media (max-width: 480px) {

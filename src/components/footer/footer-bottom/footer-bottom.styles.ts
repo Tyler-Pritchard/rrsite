@@ -2,19 +2,21 @@ import styled, { css } from 'styled-components';
 
 export const BottomFooterWrapper = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: spece-evenly;
     height: 15rem;
+    width: 100vw;
     background-color: rgb(0, 0, 0);
-    padding-top: 4rem;
-    border: '2px solid red';
+    padding-top: 3rem;
 `;
 
 export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; }>`
-  width: 100%;
+  width: 100vw;
   display: flex;
-  height: 10px;
+  height: .15rem;
   background-color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   opacity: 0.6;
 
   /* Handling variant */
@@ -37,11 +39,11 @@ export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: str
 
 export const BottomIconsContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
   background-color: black;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-bottom: 2rem;
 `;
 
 export const BottomIconLink = styled.a``;
@@ -54,13 +56,21 @@ export const BottomIcons = styled.img`
 
 export const BottomLinksContainer = styled.div`
   display: flex;
-  // justify-content: center;
-  // gap: 2rem;
-  // flex-wrap: wrap;
-  // flex-direction: row;
-  // align-items: center;
-  padding-left: 15%;
-  padding-right: 15%;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
+  display: flex;
+  flex-direction: ${({ direction }) => direction || 'row'};
+  gap: ${({ spacing }) => spacing || '1rem'};
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  overflow-x: hidden;
 `;
 
 export const BottomFooterLinks = styled.a<{ disabled?: boolean }>`

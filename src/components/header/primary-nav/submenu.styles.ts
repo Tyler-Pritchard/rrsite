@@ -14,9 +14,11 @@ export const SubmenuWrapper = styled.div.withConfig({
     left: 0;
     color: #fff;
     width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     height: 20rem;
     z-index: 1000;
-
+    box-sizing: border-box;
 `;
 
 export const SubmenuItem = styled.li.withConfig({ shouldForwardProp: (prop) => isPropValid(prop) && prop !== 'backgroundImage'

@@ -1,7 +1,6 @@
 import React from 'react';
-import {Stack} from '@mui/material';
 import {
-    BottomFooterWrapper, BottomFooterDivider, BottomIconsContainer, BottomLinksContainer, BottomIconLink, BottomIcons, BottomFooterLinks
+    BottomFooterWrapper, BottomFooterDivider, BottomIconsContainer, BottomLinksContainer, FooterStack, BottomIconLink, BottomIcons, BottomFooterLinks
 } from "./footer-bottom.styles";
 import XIcon from '../../../assets/icons/x.svg';
 import FacebookIcon from '../../../assets/icons/facebook.svg';
@@ -47,7 +46,7 @@ const FooterBottom = () => {
 
             {/* Text Links Container  */}
             <BottomLinksContainer>
-                <Stack direction="row" spacing={2}>
+                <FooterStack direction="row" spacing="2rem">
                     <BottomFooterLinks href="#text-buttons">HELP</BottomFooterLinks>
                     <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">RETURNS</BottomFooterLinks>
@@ -63,7 +62,7 @@ const FooterBottom = () => {
                     <BottomFooterLinks disabled>© UNCROSSED RECORDINGS</BottomFooterLinks>
                     <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks disabled>THE ROB RICH CLUB®</BottomFooterLinks>
-                </Stack>
+                </FooterStack>
             </BottomLinksContainer>
         </BottomFooterWrapper>
     );
