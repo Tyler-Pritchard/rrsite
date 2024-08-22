@@ -4,9 +4,18 @@ import Metal from "../../../assets/images/desktop/savage.svg";
 export const TopFooterWrapper = styled.div`
   height: 30rem;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   background-image: url(${Metal});
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const TopFooterBody = styled.div`
@@ -15,6 +24,15 @@ export const TopFooterBody = styled.div`
   width: 30rem;
   float: right;
   margin-top: 6rem;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: .5rem;
+    width: 99vw;
+  }
 `;
 
 export const TopFooterBrow = styled.div`
