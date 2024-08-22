@@ -44,7 +44,6 @@ export const MainTitle = styled.h1`
   };
 `;
 
-
 // @media (max-width: 480px) {}
 // @media (max-width: 768px) {}
 // @media (max-width: 992px) {}
