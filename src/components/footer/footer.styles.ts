@@ -7,4 +7,8 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   height: auto;
   background-color: black;
+
+  @media (max-width: 480px) {
+    width: 100vw;
+  }
 `;

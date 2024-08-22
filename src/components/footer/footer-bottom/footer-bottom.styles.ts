@@ -1,14 +1,19 @@
 import styled, { css } from 'styled-components';
 
 export const BottomFooterWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: spece-evenly;
-    height: 15rem;
-    width: 100vw;
-    background-color: rgb(0, 0, 0);
-    padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: spece-evenly;
+  height: 15rem;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  padding-top: 3rem;
+
+  @media (max-width: 480px) {
+    height: auto;
+    overflow: hidden;
+  }
 `;
 
 export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; }>`
@@ -44,6 +49,10 @@ export const BottomIconsContainer = styled.div`
   width: 30vw;
   background-color: black;
   padding-bottom: 2rem;
+
+  @media (max-width: 480px) {
+    width: 100vw;
+  }
 `;
 
 export const BottomIconLink = styled.a``;
@@ -61,8 +70,9 @@ export const BottomLinksContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  
 `;
-
+    //TODO: get rid of spacing prop
 export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
   display: flex;
   flex-direction: ${({ direction }) => direction || 'row'};
@@ -71,6 +81,13 @@ export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
   justify-content: center;
   max-width: 100vw;
   overflow-x: hidden;
+
+  @media (max-width: 480px) {
+    width: 80vw;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const BottomFooterLinks = styled.a<{ disabled?: boolean }>`
