@@ -51,7 +51,7 @@ export const BottomIconsContainer = styled.div`
   padding-bottom: 2rem;
 
   @media (max-width: 480px) {
-    width: 100vw;
+    width: 95vw;
   }
 `;
 
