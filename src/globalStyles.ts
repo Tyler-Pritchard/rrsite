@@ -40,48 +40,48 @@ const GlobalStyle = createGlobalStyle`
     font-family:${GlobalVariables.titleFont};
     font-size: ${GlobalVariables.fontSizeMedium};
   }
-  .wrapper{
-    margin: 0 6.2vw;
+//   .wrapper{
+//     margin: 0 6.2vw;
 
-  }
+//   }
 
-/* Global media query for small screens */
-  @media (max-width: 480px) {
-    body {
-      border: 2px solid blue;
-      font-size: 12px;
-      padding: 5px;
-    }
+// /* Global media query for small screens */
+//   @media (max-width: 480px) {
+//     body {
+//       border: 2px solid blue;
+//       font-size: 12px;
+//       padding: 5px;
+//     }
 
-    .container {
-      padding: 10px;
-      width: 100%;
-    }
+//     .container {
+//       padding: 10px;
+//       width: 100%;
+//     }
 
-    /* Add more global styles here */
-  }
+//     /* Add more global styles here */
+//   }
 
-  /* Existing media queries for larger screens */
-  @media (min-width: 768px) {
-    body {
-      font-size: 16px;
-      padding: 20px;
-    }
-  }
+//   /* Existing media queries for larger screens */
+//   @media (min-width: 768px) {
+//     body {
+//       font-size: 16px;
+//       padding: 20px;
+//     }
+//   }
 
-  @media (min-width: 992px) {
-    body {
-      font-size: 18px;
-      padding: 30px;
-    }
-  }
+//   @media (min-width: 992px) {
+//     body {
+//       font-size: 18px;
+//       padding: 30px;
+//     }
+//   }
 
-  @media (min-width: 1200px) {
-    body {
-      font-size: 20px;
-      padding: 40px;
-    }
-  }
-`;
+//   @media (min-width: 1200px) {
+//     body {
+//       font-size: 20px;
+//       padding: 40px;
+//     }
+//   }
+// `;
 
 export default GlobalStyle;

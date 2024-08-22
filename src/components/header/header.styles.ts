@@ -16,11 +16,12 @@ export const AppBar = styled.div`
     padding-left: 3rem;
     padding-right: 3rem;
     height: 10rem;
+    border: 2px solid orange;
 
     @media (max-width: 480px) {
       position: relative;
-      overflow: contain;
-        border: 2px solid pink;
+      overflow: auto;
+      border: 2px solid pink;
     }
 `;
 

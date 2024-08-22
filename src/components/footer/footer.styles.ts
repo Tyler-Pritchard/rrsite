@@ -7,4 +7,5 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   height: auto;
   background-color: black;
+  border: 2px solid red;
 `;
