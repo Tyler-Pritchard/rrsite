@@ -3,7 +3,6 @@ import MainImage from '../../assets/images/desktop/TacomaCrows.png';
 
 export const MainWrapper = styled.div`
   background-image: url(${MainImage});
-  top: 0;
   width: 99%;
   height: auto;
   background-size: cover;
@@ -43,9 +42,3 @@ export const MainTitle = styled.h1`
     padding-top: 2rem;
   };
 `;
-
-// @media (max-width: 480px) {}
-// @media (max-width: 768px) {}
-// @media (max-width: 992px) {}
-// @media (max-width: 1200px) {}
-// @media (max-width: 1201px) {}

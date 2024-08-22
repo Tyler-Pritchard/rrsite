@@ -41,7 +41,7 @@ export const BottomIconsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100vw;
+  width: 30vw;
   background-color: black;
   padding-bottom: 2rem;
 `;

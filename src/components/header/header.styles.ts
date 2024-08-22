@@ -30,10 +30,6 @@ export const HeaderLeftContainer = styled.div`
 export const PrimaryNavContainer = styled.nav`
     overflow: visible;
     width: 100%;
-    
-    @media (max-width: 480px) {
-        border: 2px solid red;
-    }
 `;
 
 export const NavigationContainer = styled.div`

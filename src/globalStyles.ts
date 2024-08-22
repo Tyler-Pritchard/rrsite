@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 interface GlobalVariablesInterface {
   fontSizeBig: string;
   fontSizeSmall: string;
+  fontSizeXSmall: string;
   fontSizeMedium: string;
   paragraphFont: string;
   titleFont: string;
@@ -11,6 +12,7 @@ interface GlobalVariablesInterface {
 const GlobalVariables: GlobalVariablesInterface = {
   fontSizeBig: "2.375rem",
   fontSizeSmall: "1.18rem",
+  fontSizeXSmall: "1.00rem",
   fontSizeMedium: "1.75rem",
   titleFont: "'Satisfy', cursive",
   paragraphFont: "'Satisfy', cursive"
@@ -48,21 +50,17 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
-// /* Global media query for small screens */
-//   @media (max-width: 480px) {
-//     body {
-//       border: 2px solid blue;
-//       font-size: 12px;
-//       padding: 5px;
-//     }
-
-//     .container {
-//       padding: 10px;
-//       width: 100%;
-//     }
-
-//     /* Add more global styles here */
-//   }
+  @media (max-width: 480px) {
+    body {
+      font-size: 10px;
+    }
+    h1,h2 {
+      font-size: ${GlobalVariables.fontSizeSmall};
+    }
+    h3, .h3{
+      font-size: ${GlobalVariables.fontSizeXSmall};
+    }
+  }
 
 //   /* Existing media queries for larger screens */
 //   @media (min-width: 768px) {
@@ -85,6 +83,6 @@ const GlobalStyle = createGlobalStyle`
 //       padding: 40px;
 //     }
 //   }
-// `;
+`;
 
 export default GlobalStyle;
