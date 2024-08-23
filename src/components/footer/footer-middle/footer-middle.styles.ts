@@ -19,6 +19,9 @@ export const MiddleLogo = styled.img`
   @media (max-width: 480px) {
     width: 60%;
   }
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `;
 
 export const MiddleMenu = styled.div``;

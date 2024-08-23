@@ -11,10 +11,15 @@ export const TopFooterWrapper = styled.div`
   background-position: center;
 
   @media (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 1rem;
   }
 `;
 
@@ -26,12 +31,18 @@ export const TopFooterBody = styled.div`
   margin-top: 6rem;
 
   @media (max-width: 480px) {
+    justify-content: space-evenly;
+    align-items: end;
+    padding: 1rem;
+    width: 95vw;
+  }
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-end;
-    padding: .5rem;
-    width: 99vw;
+    justify-content: space-around;
+    overflow: hidden;
+    height: auto;
   }
 `;
 

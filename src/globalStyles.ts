@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 interface GlobalVariablesInterface {
+  fontSizeXBig: string;
   fontSizeBig: string;
   fontSizeSmall: string;
   fontSizeXSmall: string;
@@ -10,6 +11,7 @@ interface GlobalVariablesInterface {
 }
 
 const GlobalVariables: GlobalVariablesInterface = {
+  fontSizeXBig: "2.6rem",
   fontSizeBig: "2.375rem",
   fontSizeSmall: "1.18rem",
   fontSizeXSmall: "1.00rem",
@@ -64,7 +66,13 @@ const GlobalStyle = createGlobalStyle`
 
   @media (min-width: 768px) {
     body {
-      font-size: 14px;
+      font-size: 16px;
+    }
+    h1,h2 {
+      font-size: ${GlobalVariables.fontSizeXBig};
+    }
+    h3, .h3{
+      font-size: ${GlobalVariables.fontSizeBig};
     }
   }
       

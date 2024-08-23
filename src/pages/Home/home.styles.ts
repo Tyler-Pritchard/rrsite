@@ -18,7 +18,7 @@ export const MainWrapper = styled.div`
     width: 102%;
     height: 25rem;
     padding-top: 4.5rem;
-  }
+  };
 `;
 
 export const MainTitle = styled.h1`
@@ -33,12 +33,15 @@ export const MainTitle = styled.h1`
   background-color: #fce4ad;
   opacity: 90%;
   border: .5rem double gold;
-    z-index: 0;
+  z-index: 0;
 
   @media (max-width: 480px) {
     top: 45%;
     width: 65vw;
     height: 8rem;
     padding-top: 2rem;
+  };
+  @media (max-width: 768px) {
+    padding-top: 4rem;
   };
 `;
