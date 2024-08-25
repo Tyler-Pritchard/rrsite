@@ -75,14 +75,12 @@ const GlobalStyle = createGlobalStyle`
       font-size: ${GlobalVariables.fontSizeBig};
     }
   }
-      
-//   /* Existing media queries for larger screens */
-//   @media (min-width: 992px) {
-//     body {
-//       font-size: 18px;
-//       padding: 30px;
-//     }
-//   }
+    
+  @media (min-width: 992px) {
+    body {
+      font-size: 18px;
+    }
+  }
 
 //   @media (min-width: 1200px) {
 //     body {
