@@ -19,7 +19,7 @@ export const MiddleLogo = styled.img`
   @media (max-width: 480px) {
     width: 60%;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 920px) {
     width: 70%;
   }
 `;
