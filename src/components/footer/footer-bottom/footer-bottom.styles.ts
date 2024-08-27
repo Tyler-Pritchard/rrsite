@@ -42,7 +42,8 @@ export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: str
     width: 10px;
     height: 100%;
   `}
-  @media (max-width: 768px) {
+
+  @media (max-width: 920px) {
     display: none;
   }
 `;
@@ -96,7 +97,7 @@ export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
     margin-bottom: 2rem;
   }
     
-  @media (max-width: 768px) {
+  @media (max-width: 920px) {
     flex-wrap: wrap;
     overflow: hidden;
     width: 50vw;
