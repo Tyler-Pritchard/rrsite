@@ -16,14 +16,17 @@ export const MainWrapper = styled.div`
   padding-top: 10rem;
   padding-bottom: 6rem;
 
-  @media (min-width: 768px) {
-    padding-top: 38rem;
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding-top: 36rem;
     padding-bottom: 16rem;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 769px) and (max-width: 992px){
+
+  }
+  @media (min-width: 993px) and (max-width: 1200px) {
     padding-top: 42rem;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1201px) {
     padding-top: 16rem;
   }
 `;

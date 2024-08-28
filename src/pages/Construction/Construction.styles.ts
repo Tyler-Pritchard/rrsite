@@ -9,9 +9,12 @@ export const ConstructionWrapper = styled.div`
   background-color: #f3f3f3;
   height: 30rem;
   
+  @media (min-width: 481px) and (max-width: 768px){
+      height: 50rem;
+      padding-top: 8rem;
+  }
   @media (min-width: 768px) {
-    height: 60rem;
-    padding-top: 8rem;
+
   }
 `;
 
