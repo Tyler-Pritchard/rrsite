@@ -16,6 +16,9 @@ export const ConstructionWrapper = styled.div`
     padding-top: 2.5rem;
     padding-bottom: 0rem;
   }
+  @media (max-width: 920px) {
+    padding: 0rem 2rem;
+  }
 `;
 
 export const ContentContainer = styled.div``
@@ -30,9 +33,3 @@ export const Message = styled.h1`
   font-size: 2rem;
   color: #333;
 `;
-
-// @media (max-width: 480px) {}
-// @media (max-width: 768px) {}
-// @media (max-width: 992px) {}
-// @media (max-width: 1200px) {}
-// @media (max-width: 1201px) {}
