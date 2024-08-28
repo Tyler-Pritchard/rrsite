@@ -16,6 +16,10 @@ export const TopFooterWrapper = styled.div`
     justify-content: end;
     align-items: center;
   }
+  @media (min-width: 992px) {
+    justify-content: center;
+    padding-left: 30rem;
+  }
 `;
 
 export const TopFooterBody = styled.div`

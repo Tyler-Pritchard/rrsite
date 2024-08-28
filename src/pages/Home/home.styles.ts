@@ -20,9 +20,8 @@ export const MainWrapper = styled.div`
     padding-top: 38rem;
     padding-bottom: 16rem;
   }
-
   @media (min-width: 992px) {
-    padding-top: 14rem;
+    padding-top: 42rem;
   }
   @media (min-width: 1200px) {
     padding-top: 16rem;
@@ -42,13 +41,6 @@ export const MainTitle = styled.h1`
   border: .5rem double gold;
   z-index: 0;
 
-  @media (min-width: 992px) {
-    display: flex;
-    flex-direction: column;
-    height: 40vh;
-    padding-top: 2rem;
-    justify-content: center;
-  };
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: column;
