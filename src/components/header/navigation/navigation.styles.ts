@@ -7,9 +7,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 export const Container = styled(Box)`
   display: flex;
   flex-direction: row;
-  max-width: 600px;
-  gap: 16px;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 `
 

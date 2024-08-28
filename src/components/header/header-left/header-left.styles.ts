@@ -2,16 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 4.5rem;
-  
-  @media (min-width: 1200px) {
-    justify-content: center;
-    align-items: center;
-  }
 `;
 
 export const OpenButton = styled.button`
   color: white;
-  margin-bottom: 2rem;
+  
+  @media (min-width: 768px) {
+    height: 3rem;
+    width: 3rem;
+  }
 `;
 
 export const Drawer = styled.div`
