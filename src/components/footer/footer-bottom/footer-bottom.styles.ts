@@ -65,6 +65,10 @@ export const BottomIconsContainer = styled.div`
     width: 50vw;
     jusify-content: space-evenly;
   }
+  @media (max-width: 1200px) {
+    width: 50vw;
+    padding-bottom: 0;
+  }
 `;
 
 export const BottomIconLink = styled.a``;
@@ -73,6 +77,10 @@ export const BottomIcons = styled.img`
   width: 2rem;
   height: 2rem;
   color: white;
+  @media (max-width: 1200px) {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
 `;
 
 export const BottomLinksContainer = styled.div`
@@ -83,6 +91,9 @@ export const BottomLinksContainer = styled.div`
   flex-direction: row;
   align-items: center;
   
+  @media (max-width: 1200px) {
+    gap: .5rem;
+  }
 `;
 
 //TODO: get rid of spacing prop
@@ -102,14 +113,15 @@ export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
   }  
   @media (max-width: 992px) {
     flex-wrap: wrap;
-    width: 50vw;
-    gap: 1;
+    max-width: 50vw;
+    gap: 1rem;
     align-items: flex-end;
     justify-content: space-around;
   }
   @media (max-width: 1200px) {
-    width: 80vw;
+    width: 90vw;
     gap: 0;
+    justify-content: space-between;
     white-space: nowrap;
     text-align: center;
   }

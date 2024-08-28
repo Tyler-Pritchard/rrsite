@@ -14,6 +14,7 @@ import ListenIcon from '../../../assets/icons/listen.svg';
 const FooterBottom = () => {
     return (
         <BottomFooterWrapper>
+            <BottomFooterDivider variant='fullWidth' aria-hidden="false" />
             {/* Social Media Icons Container */}
             <BottomIconsContainer>
                 <BottomIconLink href="https://www.instagram.com/robrichusa/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -41,8 +42,6 @@ const FooterBottom = () => {
                     <BottomIcons src={ListenIcon} />
                 </BottomIconLink>
             </BottomIconsContainer>
-
-            <BottomFooterDivider variant='fullWidth' aria-hidden="false" />
 
             {/* Text Links Container  */}
             <BottomLinksContainer>
