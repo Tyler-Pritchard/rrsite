@@ -11,11 +11,12 @@ export const MiddleFooterWrapper = styled.div`
   height: auto;
   background-color: black;
     
-  @media (min-width: 768px) {
+  @media  (min-width: 481px) and (max-width: 768px) {
     justify-content: center;
-    width: 70%;
+    width: 90vw;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 769px) and (max-width: 992px) {}
+  @media (min-width: 993px) and (max-width: 1200px) {
     width: 100vw;
     justify-content: left;
     align-items: start;
@@ -27,8 +28,8 @@ export const MiddleInner = styled.div``;
 export const MiddleLogo = styled.img`
   width: 50vw;
 
-  @media (min-width: 1200px) {
-    width: 50%;
+  @media (min-width: 481px) and (max-width: 768px){
+    width: 60vw;
   }
 `;
 

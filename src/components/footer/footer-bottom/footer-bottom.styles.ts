@@ -10,8 +10,8 @@ export const BottomFooterWrapper = styled.div`
   background-color: rgb(0, 0, 0);
   padding-top: 3rem;
 
-  @media (min-width: 768px) {
-    width: 50vw;
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 70vw;
   }
   @media (min-width: 992px) {
     width: 90vw;
@@ -27,6 +27,7 @@ export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: str
     background-color: white;
     margin-bottom: 2rem;
     opacity: 0.6;
+    border: 1px solid green;
   }
   
   /* Handling variant */
@@ -54,16 +55,15 @@ export const BottomIconsContainer = styled.div`
   align-items: center;
   width: 80vw;
 
-  @media (min-width: 768px) {
+  (min-width: 481px) and (max-width: 768px) {
+  
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
     justify-content: center;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 993px) and (max-width: 1200px) {
     width: 80vw;
     jusify-content: space-evenly;
-  }
-  @media (min-width: 1200px) {
-    width: 50vw;
-    padding-bottom: 0;
   }
 `;
 

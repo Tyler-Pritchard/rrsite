@@ -10,15 +10,19 @@ export const TopFooterWrapper = styled.div`
   background-position: center;
   padding-left: 2rem;
 
-  @media (min-width: 768px) {
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    border: 3px solid blue;
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
   }
-  @media (min-width: 992px) {
-    justify-content: center;
-    padding-left: 30rem;
+  @media (min-width: 769px) and (max-width: 992px) {
+
+  }
+  @media (min-width: 993px) and (max-width: 1200px) {
+
   }
 `;
 
