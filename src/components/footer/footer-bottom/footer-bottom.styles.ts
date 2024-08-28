@@ -11,12 +11,20 @@ export const BottomFooterWrapper = styled.div`
   padding-top: 3rem;
 
   @media (min-width: 768px) {
-    overflow: hidden;
+    width: 50vw;
   }
 `;
 
+/* TODO: SELECTOR CONTROLS BOTH BOTTOM FOOTER LINKS DIVIDERS AND DIVIDER SEPARATING FOOTER SECTIONS.  DIVIDERS LIKELY NEED TO BE REPLACED ANYWAYS */
 export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; }>`
   display: none;
+  
+  @media (min-width: 768px) {
+    height: 1rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    opacity: 0.6;
+  }
   
   /* Handling variant */
   ${({ variant }) => variant === 'outlined' && css`
@@ -34,15 +42,6 @@ export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: str
     width: 10px;
     height: 100%;
   `}
-
-  @media (min-width: 992px) {
-    width: 100vw;
-    display: flex;
-    height: .15rem;
-    background-color: white;
-    margin-bottom: 2rem;
-    opacity: 0.6;
-  }
 `;
 
 export const BottomIconsContainer = styled.div`
@@ -53,8 +52,6 @@ export const BottomIconsContainer = styled.div`
   width: 80vw;
 
   @media (min-width: 768px) {
-    width: 50vw;
-    padding-bottom: 2rem;
     justify-content: center;
   }
   @media (min-width: 992px) {
@@ -74,18 +71,12 @@ export const BottomIcons = styled.img`
   height: 1.8rem;
   color: white;
 
-  @media (min-width: 1200px) {
-    height: 2.25rem;
-    width: 2.25rem;
+  @media (min-width: 768px) {
+    margin: .5rem;
   }
 `;
 
-export const BottomLinksContainer = styled.div`
-  
-  @media (min-width: 1200px) {
-    gap: .5rem;
-  }
-`;
+export const BottomLinksContainer = styled.div``;
 
 export const FooterStack = styled.div`
   display: flex;
@@ -115,7 +106,6 @@ export const FooterStack = styled.div`
   }
   @media (min-width: 1201px) {
     width: 50vw;
-    border: 3px solid orangered;
   }
 `;
 

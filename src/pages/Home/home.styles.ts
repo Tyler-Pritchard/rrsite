@@ -16,6 +16,11 @@ export const MainWrapper = styled.div`
   padding-top: 10rem;
   padding-bottom: 6rem;
 
+  @media (min-width: 768px) {
+    padding-top: 38rem;
+    padding-bottom: 16rem;
+  }
+
   @media (min-width: 992px) {
     padding-top: 14rem;
   }

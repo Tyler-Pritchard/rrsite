@@ -12,29 +12,20 @@ export const TopFooterWrapper = styled.div`
 
   @media (min-width: 768px) {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-    padding: 1rem;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
   }
 `;
 
 export const TopFooterBody = styled.div`
   color: white;
-  height: 80vh;
-  width: 70vw;
+  height: 70vh;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: hidden;
-    height: auto;
-  }
   @media (min-width: 1200px) {
     margin-top: 10rem;
   }

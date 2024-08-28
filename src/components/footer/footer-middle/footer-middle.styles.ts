@@ -10,6 +10,13 @@ export const MiddleFooterWrapper = styled.div`
   overflow-x: hidden;
   height: auto;
   background-color: black;
+    
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
 `;
 
 export const MiddleInner = styled.div``;
@@ -17,9 +24,6 @@ export const MiddleInner = styled.div``;
 export const MiddleLogo = styled.img`
   width: 50vw;
   
-  @media (min-width: 992px) {
-    width: 70%;
-  }
   @media (min-width: 1200px) {
     width: 50%;
   }
