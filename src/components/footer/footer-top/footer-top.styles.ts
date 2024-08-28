@@ -12,7 +12,6 @@ export const TopFooterWrapper = styled.div`
 
 
   @media (min-width: 481px) and (max-width: 768px) {
-    border: 3px solid blue;
     display: flex;
     flex-direction: row;
     justify-content: end;
