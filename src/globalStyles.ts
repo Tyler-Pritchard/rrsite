@@ -61,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: ${GlobalVariables.fontSizeXSmall};
     }
   }
-
   @media (min-width: 481px) and (max-width: 768px) {
     body {
       font-size: 14px;
@@ -78,13 +77,11 @@ const GlobalStyle = createGlobalStyle`
       font-size: 18px;
     }
   }
-
   @media (min-width: 993px) and (max-width: 1200px) {
     body {
       font-size: 20px;
     }
   }
-
   @media (min-width: 1201px) {
     body {
       font-size: 24px;
