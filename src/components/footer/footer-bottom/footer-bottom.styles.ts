@@ -43,7 +43,7 @@ export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: str
     height: 100%;
   `}
 
-  @media (max-width: 920px) {
+  @media (max-width: 992px) {
     display: none;
   }
 `;
@@ -60,6 +60,10 @@ export const BottomIconsContainer = styled.div`
     width: 50vw;
     padding-bottom: 2rem;
     justify-content: center;
+  }
+  @media (max-width: 992px) {
+    width: 50vw;
+    jusify-content: space-evenly;
   }
 `;
 
@@ -97,7 +101,7 @@ export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
     margin-bottom: 2rem;
   }
     
-  @media (max-width: 920px) {
+  @media (max-width: 992px) {
     flex-wrap: wrap;
     overflow: hidden;
     width: 50vw;

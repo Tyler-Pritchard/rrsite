@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
     
-  @media (min-width: 920px) {
+  @media (min-width: 992px) {
     body {
       font-size: 18px;
     }

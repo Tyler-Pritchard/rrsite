@@ -19,7 +19,7 @@ export const MainWrapper = styled.div`
     height: 60vh;
     padding-bottom: 8rem;
   };
-  @media (max-width: 920px) {
+  @media (max-width: 992px) {
     padding-top: 14rem;
   }
 `;
@@ -41,7 +41,7 @@ export const MainTitle = styled.h1`
   @media (max-width: 480px) {
     
   };
-  @media (max-width: 920px) {
+  @media (max-width: 992px) {
     display: flex;
     flex-direction: column;
     height: 40vh;

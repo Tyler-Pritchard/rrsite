@@ -16,7 +16,7 @@ export const ConstructionWrapper = styled.div`
     padding-top: 2.5rem;
     padding-bottom: 0rem;
   }
-  @media (max-width: 920px) {
+  @media (max-width: 992px) {
     padding: 0rem 2rem;
   }
 `;

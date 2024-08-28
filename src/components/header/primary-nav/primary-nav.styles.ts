@@ -14,7 +14,7 @@ export const NavItem = styled.li`
     cursor: pointer;
     padding: 4.2rem 2rem;
     
-    @media (max-width: 920px) {
+    @media (max-width: 992px) {
         display: none;
     }
 `;
