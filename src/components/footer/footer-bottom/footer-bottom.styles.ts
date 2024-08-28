@@ -13,6 +13,9 @@ export const BottomFooterWrapper = styled.div`
   @media (min-width: 768px) {
     width: 50vw;
   }
+  @media (min-width: 992px) {
+    width: 90vw;
+  }
 `;
 
 /* TODO: SELECTOR CONTROLS BOTH BOTTOM FOOTER LINKS DIVIDERS AND DIVIDER SEPARATING FOOTER SECTIONS.  DIVIDERS LIKELY NEED TO BE REPLACED ANYWAYS */
@@ -55,7 +58,7 @@ export const BottomIconsContainer = styled.div`
     justify-content: center;
   }
   @media (min-width: 992px) {
-    width: 50vw;
+    width: 80vw;
     jusify-content: space-evenly;
   }
   @media (min-width: 1200px) {
@@ -91,11 +94,11 @@ export const FooterStack = styled.div`
   white-space: nowrap;
   
   @media (min-width: 992px) {
-    flex-wrap: wrap;
-    max-width: 50vw;
+    width: 80vw;
     gap: 1rem;
     align-items: flex-end;
     justify-content: space-around;
+    margin: .5rem 0rem;
   }
   @media (min-width: 1200px) {
     width: 90vw;
