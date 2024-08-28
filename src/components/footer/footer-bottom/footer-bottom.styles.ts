@@ -99,15 +99,19 @@ export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
     width: 80vw;
     gap: 0;
     margin-bottom: 2rem;
-  }
-    
+  }  
   @media (max-width: 992px) {
     flex-wrap: wrap;
-    overflow: hidden;
     width: 50vw;
     gap: 1;
     align-items: flex-end;
     justify-content: space-around;
+  }
+  @media (max-width: 1200px) {
+    width: 80vw;
+    gap: 0;
+    white-space: nowrap;
+    text-align: center;
   }
 `;
 
