@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const MiddleFooterWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   max-width: 100vw;
+  padding: 1rem;
   overflow-x: hidden;
   height: auto;
   background-color: black;
@@ -14,15 +15,12 @@ export const MiddleFooterWrapper = styled.div`
 export const MiddleInner = styled.div``;
 
 export const MiddleLogo = styled.img`
-  width: 30%;
+  width: 50vw;
   
-  @media (max-width: 480px) {
-    width: 60%;
-  }
-  @media (max-width: 992px) {
+  @media (min-width: 992px) {
     width: 70%;
   }
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     width: 50%;
   }
 `;

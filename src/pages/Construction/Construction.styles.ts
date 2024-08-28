@@ -5,18 +5,12 @@ export const ConstructionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   text-align: center;
   background-color: #f3f3f3;
-  padding-top: 25rem;
-  padding-bottom: 1.5rem;
+  height: 30rem;
   
-  @media (max-width: 480px) {
-    height: 32.5rem;
-    padding-top: 2.5rem;
-    padding-bottom: 0rem;
-  }
-  @media (max-width: 992px) {
+
+  @media (min-width: 992px) {
     padding: 0rem 2rem;
   }
 `;
@@ -29,7 +23,6 @@ export const Image = styled.img`
 `;
   
 export const Message = styled.h1`
-  margin-top: 8rem;
   font-size: 2rem;
   color: #333;
 `;

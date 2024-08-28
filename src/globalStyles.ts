@@ -62,9 +62,9 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     body {
-      font-size: 16px;
+      font-size: 14px;
     }
     h1,h2 {
       font-size: ${GlobalVariables.fontSizeXBig};
@@ -74,17 +74,19 @@ const GlobalStyle = createGlobalStyle`
     }
   }
     
-  @media (max-width: 992px) {
+  @media (min-width: 992px) {
     body {
       font-size: 18px;
     }
   }
-  @media (max-width: 1200px) {
+
+  @media (min-width: 1200px) {
     body {
       font-size: 20px;
     }
   }
-  @media (max-width: 1201px) {
+
+  @media (min-width: 1201px) {
     body {
       font-size: 24px;
     }

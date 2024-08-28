@@ -4,28 +4,20 @@ export const BottomFooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: spece-evenly;
-  height: 15rem;
+  justify-content: space-evenly;
+  height: auto;
   width: 100vw;
   background-color: rgb(0, 0, 0);
   padding-top: 3rem;
 
-  @media (max-width: 480px) {
-    height: auto;
-  }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     overflow: hidden;
   }
 `;
 
 export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; }>`
-  width: 100vw;
-  display: flex;
-  height: .15rem;
-  background-color: white;
-  margin-bottom: 2rem;
-  opacity: 0.6;
-
+  display: none;
+  
   /* Handling variant */
   ${({ variant }) => variant === 'outlined' && css`
     border: 2px solid white;
@@ -43,8 +35,13 @@ export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: str
     height: 100%;
   `}
 
-  @media (max-width: 992px) {
-    display: none;
+  @media (min-width: 992px) {
+    width: 100vw;
+    display: flex;
+    height: .15rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    opacity: 0.6;
   }
 `;
 
@@ -52,20 +49,19 @@ export const BottomIconsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 30vw;
-  background-color: black;
-  padding-bottom: 2rem;
+  align-items: center;
+  width: 80vw;
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     width: 50vw;
     padding-bottom: 2rem;
     justify-content: center;
   }
-  @media (max-width: 992px) {
+  @media (min-width: 992px) {
     width: 50vw;
     jusify-content: space-evenly;
   }
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     width: 50vw;
     padding-bottom: 0;
   }
@@ -74,56 +70,52 @@ export const BottomIconsContainer = styled.div`
 export const BottomIconLink = styled.a``;
 
 export const BottomIcons = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   color: white;
-  @media (max-width: 1200px) {
+
+  @media (min-width: 1200px) {
     height: 2.25rem;
     width: 2.25rem;
   }
 `;
 
 export const BottomLinksContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
   
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     gap: .5rem;
   }
 `;
 
-//TODO: get rid of spacing prop
-export const FooterStack = styled.div<{ direction?: string; spacing?: string }>`
+export const FooterStack = styled.div`
   display: flex;
-  flex-direction: ${({ direction }) => direction || 'row'};
-  gap: ${({ spacing }) => spacing || '1rem'};
+  flex-direction: row;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   max-width: 100vw;
   overflow: hidden;
-
-  @media (max-width: 480px) {
-    width: 80vw;
-    gap: 0;
-    margin-bottom: 2rem;
-  }  
-  @media (max-width: 992px) {
+  margin: 1.5rem 1.5rem;
+  white-space: nowrap;
+  
+  @media (min-width: 992px) {
     flex-wrap: wrap;
     max-width: 50vw;
     gap: 1rem;
     align-items: flex-end;
     justify-content: space-around;
   }
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     width: 90vw;
     gap: 0;
     justify-content: space-between;
-    white-space: nowrap;
+
     text-align: center;
+  }
+  @media (min-width: 1201px) {
+    width: 50vw;
+    border: 3px solid orangered;
   }
 `;
 

@@ -45,7 +45,7 @@ const FooterBottom = () => {
 
             {/* Text Links Container  */}
             <BottomLinksContainer>
-                <FooterStack direction="row" spacing="2rem">
+                <FooterStack>
                     <BottomFooterLinks href="#text-buttons">HELP</BottomFooterLinks>
                     <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">RETURNS</BottomFooterLinks>

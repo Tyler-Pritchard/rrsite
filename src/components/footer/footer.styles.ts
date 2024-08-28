@@ -4,11 +4,9 @@ export const FooterWrapper = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: auto;
+  padding-bottom: 4rem;
   background-color: black;
-
-  @media (max-width: 480px) {
-    width: 100vw;
-  }
+  overflow: hidden;
 `;

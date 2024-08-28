@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 4.5rem;
   
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     justify-content: center;
     align-items: center;
   }
