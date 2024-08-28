@@ -44,6 +44,9 @@ export const TopFooterBody = styled.div`
     overflow: hidden;
     height: auto;
   }
+  @media (max-width: 1200px) {
+    margin-top: 10rem;
+  }
 `;
 
 export const TopFooterBrow = styled.div`
