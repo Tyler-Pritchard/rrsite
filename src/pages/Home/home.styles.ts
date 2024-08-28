@@ -13,14 +13,17 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 8rem;
 
   @media (max-width: 480px) {
-    width: 102%;
-    height: 60vh;
+    padding-top: 10rem;
     padding-bottom: 8rem;
   };
   @media (max-width: 992px) {
     padding-top: 14rem;
+  }
+  @media (max-width: 1200px) {
+    padding-top: 16rem;
   }
 `;
 
@@ -39,7 +42,7 @@ export const MainTitle = styled.h1`
   z-index: 0;
 
   @media (max-width: 480px) {
-    
+    width: 75vw;
   };
   @media (max-width: 992px) {
     display: flex;
@@ -48,4 +51,9 @@ export const MainTitle = styled.h1`
     padding-top: 2rem;
     justify-content: center;
   };
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
