@@ -26,7 +26,7 @@ const HeaderLeft: React.FC = () => {
         { title: 'Music', link: '/store/music' },
         { title: 'Media', link: '/media' },
     ];
-
+/* TO DO: REPLACE MENUICON & CLOSE ICON */
     return (
         <Container>
             <OpenButton onClick={toggleModal}>

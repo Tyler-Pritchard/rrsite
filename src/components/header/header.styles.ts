@@ -21,6 +21,10 @@ export const AppBar = styled.div`
       position: relative;
       overflow: auto;
     }
+    @media (max-width: 1200px) {
+      position: absolute;
+      overflow: hidden;
+    }
 `;
 
 export const HeaderLeftContainer = styled.div`
@@ -30,6 +34,13 @@ export const HeaderLeftContainer = styled.div`
 export const PrimaryNavContainer = styled.nav`
     overflow: visible;
     width: 100%;
+    
+    @media (max-width: 1200px) {
+      width: 70vw;
+      overflow: hidden;
+      padding: .11rem;
+      justify-content: space-evenly;
+    }
 `;
 
 export const NavigationContainer = styled.div`

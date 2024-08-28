@@ -80,12 +80,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-//   @media (min-width: 1200px) {
-//     body {
-//       font-size: 20px;
-//       padding: 40px;
-//     }
-//   }
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+    }
+  }
 `;
 
 export default GlobalStyle;

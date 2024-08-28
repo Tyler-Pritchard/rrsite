@@ -17,6 +17,9 @@ export const NavItem = styled.li`
     @media (max-width: 992px) {
         display: none;
     }
+    @media (max-width: 1200px) {
+        padding: 4.2rem 1rem;
+    }
 `;
 
 export const NavLink = styled.a`

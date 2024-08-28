@@ -9,6 +9,8 @@ export const Container = styled(Box)`
   flex-direction: row;
   max-width: 600px;
   gap: 16px;
+  justify-content: center;
+  align-items: center;
 `
 
 // Hide account button for mobile
