@@ -36,12 +36,33 @@ export const NavLink = styled.a`
 export const LogoItem = styled.li`
     display: inline-block;
     position: relative;
-    padding-top: 1.6rem;
     cursor: pointer;
     z-index: 9999;
+    
+    @media (max-width: 480px) {
+        padding-top: 2rem;
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+        padding-top: 1.5rem;
+    }
+    @media (min-width: 769px) and (max-width: 992px) {
+        padding-top: 1rem;
+    }
+    @media (min-width: 993px) and (max-width: 1200px) {}
 `;
 
 export const Logo = styled.img`
-    height: 6.5rem;
+    @media (max-width: 480px) {
+        height: 5.75rem;
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+        height: 7rem;
+    }
+    @media (min-width: 769px) and (max-width: 992px) {
+        height: 8rem;
+    }
+    @media (min-width: 993px) and (max-width: 1200px) {
+        height: 10rem;
+    }
 `
 export const LogoLink = styled.a``;

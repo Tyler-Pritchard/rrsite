@@ -13,7 +13,7 @@ export const Container = styled(Box)`
 
 // Hide account button for mobile
 export const IconWrapper = styled.div`
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

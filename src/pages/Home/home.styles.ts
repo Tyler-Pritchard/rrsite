@@ -15,15 +15,15 @@ export const MainWrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 480px) {
-    padding-top: 14rem;
-    padding-bottom: 8rem;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     padding-top: 36rem;
     padding-bottom: 24rem;
   }
   @media (min-width: 769px) and (max-width: 992px){
-    padding-top: 36rem;
+    padding-top: 38rem;
     padding-bottom: 16rem;
   }
   @media (min-width: 993px) and (max-width: 1200px) {
