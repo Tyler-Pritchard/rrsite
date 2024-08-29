@@ -5,20 +5,20 @@ import { ReactComponent as CloseSvg } from '../../../assets/icons/close-icon.svg
 export const StyledMenuIcon = styled(MenuSvg)`
   background: none;
   background-color: transparent;
-  height: 2rem;
-  width: 2rem;
+  border: none;
+  height: 2.25rem;
+  width: 2.25rem;
 `;
 
 export const StyledCloseIcon = styled(CloseSvg)`
+  color: black;
   background: none;
   background-color: transparent;
   height: 2rem;
   width: 2rem;
 `;
 
-export const Container = styled.div`
-  width: 4.5rem;
-`;
+export const Container = styled.div``;
 
 export const OpenButton = styled.button`
   color: white;
@@ -78,4 +78,6 @@ export const MenuItemText = styled.header`
   color: black;
 `;
 
-export const ModalFooterContainer = styled.div``
+export const ModalFooterContainer = styled.div`
+  width: 100vw;
+`
