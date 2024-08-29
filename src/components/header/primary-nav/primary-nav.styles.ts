@@ -48,7 +48,6 @@ export const LogoItem = styled.li`
     @media (min-width: 769px) and (max-width: 992px) {
         padding-top: 1rem;
     }
-    @media (min-width: 993px) and (max-width: 1200px) {}
 `;
 
 export const Logo = styled.img`
@@ -63,6 +62,9 @@ export const Logo = styled.img`
     }
     @media (min-width: 993px) and (max-width: 1200px) {
         height: 10rem;
+    }
+    @media (min-width: 1201px) {
+        height: 8rem;
     }
 `
 export const LogoLink = styled.a``;

@@ -8,7 +8,7 @@ import {
     ModalMenuItem,
     MenuItemText
   } from './header-left.styles';
-import MenuIcon from '@mui/icons-material/Menu';
+  import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 
 
@@ -30,7 +30,7 @@ const HeaderLeft: React.FC = () => {
     return (
         <Container>
             <OpenButton onClick={toggleModal}>
-                <MenuIcon />
+                <MenuOutlinedIcon />
             </OpenButton>
             {isModalOpen && (
                 <ModalContainer>
