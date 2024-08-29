@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import {
+    StyledMenuIcon, 
+    StyledCloseIcon, 
     Container,
     OpenButton,
     Drawer,
@@ -9,9 +11,6 @@ import {
     ModalMenuLink,
     MenuItemText
   } from './header-left.styles';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import CloseIcon from '@mui/icons-material/Close';
-
 
 const HeaderLeft: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,16 +26,16 @@ const HeaderLeft: React.FC = () => {
         { title: 'Music', link: '/store/music' },
         { title: 'Media', link: '/media' },
     ];
-/* TO DO: REPLACE MENUICON & CLOSE ICON */
+
     return (
         <Container>
             <OpenButton onClick={toggleModal}>
-                <MenuOutlinedIcon />
+                <StyledMenuIcon />
             </OpenButton>
             {isModalOpen && (
                 <ModalContainer>
                     <Drawer>
-                        <OpenButton onClick={toggleModal}><CloseIcon /></OpenButton>
+                        <OpenButton onClick={toggleModal}><StyledCloseIcon />Close</OpenButton>
                         <ModalMenu>
                         {menuItems.map((item, index) => (
                             <ModalMenuItem key={index} onClick={toggleModal}>

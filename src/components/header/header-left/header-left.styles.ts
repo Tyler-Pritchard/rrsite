@@ -1,4 +1,20 @@
 import styled from 'styled-components';
+import { ReactComponent as MenuSvg } from '../../../assets/icons/menu-icon.svg';
+import { ReactComponent as CloseSvg } from '../../../assets/icons/close-icon.svg';
+
+export const StyledMenuIcon = styled(MenuSvg)`
+  background: none;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+`;
+
+export const StyledCloseIcon = styled(CloseSvg)`
+  background: none;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+`;
 
 export const Container = styled.div`
   width: 4.5rem;
@@ -61,3 +77,5 @@ export const ModalMenuLink = styled.a`
 export const MenuItemText = styled.header`
   color: black;
 `;
+
+export const ModalFooterContainer = styled.div``
