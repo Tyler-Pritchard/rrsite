@@ -13,6 +13,7 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 
   @media (max-width: 480px) {
     padding-top: 24rem;
@@ -44,7 +45,7 @@ export const MainTitle = styled.h1`
   align-items: center;
   text-align: center;
   opacity: 95%;
-  z-index: 0;
+  z-index: 1;
 
   @media (max-width: 480px) {
     width: 75vw;

@@ -6,9 +6,10 @@ import {
     ModalContainer,
     ModalMenu,
     ModalMenuItem,
+    ModalMenuLink,
     MenuItemText
   } from './header-left.styles';
-  import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 
 
@@ -39,7 +40,9 @@ const HeaderLeft: React.FC = () => {
                         <ModalMenu>
                         {menuItems.map((item, index) => (
                             <ModalMenuItem key={index} onClick={toggleModal}>
-                                <MenuItemText>{item.title}</MenuItemText>
+                                <ModalMenuLink href={item.link}>
+                                    <MenuItemText>{item.title}</MenuItemText>
+                                </ModalMenuLink>
                             </ModalMenuItem>
                         ))}
                         </ModalMenu>

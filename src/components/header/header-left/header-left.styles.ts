@@ -41,6 +41,7 @@ export const ModalMenu = styled.ul`
   padding-left: 2rem;
   font-size: large;
   margin: 0;
+  z-index: 10001;
 `;
 
 export const ModalMenuItem = styled.li`
@@ -52,6 +53,10 @@ export const ModalMenuItem = styled.li`
     background-color: lightgray;
   }
 `;
+
+export const ModalMenuLink = styled.a`
+  text-decoration: none;
+`
 
 export const MenuItemText = styled.header`
   color: black;
