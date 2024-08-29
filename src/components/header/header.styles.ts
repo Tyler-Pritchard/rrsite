@@ -39,7 +39,7 @@ export const AppBar = styled.div`
     height: 14rem;
   }
   @media (min-width: 1201px) {
-    border: .75rem groove #f7E581;
+    border: 1rem groove #f7E581;
     padding-left: 4rem;
     padding-right: 4rem;
     height: 14rem;
@@ -52,10 +52,10 @@ export const HeaderLeftContainer = styled.div`
 
 export const PrimaryNavContainer = styled.nav`
     overflow: visible;
-    width: 100%;
+    width: 100vw;
     
     @media (min-width: 1200px) {
-      width: 65vw;
+      width: 50vw;
       font-weight: 600;
       white-space: nowrap;
       overflow: hidden;

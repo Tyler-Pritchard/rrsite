@@ -15,7 +15,7 @@ export const NavItem = styled.li`
         display: inline-block;
         position: relative;
         cursor: pointer;
-        padding: 4.2rem 2rem;
+        padding: 4.2rem 1rem;
     }
 `;
 
@@ -61,10 +61,10 @@ export const Logo = styled.img`
         height: 8rem;
     }
     @media (min-width: 993px) and (max-width: 1200px) {
-        height: 10rem;
+        height: 9.5rem;
     }
     @media (min-width: 1201px) {
-        height: 8rem;
+        height: 9rem;
     }
 `
 export const LogoLink = styled.a``;

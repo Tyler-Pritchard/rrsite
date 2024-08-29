@@ -15,7 +15,7 @@ export const MainWrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 480px) {
-    padding-top: 20rem;
+    padding-top: 24rem;
     padding-bottom: 10rem;
   }
   @media (min-width: 481px) and (max-width: 768px) {
@@ -47,12 +47,12 @@ export const MainTitle = styled.h1`
   z-index: 0;
 
   @media (max-width: 480px) {
-    width: 65vw;
+    width: 75vw;
     height: 30vh;
     border: .75rem double #f1e180;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    width: 90vw;
+    width: 95vw;
     height: 55vh;
     border: 2rem double #f1e180;
   }
