@@ -14,7 +14,7 @@ export const FanClubWrapper = styled.div.withConfig({
     left: 0;
     color: #fff;
     width: 100%;
-    height: 20rem;
+    height: 30rem;
 `;
 
 export const FanClubItem = styled.li`

@@ -14,7 +14,7 @@ export const ShopWrapper = styled.div.withConfig({
     left: 0;
     color: #fff;
     width: 100%;
-    height: 20rem;
+    height: 30rem;
     z-index: 1000;
 `;
 

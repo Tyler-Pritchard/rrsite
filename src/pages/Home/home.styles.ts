@@ -33,7 +33,7 @@ export const MainWrapper = styled.div`
     padding-bottom: 16rem;
   }
   @media (min-width: 1201px) {
-    padding-top: 24rem;
+    padding-top: 32rem;
     padding-bottom: 18rem;
   }
 `;
