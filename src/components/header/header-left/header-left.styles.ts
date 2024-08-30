@@ -45,7 +45,7 @@ export const ModalContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10001;
+  z-index: 99999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ export const ModalMenu = styled.ul`
   padding-left: 2rem;
   font-size: large;
   margin: 0;
-  z-index: 10001;
+  z-index: 99999;
 `;
 
 export const ModalMenuItem = styled.li`

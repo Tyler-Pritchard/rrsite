@@ -5,22 +5,8 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/Home/Home";
 import Construction from './pages/Construction/Construction';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import GlobalStyle from "./globalStyles";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#556cd6',
-    },
-    secondary: {
-      main: '#19857b',
-    },
-    error: {
-      main: '#f44336',
-    },
-  },
-});
 
 const App: React.FC = () => {
   return (
@@ -29,8 +15,6 @@ const App: React.FC = () => {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
       </Helmet>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
         <GlobalStyle />
         <Header />
         <Routes>
@@ -67,7 +51,6 @@ const App: React.FC = () => {
           <Route path="*" element={<Construction />} />
         </Routes>
         <Footer />
-      </ThemeProvider>
     </HelmetProvider>
   );
 };

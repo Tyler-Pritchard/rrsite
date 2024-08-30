@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Metal from "../../../assets/images/desktop/savage.svg";
 
 export const TopFooterWrapper = styled.div`
@@ -81,31 +81,15 @@ export const TopFooterCta = styled.div`
   }
 `;
 
-export const TopFooterButton = styled.button<{ size?: string; variant?: string }>`
+export const TopFooterButton = styled.button`
   color: white;
   float: left;
   font-weight: 600;
   width: 50vw;
   border: 2px solid white;
+  background-color: transparent;
+  font-family: "'Satisfy', cursive";
 
-  /* Handling size */
-  ${({ size }) => size === 'large' && `
-    padding: 8px 16px; 
-    font-size: 1rem;
-  `}
-
-  /* Handling variant */
-  ${({ variant }) => variant === 'outlined' && css`
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-  `}
-
-  ${({ variant }) => variant === 'contained' && css`
-    background-color: white;
-    border: none;
-    color: black;
-  `}
   @media (max-width: 480px) {
     width: 45vw;
   }

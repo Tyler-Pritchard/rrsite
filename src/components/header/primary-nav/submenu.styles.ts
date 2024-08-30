@@ -16,7 +16,7 @@ export const SubmenuWrapper = styled.div.withConfig({
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
-    height: 20rem;
+    height: 30rem;
     z-index: 1000;
     box-sizing: border-box;
 `;

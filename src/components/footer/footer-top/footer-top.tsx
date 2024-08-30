@@ -10,7 +10,7 @@ const FooterTop = () => {
                 </TopFooterBrow>
                 <h2>JOIN MY FREE FAN CLUB EVENTUALLY!!</h2>
                 <TopFooterCta>
-                    <TopFooterButton size={"large"} variant={"outlined"}>SIGN UP TODAY</TopFooterButton>
+                    <TopFooterButton>SIGN UP TODAY</TopFooterButton>
                 </TopFooterCta>
             </TopFooterBody>
         </TopFooterWrapper>

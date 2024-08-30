@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BottomFooterWrapper, BottomFooterDivider, BottomIconsContainer, BottomLinksContainer, FooterStack, BottomIconLink, BottomIcons, BottomFooterLinks
+    BottomFooterWrapper, BottomIconsContainer, BottomLinksContainer, FooterStack, BottomIconLink, BottomIcons, BottomFooterLinks
 } from "./footer-bottom.styles";
 import XIcon from '../../../assets/icons/x.svg';
 import FacebookIcon from '../../../assets/icons/facebook.svg';
@@ -14,7 +14,6 @@ import ListenIcon from '../../../assets/icons/listen.svg';
 const FooterBottom = () => {
     return (
         <BottomFooterWrapper>
-            <BottomFooterDivider variant='fullWidth' aria-hidden="false" />
             {/* Social Media Icons Container */}
             <BottomIconsContainer>
                 <BottomIconLink href="https://www.instagram.com/robrichusa/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -47,19 +46,12 @@ const FooterBottom = () => {
             <BottomLinksContainer>
                 <FooterStack>
                     <BottomFooterLinks href="#text-buttons">HELP</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">RETURNS</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">CREDITS</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">TERMS OF USE</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks href="#text-buttons">PRIVACY POLICY</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks disabled>© ROB RICH</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks disabled>© UNCROSSED RECORDINGS</BottomFooterLinks>
-                    <BottomFooterDivider orientation="vertical" variant="middle" />
                     <BottomFooterLinks disabled>THE ROB RICH CLUB®</BottomFooterLinks>
                 </FooterStack>
             </BottomLinksContainer>

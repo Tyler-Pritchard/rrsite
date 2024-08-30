@@ -28,35 +28,6 @@ export const BottomFooterWrapper = styled.div`
   }
 `;
 
-/* TODO: SELECTOR CONTROLS BOTH BOTTOM FOOTER LINKS DIVIDERS AND DIVIDER SEPARATING FOOTER SECTIONS.  DIVIDERS LIKELY NEED TO BE REPLACED ANYWAYS */
-export const BottomFooterDivider = styled.div<{ variant?: string; maxWidth?: string; orientation?: string; }>`
-  display: none;
-  
-  // @media (min-width: 768px) {
-  //   height: 1rem;
-  //   background-color: white;
-  //   margin-bottom: 2rem;
-  //   opacity: 0.6;
-  // }
-  
-  /* Handling variant */
-  ${({ variant }) => variant === 'outlined' && css`
-    border: 2px solid white;
-    background-color: transparent;
-  `}
-
-  /* Handling maxWidth */
-  ${({ maxWidth }) => maxWidth && css`
-    max-width: ${maxWidth};
-  `}
-
-  /* Handling orientation */
-  ${({ orientation }) => orientation === 'vertical' && css`
-    width: 10px;
-    height: 100%;
-  `}
-`;
-
 export const BottomIconsContainer = styled.div`
   display: flex;
   flex-direction: row;

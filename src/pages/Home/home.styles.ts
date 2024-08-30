@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../globalStyles';
 import MainImage from '../../assets/images/desktop/TacomaCrows.png';
 
 export const MainWrapper = styled.div`
@@ -13,7 +14,7 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-inded: 1;
 
   @media (max-width: 480px) {
     padding-top: 24rem;
@@ -38,8 +39,8 @@ export const MainWrapper = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-  color: #5f955c;
-  background-color: #fce4ad;
+  color: ${colors.primaryGreen};
+  background-color: ${colors.neutralOffWhite};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,26 +51,26 @@ export const MainTitle = styled.h1`
   @media (max-width: 480px) {
     width: 75vw;
     height: 30vh;
-    border: .75rem double #f1e180;
+    border: .75rem double ${colors.primaryYellow};
   }
   @media (min-width: 481px) and (max-width: 768px) {
     width: 95vw;
     height: 55vh;
-    border: 2rem double #f1e180;
+    border: 2rem double ${colors.primaryYellow};
   }
   @media (min-width: 769px) and (max-width: 992px) {
     width: 90vw;
     height: 50vh;
-    border: 3rem double #f1e180;
+    border: 3rem double ${colors.primaryYellow};
   }
   @media (min-width: 993px) and (max-width: 1200px) {
     width: 80vw;
     height: 40vh;
-    border: 3.5rem double #f1e180;
+    border: 3.5rem double ${colors.primaryYellow};
   }
   @media (min-width: 1201px) {
     width: 80vw;
     height: 80vh;
-    border: 3.5rem double #f1e180;
+    border: 3.5rem double ${colors.primaryYellow};
   }
 `;
