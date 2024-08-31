@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home/Home";
+import Register from './pages/Register/Register';
 import Construction from './pages/Construction/Construction';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import GlobalStyle from "./globalStyles";
@@ -33,7 +34,7 @@ const App: React.FC = () => {
           <Route path="/photos" element={<Construction />} />
           <Route path="/podcast" element={<Construction />} />
           <Route path="/museum" element={<Construction />} />
-          <Route path="/register" element={<Construction />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/fans/club-news" element={<Construction />} />
           <Route path="/fans/so-what" element={<Construction />} />
           <Route path="/contests" element={<Construction />} />
