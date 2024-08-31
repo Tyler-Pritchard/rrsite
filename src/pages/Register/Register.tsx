@@ -11,7 +11,7 @@ const Register: React.FC = () => {
   return (
     <RegisterWrapper>
       <SideMenu>
-        <SideMenuItem href="#register">Register</SideMenuItem>
+        <SideMenuItem href="/register">Register</SideMenuItem>
         <SideMenuItem href="#faq">FAQ</SideMenuItem>
         <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
       </SideMenu>
@@ -60,7 +60,8 @@ const Register: React.FC = () => {
       </FormWrapper>
       <CallToAction>
         {/* Call-to-action text box content */}
-        Join our community for exclusive content, updates, and more!
+        <h3>Become a Fifth Member</h3>
+        <p>Join our free Fan Club so we can give back to you - the most dedicated fans on the planet. You’ll get first crack at tickets plus access to giveaways, coupons, and more benefits designed exclusively for members of our Fan Club: The Fifth Members.</p>
       </CallToAction>
     </RegisterWrapper>
   );

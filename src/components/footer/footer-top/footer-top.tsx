@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopFooterBody, TopFooterBrow, TopFooterWrapper, TopFooterCta, TopFooterButton, TopFooterCounter } from "./footer-top.styles";
+import { TopFooterBody, TopFooterBrow, TopFooterWrapper, TopFooterCta, TopFooterButton, TopFooterCounter, TopFooterLink } from "./footer-top.styles";
 
 const FooterTop = () => {
     return (
@@ -10,7 +10,11 @@ const FooterTop = () => {
                 </TopFooterBrow>
                 <h2>JOIN MY FREE FAN CLUB EVENTUALLY!!</h2>
                 <TopFooterCta>
-                    <TopFooterButton>SIGN UP TODAY</TopFooterButton>
+                    <TopFooterLink href='/register'>
+                        <TopFooterButton>
+                            SIGN UP TODAY
+                        </TopFooterButton>
+                    </TopFooterLink>
                 </TopFooterCta>
             </TopFooterBody>
         </TopFooterWrapper>

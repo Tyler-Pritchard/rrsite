@@ -167,9 +167,9 @@ const GlobalStyle = createGlobalStyle`
 
   @media (min-width: 1201px) {
     body {
-      font-size: 24px;
+      font-size: 28px;
     }
-    button {
+    button, a {
       font-size: ${GlobalVariables.fontSizeBig};
     }
     h1,h2 {

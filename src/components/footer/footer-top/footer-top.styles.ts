@@ -90,6 +90,15 @@ export const TopFooterButton = styled.button`
   background-color: transparent;
   font-family: "'Satisfy', cursive";
 
+  &:hover {
+    background: #e5e5e5;
+    color: black;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    border: 2px solid black;
+  }
+
   @media (max-width: 480px) {
     width: 45vw;
   }
@@ -107,5 +116,8 @@ export const TopFooterButton = styled.button`
   }
   @media (min-width: 1201px) {
     width: 15vw;
+    padding: .75rem .25rem;
   }
 `;
+
+export const TopFooterLink = styled.a``;
