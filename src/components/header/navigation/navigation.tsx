@@ -4,7 +4,7 @@ import {Container, IconWrapper, StyledIconButton, StyledAccountCircleIcon, Style
 const Navigation: React.FC = () => {
     return (
         <Container>
-            <StyledIconButton aria-label="user login">
+            <StyledIconButton href="/login" aria-label="user login">
                 <IconWrapper>
                     <StyledAccountCircleIcon />
                 </IconWrapper>

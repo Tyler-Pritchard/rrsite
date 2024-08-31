@@ -16,7 +16,8 @@ const HeaderLeft: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
   
     const toggleModal = () => {
-      setIsModalOpen(!isModalOpen);
+    //   setIsModalOpen(!isModalOpen);
+    console.log("modal toggled!")
     };
   
     const menuItems = [

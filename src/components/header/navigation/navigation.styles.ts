@@ -20,7 +20,7 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const StyledIconButton = styled.button`
+export const StyledIconButton = styled.a`
   border: none;
 `;
 

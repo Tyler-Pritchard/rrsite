@@ -11,7 +11,9 @@ const Register: React.FC = () => {
   return (
     <RegisterWrapper>
       <SideMenu>
-        <SideMenuItem href="/register">Register</SideMenuItem>
+        <h3>Account Settings</h3>
+        <SideMenuItem href="/login">Sign In</SideMenuItem>
+        <h3>Customer Service</h3>
         <SideMenuItem href="#faq">FAQ</SideMenuItem>
         <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
       </SideMenu>
