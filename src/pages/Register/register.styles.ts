@@ -65,6 +65,28 @@ export const FormWrapper = styled.div`
   }
 `;
 
+export const Form = styled.form`
+  /* Your existing styling */
+`;
+
+export const InputField = styled.input`
+  /* Your existing styling */
+`;
+
+export const ErrorText = styled.p`
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+`;
+
+export const SubmitButton = styled.button`
+  /* Your existing styling */
+`;
+
+export const Title = styled.h1`
+  /* Your existing styling */
+`;
+
 export const CallToAction = styled.div`
   background-color: #19857b;
   padding: 20px;

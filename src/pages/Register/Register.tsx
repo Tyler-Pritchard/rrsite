@@ -1,13 +1,102 @@
-import React from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import {
   RegisterWrapper,
   SideMenu,
   SideMenuItem,
   FormWrapper,
-  CallToAction,
+  CallToAction, Form, InputField, ErrorText, SubmitButton, Title
 } from './register.styles';
 
 const Register: React.FC = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [country, setCountry] = useState('');
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePassword = (password: string): boolean => {
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return passwordRegex.test(password);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    let hasError = false;
+    const newErrors = { ...errors };
+
+    if (firstName.trim() === '') {
+      newErrors.firstName = 'First name is required';
+      hasError = true;
+    } else {
+      newErrors.firstName = '';
+    }
+
+    if (lastName.trim() === '') {
+      newErrors.lastName = 'Last name is required';
+      hasError = true;
+    } else {
+      newErrors.lastName = '';
+    }
+
+    if (username.trim() === '') {
+      newErrors.username = 'Username is required';
+      hasError = true;
+    } else {
+      newErrors.username = '';
+    }
+
+    if (!validateEmail(email)) {
+      newErrors.email = 'Invalid email format';
+      hasError = true;
+    } else {
+      newErrors.email = '';
+    }
+
+    if (!validatePassword(password)) {
+      newErrors.password = 'Password must be at least 8 characters, include an uppercase letter, a lowercase letter, and a number';
+      hasError = true;
+    } else {
+      newErrors.password = '';
+    }
+
+    if (password !== confirmPassword) {
+      newErrors.confirmPassword = 'Passwords do not match';
+      hasError = true;
+    } else {
+      newErrors.confirmPassword = '';
+    }
+
+    if (dateOfBirth.trim() === '') {
+      newErrors.dateOfBirth = 'Date of birth is required';
+      hasError = true;
+    } else {
+      newErrors.dateOfBirth = '';
+    }
+
+    if (country.trim() === '') {
+      newErrors.country = 'Country is required';
+      hasError = true;
+    } else {
+      newErrors.country = '';
+    }
+
+    setErrors(newErrors);
+
+    if (!hasError) {
+      // Submit the form data
+      console.log('Form submitted successfully');
+    }
+  };
+
   return (
     <RegisterWrapper>
       <SideMenu>
@@ -18,47 +107,74 @@ const Register: React.FC = () => {
         <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
       </SideMenu>
       <FormWrapper>
-        <h2>Register</h2>
-        <form>
-          <label>First Name</label>
-          <input type="text" name="firstName" required />
+        <Title>Register</Title>
+          <Form onSubmit={handleSubmit}>
+          <InputField
+            type="text"
+            placeholder="First Name"
+            value={firstName}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setFirstName(e.target.value)}
+            />
+          {errors.firstName && <ErrorText>{errors.firstName}</ErrorText>}
 
-          <label>Last Name</label>
-          <input type="text" name="lastName" required />
+          <InputField
+            type="text"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setLastName(e.target.value)}
+            />
+          {errors.lastName && <ErrorText>{errors.lastName}</ErrorText>}
 
-          <label>Username</label>
-          <input type="text" name="username" required />
+          <InputField
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)}
+            />
+          {errors.username && <ErrorText>{errors.username}</ErrorText>}
 
-          <label>Email</label>
-          <input type="email" name="email" required />
+          <InputField
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            />
+          {errors.email && <ErrorText>{errors.email}</ErrorText>}
 
-          <label>Confirm Email</label>
-          <input type="email" name="confirmEmail" required />
+          <InputField
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+            />
+          {errors.password && <ErrorText>{errors.password}</ErrorText>}
 
-          <label>Password</label>
-          <input type="password" name="password" required />
+          <InputField
+            type="password"
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
+            />
+          {errors.confirmPassword && <ErrorText>{errors.confirmPassword}</ErrorText>}
 
-          <label>Confirm Password</label>
-          <input type="password" name="confirmPassword" required />
+          <InputField
+            type="date"
+            placeholder="Date of Birth"
+            value={dateOfBirth}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setDateOfBirth(e.target.value)}
+            />
+          {errors.dateOfBirth && <ErrorText>{errors.dateOfBirth}</ErrorText>}
 
-          <label>Date of Birth</label>
-          <input type="date" name="dateOfBirth" required />
+          <InputField
+            type="text"
+            placeholder="Country"
+            value={country}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setCountry(e.target.value)}
+            />
+          {errors.country && <ErrorText>{errors.country}</ErrorText>}
 
-          <label>Country</label>
-          <input type="text" name="country" required />
-
-          <label>
-            <input type="checkbox" name="subscribe" />
-            Subscribe to newsletter
-          </label>
-
-          {/* CAPTCHA */}
-          <div className="captcha">
-            {/* CAPTCHA component */}
-          </div>
-
-          <button type="submit">Register</button>
-        </form>
+          <SubmitButton type="submit">Register</SubmitButton>
+        </Form>
       </FormWrapper>
       <CallToAction>
         {/* Call-to-action text box content */}
