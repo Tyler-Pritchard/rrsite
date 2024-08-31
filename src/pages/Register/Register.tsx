@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import {
   RegisterWrapper,
   SideMenu,
@@ -6,6 +6,7 @@ import {
   FormWrapper,
   CallToAction, Form, InputField, ErrorText, SubmitButton, Title
 } from './register.styles';
+import { validateEmail, validatePassword } from '../../utils/validation';
 
 const Register: React.FC = () => {
   const [firstName, setFirstName] = useState('');
@@ -17,84 +18,36 @@ const Register: React.FC = () => {
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [country, setCountry] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isRegistered, setIsRegistered] = useState<boolean>(false);
 
-  const validateEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
 
-  const validatePassword = (password: string): boolean => {
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    return passwordRegex.test(password);
-  };
+  useEffect(() => {
+    if (isSubmitting) {
+      const validationErrors: any = {};
+
+      if (!firstName) validationErrors.firstName = 'First name is required';
+      if (!lastName) validationErrors.lastName = 'Last name is required';
+      if (!username) validationErrors.username = 'Username is required';
+      if (!validateEmail(email)) validationErrors.email = 'Invalid email format';
+      if (!validatePassword(password)) validationErrors.password = 'Password must be at least 8 characters long and contain a number';
+      if (password !== confirmPassword) validationErrors.confirmPassword = 'Passwords do not match';
+      if (!dateOfBirth) validationErrors.dateOfBirth = 'Date of birth is required';
+      if (!country) validationErrors.country = 'Country is required';
+
+      setErrors(validationErrors);
+      setIsSubmitting(false);
+
+      if (Object.keys(validationErrors).length === 0) {
+        // Simulate registration success
+        setIsRegistered(true);
+      }
+    }
+  }, [isSubmitting]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    let hasError = false;
-    const newErrors = { ...errors };
-
-    if (firstName.trim() === '') {
-      newErrors.firstName = 'First name is required';
-      hasError = true;
-    } else {
-      newErrors.firstName = '';
-    }
-
-    if (lastName.trim() === '') {
-      newErrors.lastName = 'Last name is required';
-      hasError = true;
-    } else {
-      newErrors.lastName = '';
-    }
-
-    if (username.trim() === '') {
-      newErrors.username = 'Username is required';
-      hasError = true;
-    } else {
-      newErrors.username = '';
-    }
-
-    if (!validateEmail(email)) {
-      newErrors.email = 'Invalid email format';
-      hasError = true;
-    } else {
-      newErrors.email = '';
-    }
-
-    if (!validatePassword(password)) {
-      newErrors.password = 'Password must be at least 8 characters, include an uppercase letter, a lowercase letter, and a number';
-      hasError = true;
-    } else {
-      newErrors.password = '';
-    }
-
-    if (password !== confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-      hasError = true;
-    } else {
-      newErrors.confirmPassword = '';
-    }
-
-    if (dateOfBirth.trim() === '') {
-      newErrors.dateOfBirth = 'Date of birth is required';
-      hasError = true;
-    } else {
-      newErrors.dateOfBirth = '';
-    }
-
-    if (country.trim() === '') {
-      newErrors.country = 'Country is required';
-      hasError = true;
-    } else {
-      newErrors.country = '';
-    }
-
-    setErrors(newErrors);
-
-    if (!hasError) {
-      // Submit the form data
-      console.log('Form submitted successfully');
-    }
+    setIsSubmitting(true);
   };
 
   return (

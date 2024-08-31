@@ -29,8 +29,9 @@ export const SideMenuItem = styled.a`
   }
 `;
 
-export const FormWrapper = styled.div`
-  width: 75%;
+
+export const FormWrapper = styled.form`
+width: 75%;
   padding: 20px;
   margin-left: 25%;
   form {
@@ -47,8 +48,7 @@ export const FormWrapper = styled.div`
       padding: 10px;
       font-size: 1rem;
     }
-
-    button {
+  button {
       padding: 10px;
       background-color: #556cd6;
       color: white;
@@ -57,64 +57,75 @@ export const FormWrapper = styled.div`
       &:hover {
         background-color: #4452b1;
       }
-    }
+    } 
+`;
+
+export const FormField = styled.input`
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+export const ErrorText = styled.span`
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+`;
+
+export const SubmitButton = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #0056b3;
   }
 `;
 
-export const ForgotPasswordLink = styled.a`
-  color: #556cd6;
-  text-decoration: underline;
-  cursor: pointer;
-  &:hover {
-    color: #4452b1;
-  }
+export const RememberMeWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+`;
+
+export const RememberMeCheckbox = styled.input`
+  margin-right: 10px;
+`;
+
+export const RememberMeLabel = styled.label`
+  font-size: 1rem;
 `;
 
 export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ModalWrapper = styled.div`
-  background: white;
+  background-color: white;
   padding: 20px;
-  width: 300px;
-  margin: 100px auto;
-  border-radius: 5px;
-  position: relative;
-  z-index: 1001;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 500px;
 `;
 
 export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
-  h2 {
-    margin-bottom: 20px;
-  }
-  input {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 1rem;
-  }
+  align-items: center;
 `;
-
-export const ModalButton = styled.button`
-  padding: 10px;
-  background-color: #556cd6;
-  color: white;
-  border: none;
-  cursor: pointer;
-  &:hover {
-    background-color: #4452b1;
-  }
-`;
-
-export const ModalButtonLink = styled.a``;
 
 export const ModalMessage = styled.div`
   text-align: center;
@@ -124,15 +135,17 @@ export const ModalMessage = styled.div`
   p {
     margin-bottom: 20px;
   }
-  a {
-    display: block;
-    padding: 10px;
-    background-color: #556cd6;
-    color: white;
-    text-decoration: none;
-    &:hover {
-      background-color: #4452b1;
-    }
+`;
+
+export const ModalButton = styled.a`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #0056b3;
   }
 `;
 
@@ -143,11 +156,4 @@ export const CallToAction = styled.div`
   font-size: 1.2rem;
   text-align: center;
   margin-top: 20px;
-  a {
-    color: #fff;
-    text-decoration: underline;
-    &:hover {
-      color: #e0e0e0;
-    }
-  }
 `;
