@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
-import { RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CaptchaWrapper, CallToAction } from './register.styles';
+import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CaptchaWrapper, CallToAction } from './register.styles';
 
 declare global {
   interface Window {
     grecaptcha: any;
   }
 }
-
 
 const Register: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -19,9 +18,10 @@ const Register: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [country, setCountry] = useState('');
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,6 +52,13 @@ const Register: React.FC = () => {
 
   return (
     <RegisterWrapper>
+        <SideMenu>
+        <h3>Account Settings</h3>
+        <SideMenuItem href="/login">Sign In</SideMenuItem>
+        <h3>Customer Service</h3>
+        <SideMenuItem href="#faq">FAQ</SideMenuItem>
+        <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
+      </SideMenu>
       <FormWrapper>
         <h1>Register</h1>
         <form onSubmit={handleSubmit}>
@@ -89,13 +96,30 @@ const Register: React.FC = () => {
             value={confirmPassword}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
           />
+          <InputField
+            type="date"
+            placeholder="Date of Birth"
+            value={dateOfBirth}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDateOfBirth(e.target.value)}
+            />
+          {errors.dateOfBirth && <ErrorText>{errors.dateOfBirth}</ErrorText>}
+
+          <InputField
+            type="text"
+            placeholder="Country"
+            value={country}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCountry(e.target.value)}
+            />
+          {errors.country && <ErrorText>{errors.country}</ErrorText>}
 
 
           <SubmitButton type="submit">Register</SubmitButton>
         </form>
       </FormWrapper>
       <CallToAction>
-        {/* Your call-to-action content */}
+        {/* Call-to-action text box content */}
+        <h3>Become a Fifth Member</h3>
+        <p>Join our free Fan Club so we can give back to you - the most dedicated fans on the planet. You’ll get first crack at tickets plus access to giveaways, coupons, and more benefits designed exclusively for members of our Fan Club: The Fifth Members.</p>
       </CallToAction>
     </RegisterWrapper>
   );
