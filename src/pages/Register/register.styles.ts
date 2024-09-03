@@ -95,13 +95,3 @@ export const CallToAction = styled.div`
   text-align: center;
   margin-top: 20px;
 `;
-
-export const CaptchaWrapper = styled.div`
-  height: 13rem;
-  width: 12rem;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  border: 3px solid red;
-`;

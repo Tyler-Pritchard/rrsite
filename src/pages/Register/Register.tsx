@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
-import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CaptchaWrapper, CallToAction } from './register.styles';
+import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CallToAction } from './register.styles';
 
 declare global {
   interface Window {
@@ -15,6 +15,7 @@ const Register: React.FC = () => {
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [username, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -23,8 +24,25 @@ const Register: React.FC = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
+
+  const validatePasswords = () => {
+    if (password !== confirmPassword) {
+      setErrors({ ...errors, confirmPassword: 'Passwords do not match' });
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+
+    // validate passwords match
+    if (!validatePasswords()) {
+      console.log("PASSWORDS DO NOT MATCH -- ADD 'FIX THIS UI' TO THE LAUNDRY LIST")
+      return;
+    }
+
     // Execute reCAPTCHA v3 to get the token
     window.grecaptcha.ready(() => {
       window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((token: string) => {
@@ -38,9 +56,11 @@ const Register: React.FC = () => {
     const registerData = {
       firstName,
       lastName,
+      username,
       email,
       password,
-      confirmPassword,
+      dateOfBirth,
+      country,
       captchaToken: token, // Include CAPTCHA token
     };
 
@@ -74,6 +94,13 @@ const Register: React.FC = () => {
             placeholder="Last Name"
             value={lastName}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLastName(e.target.value)}
+          />
+
+          <InputField
+            type="text"
+            placeholder="User Name"
+            value={username}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserName(e.target.value)}
           />
 
           <InputField

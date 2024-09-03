@@ -1,5 +1,7 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { Dispatch } from 'redux';
+
+import axios from '../../axiosConfig';
 
 // 1. Define action type constants
 export const USER_REGISTER_REQUEST = 'USER_REGISTER_REQUEST';
@@ -28,27 +30,30 @@ export type UserActionTypes =
   | UserRegisterFailAction;
 
 // 4. Thunk action creator for registering a user
-export const registerUser = (userData: any) => async (dispatch: Dispatch<UserActionTypes>): Promise<void> => {
+export const registerUser = (userData: any) => async (dispatch: Dispatch<UserActionTypes>) => {
   try {
-    dispatch({ type: USER_REGISTER_REQUEST });
-
-    const config = {
+    const res = await axios.post('/api/users/register', userData, {
       headers: {
         'Content-Type': 'application/json',
       },
-    };
+    });
 
-    const response = await axios.post('/api/users/register', userData, config);
+    console.log('Response from backend:', res.data);  // Log the successful response
 
     dispatch({
       type: USER_REGISTER_SUCCESS,
-      payload: response.data,
+      payload: res.data,
     });
-  } catch (error: any) {
+  } catch (error) {
+    const err = error as any;  // Assert the type of error as any
+
+    console.error('Error from backend:', err.response?.data || err.message);  // Log the error response
+
     dispatch({
       type: USER_REGISTER_FAIL,
-      payload: error.response?.data?.msg || error.message || 'Registration failed',
+      payload: err.response?.data || err.message,
     });
-    throw error; // Re-throw the error to handle it in the component
+
+    throw err; // Re-throw the error to handle it in the component if needed
   }
 };
