@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-// Temporarily set the base URL for all Axios requests
-axios.defaults.baseURL = 'http://localhost:5000';
+const axiosInstance = axios.create({
+  baseURL: process.env.REACT_APP_API_BASE_URL || 'https://unique-comfort.up.railway.app',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 
-export default axios;
-
+export default axiosInstance;
