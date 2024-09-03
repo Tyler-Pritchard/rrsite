@@ -95,3 +95,37 @@ export const CallToAction = styled.div`
   text-align: center;
   margin-top: 20px;
 `;
+
+export const ModalWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+`;
+
+export const ModalContent = styled.div`
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+`;
+
+export const ModalButton = styled.button`
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #45a049;
+  }
+`;

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
-import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CallToAction } from './register.styles';
+import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CallToAction, ModalWrapper, ModalContent, ModalButton } from './register.styles';
 
 declare global {
   interface Window {
@@ -12,6 +13,7 @@ declare global {
 
 const Register: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate(); // For navigation after clicking "Done"
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -23,7 +25,8 @@ const Register: React.FC = () => {
   const [country, setCountry] = useState('');
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const validatePasswords = () => {
     if (password !== confirmPassword) {
@@ -52,7 +55,7 @@ const Register: React.FC = () => {
     });
   };
 
-  const processRegistration = (token: string) => {
+  const processRegistration = async (token: string) => {
     const registerData = {
       firstName,
       lastName,
@@ -64,10 +67,19 @@ const Register: React.FC = () => {
       captchaToken: token, // Include CAPTCHA token
     };
 
-    dispatch(registerUser(registerData))
-      .catch((error: any) => {
-        setErrors({ server: error.response?.data?.msg || error.message || 'Registration failed' });
-      });
+    try {
+      await dispatch(registerUser(registerData));
+      setShowModal(true); // Show the modal after successful registration
+    } catch (error) {
+      console.error('Error from backend:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleDone = () => {
+    setShowModal(false);
+    navigate('/'); // Navigate to the Home screen after clicking "Done"
   };
 
   return (
@@ -148,6 +160,15 @@ const Register: React.FC = () => {
         <h3>Become a Fifth Member</h3>
         <p>Join our free Fan Club so we can give back to you - the most dedicated fans on the planet. You’ll get first crack at tickets plus access to giveaways, coupons, and more benefits designed exclusively for members of our Fan Club: The Fifth Members.</p>
       </CallToAction>
+
+      {showModal && (
+        <ModalWrapper>
+          <ModalContent>
+            <h2>Registration Successful!</h2>
+            <ModalButton onClick={handleDone}>Done</ModalButton>
+          </ModalContent>
+        </ModalWrapper>
+      )}
     </RegisterWrapper>
   );
 };
