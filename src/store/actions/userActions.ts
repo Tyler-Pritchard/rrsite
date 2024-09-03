@@ -32,7 +32,7 @@ export type UserActionTypes =
 // 4. Thunk action creator for registering a user
 export const registerUser = (userData: any) => async (dispatch: Dispatch<UserActionTypes>) => {
   try {
-    const res = await axios.post('/api/users/register', userData, {
+    const res = await axios.post('/users/register', userData, {
       headers: {
         'Content-Type': 'application/json',
       },
