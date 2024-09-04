@@ -51,7 +51,7 @@ const Register: React.FC = () => {
       window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((token: string) => {
         setCaptchaToken(token);
         // CAPTCHA token for test *** DISABLE CAPTCHA TOKEN CONSOLE.LOG BEFORE PUSHING TO PROD ***
-        console.log('Captcha Token:', token);
+        // console.log('Captcha Token:', token);
         processRegistration(token); // Proceed with registration after token is generated
       });
     });
