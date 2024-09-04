@@ -36,7 +36,7 @@ export const registerUser = (userData: any) => async (dispatch: Dispatch<UserAct
       headers: {
         'Content-Type': 'application/json',
       },
-      withCredentials: false,
+      withCredentials: true,
     });
 
     console.log('Response from backend:', res.data);  // Log the successful response
