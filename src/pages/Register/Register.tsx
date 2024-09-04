@@ -5,11 +5,11 @@ import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
 import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CallToAction, ModalWrapper, ModalContent, ModalButton } from './register.styles';
 
-declare global {
-  interface Window {
-    grecaptcha: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     grecaptcha: any;
+//   }
+// }
 
 const Register: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -23,7 +23,7 @@ const Register: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [country, setCountry] = useState('');
-  const [, setCaptchaToken] = useState<string | null>(null);
+  // const [, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -47,17 +47,30 @@ const Register: React.FC = () => {
     }
 
     // Execute reCAPTCHA v3 to get the token
-    window.grecaptcha.ready(() => {
-      window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((token: string) => {
-        setCaptchaToken(token);
-        // CAPTCHA token for test *** DISABLE CAPTCHA TOKEN CONSOLE.LOG BEFORE PUSHING TO PROD ***
-        // console.log('Captcha Token:', token);
-        processRegistration(token); // Proceed with registration after token is generated
-      });
-    });
+    // window.grecaptcha.ready(() => {
+    //   window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((token: string) => {
+    //     setCaptchaToken(token);
+    //     // CAPTCHA token for test *** DISABLE CAPTCHA TOKEN CONSOLE.LOG BEFORE PUSHING TO PROD ***
+    //     // console.log('Captcha Token:', token);
+    //     processRegistration(token); // Proceed with registration after token is generated
+    //   });
+    // });
+    processRegistration();
   };
 
-  const processRegistration = async (token: string) => {
+  // const processRegistration = async (token: string) => {
+  //   const registerData = {
+  //     firstName,
+  //     lastName,
+  //     username,
+  //     email,
+  //     password,
+  //     dateOfBirth,
+  //     country,
+  //     // captchaToken: token, // Include CAPTCHA token
+  //   };
+
+  const processRegistration = async () => {
     const registerData = {
       firstName,
       lastName,
@@ -66,7 +79,7 @@ const Register: React.FC = () => {
       password,
       dateOfBirth,
       country,
-      captchaToken: token, // Include CAPTCHA token
+      // captchaToken: token, // Include CAPTCHA token
     };
 
     try {
