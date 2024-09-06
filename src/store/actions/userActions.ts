@@ -47,12 +47,13 @@ export const getUserCount = () => async (dispatch: AppDispatch) => {
 
 // Action creator for registering a user
 export const registerUser = (userData: any) => async (dispatch: Dispatch<UserActionTypes>) => {
+  
   try {
+    axiosInstance.defaults.withCredentials = true;
     const res = await axiosInstance.post('/users/register', userData, {
       headers: {
         'Content-Type': 'application/json',
       },
-      withCredentials: false,
     });
 
     console.log('Response from backend:', res.data);  // Log the successful response

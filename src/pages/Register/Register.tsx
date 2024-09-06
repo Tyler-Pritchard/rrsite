@@ -23,7 +23,7 @@ const Register: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [country, setCountry] = useState('');
-  const [recaptchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -37,10 +37,10 @@ const Register: React.FC = () => {
       password,
       dateOfBirth,
       country,
-      captchaToken: recaptchaToken,
+      captchaToken: token,
     };
 
-    // console.log("PROCESS REGISTRATION in Register: ", recaptchaToken)
+    console.log("PROCESS REGISTRATION in Register: ", captchaToken)
 
     try {
       await dispatch(registerUser(registerData));
@@ -65,7 +65,7 @@ const Register: React.FC = () => {
 
     // validate passwords match
     if (!validatePasswords()) {
-      console.log("PASSWORDS DO NOT MATCH -- ADD 'FIX THIS UI' TO THE LAUNDRY LIST")
+      console.log("PASSWORDS DO NOT MATCH")
       return;
     }
 
@@ -78,12 +78,12 @@ const Register: React.FC = () => {
     }
 
     window.grecaptcha.ready(() => {
-      window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((recaptchaToken: string) => {
-        // console.log("SUBMIT ACTION in Register: ", recaptchaToken)
-        setCaptchaToken(recaptchaToken);
+      window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((captchaToken: string) => {
+        console.log("SUBMIT ACTION in Register: ", captchaToken)
+        setCaptchaToken(captchaToken);
 
-        if (recaptchaToken) {
-          processRegistration(recaptchaToken ?? '');
+        if (captchaToken) {
+          processRegistration(captchaToken ?? '');
         } else {
           console.error('Token is null or undefined.');
           setIsSubmitting(false)
