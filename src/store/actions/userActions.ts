@@ -1,14 +1,19 @@
-// import axios from 'axios';
 import { Dispatch } from 'redux';
+import axiosInstance from '../../axiosConfig';
+import { AppDispatch } from '../store_index';
 
-import axios from '../../axiosConfig';
-
-// 1. Define action type constants
+// Action type constants
+export const GET_USER_COUNT = 'GET_USER_COUNT';
 export const USER_REGISTER_REQUEST = 'USER_REGISTER_REQUEST';
 export const USER_REGISTER_SUCCESS = 'USER_REGISTER_SUCCESS';
 export const USER_REGISTER_FAIL = 'USER_REGISTER_FAIL';
 
-// 2. Create TypeScript interfaces for each action
+// TypeScript interfaces for each action
+interface GetUserCountAction {
+  type: typeof GET_USER_COUNT;
+  payload: number;
+}
+
 interface UserRegisterRequestAction {
   type: typeof USER_REGISTER_REQUEST;
 }
@@ -23,16 +28,27 @@ interface UserRegisterFailAction {
   payload: string;
 }
 
-// 3. Union of all action types
+// Union of all action types
 export type UserActionTypes =
+  GetUserCountAction
   | UserRegisterRequestAction
   | UserRegisterSuccessAction
   | UserRegisterFailAction;
 
-// 4. Thunk action creator for registering a user
+// Action for getting user count
+export const getUserCount = () => async (dispatch: AppDispatch) => {
+  try {
+    const { data } = await axiosInstance.get(`/users/count`);
+    dispatch({ type: 'GET_USER_COUNT', payload: data.totalUsers });
+  } catch (error) {
+    console.error("Error fetching user count: ", error);
+  }
+};
+
+// Action creator for registering a user
 export const registerUser = (userData: any) => async (dispatch: Dispatch<UserActionTypes>) => {
   try {
-    const res = await axios.post('/users/register', userData, {
+    const res = await axiosInstance.post('/users/register', userData, {
       headers: {
         'Content-Type': 'application/json',
       },
