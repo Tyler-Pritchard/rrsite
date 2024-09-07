@@ -3,7 +3,9 @@ import {
     GET_USER_COUNT,
     USER_REGISTER_REQUEST,
     USER_REGISTER_SUCCESS,
-    USER_REGISTER_FAIL
+    USER_REGISTER_FAIL,
+    USER_LOGIN_SUCCESS,
+    USER_LOGIN_FAIL
 } from '../actions/userActions';
 
 interface UserState {
@@ -30,7 +32,11 @@ const userReducer = (state = initialState, action: UserActionTypes): UserState =
         return { ...state, loading: false, userInfo: action.payload };
         case USER_REGISTER_FAIL:
         return { ...state, loading: false, error: action.payload };
-        default:
+        case USER_LOGIN_SUCCESS:
+        return { ...state, loading: false, userInfo: action.payload };
+        case USER_LOGIN_FAIL:
+        return { ...state, loading: false, error: action.payload };
+    default:
         return state;
     }
 };

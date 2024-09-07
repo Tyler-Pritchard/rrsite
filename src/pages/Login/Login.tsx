@@ -18,41 +18,109 @@ import {
   RememberMeCheckbox,
 } from './login.styles';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { AppDispatch } from '../../store/store_index';
+import { loginUser } from '../../store/actions/userActions';
 import { toggleForgotPasswordModal, sendPasswordReset } from '../../store/actions/menuActions';
 import { RootState } from '../../store/store_index';
 
-const validateEmail = (email: string) => {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(String(email).toLowerCase());
-};
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
 
 const Login: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
+  const navigate = useNavigate(); 
+
   const isModalOpen = useSelector((state: RootState) => state.menu.isForgotPasswordModalOpen);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [rememberMe, setRememberMe] = useState<boolean>(false);
+  const [, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [isSubmiting, setIsSubmitting] = useState(false);
   const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const newErrors: { [key: string]: string } = {};
+  const handleCheckboxChange = () => {
+    setRememberMe(!rememberMe);
+  };
 
-    if (!email) {
-      newErrors.email = 'Email is required';
-    } else if (!validateEmail(email)) {
-      newErrors.email = 'Invalid email format';
-    }
-    if (!password) newErrors.password = 'Password is required';
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
 
-    setErrors(newErrors);
+  const handleDone = () => {
+    navigate('/'); // Navigate to the Home screen after clicking "Done"
+  };
 
-    if (Object.keys(newErrors).length === 0) {
-      // Proceed with form submission if there are no errors
-      console.log("Form submitted", { email, password, rememberMe });
+  const processLogin = async (captchaToken: string, formData: { email: string; password: string; rememberMe: boolean }) => {
+    setIsSubmitting(true);
+  
+    try {
+      // Prepare the data with the token
+      const loginData = {
+        ...formData,
+        captchaToken, // Attach the reCAPTCHA token to formData
+      };
+  
+      // Dispatch the login action with form data and captchaToken
+      await dispatch(loginUser(loginData));
+      handleDone()
+    } catch (error) {
+      console.error('Error during login:', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
+
+    // Form submission handler
+    const handleSubmit = (event: React.FormEvent) => {
+      event.preventDefault();
+
+      // Cast event.target as HTMLFormElement to access form values
+      const target = event.target as HTMLFormElement;
+  
+      // Safely access form elements using "name" attributes and check for null
+      const emailElement = target.elements.namedItem('email') as HTMLInputElement | null;
+      const passwordElement = target.elements.namedItem('password') as HTMLInputElement | null;
+      const rememberMeElement = target.elements.namedItem('rememberMe') as HTMLInputElement | null;
+
+      // Add null checks to ensure the elements exist before accessing their properties
+      const formData = {
+        email: emailElement ? emailElement.value : '',
+        password: passwordElement ? passwordElement.value : '',
+        rememberMe: rememberMeElement ? rememberMeElement.checked : false,
+      };
+      
+      const newErrors: { [key: string]: string } = {};
+  
+      if (!email) {
+        newErrors.email = 'Email is required';
+      } else if (!validateEmail(email)) {
+        newErrors.email = 'Invalid email format';
+      }
+      if (!password) newErrors.password = 'Password is required';
+
+      setErrors(newErrors);
+
+      // reCAPTCHA v3 token retrieval
+      window.grecaptcha.ready(() => {
+        window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'login' }).then((captchaToken: string) => {
+          console.log("SUBMIT ACTION in Login: ", captchaToken);
+          setCaptchaToken(captchaToken); // Store the token in state
+  
+          if (captchaToken) {
+            // Proceed with login after captcha validation
+            processLogin(captchaToken, formData);
+          } else {
+            console.error('Token is null or undefined.');
+          }
+        });
+      });
+    };
 
   const handleForgotPasswordClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -98,12 +166,12 @@ const Login: React.FC = () => {
           <RememberMeCheckbox
             type="checkbox"
             checked={rememberMe}
-            onChange={() => setRememberMe(!rememberMe)}
+            onChange={handleCheckboxChange}
           />
           <RememberMeLabel>Remember Me</RememberMeLabel>
         </RememberMeWrapper>
 
-        <SubmitButton type="submit">Login</SubmitButton>
+        <SubmitButton type="submit" disabled={isSubmiting}>{isSubmiting ? 'Logging in...' : 'Login'}</SubmitButton>
         <button type="button" onClick={handleForgotPasswordClick}>
           Forgot Password?
         </button>

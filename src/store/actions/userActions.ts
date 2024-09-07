@@ -1,12 +1,16 @@
-import { Dispatch } from 'redux';
+import { Dispatch, AnyAction } from 'redux';
 import axiosInstance from '../../axiosConfig';
 import { AppDispatch } from '../store_index';
+import { ThunkAction } from 'redux-thunk';
+import { RootState } from '../store_index';
 
 // Action type constants
 export const GET_USER_COUNT = 'GET_USER_COUNT';
 export const USER_REGISTER_REQUEST = 'USER_REGISTER_REQUEST';
 export const USER_REGISTER_SUCCESS = 'USER_REGISTER_SUCCESS';
 export const USER_REGISTER_FAIL = 'USER_REGISTER_FAIL';
+export const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS';
+export const USER_LOGIN_FAIL = 'USER_LOGIN_FAIL';
 
 // TypeScript interfaces for each action
 interface GetUserCountAction {
@@ -28,12 +32,24 @@ interface UserRegisterFailAction {
   payload: string;
 }
 
+interface UserLoginSuccessAction {
+  type: typeof USER_LOGIN_SUCCESS;
+  payload: any; // Replace `any` with the appropriate type for user info
+}
+
+interface UserLoginFailAction {
+  type: typeof USER_LOGIN_FAIL;
+  payload: string;
+}
+
 // Union of all action types
 export type UserActionTypes =
   GetUserCountAction
   | UserRegisterRequestAction
   | UserRegisterSuccessAction
-  | UserRegisterFailAction;
+  | UserRegisterFailAction
+  | UserLoginSuccessAction
+  | UserLoginFailAction;
 
 // Action for getting user count
 export const getUserCount = () => async (dispatch: AppDispatch) => {
@@ -56,7 +72,7 @@ export const registerUser = (userData: any) => async (dispatch: Dispatch<UserAct
       },
     });
 
-    // console.log('Response from backend:', res.data);  // Log the successful response
+    console.log('Response from backend:', res.data);  // Log the successful response
 
     dispatch({
       type: USER_REGISTER_SUCCESS,
@@ -75,3 +91,14 @@ export const registerUser = (userData: any) => async (dispatch: Dispatch<UserAct
     throw err; // Re-throw the error to handle it in the component if needed
   }
 };
+
+export const loginUser = (loginData: any): ThunkAction<void, RootState, unknown, AnyAction> => 
+  async (dispatch) => {
+    try {
+      const { data } = await axiosInstance.post('/users/login', loginData);
+      dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
+    } catch (error) {
+      const err = error as any;
+      dispatch({ type: USER_LOGIN_FAIL, payload: err.response?.data || err.message });
+    }
+  };
