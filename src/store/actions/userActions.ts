@@ -11,6 +11,7 @@ export const USER_REGISTER_SUCCESS = 'USER_REGISTER_SUCCESS';
 export const USER_REGISTER_FAIL = 'USER_REGISTER_FAIL';
 export const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS';
 export const USER_LOGIN_FAIL = 'USER_LOGIN_FAIL';
+export const USER_LOGOUT = 'USER_LOGOUT';
 
 // TypeScript interfaces for each action
 interface GetUserCountAction {
@@ -42,6 +43,10 @@ interface UserLoginFailAction {
   payload: string;
 }
 
+interface UserLogoutAction {
+  type: typeof USER_LOGOUT;
+}
+
 // Union of all action types
 export type UserActionTypes =
   GetUserCountAction
@@ -49,7 +54,8 @@ export type UserActionTypes =
   | UserRegisterSuccessAction
   | UserRegisterFailAction
   | UserLoginSuccessAction
-  | UserLoginFailAction;
+  | UserLoginFailAction
+  | UserLogoutAction;
 
 // Action for getting user count
 export const getUserCount = () => async (dispatch: AppDispatch) => {
@@ -93,12 +99,16 @@ export const registerUser = (userData: any) => async (dispatch: Dispatch<UserAct
 };
 
 export const loginUser = (loginData: any): ThunkAction<void, RootState, unknown, AnyAction> => 
-  async (dispatch) => {
-    try {
-      const { data } = await axiosInstance.post('/users/login', loginData);
-      dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-    } catch (error) {
-      const err = error as any;
-      dispatch({ type: USER_LOGIN_FAIL, payload: err.response?.data || err.message });
-    }
-  };
+async (dispatch) => {
+  try {
+    const { data } = await axiosInstance.post('/users/login', loginData);
+    dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
+  } catch (error) {
+    const err = error as any;
+    dispatch({ type: USER_LOGIN_FAIL, payload: err.response?.data || err.message });
+  }
+};
+
+export const logoutUser = (): UserLogoutAction => ({
+  type: USER_LOGOUT,
+});

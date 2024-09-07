@@ -46,7 +46,7 @@ const Register: React.FC = () => {
       captchaToken: token,
     };
 
-    // console.log("PROCESS REGISTRATION in Register: ", token)
+    console.log("PROCESS REGISTRATION in Register: ", token)
 
     try {
       await dispatch(registerUser(registerData));
@@ -85,7 +85,7 @@ const Register: React.FC = () => {
 
     window.grecaptcha.ready(() => {
       window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((captchaToken: string) => {
-        // console.log("SUBMIT ACTION in Register: ", captchaToken)
+        console.log("SUBMIT ACTION in Register: ", captchaToken)
         setCaptchaToken(captchaToken);
 
         if (captchaToken) {

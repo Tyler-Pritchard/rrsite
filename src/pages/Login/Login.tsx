@@ -56,18 +56,19 @@ const Login: React.FC = () => {
     navigate('/'); // Navigate to the Home screen after clicking "Done"
   };
 
-  const processLogin = async (captchaToken: string, formData: { email: string; password: string; rememberMe: boolean }) => {
-    setIsSubmitting(true);
+  const processLogin = async (token: string) => {
+    const formData = {
+      email,
+      password,
+      rememberMe,
+      captchaToken: token,
+    };
   
+    console.log("PROCESSLOGIN reCAPTCHA TOKEN in Login.tsx: ", token)
+
     try {
-      // Prepare the data with the token
-      const loginData = {
-        ...formData,
-        captchaToken, // Attach the reCAPTCHA token to formData
-      };
-  
       // Dispatch the login action with form data and captchaToken
-      await dispatch(loginUser(loginData));
+      await dispatch(loginUser(formData));
       handleDone()
     } catch (error) {
       console.error('Error during login:', error);
@@ -76,51 +77,45 @@ const Login: React.FC = () => {
     }
   };
 
-    // Form submission handler
-    const handleSubmit = (event: React.FormEvent) => {
-      event.preventDefault();
+  // Form submission handler
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    
+    const newErrors: { [key: string]: string } = {};
 
-      // Cast event.target as HTMLFormElement to access form values
-      const target = event.target as HTMLFormElement;
-  
-      // Safely access form elements using "name" attributes and check for null
-      const emailElement = target.elements.namedItem('email') as HTMLInputElement | null;
-      const passwordElement = target.elements.namedItem('password') as HTMLInputElement | null;
-      const rememberMeElement = target.elements.namedItem('rememberMe') as HTMLInputElement | null;
+    if (!email) {
+      newErrors.email = 'Email is required';
+    } else if (!validateEmail(email)) {
+      newErrors.email = 'Invalid email format';
+    }
+    if (!password) newErrors.password = 'Password is required';
 
-      // Add null checks to ensure the elements exist before accessing their properties
-      const formData = {
-        email: emailElement ? emailElement.value : '',
-        password: passwordElement ? passwordElement.value : '',
-        rememberMe: rememberMeElement ? rememberMeElement.checked : false,
-      };
-      
-      const newErrors: { [key: string]: string } = {};
-  
-      if (!email) {
-        newErrors.email = 'Email is required';
-      } else if (!validateEmail(email)) {
-        newErrors.email = 'Invalid email format';
-      }
-      if (!password) newErrors.password = 'Password is required';
+    setErrors(newErrors);
 
-      setErrors(newErrors);
+    // Execute reCAPTCHA v3 to get the token
+    setIsSubmitting(true);
+    if (!window.grecaptcha) {
+      console.error('reCAPTCHA is not loaded');
+      setIsSubmitting(false);
+      return;
+    }
 
-      // reCAPTCHA v3 token retrieval
-      window.grecaptcha.ready(() => {
-        window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'login' }).then((captchaToken: string) => {
-          console.log("SUBMIT ACTION in Login: ", captchaToken);
-          setCaptchaToken(captchaToken); // Store the token in state
-  
-          if (captchaToken) {
-            // Proceed with login after captcha validation
-            processLogin(captchaToken, formData);
-          } else {
-            console.error('Token is null or undefined.');
-          }
-        });
+    // reCAPTCHA v3 token retrieval
+    window.grecaptcha.ready(() => {
+      window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'login' }).then((captchaToken: string) => {
+        console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
+        setCaptchaToken(captchaToken); // Store the token in state
+
+        if (captchaToken) {
+          // Proceed with login after captcha validation
+          processLogin(captchaToken ?? '');
+        } else {
+          console.error('Token is null or undefined.');
+          setIsSubmitting(false)
+        }
       });
-    };
+    });
+  };
 
   const handleForgotPasswordClick = (e: React.MouseEvent) => {
     e.stopPropagation();
