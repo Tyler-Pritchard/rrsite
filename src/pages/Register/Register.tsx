@@ -46,7 +46,7 @@ const Register: React.FC = () => {
       captchaToken: token,
     };
 
-    console.log("PROCESS REGISTRATION in Register: ", captchaToken)
+    // console.log("PROCESS REGISTRATION in Register: ", captchaToken)
 
     try {
       await dispatch(registerUser(registerData));

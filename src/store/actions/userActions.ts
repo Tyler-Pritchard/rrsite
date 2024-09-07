@@ -56,7 +56,7 @@ export const registerUser = (userData: any) => async (dispatch: Dispatch<UserAct
       },
     });
 
-    console.log('Response from backend:', res.data);  // Log the successful response
+    // console.log('Response from backend:', res.data);  // Log the successful response
 
     dispatch({
       type: USER_REGISTER_SUCCESS,
