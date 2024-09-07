@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
-import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, SubmitButton, ErrorText, CallToAction, ModalWrapper, ModalContent, ModalButton } from './register.styles';
+import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, CheckboxContainer, Label, CheckboxInput, SubmitButton, ErrorText, CallToAction, ModalWrapper, ModalContent, ModalButton } from './register.styles';
 
 declare global {
   interface Window {
@@ -23,10 +23,15 @@ const Register: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [country, setCountry] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsSubscribed(!isSubscribed);
+  };
 
   const processRegistration = async (token: string) => {
     const registerData = {
@@ -37,6 +42,7 @@ const Register: React.FC = () => {
       password,
       dateOfBirth,
       country,
+      isSubscribed,
       captchaToken: token,
     };
 
@@ -167,6 +173,18 @@ const Register: React.FC = () => {
             />
           {errors.country && <ErrorText>{errors.country}</ErrorText>}
 
+          <CheckboxContainer>
+            <CheckboxInput
+              type="checkbox"
+              id="subscribe"
+              checked={isSubscribed}
+              onChange={handleCheckboxChange}
+            />
+            <Label htmlFor="subscribe">
+              <span>Subscribe Me to Your Newsletter</span>
+              <span>Stay up to date on the latest Rob Rich news, contests, content, and sales</span>
+            </Label>
+          </CheckboxContainer>
 
           <SubmitButton type="submit">Register</SubmitButton>
         </form>

@@ -79,6 +79,43 @@ export const ErrorText = styled.p`
   margin-top: 0.25rem;
 `;
 
+export const CheckboxContainer = styled.div`
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+
+  label {
+    font-size: 14px;
+    color: #fff;
+  }
+`;
+
+export const Label = styled.label`
+  font-size: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  color: #fff; /* Or any other color that fits */
+  
+  span {
+    font-size: 14px;
+    color: #ccc; /* Lighter color for the subtext */
+    margin-top: 5px;
+  }
+`;
+
+export const CheckboxInput = styled.input`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`;
+
 export const SubmitButton = styled.button`
   /* Your existing styling */
 `;
