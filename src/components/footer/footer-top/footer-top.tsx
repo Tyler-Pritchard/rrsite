@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../store/reducers';
+import { RootState } from '../../../store/store_index';
 import { AppDispatch } from '../../../store/store_index';
 import { getUserCount } from '../../../store/actions/userActions';
 import { TopFooterBody, TopFooterBrow, TopFooterWrapper, TopFooterCta, TopFooterButton, TopFooterCounter, TopFooterLink } from "./footer-top.styles";

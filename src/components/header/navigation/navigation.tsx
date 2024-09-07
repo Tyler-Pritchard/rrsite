@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, IconWrapper, StyledIconButton, StyledAccountCircleIcon, StyledShoppingCartIcon} from "./navigation.styles";
+import {Container, IconWrapper, StyledIconButton, StyledAccountCircleIcon, StyledLogoutIcon, StyledShoppingCartIcon} from "./navigation.styles";
 
 const Navigation: React.FC = () => {
     return (
@@ -7,6 +7,7 @@ const Navigation: React.FC = () => {
             <StyledIconButton href="/login" aria-label="user login">
                 <IconWrapper>
                     <StyledAccountCircleIcon />
+                    <StyledLogoutIcon />
                 </IconWrapper>
             </StyledIconButton>
             <StyledIconButton aria-label="shopping cart">

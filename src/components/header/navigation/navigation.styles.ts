@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ReactComponent as AccountCircleIcon } from '../../../assets/icons/user.svg';
 import { ReactComponent as ShoppingCartIcon } from '../../../assets/icons/cart.svg';
+import { ReactComponent as LogOutIcon } from '../../../assets/icons/logout.svg';
 
 
 export const Container = styled.div`
@@ -25,6 +26,14 @@ export const StyledIconButton = styled.a`
 `;
 
 export const StyledAccountCircleIcon = styled(AccountCircleIcon)`
+  color: black;
+  background: none;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+`;
+
+export const StyledLogoutIcon = styled(LogOutIcon)`
   color: black;
   background: none;
   background-color: transparent;
