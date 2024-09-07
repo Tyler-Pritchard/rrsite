@@ -64,7 +64,7 @@ const Login: React.FC = () => {
       captchaToken: token,
     };
   
-    console.log("PROCESSLOGIN reCAPTCHA TOKEN in Login.tsx: ", token)
+    // console.log("PROCESSLOGIN reCAPTCHA TOKEN in Login.tsx: ", token)
 
     try {
       // Dispatch the login action with form data and captchaToken
@@ -103,7 +103,7 @@ const Login: React.FC = () => {
     // reCAPTCHA v3 token retrieval
     window.grecaptcha.ready(() => {
       window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'login' }).then((captchaToken: string) => {
-        console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
+        // console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
         setCaptchaToken(captchaToken); // Store the token in state
 
         if (captchaToken) {

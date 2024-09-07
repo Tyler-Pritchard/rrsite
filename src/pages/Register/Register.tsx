@@ -46,7 +46,7 @@ const Register: React.FC = () => {
       captchaToken: token,
     };
 
-    console.log("PROCESS REGISTRATION in Register: ", token)
+    // console.log("PROCESS REGISTRATION in Register: ", token)
 
     try {
       await dispatch(registerUser(registerData));
@@ -71,7 +71,7 @@ const Register: React.FC = () => {
 
     // validate passwords match
     if (!validatePasswords()) {
-      console.log("PASSWORDS DO NOT MATCH")
+      // console.log("PASSWORDS DO NOT MATCH")
       return;
     }
 
