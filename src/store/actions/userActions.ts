@@ -1,8 +1,7 @@
-import { Dispatch, AnyAction } from 'redux';
+import { Dispatch } from 'redux';
+import { AxiosError } from 'axios';
 import axiosInstance from '../../axiosConfig';
 import { AppDispatch } from '../store_index';
-import { ThunkAction } from 'redux-thunk';
-import { RootState } from '../store_index';
 
 // Action type constants
 export const GET_USER_COUNT = 'GET_USER_COUNT';
@@ -98,14 +97,21 @@ export const registerUser = (userData: any) => async (dispatch: Dispatch<UserAct
   }
 };
 
-export const loginUser = (loginData: any): ThunkAction<void, RootState, unknown, AnyAction> => 
-async (dispatch) => {
+export const loginUser = (loginData: any) => async (dispatch: AppDispatch) => {
   try {
-    const { data } = await axiosInstance.post('/users/login', loginData);
-    dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
+    const response = await axiosInstance.post('/users/login', loginData);
+    dispatch({ type: 'USER_LOGIN_SUCCESS', payload: response.data });
+
+    return response.data;  // Return the full response object
   } catch (error) {
-    const err = error as any;
-    dispatch({ type: USER_LOGIN_FAIL, payload: err.response?.data || err.message });
+    if (error instanceof AxiosError && error.response) {
+      // If error is an AxiosError and has a response property, use it
+      dispatch({ type: 'USER_LOGIN_FAIL', payload: error.response.data });
+    } else {
+      // Otherwise, use the error message
+      dispatch({ type: 'USER_LOGIN_FAIL', payload: (error as Error).message });
+    }
+    throw error;
   }
 };
 

@@ -38,14 +38,10 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [rememberMe, setRememberMe] = useState<boolean>(false);
-  const [, setCaptchaToken] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmiting, setIsSubmitting] = useState(false);
   const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
-
-  const handleCheckboxChange = () => {
-    setRememberMe(!rememberMe);
-  };
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -56,19 +52,22 @@ const Login: React.FC = () => {
     navigate('/'); // Navigate to the Home screen after clicking "Done"
   };
 
-  const processLogin = async (token: string) => {
-    const formData = {
-      email,
-      password,
-      rememberMe,
-      captchaToken: token,
-    };
+  const processLogin = async (formData: { email: string; password: string; rememberMe: boolean }) => {
   
     // console.log("PROCESSLOGIN reCAPTCHA TOKEN in Login.tsx: ", token)
 
     try {
-      // Dispatch the login action with form data and captchaToken
-      await dispatch(loginUser(formData));
+      const response = await dispatch(loginUser(formData));  // Dispatch login action
+  
+      // Extract the token from the response
+      const { token } = response;
+  
+      // Store the token based on the 'Remember Me' selection
+      if (formData.rememberMe) {
+        localStorage.setItem('token', token);  // Use localStorage for 'Remember Me'
+      } else {
+        sessionStorage.setItem('token', token);  // Use sessionStorage if 'Remember Me' is not checked
+      }
       handleDone()
     } catch (error) {
       console.error('Error during login:', error);
@@ -80,6 +79,13 @@ const Login: React.FC = () => {
   // Form submission handler
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+
+    const formData = {
+      email,
+      password,
+      rememberMe,
+      captchaToken: captchaToken
+    };
     
     const newErrors: { [key: string]: string } = {};
 
@@ -107,8 +113,9 @@ const Login: React.FC = () => {
         setCaptchaToken(captchaToken); // Store the token in state
 
         if (captchaToken) {
+          formData.captchaToken = captchaToken ?? '';
           // Proceed with login after captcha validation
-          processLogin(captchaToken ?? '');
+          processLogin(formData);
         } else {
           console.error('Token is null or undefined.');
           setIsSubmitting(false)
@@ -161,7 +168,7 @@ const Login: React.FC = () => {
           <RememberMeCheckbox
             type="checkbox"
             checked={rememberMe}
-            onChange={handleCheckboxChange}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRememberMe(e.target.checked)}
           />
           <RememberMeLabel>Remember Me</RememberMeLabel>
         </RememberMeWrapper>
