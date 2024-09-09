@@ -20,8 +20,8 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
-import { loginUser } from '../../store/actions/userActions';
-import { toggleForgotPasswordModal, sendPasswordReset } from '../../store/actions/menuActions';
+import { loginUser, forgotPassword  } from '../../store/actions/userActions';
+import { toggleForgotPasswordModal } from '../../store/actions/menuActions';
 import { RootState } from '../../store/store_index';
 
 declare global {
@@ -41,7 +41,7 @@ const Login: React.FC = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmiting, setIsSubmitting] = useState(false);
-  const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
+  const [isEmailSent, ] = useState<boolean>(false);
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -53,8 +53,6 @@ const Login: React.FC = () => {
   };
 
   const processLogin = async (formData: { email: string; password: string; rememberMe: boolean }) => {
-  
-    // console.log("PROCESSLOGIN reCAPTCHA TOKEN in Login.tsx: ", token)
 
     try {
       const response = await dispatch(loginUser(formData));  // Dispatch login action
@@ -109,7 +107,7 @@ const Login: React.FC = () => {
     // reCAPTCHA v3 token retrieval
     window.grecaptcha.ready(() => {
       window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'login' }).then((captchaToken: string) => {
-        // console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
+        console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
         setCaptchaToken(captchaToken); // Store the token in state
 
         if (captchaToken) {
@@ -129,13 +127,19 @@ const Login: React.FC = () => {
     dispatch(toggleForgotPasswordModal());
   };
 
-  const handleSendPasswordReset = () => {
+  // Function to handle sending the password reset email
+  const handleSendPasswordReset = async () => {
     if (!email) {
-      setErrors({ email: 'Please enter your email to reset password' });
+      // Handle empty email validation
       return;
     }
-    dispatch(sendPasswordReset(email));
-    setIsEmailSent(true);
+
+    setIsSubmitting(true);
+
+    // Dispatch the forgot password action
+    dispatch(forgotPassword(email));
+
+    setIsSubmitting(false);
   };
 
   return (

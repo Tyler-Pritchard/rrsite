@@ -11,6 +11,9 @@ export const USER_REGISTER_FAIL = 'USER_REGISTER_FAIL';
 export const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS';
 export const USER_LOGIN_FAIL = 'USER_LOGIN_FAIL';
 export const USER_LOGOUT = 'USER_LOGOUT';
+export const USER_FORGOT_PASSWORD_REQUEST = 'USER_FORGOT_PASSWORD_REQUEST';
+export const USER_FORGOT_PASSWORD_SUCCESS = 'USER_FORGOT_PASSWORD_SUCCESS';
+export const USER_FORGOT_PASSWORD_FAIL = 'USER_FORGOT_PASSWORD_FAIL';
 
 // TypeScript interfaces for each action
 interface GetUserCountAction {
@@ -46,6 +49,20 @@ interface UserLogoutAction {
   type: typeof USER_LOGOUT;
 }
 
+interface UserForgotPasswordRequestAction {
+  type: typeof USER_FORGOT_PASSWORD_REQUEST;
+}
+
+interface UserForgotPasswordSuccessAction {
+  type: typeof USER_FORGOT_PASSWORD_SUCCESS;
+  payload: any; // Replace `any` with a specific user type if available
+}
+
+interface UserForgotPasswordFailAction {
+  type: typeof USER_FORGOT_PASSWORD_FAIL;
+  payload: string;
+}
+
 // Union of all action types
 export type UserActionTypes =
   GetUserCountAction
@@ -54,7 +71,10 @@ export type UserActionTypes =
   | UserRegisterFailAction
   | UserLoginSuccessAction
   | UserLoginFailAction
-  | UserLogoutAction;
+  | UserLogoutAction
+  | UserForgotPasswordRequestAction
+  | UserForgotPasswordSuccessAction
+  | UserForgotPasswordFailAction;
 
 // Action for getting user count
 export const getUserCount = () => async (dispatch: AppDispatch) => {
@@ -118,3 +138,23 @@ export const loginUser = (loginData: any) => async (dispatch: AppDispatch) => {
 export const logoutUser = (): UserLogoutAction => ({
   type: USER_LOGOUT,
 });
+
+export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
+  try {
+    dispatch({ type: 'USER_FORGOT_PASSWORD_REQUEST' });
+
+    const { data } = await axiosInstance.post('/users/forgot-password', { email });
+
+    dispatch({ type: 'USER_FORGOT_PASSWORD_SUCCESS', payload: data });
+
+  } catch (error) {
+    if (error instanceof AxiosError && error.response) {
+      // If error is an AxiosError and has a response property, use it
+      dispatch({ type: 'USER_FORGOT_PASSWORD_FAIL', payload: error.response.data });
+    } else {
+      // Otherwise, use the error message
+      dispatch({ type: 'USER_FORGOT_PASSWORD_FAIL', payload: (error as Error).message });
+    }
+    throw error;
+  }
+};

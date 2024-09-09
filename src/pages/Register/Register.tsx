@@ -71,7 +71,7 @@ const Register: React.FC = () => {
 
     // validate passwords match
     if (!validatePasswords()) {
-      // console.log("PASSWORDS DO NOT MATCH")
+      console.log("PASSWORDS DO NOT MATCH")
       return;
     }
 
