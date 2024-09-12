@@ -10,6 +10,9 @@ import {
     USER_FORGOT_PASSWORD_REQUEST,
     USER_FORGOT_PASSWORD_SUCCESS,
     USER_FORGOT_PASSWORD_FAIL,
+    USER_RESET_PASSWORD_REQUEST,
+    USER_RESET_PASSWORD_SUCCESS,
+    USER_RESET_PASSWORD_FAIL,
 } from '../actions/userActions';
 
 interface UserState {
@@ -51,6 +54,12 @@ const userReducer = (state = initialState, action: UserActionTypes): UserState =
             return { ...state, loading: false, success: true };
         case USER_FORGOT_PASSWORD_FAIL:
             return { ...state, loading: false, error: action.payload, success: false };
+        case USER_RESET_PASSWORD_REQUEST:
+            return { ...state, loading: true, };
+        case USER_RESET_PASSWORD_SUCCESS:
+            return { ...state, loading: false, success: true, };
+        case USER_RESET_PASSWORD_FAIL:
+            return { ...state, loading: false, error: action.payload, };
         default:
             return state; 
     }
