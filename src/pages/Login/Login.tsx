@@ -142,7 +142,7 @@ const Login: React.FC = () => {
       // Update state to show success message
       setIsEmailSent(true);
       setErrors({}); // Clear any existing errors
-  
+
     } catch (error: any) {
       // Handle the error safely
       if (error.response && error.response.data) {
