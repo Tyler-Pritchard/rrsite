@@ -129,8 +129,11 @@ export const ModalContent = styled.div`
 
 export const ModalMessage = styled.div`
   text-align: center;
+    margin: 1rem 0;
+
   h2 {
     margin-bottom: 10px;
+    font-size: 1.5rem;
   }
   p {
     margin-bottom: 20px;
@@ -144,6 +147,8 @@ export const ModalButton = styled.a`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
   &:hover {
     background-color: #0056b3;
   }

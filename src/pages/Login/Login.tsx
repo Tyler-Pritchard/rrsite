@@ -40,8 +40,8 @@ const Login: React.FC = () => {
   const [rememberMe, setRememberMe] = useState<boolean>(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [isSubmiting, setIsSubmitting] = useState(false);
-  const [isEmailSent, ] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -135,11 +135,24 @@ const Login: React.FC = () => {
     }
 
     setIsSubmitting(true);
-
-    // Dispatch the forgot password action
-    dispatch(forgotPassword(email));
-
-    setIsSubmitting(false);
+    try {
+      // Dispatch the forgot password action
+      await dispatch(forgotPassword(email));
+      
+      // Update state to show success message
+      setIsEmailSent(true);
+      setErrors({}); // Clear any existing errors
+  
+    } catch (error: any) {
+      // Handle the error safely
+      if (error.response && error.response.data) {
+        setErrors({ email: error.response.data.msg });
+      } else {
+        setErrors({ email: 'Failed to send reset email. Please try again.' });
+      }
+    } finally {
+      setIsSubmitting(false);  // Re-enable button or hide loader
+    }
   };
 
   return (
@@ -177,7 +190,7 @@ const Login: React.FC = () => {
           <RememberMeLabel>Remember Me</RememberMeLabel>
         </RememberMeWrapper>
 
-        <SubmitButton type="submit" disabled={isSubmiting}>{isSubmiting ? 'Logging in...' : 'Login'}</SubmitButton>
+        <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
         <button type="button" onClick={handleForgotPasswordClick}>
           Forgot Password?
         </button>
@@ -186,11 +199,11 @@ const Login: React.FC = () => {
       {isModalOpen && (
         <ModalOverlay onClick={handleForgotPasswordClick}>
           <ModalWrapper onClick={(e: React.MouseEvent) => e.stopPropagation()}>
-          {isEmailSent ? (
+            {isEmailSent ? (
               <ModalMessage>
                 <h2>Email Sent</h2>
                 <p>Please check your inbox for further instructions.</p>
-                <ModalButton href="/">Back to Home</ModalButton>
+                <ModalButton onClick={handleForgotPasswordClick}>Done</ModalButton> {/* Closes modal */}
               </ModalMessage>
             ) : (
               <ModalContent>
@@ -202,7 +215,9 @@ const Login: React.FC = () => {
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                 />
                 {errors.email && <ErrorText>{errors.email}</ErrorText>}
-                <ModalButton onClick={handleSendPasswordReset}>Send</ModalButton>
+                <ModalButton as="button" onClick={handleSendPasswordReset} disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Send'}
+                </ModalButton>
               </ModalContent>
             )}
           </ModalWrapper>
