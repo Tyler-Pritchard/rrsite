@@ -14,6 +14,9 @@ export const USER_LOGOUT = 'USER_LOGOUT';
 export const USER_FORGOT_PASSWORD_REQUEST = 'USER_FORGOT_PASSWORD_REQUEST';
 export const USER_FORGOT_PASSWORD_SUCCESS = 'USER_FORGOT_PASSWORD_SUCCESS';
 export const USER_FORGOT_PASSWORD_FAIL = 'USER_FORGOT_PASSWORD_FAIL';
+export const USER_RESET_PASSWORD_REQUEST = 'USER_RESET_PASSWORD_REQUEST';
+export const USER_RESET_PASSWORD_SUCCESS = 'USER_RESET_PASSWORD_SUCCESS';
+export const USER_RESET_PASSWORD_FAIL = 'USER_RESET_PASSWORD_FAIL';
 
 // TypeScript interfaces for each action
 interface GetUserCountAction {
@@ -63,6 +66,21 @@ interface UserForgotPasswordFailAction {
   payload: string;
 }
 
+interface UserResetPasswordRequestAction {
+  type: typeof USER_RESET_PASSWORD_REQUEST;
+}
+
+interface UserResetPasswordSuccessAction {
+  type: typeof USER_RESET_PASSWORD_SUCCESS;
+  payload: any; // Replace `any` with a specific user type if available
+}
+
+interface UserResetPasswordFailAction {
+  type: typeof USER_RESET_PASSWORD_FAIL;
+  payload: string;
+}
+
+
 // Union of all action types
 export type UserActionTypes =
   GetUserCountAction
@@ -74,7 +92,10 @@ export type UserActionTypes =
   | UserLogoutAction
   | UserForgotPasswordRequestAction
   | UserForgotPasswordSuccessAction
-  | UserForgotPasswordFailAction;
+  | UserForgotPasswordFailAction
+  | UserResetPasswordRequestAction
+  | UserResetPasswordSuccessAction
+  | UserResetPasswordFailAction;
 
 // Action for getting user count
 export const getUserCount = () => async (dispatch: AppDispatch) => {
@@ -156,5 +177,14 @@ export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
       dispatch({ type: 'USER_FORGOT_PASSWORD_FAIL', payload: (error as Error).message });
     }
     throw error;
+  }
+};
+
+export const resetPassword = (token: string, newPassword: string) => async (dispatch: Dispatch) => {
+  try {
+    await axiosInstance.post('/api/users/reset-password', { token, newPassword });
+    dispatch({ type: 'USER_RESET_PASSWORD_SUCCESS' });
+  } catch (error: any) {
+    dispatch({ type: 'USER_RESET_PASSWORD_FAIL', payload: error.response?.data?.msg || error.message });
   }
 };
