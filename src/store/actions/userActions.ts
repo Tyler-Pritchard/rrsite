@@ -182,7 +182,7 @@ export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
 
 export const resetPassword = (token: string, newPassword: string) => async (dispatch: Dispatch) => {
   try {
-    await axiosInstance.post('/api/users/reset-password', { token, newPassword });
+    await axiosInstance.post('/users/reset-password', { token, newPassword });
     dispatch({ type: 'USER_RESET_PASSWORD_SUCCESS' });
   } catch (error: any) {
     dispatch({ type: 'USER_RESET_PASSWORD_FAIL', payload: error.response?.data?.msg || error.message });
