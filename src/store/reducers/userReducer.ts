@@ -52,7 +52,7 @@ const userReducer = (state = initialState, action: UserActionTypes): UserState =
         case USER_FORGOT_PASSWORD_FAIL:
             return { ...state, loading: false, error: action.payload, success: false };
         default:
-            return state;
+            return state; 
     }
 };
 
