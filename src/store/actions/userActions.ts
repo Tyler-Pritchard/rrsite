@@ -156,9 +156,21 @@ export const loginUser = (loginData: any) => async (dispatch: AppDispatch) => {
   }
 };
 
-export const logoutUser = (): UserLogoutAction => ({
-  type: USER_LOGOUT,
-});
+
+// userActions.ts
+export const logoutUser = () => async (dispatch: any) => {
+  try {
+    await axiosInstance.post('/api/users/logout'); // Call the backend logout endpoint
+    // Clear localStorage
+    localStorage.removeItem('userInfo');
+    // Dispatch the action to update the state
+    dispatch({ type: 'USER_LOGOUT' });
+    // Optionally reset any other state if needed
+  } catch (error) {
+    console.error('Logout error:', error);
+  }
+};
+
 
 export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
   try {
@@ -180,10 +192,15 @@ export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
   }
 };
 
-export const resetPassword = (token: string, newPassword: string) => async (dispatch: Dispatch) => {
+export const resetPassword = (token: string, userData: any) => async (dispatch: Dispatch<UserActionTypes>) => {
   try {
-    await axiosInstance.post('/users/reset-password', { token, newPassword });
-    dispatch({ type: 'USER_RESET_PASSWORD_SUCCESS' });
+    axiosInstance.defaults.withCredentials = true;
+    const res = await axiosInstance.post('/users/reset-password', userData, { 
+      headers: {
+        'Content-Type': 'application/json',
+        'Reset-Token': `${token}`
+      } });
+    dispatch({ type: 'USER_RESET_PASSWORD_SUCCESS', payload: res.data });
   } catch (error: any) {
     dispatch({ type: 'USER_RESET_PASSWORD_FAIL', payload: error.response?.data?.msg || error.message });
   }

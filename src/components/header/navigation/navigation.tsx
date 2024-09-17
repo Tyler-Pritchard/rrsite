@@ -10,7 +10,12 @@ const Navigation: React.FC = () => {
     const dispatch: AppDispatch = useDispatch();
   
     const handleLogout = () => {
-      dispatch(logoutUser()); // Dispatch the logout action to update Redux state
+        // Dispatch the logout action to update Redux state
+        dispatch(logoutUser()); 
+        // Clear the JWT token
+        localStorage.removeItem('token');
+        // Redirect to the homepage after logout
+        window.location.href = '/';
     };
   
     return (
