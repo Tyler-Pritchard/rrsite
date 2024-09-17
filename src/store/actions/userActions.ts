@@ -192,16 +192,29 @@ export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
   }
 };
 
-export const resetPassword = (token: string, userData: any) => async (dispatch: Dispatch<UserActionTypes>) => {
+export const resetPassword = (token: string, newPassword: string) => async (dispatch: Dispatch<UserActionTypes>) => {
   try {
     axiosInstance.defaults.withCredentials = true;
-    const res = await axiosInstance.post('/users/reset-password', userData, { 
+
+    // Prepare the request body as JSON
+    const body = {
+      newPassword,  // Send the new password in the body
+    };
+
+    // Make the API request
+    const res = await axiosInstance.post('/users/reset-password', body, { 
       headers: {
         'Content-Type': 'application/json',
-        'Reset-Token': `${token}`
-      } });
+        'Reset-Token': `${token}`,  // Send the reset token in headers
+      }
+    });
+
+    // Dispatch success action with response data
     dispatch({ type: 'USER_RESET_PASSWORD_SUCCESS', payload: res.data });
+
   } catch (error: any) {
+    // Dispatch failure action with error message
     dispatch({ type: 'USER_RESET_PASSWORD_FAIL', payload: error.response?.data?.msg || error.message });
   }
 };
+
