@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const LoginWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  padding-top: 30rem;
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 8rem;
+  }
 `;
 
 export const SideMenu = styled.div`
@@ -17,6 +17,9 @@ export const SideMenu = styled.div`
   top: 100px;
   left: 0;
   height: 100%;
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const SideMenuItem = styled.a`
@@ -26,46 +29,43 @@ export const SideMenuItem = styled.a`
   color: #000;
   &:hover {
     background-color: #e0e0e0;
-  }
+  };
 `;
 
-
 export const FormWrapper = styled.form`
-width: 75%;
-  padding: 20px;
-  margin-left: 25%;
-  form {
+  @media (max-width: 480px) {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem;
+  };
+`;
 
-    label {
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
+export const TextBox = styled.div`
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+  };
+`;
 
-    input {
-      margin-bottom: 15px;
-      padding: 10px;
-      font-size: 1rem;
-    }
-  button {
-      padding: 10px;
-      background-color: #556cd6;
-      color: white;
-      border: none;
-      cursor: pointer;
-      &:hover {
-        background-color: #4452b1;
-      }
-    } 
+export const Note = styled.p`
+  @media (max-width: 480px) {
+    margin-bottom: 1rem;
+  };
 `;
 
 export const FormField = styled.input`
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 4px;
+
+  @media (max-width: 480px) {
+    width: 99%;
+    margin: .5rem 0 1rem 0;
+    padding: 1rem;
+    border-radius: 2px;
+  };
 `;
 
 export const ErrorText = styled.span`
@@ -74,23 +74,12 @@ export const ErrorText = styled.span`
   margin-top: 0.25rem;
 `;
 
-export const SubmitButton = styled.button`
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
-
 export const RememberMeWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  @media (max-width: 480px) {
+    margin: .5rem 0 1.5rem 0;
+  };
 `;
 
 export const RememberMeCheckbox = styled.input`
@@ -99,6 +88,42 @@ export const RememberMeCheckbox = styled.input`
 
 export const RememberMeLabel = styled.label`
   font-size: 1rem;
+`;
+
+export const ButtonBox = styled.div`
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  };
+`;
+
+export const SubmitButton = styled.button`
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  jusfify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #0056b3;
+  }
+  @media (max-width: 480px) {
+    width: 10rem;
+    height: 4rem;
+    padding: 1rem;
+  };
+`;
+
+export const ForgotPassword = styled.a`
+  @media (max-width: 480px) {
+    width: 12rem;
+  };
 `;
 
 export const ModalOverlay = styled.div`

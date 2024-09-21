@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import {
   FormWrapper,
   FormField,
+  Note,
   ErrorText,
   SubmitButton,
+  ForgotPassword,
   LoginWrapper,
+  TextBox,
   ModalOverlay,
   ModalWrapper,
   ModalContent,
@@ -16,6 +19,7 @@ import {
   RememberMeWrapper,
   RememberMeLabel,
   RememberMeCheckbox,
+  ButtonBox
 } from './login.styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -166,6 +170,12 @@ const Login: React.FC = () => {
       </SideMenu>
 
       <FormWrapper onSubmit={handleSubmit}>
+        <TextBox>
+          <h1>SIGN IN</h1>
+          <p>*REQUIRED</p>
+        </TextBox>
+        <Note>If you are already a Member, please enter your email and password.</Note>
+        <h3>EMAIL ADDRESS*</h3>
         <FormField
           type="email"
           placeholder="Email"
@@ -173,6 +183,7 @@ const Login: React.FC = () => {
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
         />
         {errors.email && <ErrorText>{errors.email}</ErrorText>}
+        <h3>PASSWORD*</h3>
         <FormField
           type="password"
           placeholder="Password"
@@ -189,11 +200,12 @@ const Login: React.FC = () => {
           />
           <RememberMeLabel>Remember Me</RememberMeLabel>
         </RememberMeWrapper>
-
-        <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
-        <button type="button" onClick={handleForgotPasswordClick}>
-          Forgot Password?
-        </button>
+        <ButtonBox>
+          <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
+          <ForgotPassword type="button" onClick={handleForgotPasswordClick}>
+            Forgot Password?
+          </ForgotPassword>
+        </ButtonBox>
       </FormWrapper>
 
       {isModalOpen && (
@@ -225,8 +237,8 @@ const Login: React.FC = () => {
       )}
       <CallToAction>
         {/* Call-to-action text box content */}
-        <h3>Become a Fifth Member</h3>
-        <p>Join our free Fan Club so we can give back to you - the most dedicated fans on the planet. You’ll get first crack at tickets plus access to giveaways, coupons, and more benefits designed exclusively for members of our Fan Club: The Fifth Members.</p>
+        <h3>NEW HERE? JOIN THE ROB RICH FAN CLUB!</h3>
+        <p>It’s totally free and super easy to sign up! Get in on presale tickets, exclusive content, early access to new releases, merch discounts, and so much more. Don’t miss out—become a part of the crew today!</p>
       </CallToAction>
     </LoginWrapper>
   );
