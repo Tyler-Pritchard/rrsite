@@ -11,22 +11,27 @@ export const ConstructionWrapper = styled.div`
   @media (max-width: 480px) {
     height: 45rem;
     padding: .5rem;
+    padding-top: 3rem;
   }
   @media (min-width: 481px) and (max-width: 768px){
       height: 60rem;
       padding: 1rem;
+      padding-top: 10rem;
   }
   @media (min-width: 769px) and (max-width: 992px) {
     height: 70rem;
     padding: 1.5rem;
+    padding-top: 10rem;
   }
   @media (min-width: 993px) and (max-width: 1200px) {
     height: 80rem;
     padding: 2rem;
+    padding-top: 14rem;
   }
   @media (min-width: 1201px) {
     height: 75rem;
     padding: 3.5rem; 
+    padding-top: 32rem;
   }
 `;
 

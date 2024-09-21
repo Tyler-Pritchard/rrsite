@@ -196,17 +196,11 @@ export const resetPassword = (token: string, newPassword: string) => async (disp
   try {
     axiosInstance.defaults.withCredentials = true;
 
-    // Prepare the request body as JSON
-    const body = {
-      newPassword,  // Send the new password in the body
-    };
-
-    // Make the API request
-    const res = await axiosInstance.post('/users/reset-password', body, { 
+    const res = await axiosInstance.post('/users/reset-password', { 
       headers: {
         'Content-Type': 'application/json',
-        'Reset-Token': `${token}`,  // Send the reset token in headers
-      }
+        'Reset-Token': `${token}`
+      } 
     });
 
     // Dispatch success action with response data
