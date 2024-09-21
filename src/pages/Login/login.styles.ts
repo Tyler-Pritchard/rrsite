@@ -1,70 +1,104 @@
 import styled from 'styled-components';
 
 export const LoginWrapper = styled.div`
+  display: flex;
+
   @media (max-width: 480px) {
-    display: flex;
     flex-direction: column;
-    padding: 1rem;
-    padding-top: 8rem;
-  }
+    padding: 8rem 1rem 1rem 1rem;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
+    flex-direction: row;
+    padding-top: 10rem;
+  };
 `;
 
 export const SideMenu = styled.div`
-  width: 25%;
-  padding: 20px;
   background-color: #f2f2f2;
-  position: relative;
-  top: 100px;
-  left: 0;
-  height: 100%;
   @media (max-width: 480px) {
     display: none;
   }
+  @media (min-width: 481px) and (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 20rem;
+  };
 `;
 
 export const SideMenuItem = styled.a`
-  display: block;
-  padding: 10px 20px;
   text-decoration: none;
   color: #000;
   &:hover {
     background-color: #e0e0e0;
   };
+  @media (min-width: 481px) and (max-width: 768px){
+    padding: 1rem;
+  };
+`;
+
+export const ContentWrapper = styled.div`
+  @media (min-width: 481px) and (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 3rem 4rem;
+  };
 `;
 
 export const FormWrapper = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
   @media (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 1rem;
+    margin: 3rem 1rem 2rem 1rem;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
+    align-items: flex-start;
+    width: 90%;
+    height: 40rem;
+    margin: 1rem 0 2rem 0;
   };
 `;
 
 export const TextBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   @media (max-width: 480px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: .5rem;
+    margin: 1rem 0 1rem 0;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
+    width: 90%;
+    margin: 1.5rem 0 .5rem 0;
   };
 `;
 
-export const Note = styled.p`
+export const Note = styled.h4`
   @media (max-width: 480px) {
-    margin-bottom: 1rem;
+    margin: .5rem 0 4rem 0;
   };
+  @media (min-width: 481px) and (max-width: 768px){
+    margin: .5rem 0 2rem 0;
+  };
+
 `;
 
 export const FormField = styled.input`
   border: 1px solid #ccc;
+  border-radius: 2px;
 
   @media (max-width: 480px) {
     width: 99%;
-    margin: .5rem 0 1rem 0;
+    margin: .5rem 0 2rem 0;
     padding: 1rem;
-    border-radius: 2px;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
+    width: 90%;
+    margin: 1.5rem 0 2rem 0;
+    height: 4.5rem;
+    padding: 1rem;
   };
 `;
 
@@ -78,7 +112,10 @@ export const RememberMeWrapper = styled.div`
   display: flex;
   align-items: center;
   @media (max-width: 480px) {
-    margin: .5rem 0 1.5rem 0;
+    margin: 0 0 3rem 0;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
+    margin: 0 0 3rem 0;
   };
 `;
 
@@ -91,11 +128,15 @@ export const RememberMeLabel = styled.label`
 `;
 
 export const ButtonBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   @media (max-width: 480px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: 90%;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
     width: 90%;
   };
 `;
@@ -113,7 +154,13 @@ export const SubmitButton = styled.button`
   &:hover {
     background-color: #0056b3;
   }
+
   @media (max-width: 480px) {
+    width: 10rem;
+    height: 4rem;
+    padding: 1rem;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
     width: 10rem;
     height: 4rem;
     padding: 1rem;
@@ -123,6 +170,9 @@ export const SubmitButton = styled.button`
 export const ForgotPassword = styled.a`
   @media (max-width: 480px) {
     width: 12rem;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
+    width: 16rem;
   };
 `;
 
@@ -181,9 +231,15 @@ export const ModalButton = styled.a`
 
 export const CallToAction = styled.div`
   background-color: #19857b;
-  padding: 20px;
   color: white;
-  font-size: 1.2rem;
   text-align: center;
-  margin-top: 20px;
+  @media (max-width: 480px) {
+    padding: 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  };
+  @media (min-width: 481px) and (max-width: 768px){
+    padding: 1.5rem;
+    width: 85%;
+  };
 `;

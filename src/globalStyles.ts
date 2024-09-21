@@ -26,7 +26,7 @@ const GlobalVariables: GlobalVariablesInterface = {
   fontSizeXXBig: "clamp(2.5rem, 5vw + 1rem, 3.5rem)",
   fontSizeXBig: "clamp(2rem, 4vw + 1rem, 2.75rem)",
   fontSizeBig: "clamp(1.75rem, 3vw + 1rem, 2.375rem)",
-  fontSizeMedium: "clamp(1.25rem, 2vw + 1rem, 1.75rem)",
+  fontSizeMedium: "clamp(1.75rem, 2vw + 1rem, 2.25rem)",
   fontSizeSmall: "clamp(1rem, 1.5vw + 1rem, 1.25rem)",
   fontSizeXSmall: "clamp(0.875rem, 1vw + 0.5rem, 1rem)",
   titleFont: "'Satisfy', cursive",

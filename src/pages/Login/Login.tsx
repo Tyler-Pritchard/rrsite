@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  ContentWrapper,
   FormWrapper,
   FormField,
   Note,
@@ -168,78 +169,79 @@ const Login: React.FC = () => {
         <SideMenuItem href="#faq">FAQ</SideMenuItem>
         <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
       </SideMenu>
-
-      <FormWrapper onSubmit={handleSubmit}>
-        <TextBox>
-          <h1>SIGN IN</h1>
-          <p>*REQUIRED</p>
-        </TextBox>
-        <Note>If you are already a Member, please enter your email and password.</Note>
-        <h3>EMAIL ADDRESS*</h3>
-        <FormField
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-        />
-        {errors.email && <ErrorText>{errors.email}</ErrorText>}
-        <h3>PASSWORD*</h3>
-        <FormField
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-        />
-        {errors.password && <ErrorText>{errors.password}</ErrorText>}
-
-        <RememberMeWrapper>
-          <RememberMeCheckbox
-            type="checkbox"
-            checked={rememberMe}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRememberMe(e.target.checked)}
+      <ContentWrapper>
+        <FormWrapper onSubmit={handleSubmit}>
+          <TextBox>
+            <h1>SIGN IN</h1>
+            <p>*REQUIRED</p>
+          </TextBox>
+          <Note>If you are already a Member, please enter your email and password.</Note>
+          <h3>EMAIL ADDRESS*</h3>
+          <FormField
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
           />
-          <RememberMeLabel>Remember Me</RememberMeLabel>
-        </RememberMeWrapper>
-        <ButtonBox>
-          <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
-          <ForgotPassword type="button" onClick={handleForgotPasswordClick}>
-            Forgot Password?
-          </ForgotPassword>
-        </ButtonBox>
-      </FormWrapper>
+          {errors.email && <ErrorText>{errors.email}</ErrorText>}
+          <h3>PASSWORD*</h3>
+          <FormField
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+          />
+          {errors.password && <ErrorText>{errors.password}</ErrorText>}
 
-      {isModalOpen && (
-        <ModalOverlay onClick={handleForgotPasswordClick}>
-          <ModalWrapper onClick={(e: React.MouseEvent) => e.stopPropagation()}>
-            {isEmailSent ? (
-              <ModalMessage>
-                <h2>Email Sent</h2>
-                <p>Please check your inbox for further instructions.</p>
-                <ModalButton onClick={handleForgotPasswordClick}>Done</ModalButton> {/* Closes modal */}
-              </ModalMessage>
-            ) : (
-              <ModalContent>
-                <h2>Forgot Password</h2>
-                <FormField
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                />
-                {errors.email && <ErrorText>{errors.email}</ErrorText>}
-                <ModalButton as="button" onClick={handleSendPasswordReset} disabled={isSubmitting}>
-                  {isSubmitting ? 'Sending...' : 'Send'}
-                </ModalButton>
-              </ModalContent>
-            )}
-          </ModalWrapper>
-        </ModalOverlay>
-      )}
-      <CallToAction>
-        {/* Call-to-action text box content */}
-        <h3>NEW HERE? JOIN THE ROB RICH FAN CLUB!</h3>
-        <p>It’s totally free and super easy to sign up! Get in on presale tickets, exclusive content, early access to new releases, merch discounts, and so much more. Don’t miss out—become a part of the crew today!</p>
-      </CallToAction>
+          <RememberMeWrapper>
+            <RememberMeCheckbox
+              type="checkbox"
+              checked={rememberMe}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRememberMe(e.target.checked)}
+            />
+            <RememberMeLabel>Remember Me</RememberMeLabel>
+          </RememberMeWrapper>
+          <ButtonBox>
+            <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
+            <ForgotPassword type="button" onClick={handleForgotPasswordClick}>
+              Forgot Password?
+            </ForgotPassword>
+          </ButtonBox>
+        </FormWrapper>
+
+        {isModalOpen && (
+          <ModalOverlay onClick={handleForgotPasswordClick}>
+            <ModalWrapper onClick={(e: React.MouseEvent) => e.stopPropagation()}>
+              {isEmailSent ? (
+                <ModalMessage>
+                  <h2>Email Sent</h2>
+                  <p>Please check your inbox for further instructions.</p>
+                  <ModalButton onClick={handleForgotPasswordClick}>Done</ModalButton> {/* Closes modal */}
+                </ModalMessage>
+              ) : (
+                <ModalContent>
+                  <h2>Forgot Password</h2>
+                  <FormField
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+                  />
+                  {errors.email && <ErrorText>{errors.email}</ErrorText>}
+                  <ModalButton as="button" onClick={handleSendPasswordReset} disabled={isSubmitting}>
+                    {isSubmitting ? 'Sending...' : 'Send'}
+                  </ModalButton>
+                </ModalContent>
+              )}
+            </ModalWrapper>
+          </ModalOverlay>
+        )}
+        <CallToAction>
+          {/* Call-to-action text box content */}
+          <h2>NEW HERE? JOIN THE ROB RICH FAN CLUB!</h2>
+          <h3>It’s totally free and super easy to sign up! Get in on presale tickets, exclusive content, early access to new releases, merch discounts, and so much more. Don’t miss out—become a part of the crew today!</h3>
+        </CallToAction>
+      </ContentWrapper>
     </LoginWrapper>
   );
 };
