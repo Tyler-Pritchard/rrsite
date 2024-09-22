@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
-import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, Label, CheckboxInput, SubmitButton, ErrorText, CallToAction, CallToActionMobile, ModalWrapper, ModalContent, ModalButton } from './register.styles';
+import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, CheckboxLabel, InputLabel, CheckboxInput, SubmitButton, ErrorText, CallToAction, CallToActionMobile, ModalWrapper, ModalContent, ModalButton, ContentWrapper } from './register.styles';
 
 declare global {
   interface Window {
@@ -124,77 +124,88 @@ const Register: React.FC = () => {
         <p>Join the Rich Robbers Club—our way of giving back to you, the most dedicated fans out there! As a member, you’ll get first dibs on tickets, access to giveaways, exclusive events, discounts, and so much more. All these perks are just for you, our amazing fans!</p>
       </CallToActionMobile>
         <form onSubmit={handleSubmit}>
-          <InputField
-            type="text"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFirstName(e.target.value)}
-          />
-
-          <InputField
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLastName(e.target.value)}
-          />
-
-          <InputField
-            type="text"
-            placeholder="User Name"
-            value={username}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserName(e.target.value)}
-          />
-
-          <InputField
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-          />
-
-          <InputField
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-          />
-
-          <InputField
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
-          />
-          <InputField
-            type="date"
-            placeholder="Date of Birth"
-            value={dateOfBirth}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDateOfBirth(e.target.value)}
+          <ContentWrapper>
+            <InputLabel>FIRST NAME*</InputLabel>
+            <InputField
+              type="text"
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFirstName(e.target.value)}
             />
-          {errors.dateOfBirth && <ErrorText>{errors.dateOfBirth}</ErrorText>}
 
-          <InputField
-            type="text"
-            placeholder="Country"
-            value={country}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCountry(e.target.value)}
+            <InputLabel>LAST NAME*</InputLabel>
+            <InputField
+              type="text"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLastName(e.target.value)}
             />
-          {errors.country && <ErrorText>{errors.country}</ErrorText>}
 
-          <CheckboxContainer>
-            <CheckboxInput
-              type="checkbox"
-              id="subscribe"
-              checked={isSubscribed}
-              onChange={handleCheckboxChange}
+            <InputLabel>USER NAME*</InputLabel>
+            <InputField
+              type="text"
+              placeholder="User Name"
+              value={username}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserName(e.target.value)}
             />
-            <Label htmlFor="subscribe">
-              <div>Subscribe Me to Your Newsletter</div>
-              <div>Stay up to date on the latest Rob Rich news, contests, content, and sales</div>
-            </Label>
-          </CheckboxContainer>
 
-          <SubmitButton type="submit">Register</SubmitButton>
+            <InputLabel>EMAIL*</InputLabel>
+            <InputField
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            />
+
+            <InputLabel>PASSWORD*</InputLabel>
+            <InputField
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+            />
+
+            <InputLabel>CONFIRM PASSWORD*</InputLabel>
+            <InputField
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
+            />
+
+            <InputLabel>DATE OF BIRTH</InputLabel>
+            <InputField
+              type="date"
+              placeholder="Date of Birth"
+              value={dateOfBirth}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDateOfBirth(e.target.value)}
+              />
+            {errors.dateOfBirth && <ErrorText>{errors.dateOfBirth}</ErrorText>}
+
+            <InputLabel>COUNTRY</InputLabel>
+            <InputField
+              type="text"
+              placeholder="Country"
+              value={country}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCountry(e.target.value)}
+              />
+            {errors.country && <ErrorText>{errors.country}</ErrorText>}
+
+            <CheckboxContainer>
+              <CheckboxInput
+                type="checkbox"
+                id="subscribe"
+                checked={isSubscribed}
+                onChange={handleCheckboxChange}
+              />
+              <CheckboxLabel htmlFor="subscribe">
+                <div>Subscribe Me to Your Newsletter</div>
+                <div>Stay up to date on the latest Rob Rich news, contests, content, and sales</div>
+              </CheckboxLabel>
+            </CheckboxContainer>
+
+            <SubmitButton type="submit">Register</SubmitButton>
+          </ContentWrapper>
         </form>
       </FormWrapper>
       <CallToAction>

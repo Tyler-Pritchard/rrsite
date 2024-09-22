@@ -14,6 +14,7 @@ export const RegisterWrapper = styled.div`
 
   @media (min-width: 481px) and (max-width: 768px) {
     padding-top: 10rem;
+    height: 170rem;
   };
 
   @media (min-width: 769px) {
@@ -39,7 +40,7 @@ export const SideMenu = styled.div`
 
   @media (min-width: 481px) and (max-width: 768px) {
     padding: 2rem;
-    width: 20rem;
+    width: 25rem;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
@@ -67,7 +68,7 @@ export const SideMenuItem = styled.a`
   };
 
   @media (min-width: 481px) and (max-width: 768px){
-    padding: 1rem;
+    padding: 1.5rem;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
@@ -84,9 +85,10 @@ export const SideMenuItem = styled.a`
 `;
 
 export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  
   @media (min-width: 481px) and (max-width: 768px){
-    display: flex;
-    flex-direction: column;
     padding: 1rem 2rem 3rem 4rem;
   };
 
@@ -120,6 +122,7 @@ export const FormWrapper = styled.div`
   @media (min-width: 481px) and (max-width: 768px){
     height: 40rem;
     margin: 1rem 0 2rem 0;
+    padding-left: 2rem;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
@@ -140,23 +143,18 @@ export const FormWrapper = styled.div`
 
 export const TextBox = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 
   @media (max-width: 480px) {
-    flex-direction: column;
-    align-items: start;
     width: 85%;
     margin-bottom: .5rem;
   };
 
-  @media (min-width: 481px) {
-    width: 90%;
-  };
-
   @media (min-width: 481px) and (max-width: 768px){
-    margin: 1.5rem 0 .5rem 0;
+    margin: 1.5rem 0 1.5rem 0;
+    width: 80%;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
@@ -183,8 +181,9 @@ export const InputField = styled.input`
   };
 
   @media (min-width: 481px) and (max-width: 768px){
+    font-size: 18px;
     width: 90%;
-    margin: 1.5rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     height: 4.5rem;
     padding: 1rem;
   };
@@ -229,7 +228,7 @@ export const CheckboxContainer = styled.div`
   };
 
   @media (min-width: 481px) and (max-width: 768px){
-    margin: 0 0 3rem 0;
+    margin: 0 0 2rem 0;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
@@ -245,11 +244,15 @@ export const CheckboxContainer = styled.div`
   };
 `;
 
-export const Label = styled.label`
+export const InputLabel = styled.label`
   font-size: 1rem;
+
+  @media (min-width: 481px) and (max-width: 768px){
+    font-size: 20px;
+  };
   
   @media (min-width: 769px) and (max-width: 992px) {
-    font-size: 24px;
+    font-size: 28px;
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
@@ -263,6 +266,32 @@ export const Label = styled.label`
 
 export const CheckboxInput = styled.input`
   margin-right: 10px;
+  
+  @media (min-width: 481px) and (max-width: 768px){
+    margin-right: 2rem;
+    height: 4rem;
+    width: 4rem;
+  };
+`;
+
+export const CheckboxLabel = styled.label`
+  font-size: 1rem;
+  
+  @media (min-width: 481px) and (max-width: 768px){
+    font-size: 20px;
+  };
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    font-size: 24px;
+  };
+
+  @media (min-width: 993px) and (max-width: 1200px) {
+    font-size: 26px;
+  };
+
+  @media (min-width: 1201px) {
+    font-size: 28px;
+  };
 `;
 
 export const SubmitButton = styled.button`
@@ -286,8 +315,8 @@ export const SubmitButton = styled.button`
   };
 
   @media (min-width: 481px) and (max-width: 768px){
-    width: 10rem;
-    height: 4rem;
+    width: 40rem;
+    height: 6rem;
     padding: 1rem;
   };
 
@@ -388,8 +417,9 @@ export const CallToActionMobile = styled.div`
   };
 
   @media (min-width: 481px) and (max-width: 768px){
-    padding: 1.5rem;
-    width: 85%;
+    padding: 2rem;
+    width: 90%;
+    font-size: 2.2rem;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
