@@ -7,47 +7,52 @@ export const LoginWrapper = styled.div`
     flex-direction: column;
     padding: 8rem 1rem 1rem 1rem;
   };
-  @media (min-width: 481px) and (max-width: 768px){
+
+  @media (min-width: 481px) {
     flex-direction: row;
+  };
+
+  @media (min-width: 481px) and (max-width: 768px) {
     padding-top: 10rem;
   };
-  @media (min-width: 769px) and (max-width: 992px) {
+
+  @media (min-width: 769px) {
     padding-top: 12rem;
   };
-  @media (min-width: 993px) and (max-width: 1200px) {
-    padding-top: 14rem;
-  };
-  @media (min-width: 1201px) {
+
+  @media (min-width: 993px) {
     padding-top: 14rem;
   };
 `;
 
 export const SideMenu = styled.div`
   background-color: #f2f2f2;
+
   @media (max-width: 480px) {
     display: none;
-  }
-  @media (min-width: 481px) and (max-width: 768px){
+  };
+
+  @media (min-width: 481px) {
     display: flex;
     flex-direction: column;
+  };
+
+  @media (min-width: 481px) and (max-width: 768px) {
     padding: 2rem;
     width: 20rem;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
-    display: flex;
-    flex-direction: column;
     padding: 4rem;
     width: 20rem;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
-    display: flex;  
-    flex-direction: column;
     padding: 6rem;
     width: 30rem;
   };
+
   @media (min-width: 1201px) {
-    display: flex;
-    flex-direction: column;
     padding: 6rem;
     width: 40rem;
   };
@@ -56,18 +61,23 @@ export const SideMenu = styled.div`
 export const SideMenuItem = styled.a`
   text-decoration: none;
   color: #000;
+
   &:hover {
     background-color: #e0e0e0;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     padding: 1rem;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     padding: 2rem;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     padding: 2.5rem;
   };
+
   @media (min-width: 1201px) {
     padding: 3rem;
   };
@@ -79,12 +89,15 @@ export const ContentWrapper = styled.div`
     flex-direction: column;
     padding: 1rem 2rem 3rem 4rem;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     padding: 2rem 3rem 4rem 5rem;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     padding: 3rem 4rem 5rem 6rem;
   };
+
   @media (min-width: 1201px) {
     padding: 4rem 5rem 6rem 5rem;
   };
@@ -98,27 +111,28 @@ export const FormWrapper = styled.form`
   @media (max-width: 480px) {
     margin: 3rem 1rem 2rem 1rem;
   };
-  @media (min-width: 481px) and (max-width: 768px){
+
+  @media (min-width: 481px) {
     align-items: flex-start;
     width: 90%;
+  };
+
+  @media (min-width: 481px) and (max-width: 768px){
     height: 40rem;
     margin: 1rem 0 2rem 0;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
-    align-items: flex-start;
-    width: 90%;
     height: 50rem;
     margin: 2rem 0 3rem 0;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
-    align-items: flex-start;
-    width: 90%;
     height: 60rem;
     margin: 3rem 0 4rem 0;
   };
+
   @media (min-width: 1201px) {
-    align-items: flex-start;
-    width: 90%;
     height: 60rem;
     margin: 4rem 0 5rem 0;
   };
@@ -129,23 +143,28 @@ export const TextBox = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   @media (max-width: 480px) {
     margin: 1rem 0 1rem 0;
   };
-  @media (min-width: 481px) and (max-width: 768px){
+
+  @media (min-width: 481px) {
     width: 90%;
+  };
+
+  @media (min-width: 481px) and (max-width: 768px){
     margin: 1.5rem 0 .5rem 0;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
-    width: 90%;
     margin: 2rem 0 1rem 0;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
-    width: 90%;
     margin: 3rem 0 2rem 0;
   };
+
   @media (min-width: 1201px) {
-    width: 90%;
     margin: 4rem 0 3rem 0;
   };
 `;
@@ -154,15 +173,19 @@ export const Note = styled.h4`
   @media (max-width: 480px) {
     margin: .5rem 0 4rem 0;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     margin: .5rem 0 2rem 0;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     margin: 1rem 0 3rem 0;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     margin: 2rem 0 4rem 0;
   };
+
   @media (min-width: 1201px) {
     margin: 3rem 0 5rem 0;
   };
@@ -177,12 +200,14 @@ export const FormField = styled.input`
     margin: .5rem 0 2rem 0;
     padding: 1rem;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     width: 90%;
     margin: 1.5rem 0 2rem 0;
     height: 4.5rem;
     padding: 1rem;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     width: 90%;
     margin: 2rem 0 3rem 0;
@@ -190,6 +215,7 @@ export const FormField = styled.input`
     font-size: 20px;
     padding: 1.5rem;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     width: 90%;
     margin: 3rem 0 4rem 0;
@@ -197,6 +223,7 @@ export const FormField = styled.input`
     font-size: 24px;
     padding: 1.5rem;
   };
+
   @media (min-width: 1201px) {
     width: 90%;
     margin: 4rem 0 5rem 0;
@@ -215,18 +242,23 @@ export const ErrorText = styled.span`
 export const RememberMeWrapper = styled.div`
   display: flex;
   align-items: center;
+
   @media (max-width: 480px) {
     margin: 0 0 3rem 0;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     margin: 0 0 3rem 0;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     margin: 0 0 4rem 0;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     margin: 0 0 5rem 0;
   };
+
   @media (min-width: 1201px) {
     margin: 0 0 6rem 0;
   };
@@ -242,9 +274,11 @@ export const RememberMeLabel = styled.label`
   @media (min-width: 769px) and (max-width: 992px) {
     font-size: 24px;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     font-size: 26px;
   };
+
   @media (min-width: 1201px) {
     font-size: 28px;
   };
@@ -259,15 +293,19 @@ export const ButtonBox = styled.div`
   @media (max-width: 480px) {
     width: 90%;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     width: 90%;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     width: 90%;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     width: 90%;
   };
+
   @media (min-width: 1201px) {
     width: 90%;
   };
@@ -292,21 +330,25 @@ export const SubmitButton = styled.button`
     height: 4rem;
     padding: 1rem;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     width: 10rem;
     height: 4rem;
     padding: 1rem;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     width: 12rem;
     height: 5rem;
     padding: 1rem;  
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     width: 14rem;
     height: 6rem;
     padding: 1rem; 
   };
+
   @media (min-width: 1201px) {
     width: 14rem;
     height: 6rem;
@@ -318,15 +360,19 @@ export const ForgotPassword = styled.a`
   @media (max-width: 480px) {
     width: 12rem;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     width: 16rem;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     width: 18rem;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     width: 20rem;
   };
+
   @media (min-width: 1201px) {
     width: 24rem;
   };
@@ -389,25 +435,30 @@ export const CallToAction = styled.div`
   background-color: #19857b;
   color: white;
   text-align: center;
+  
   @media (max-width: 480px) {
     padding: 20px;
     font-size: 1.2rem;
     margin-top: 20px;
   };
+
   @media (min-width: 481px) and (max-width: 768px){
     padding: 1.5rem;
     width: 85%;
   };
+
   @media (min-width: 769px) and (max-width: 992px) {
     padding: 2rem;
     width: 90%;
     margin-top: 14rem;
   };
+
   @media (min-width: 993px) and (max-width: 1200px) {
     padding: 2rem;
     width: 85%;
     margin-top: 14rem;
   };
+  
   @media (min-width: 1201px) {
     padding: 2rem;
     width: 85%;
