@@ -22,8 +22,9 @@ export const RegisterWrapper = styled.div`
     height: 200rem;
   };
 
-  @media (min-width: 993px) {
+  @media (min-width: 993px) and (max-width: 1200px) {
     padding-top: 14rem;
+    height: 225rem;
   };
 `;
 
@@ -401,7 +402,6 @@ export const CallToAction = styled.div`
   @media (min-width: 993px) and (max-width: 1200px) {
     padding: 2rem;
     width: 85%;
-    margin-top: 14rem;
   };
   
   @media (min-width: 1201px) {
@@ -435,9 +435,7 @@ export const CallToActionMobile = styled.div`
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
-    padding: 2rem;
-    width: 85%;
-    margin-top: 14rem;
+    display: none;
   };
   
   @media (min-width: 1201px) {
