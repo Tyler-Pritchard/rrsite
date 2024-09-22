@@ -78,7 +78,7 @@ export const SideMenuItem = styled.a`
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
-    padding: 2.5rem;
+    padding: 2rem;
   };
 
   @media (min-width: 1201px) {
@@ -99,7 +99,8 @@ export const ContentWrapper = styled.div`
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
-    padding: 3rem 4rem 5rem 6rem;
+    padding: 2rem 0 2rem 0;
+    width: 100%;
   };
 
   @media (min-width: 1201px) {
@@ -135,7 +136,9 @@ export const FormWrapper = styled.div`
 
   @media (min-width: 993px) and (max-width: 1200px) {
     height: 60rem;
+    width: 50rem;
     margin: 3rem 0 4rem 0;
+    padding-left: 2rem;
   };
 
   @media (min-width: 1201px) {
@@ -277,9 +280,15 @@ export const CheckboxInput = styled.input`
   };
   
   @media (min-width: 769px) and (max-width: 992px) {
-    margint-right: 3rem;
+    margin-right: 3rem;
     height: 4.5rem;
     width: 4.5rem;
+  };
+
+  @media (min-width: 993px) and (max-width: 1200px) {
+    margin: 0 4rem 0 1rem;
+    height: 7rem;
+    width: 7rem;
   };
 `;
 
@@ -296,6 +305,7 @@ export const CheckboxLabel = styled.label`
 
   @media (min-width: 993px) and (max-width: 1200px) {
     font-size: 26px;
+    padding-right: 1rem;
   };
 
   @media (min-width: 1201px) {
@@ -336,7 +346,7 @@ export const SubmitButton = styled.button`
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
-    width: 14rem;
+    width: 50rem;
     height: 6rem;
     padding: 1rem; 
   };
