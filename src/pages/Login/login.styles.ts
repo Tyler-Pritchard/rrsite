@@ -11,6 +11,9 @@ export const LoginWrapper = styled.div`
     flex-direction: row;
     padding-top: 10rem;
   };
+  @media (min-width: 769px) and (max-width: 992px) {
+    padding-top: 12rem;
+  };
 `;
 
 export const SideMenu = styled.div`
@@ -24,6 +27,12 @@ export const SideMenu = styled.div`
     padding: 2rem;
     width: 20rem;
   };
+  @media (min-width: 769px) and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    width: 20rem;
+  };
 `;
 
 export const SideMenuItem = styled.a`
@@ -35,6 +44,9 @@ export const SideMenuItem = styled.a`
   @media (min-width: 481px) and (max-width: 768px){
     padding: 1rem;
   };
+  @media (min-width: 769px) and (max-width: 992px) {
+    padding: 2rem;
+  };
 `;
 
 export const ContentWrapper = styled.div`
@@ -42,6 +54,9 @@ export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem 3rem 4rem;
+  };
+  @media (min-width: 769px) and (max-width: 992px) {
+    padding: 2rem 3rem 4rem 5rem;
   };
 `;
 
@@ -59,6 +74,12 @@ export const FormWrapper = styled.form`
     height: 40rem;
     margin: 1rem 0 2rem 0;
   };
+  @media (min-width: 769px) and (max-width: 992px) {
+    align-items: flex-start;
+    width: 90%;
+    height: 50rem;
+    margin: 2rem 0 3rem 0;
+  };
 `;
 
 export const TextBox = styled.div`
@@ -73,6 +94,10 @@ export const TextBox = styled.div`
     width: 90%;
     margin: 1.5rem 0 .5rem 0;
   };
+  @media (min-width: 769px) and (max-width: 992px) {
+    width: 90%;
+    margin: 2rem 0 1rem 0;
+  };
 `;
 
 export const Note = styled.h4`
@@ -82,7 +107,9 @@ export const Note = styled.h4`
   @media (min-width: 481px) and (max-width: 768px){
     margin: .5rem 0 2rem 0;
   };
-
+  @media (min-width: 769px) and (max-width: 992px) {
+    margin: 1rem 0 3rem 0;
+  };
 `;
 
 export const FormField = styled.input`
@@ -99,6 +126,13 @@ export const FormField = styled.input`
     margin: 1.5rem 0 2rem 0;
     height: 4.5rem;
     padding: 1rem;
+  };
+  @media (min-width: 769px) and (max-width: 992px) {
+    width: 90%;
+    margin: 2rem 0 3rem 0;
+    height: 6rem;
+    font-size: 20px;
+    padding: 1.5rem;
   };
 `;
 
@@ -117,6 +151,9 @@ export const RememberMeWrapper = styled.div`
   @media (min-width: 481px) and (max-width: 768px){
     margin: 0 0 3rem 0;
   };
+  @media (min-width: 769px) and (max-width: 992px) {
+    margin: 0 0 4rem 0;
+  };
 `;
 
 export const RememberMeCheckbox = styled.input`
@@ -125,6 +162,10 @@ export const RememberMeCheckbox = styled.input`
 
 export const RememberMeLabel = styled.label`
   font-size: 1rem;
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    font-size: 24px;
+  };
 `;
 
 export const ButtonBox = styled.div`
@@ -137,6 +178,9 @@ export const ButtonBox = styled.div`
     width: 90%;
   };
   @media (min-width: 481px) and (max-width: 768px){
+    width: 90%;
+  };
+  @media (min-width: 769px) and (max-width: 992px) {
     width: 90%;
   };
 `;
@@ -165,6 +209,11 @@ export const SubmitButton = styled.button`
     height: 4rem;
     padding: 1rem;
   };
+  @media (min-width: 769px) and (max-width: 992px) {
+    width: 12rem;
+    height: 5rem;
+    padding 1.5rem;  
+  };
 `;
 
 export const ForgotPassword = styled.a`
@@ -173,6 +222,9 @@ export const ForgotPassword = styled.a`
   };
   @media (min-width: 481px) and (max-width: 768px){
     width: 16rem;
+  };
+  @media (min-width: 769px) and (max-width: 992px) {
+    width: 18rem;
   };
 `;
 
@@ -241,5 +293,10 @@ export const CallToAction = styled.div`
   @media (min-width: 481px) and (max-width: 768px){
     padding: 1.5rem;
     width: 85%;
+  };
+  @media (min-width: 769px) and (max-width: 992px) {
+    padding: 2rem;
+    width: 85%;
+    margin-top: 14rem;
   };
 `;
