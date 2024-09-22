@@ -17,8 +17,9 @@ export const RegisterWrapper = styled.div`
     height: 170rem;
   };
 
-  @media (min-width: 769px) {
+  @media (min-width: 769px) and (max-width: 992px) {
     padding-top: 12rem;
+    height: 200rem;
   };
 
   @media (min-width: 993px) {
@@ -45,7 +46,7 @@ export const SideMenu = styled.div`
 
   @media (min-width: 769px) and (max-width: 992px) {
     padding: 4rem;
-    width: 20rem;
+    width: 25rem;
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
@@ -93,7 +94,7 @@ export const ContentWrapper = styled.div`
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
-    padding: 2rem 3rem 4rem 5rem;
+    padding: 2rem 0rem 4rem 0rem;
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
@@ -128,6 +129,7 @@ export const FormWrapper = styled.div`
   @media (min-width: 769px) and (max-width: 992px) {
     height: 50rem;
     margin: 2rem 0 3rem 0;
+    padding-left: 3rem;
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
@@ -272,6 +274,12 @@ export const CheckboxInput = styled.input`
     height: 4rem;
     width: 4rem;
   };
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    margint-right: 3rem;
+    height: 4.5rem;
+    width: 4.5rem;
+  };
 `;
 
 export const CheckboxLabel = styled.label`
@@ -321,7 +329,7 @@ export const SubmitButton = styled.button`
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
-    width: 12rem;
+    width: 51rem;
     height: 5rem;
     padding: 1rem;  
   };
@@ -387,9 +395,7 @@ export const CallToAction = styled.div`
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
-    padding: 2rem;
-    width: 90%;
-    margin-top: 14rem;
+    display: none;
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
@@ -425,7 +431,7 @@ export const CallToActionMobile = styled.div`
   @media (min-width: 769px) and (max-width: 992px) {
     padding: 2rem;
     width: 90%;
-    margin-top: 14rem;
+    margin-top: 2rem;
   };
 
   @media (min-width: 993px) and (max-width: 1200px) {
