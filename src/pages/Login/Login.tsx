@@ -238,7 +238,7 @@ const Login: React.FC = () => {
         )}
         <CallToAction>
           {/* Call-to-action text box content */}
-          <h2>NEW HERE? JOIN THE ROB RICH FAN CLUB!</h2>
+          <h2>NEW HERE? JOIN THE RICH ROBBER'S CLUB!</h2>
           <h3>It’s totally free and super easy to sign up! Get in on presale tickets, exclusive content, early access to new releases, merch discounts, and so much more. Don’t miss out—become a part of the crew today!</h3>
         </CallToAction>
       </ContentWrapper>

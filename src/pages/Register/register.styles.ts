@@ -145,7 +145,10 @@ export const TextBox = styled.div`
   align-items: center;
 
   @media (max-width: 480px) {
-    margin: 1rem 0 1rem 0;
+    flex-direction: column;
+    align-items: start;
+    width: 85%;
+    margin-bottom: .5rem;
   };
 
   @media (min-width: 481px) {
@@ -307,15 +310,6 @@ export const SubmitButton = styled.button`
   };
 `;
 
-export const CallToAction = styled.div`
-  background-color: #19857b;
-  padding: 20px;
-  color: white;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 20px;
-`;
-
 export const ModalWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -348,4 +342,71 @@ export const ModalButton = styled.button`
   &:hover {
     background-color: #45a049;
   }
+`;
+
+export const CallToAction = styled.div`
+  background-color: #19857b;
+  color: white;
+  text-align: center;
+  
+  @media (max-width: 480px) {
+    display: none;
+  };
+
+  @media (min-width: 481px) and (max-width: 768px){
+    display: none;
+  };
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    padding: 2rem;
+    width: 90%;
+    margin-top: 14rem;
+  };
+
+  @media (min-width: 993px) and (max-width: 1200px) {
+    padding: 2rem;
+    width: 85%;
+    margin-top: 14rem;
+  };
+  
+  @media (min-width: 1201px) {
+    padding: 2rem;
+    width: 85%;
+    margin-top: 24rem;
+  };
+`;
+
+export const CallToActionMobile = styled.div`
+  background-color: #19857b;
+  color: white;
+  text-align: center;
+  
+  @media (max-width: 480px) {
+    padding: 2rem;
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem 0;
+  };
+
+  @media (min-width: 481px) and (max-width: 768px){
+    padding: 1.5rem;
+    width: 85%;
+  };
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    padding: 2rem;
+    width: 90%;
+    margin-top: 14rem;
+  };
+
+  @media (min-width: 993px) and (max-width: 1200px) {
+    padding: 2rem;
+    width: 85%;
+    margin-top: 14rem;
+  };
+  
+  @media (min-width: 1201px) {
+    padding: 2rem;
+    width: 85%;
+    margin-top: 24rem;
+  };
 `;

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
-import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, Label, CheckboxInput, SubmitButton, ErrorText, CallToAction, ModalWrapper, ModalContent, ModalButton } from './register.styles';
+import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, Label, CheckboxInput, SubmitButton, ErrorText, CallToAction, CallToActionMobile, ModalWrapper, ModalContent, ModalButton } from './register.styles';
 
 declare global {
   interface Window {
@@ -115,9 +115,14 @@ const Register: React.FC = () => {
       </SideMenu>
       <FormWrapper>
         <TextBox>
-          <h1>CREATE ACCOUNT TO BECOME A MEMBER</h1>
+          <h1>CREATE AN ACCOUNT AND BECOME A MEMBER</h1>
           <p>*REQUIRED</p>
         </TextBox>
+        <CallToActionMobile>
+        {/* Call-to-action text box content */}
+        <h3>Become a Member of the Rich Robbers Club</h3>
+        <p>Join the Rich Robbers Club—our way of giving back to you, the most dedicated fans out there! As a member, you’ll get first dibs on tickets, access to giveaways, exclusive events, discounts, and so much more. All these perks are just for you, our amazing fans!</p>
+      </CallToActionMobile>
         <form onSubmit={handleSubmit}>
           <InputField
             type="text"
@@ -184,8 +189,8 @@ const Register: React.FC = () => {
               onChange={handleCheckboxChange}
             />
             <Label htmlFor="subscribe">
-              <span>Subscribe Me to Your Newsletter</span>
-              <span>Stay up to date on the latest Rob Rich news, contests, content, and sales</span>
+              <div>Subscribe Me to Your Newsletter</div>
+              <div>Stay up to date on the latest Rob Rich news, contests, content, and sales</div>
             </Label>
           </CheckboxContainer>
 
@@ -194,8 +199,8 @@ const Register: React.FC = () => {
       </FormWrapper>
       <CallToAction>
         {/* Call-to-action text box content */}
-        <h3>Become a Fifth Member</h3>
-        <p>Join our free Fan Club so we can give back to you - the most dedicated fans on the planet. You’ll get first crack at tickets plus access to giveaways, coupons, and more benefits designed exclusively for members of our Fan Club: The Fifth Members.</p>
+        <h3>Become a Member of the Rich Robbers Club</h3>
+        <p>Join the Rich Robbers Club—our way of giving back to you, the most dedicated fans out there! As a member, you’ll get first dibs on tickets, access to giveaways, exclusive events, discounts, and so much more. All these perks are just for you, our amazing fans!</p>
       </CallToAction>
 
       {showModal && (

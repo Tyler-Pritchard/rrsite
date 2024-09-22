@@ -458,7 +458,7 @@ export const CallToAction = styled.div`
     width: 85%;
     margin-top: 14rem;
   };
-  
+
   @media (min-width: 1201px) {
     padding: 2rem;
     width: 85%;

@@ -52,7 +52,7 @@ const FooterBottom = () => {
                     <BottomFooterLinks href="#text-buttons">PRIVACY POLICY</BottomFooterLinks>
                     <BottomFooterLinks disabled>© ROB RICH</BottomFooterLinks>
                     <BottomFooterLinks disabled>© UNCROSSED RECORDINGS</BottomFooterLinks>
-                    <BottomFooterLinks disabled>THE ROB RICH CLUB®</BottomFooterLinks>
+                    <BottomFooterLinks disabled>THE RICH ROBBERS CLUB®</BottomFooterLinks>
                 </FooterStack>
             </BottomLinksContainer>
         </BottomFooterWrapper>
