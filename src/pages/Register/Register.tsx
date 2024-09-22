@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../store/actions/userActions';
-import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, InputField, CheckboxContainer, Label, CheckboxInput, SubmitButton, ErrorText, CallToAction, ModalWrapper, ModalContent, ModalButton } from './register.styles';
+import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, Label, CheckboxInput, SubmitButton, ErrorText, CallToAction, ModalWrapper, ModalContent, ModalButton } from './register.styles';
 
 declare global {
   interface Window {
@@ -114,7 +114,10 @@ const Register: React.FC = () => {
         <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
       </SideMenu>
       <FormWrapper>
-        <h1>Register</h1>
+        <TextBox>
+          <h1>CREATE ACCOUNT TO BECOME A MEMBER</h1>
+          <p>*REQUIRED</p>
+        </TextBox>
         <form onSubmit={handleSubmit}>
           <InputField
             type="text"
