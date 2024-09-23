@@ -166,8 +166,8 @@ const Login: React.FC = () => {
         <h3>Account Settings</h3>
         <SideMenuItem href="/register">Create Account</SideMenuItem>
         <h3>Customer Service</h3>
-        <SideMenuItem href="#faq">FAQ</SideMenuItem>
-        <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
+        <SideMenuItem href="/help">FAQ</SideMenuItem>
+        <SideMenuItem href="/privacy-policy">Privacy Policy</SideMenuItem>
       </SideMenu>
       <ContentWrapper>
         <FormWrapper onSubmit={handleSubmit}>

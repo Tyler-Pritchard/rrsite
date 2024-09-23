@@ -7,6 +7,7 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import ResetPassword from './pages/ResetPassword/ResetPassword';
 import Construction from './pages/Construction/Construction';
+import FAQ from './pages/FAQ/faq';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import GlobalStyle from "./globalStyles";
 
@@ -40,6 +41,7 @@ const App: React.FC = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/privacy-policy" element={<Construction />} />
+          <Route path="/help" element={<FAQ />} />
           <Route path="/fans/club-news" element={<Construction />} />
           <Route path="/fans/so-what" element={<Construction />} />
           <Route path="/contests" element={<Construction />} />

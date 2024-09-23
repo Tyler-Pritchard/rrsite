@@ -110,8 +110,8 @@ const Register: React.FC = () => {
         <h3>Account Settings</h3>
         <SideMenuItem href="/login">Sign In</SideMenuItem>
         <h3>Customer Service</h3>
-        <SideMenuItem href="#faq">FAQ</SideMenuItem>
-        <SideMenuItem href="#privacy">Privacy Policy</SideMenuItem>
+        <SideMenuItem href="/help">FAQ</SideMenuItem>
+        <SideMenuItem href="/privacy-policy">Privacy Policy</SideMenuItem>
       </SideMenu>
       <FormWrapper>
         <TextBox>
