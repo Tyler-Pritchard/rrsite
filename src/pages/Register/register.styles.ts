@@ -26,6 +26,10 @@ export const RegisterWrapper = styled.div`
     padding-top: 14rem;
     height: 225rem;
   };
+  @media (min-width: 1201px) {
+    padding-top: 13rem;
+    height: 260rem;
+  };
 `;
 
 export const SideMenu = styled.div`
@@ -91,7 +95,7 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   
   @media (min-width: 481px) and (max-width: 768px){
-    padding: 1rem 2rem 3rem 4rem;
+    padding: 1rem 0 3rem 4rem;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
@@ -125,7 +129,6 @@ export const FormWrapper = styled.div`
   @media (min-width: 481px) and (max-width: 768px){
     height: 40rem;
     margin: 1rem 0 2rem 0;
-    padding-left: 2rem;
   };
 
   @media (min-width: 769px) and (max-width: 992px) {
@@ -449,8 +452,6 @@ export const CallToActionMobile = styled.div`
   };
   
   @media (min-width: 1201px) {
-    padding: 2rem;
-    width: 85%;
-    margin-top: 24rem;
+    display: none;
   };
 `;
