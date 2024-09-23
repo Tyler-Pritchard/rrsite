@@ -8,6 +8,30 @@ export const FAQContainer = styled.div`
         margin: 0 auto;
         padding: 9rem 1rem 1rem 1.5rem;
     };
+    @media (min-width: 481px) and (max-width: 768px){
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 12rem 2rem 2rem 2rem;
+    };
+    @media (min-width: 769px) and (max-width: 992px) {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 14rem 2rem 2rem 2rem;
+    };
+    @media (min-width: 993px) and (max-width: 1200px) {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16rem 2rem 2rem 2rem;
+    };
+    @media (min-width: 1201px) {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16rem 2rem 2rem 2rem; 
+    };
 `;
 
 export const SectionTitle = styled.h2<{ expanded: boolean }>`
@@ -57,4 +81,9 @@ export const ShowMoreButton = styled.button`
     background-color: #000;
     color: #fff;
   }
+`;
+
+export const Image = styled.img`
+  max-width: 100%;
+  height: auto;
 `;

@@ -4,10 +4,13 @@ import {
   FAQContainer,
   Question,
   Answer,
+  Image,
   DropdownIcon,
   SectionTitle,
   ShowMoreButton,
 } from './faq.styles';
+import help from "../../assets/images/desktop/faq.jpg";
+
 
 const faqData = [
   {
@@ -44,6 +47,7 @@ const FAQ: React.FC = () => {
 
   return (
     <FAQContainer>
+        <Image src={help} alt="Rob Rich hard at work" />
       {faqData.map((section, sectionIndex) => (
         <div key={sectionIndex}>
           <SectionTitle
