@@ -140,7 +140,7 @@ export const registerUser = (userData: any) => async (dispatch: Dispatch<UserAct
 
 export const loginUser = (loginData: any) => async (dispatch: AppDispatch) => {
   try {
-    const response = await axiosInstance.post('/users/login', loginData);
+    const response = await axiosInstance.post('/auth/login', loginData);
     dispatch({ type: 'USER_LOGIN_SUCCESS', payload: response.data });
 
     return response.data;  // Return the full response object
@@ -160,7 +160,7 @@ export const loginUser = (loginData: any) => async (dispatch: AppDispatch) => {
 // userActions.ts
 export const logoutUser = () => async (dispatch: any) => {
   try {
-    await axiosInstance.post('/api/users/logout'); // Call the backend logout endpoint
+    await axiosInstance.post('/auth/logout'); // Call the backend logout endpoint
     // Clear localStorage
     localStorage.removeItem('userInfo');
     // Dispatch the action to update the state
@@ -176,7 +176,7 @@ export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
   try {
     dispatch({ type: 'USER_FORGOT_PASSWORD_REQUEST' });
 
-    const { data } = await axiosInstance.post('/users/forgot-password', { email });
+    const { data } = await axiosInstance.post('/auth/forgot-password', { email });
 
     dispatch({ type: 'USER_FORGOT_PASSWORD_SUCCESS', payload: data });
 
@@ -196,7 +196,7 @@ export const resetPassword = (token: string, newPassword: string) => async (disp
   try {
     axiosInstance.defaults.withCredentials = true;
 
-    const res = await axiosInstance.post('/users/reset-password', { 
+    const res = await axiosInstance.post('/auth/reset-password', { 
       headers: {
         'Content-Type': 'application/json',
         'Reset-Token': `${token}`
