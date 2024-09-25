@@ -176,7 +176,7 @@ export const forgotPassword = (email: string) => async (dispatch: Dispatch) => {
   try {
     dispatch({ type: 'USER_FORGOT_PASSWORD_REQUEST' });
 
-    const { data } = await axiosInstance.post('/auth/forgot-password', { email });
+    const { data } = await axiosInstance.post('/password/forgot-password', { email });
 
     dispatch({ type: 'USER_FORGOT_PASSWORD_SUCCESS', payload: data });
 
@@ -196,7 +196,7 @@ export const resetPassword = (token: string, newPassword: string) => async (disp
   try {
     axiosInstance.defaults.withCredentials = true;
 
-    const res = await axiosInstance.post('/auth/reset-password', { 
+    const res = await axiosInstance.post('/password/reset-password', { 
       headers: {
         'Content-Type': 'application/json',
         'Reset-Token': `${token}`

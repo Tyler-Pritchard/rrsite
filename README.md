@@ -94,7 +94,7 @@ rrsite/
 ### Development Environment
 To start the application in a development environment:
 ```
-npm run start
+npm start
 ```
 This will run the app in development mode, accessible at http://localhost:3000/.
 
