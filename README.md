@@ -35,7 +35,7 @@ Ensure you have the following installed:
 - TypeScript (>= v4.5)
 
 ### Dependencies
-The project uses several libraries and dependencies, as listed in the package.json:
+The project uses several libraries and dependencies, as listed in the ```package.json```:
 
 - React for UI development
 - Redux & Redux Thunk for state management
@@ -47,7 +47,7 @@ The project uses several libraries and dependencies, as listed in the package.js
 - React Hook Form for handling form inputs
 - React Helmet for SEO optimization
 
-For full details of the project's dependencies, refer to the package.json file.
+For full details of the project's dependencies, refer to the ```package.json``` file.
 
 ### Installing
 1. Clone the repository:
@@ -86,8 +86,8 @@ rrsite/
 ```
 
 ### Key Configuration Files:
-- tsconfig.json: Defines the TypeScript configuration for the project​(tsconfig).
-- package.json: Manages project dependencies, scripts, and metadata​(package).
+- ```tsconfig.json```: Defines the TypeScript configuration for the project[​(tsconfig)](./tsconfig.json).
+- ```package.json```: Manages project dependencies, scripts, and metadata[​(package)](./package.json).
 
 ## Running the Application
 
@@ -96,7 +96,7 @@ To start the application in a development environment:
 ```
 npm start
 ```
-This will run the app in development mode, accessible at http://localhost:3000/.
+This will run the app in development mode, accessible at ```http://localhost:3000/```.
 
 ### Production Build
 To create an optimized production build:
@@ -111,19 +111,19 @@ You can deploy the application using GitHub Pages:
 npm run deploy
 ```
 
-Make sure to configure the homepage field in package.json for the correct URL (currently set to https://www.robrich.band/).
+Make sure to configure the ```homepage``` field in ```package.json``` for the correct URL (currently set to ```https://www.robrich.band/```).
 
 ## Contributing
 We welcome contributions to improve this project! Please follow the steps below:
 
 1. Fork the repository.
-2. Create a feature branch (git checkout -b feature-branch).
-3. Commit your changes (git commit -m 'Add new feature').
-4. Push to the branch (git push origin feature-branch).
+2. Create a feature branch (```git checkout -b feature-branch```).
+3. Commit your changes (```git commit -m 'Add new feature'```).
+4. Push to the branch (```git push origin feature-branch```).
 5. Create a new Pull Request.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE.md file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ## Contact
 For any questions or support, please reach out:
