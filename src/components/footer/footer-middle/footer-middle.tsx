@@ -7,7 +7,7 @@ const FooterMiddle = () => {
     return (
         <MiddleFooterWrapper>
             <MiddleInner >
-                <MiddleLogo src={Logo} alt="Rob Rich text logo" />
+                <MiddleLogo src={Logo} alt="Rob Rich text logo" loading='lazy'/>
             </MiddleInner>
             <MiddleMenu>
                 {/* Menu */}

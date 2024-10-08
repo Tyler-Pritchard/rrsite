@@ -11,49 +11,77 @@ import ThreadsIcon from '../../../assets/icons/threads.svg';
 import TextIcon from '../../../assets/icons/text.svg';
 import ListenIcon from '../../../assets/icons/listen.svg';
 
+// Define the TypeScript interface for the social link items
+interface SocialLink {
+    href: string;
+    ariaLabel: string;
+    iconSrc: string;
+    altText: string;
+}
+
+// Define the TypeScript interface for the footer link items
+interface FooterLink {
+    href: string;
+    label: string;
+    disabled?: boolean;
+}
+  
+// Social media links configuration
+const socialLinks: SocialLink[] = [
+    { href: 'https://www.instagram.com/robrichusa/', ariaLabel: 'Instagram', iconSrc: InstagramIcon, altText: 'Instagram' },
+    { href: 'https://www.youtube.com/@RobRichUSA', ariaLabel: 'Youtube', iconSrc: YouTubeIcon, altText: 'YouTube' },
+    { href: 'https://www.facebook.com/RobRichUSA', ariaLabel: 'Facebook', iconSrc: FacebookIcon, altText: 'Facebook' },
+    { href: 'https://www.tiktok.com/@robrichusa', ariaLabel: 'TikTok', iconSrc: TikTokIcon, altText: 'TikTok' },
+    { href: 'https://www.threads.net/@robrichusa', ariaLabel: 'Threads', iconSrc: ThreadsIcon, altText: 'Threads' },
+    { href: 'https://twitter.com/RobRichUSA', ariaLabel: 'X', iconSrc: XIcon, altText: 'Twitter' },
+    { href: 'https://www.robrich.band', ariaLabel: 'Text', iconSrc: TextIcon, altText: 'Official Website' },
+    { href: 'https://www.reverbnation.com/robrichusa', ariaLabel: 'Listen', iconSrc: ListenIcon, altText: 'ReverbNation' },
+];
+
+// Footer text links configuration
+const footerLinks: FooterLink[] = [
+    { href: "#text-buttons", label: "HELP" },
+    { href: "#text-buttons", label: "RETURNS" },
+    { href: "#text-buttons", label: "CREDITS" },
+    { href: "#text-buttons", label: "TERMS OF USE" },
+    { href: "#text-buttons", label: "PRIVACY POLICY" },
+    { href: "#", label: "© ROB RICH", disabled: true },
+    { href: "#", label: "© UNCROSSED RECORDINGS", disabled: true },
+    { href: "#", label: "THE RICH ROBBERS CLUB®", disabled: true },
+];
+
 const FooterBottom = () => {
     return (
         <BottomFooterWrapper>
-            {/* Social Media Icons Container */}
-            <BottomIconsContainer>
-                <BottomIconLink href="https://www.instagram.com/robrichusa/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={InstagramIcon} alt="Instagram" />
-                </BottomIconLink>
-                <BottomIconLink href="https://www.youtube.com/@RobRichUSA" aria-label="Youtube" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={YouTubeIcon} />
-                </BottomIconLink>
-                <BottomIconLink href="https://www.facebook.com/RobRichUSA" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={FacebookIcon} />
-                </BottomIconLink>
-                <BottomIconLink href="https://www.tiktok.com/@robrichusa" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={TikTokIcon} />
-                </BottomIconLink>
-                <BottomIconLink href="https://www.threads.net/@robrichusa" aria-label="Threads" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={ThreadsIcon} />
-                </BottomIconLink>
-                <BottomIconLink href="https://twitter.com/RobRichUSA" aria-label="X" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={XIcon} />
-                </BottomIconLink>
-                <BottomIconLink href="https://www.robrich.band" aria-label="Text" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={TextIcon} />
-                </BottomIconLink>
-                <BottomIconLink href="https://www.reverbnation.com/robrichusa" aria-label="Listen" target="_blank" rel="noopener noreferrer">
-                    <BottomIcons src={ListenIcon} />
-                </BottomIconLink>
-            </BottomIconsContainer>
+                {/* Social Media Icons Container */}
+                <BottomIconsContainer>
+            {socialLinks.map((link, index) => (
+            <BottomIconLink
+                key={index}
+                href={link.href}
+                aria-label={link.ariaLabel}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <BottomIcons src={link.iconSrc} alt={link.altText} />
+            </BottomIconLink>
+            ))}
+        </BottomIconsContainer>
 
             {/* Text Links Container  */}
             <BottomLinksContainer>
-                <FooterStack>
-                    <BottomFooterLinks href="#text-buttons">HELP</BottomFooterLinks>
-                    <BottomFooterLinks href="#text-buttons">RETURNS</BottomFooterLinks>
-                    <BottomFooterLinks href="#text-buttons">CREDITS</BottomFooterLinks>
-                    <BottomFooterLinks href="#text-buttons">TERMS OF USE</BottomFooterLinks>
-                    <BottomFooterLinks href="#text-buttons">PRIVACY POLICY</BottomFooterLinks>
-                    <BottomFooterLinks disabled>© ROB RICH</BottomFooterLinks>
-                    <BottomFooterLinks disabled>© UNCROSSED RECORDINGS</BottomFooterLinks>
-                    <BottomFooterLinks disabled>THE RICH ROBBERS CLUB®</BottomFooterLinks>
-                </FooterStack>
+            <FooterStack>
+                {footerLinks.map((link, index) => (
+                    <BottomFooterLinks
+                    key={index}
+                    href={!link.disabled ? link.href : undefined} // Conditionally render href
+                    aria-disabled={link.disabled}                // Set aria-disabled for disabled links
+                    style={{ cursor: link.disabled ? 'not-allowed' : 'pointer' }} // Visual cue for disabled state
+                    >
+                    {link.label}
+                    </BottomFooterLinks>
+                ))}
+            </FooterStack>
             </BottomLinksContainer>
         </BottomFooterWrapper>
     );

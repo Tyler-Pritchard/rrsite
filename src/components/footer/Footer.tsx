@@ -5,7 +5,10 @@ import FooterTop from "./footer-top/footer-top";
 import { FooterWrapper } from "./footer.styles";
 
 
-const Footer = () => {
+// Define a props interface in case future props are added
+interface FooterProps {}
+
+const Footer: React.FC<FooterProps> = () => {
     return (
         <FooterWrapper>
             <FooterTop />
