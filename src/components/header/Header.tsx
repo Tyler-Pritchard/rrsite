@@ -4,7 +4,9 @@ import HeaderLeft from "./header-left/header-left";
 import Navigation from "./navigation/navigation";
 import { AppBar,  HeaderLeftContainer, PrimaryNavContainer, NavigationContainer } from "./header.styles";
 
-const Header = () => {
+interface HeaderProps {}
+
+const Header: React.FC<HeaderProps> = () => {
   return (
     <AppBar>
       <HeaderLeftContainer>

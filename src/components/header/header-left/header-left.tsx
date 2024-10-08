@@ -12,15 +12,25 @@ import {
     MenuItemText
   } from './header-left.styles';
 
-const HeaderLeft: React.FC = () => {
+// Define an interface for the props
+interface HeaderLeftProps {}
+
+// Define an interface for menu items
+interface MenuItem {
+    title: string;
+    link: string;
+}
+
+const HeaderLeft: React.FC<HeaderLeftProps> = () => {
+
     const [isModalOpen, setIsModalOpen] = useState(false);
-  
-    const toggleModal = () => {
+    // toggle modal state
+    const toggleModal = (): void => {
     //   setIsModalOpen(!isModalOpen);
     console.log("modal toggled!")
     };
   
-    const menuItems = [
+    const menuItems: MenuItem[] = [
         { title: 'Tour', link: '/tour' },
         { title: 'News', link: '/news' },
         { title: 'Band', link: '/band/timeline' },
