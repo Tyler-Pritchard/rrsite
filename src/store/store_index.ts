@@ -7,6 +7,8 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas';
 
+const sagaMiddleware = createSagaMiddleware();
+
 // Define persist configuration for user reducer
 const userPersistConfig = {
   key: 'user',           // Name of the key in storage
@@ -29,9 +31,6 @@ const errorMiddleware = (store: any) => (next: any) => (action: any) => {
     throw err;  // Rethrow the error for visibility
   }
 };
-
-const sagaMiddleware = createSagaMiddleware();
-
 
 // Configure the store
 const store = configureStore({

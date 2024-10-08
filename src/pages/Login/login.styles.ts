@@ -356,7 +356,7 @@ export const SubmitButton = styled.button`
   };
 `;
 
-export const ForgotPassword = styled.a`
+export const ForgotPassword = styled.button`
   @media (max-width: 480px) {
     width: 12rem;
   };

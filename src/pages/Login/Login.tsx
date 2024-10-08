@@ -26,7 +26,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { loginUser, forgotPassword  } from '../../store/actions/userActions';
-import { toggleForgotPasswordModal } from '../../store/actions/menuActions';
+import { toggleForgotPasswordModal } from '../../store/reducers/menuReducer';
 import { RootState } from '../../store/store_index';
 
 declare global {
