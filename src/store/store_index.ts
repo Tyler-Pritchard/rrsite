@@ -1,7 +1,7 @@
 // store.ts
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import menuReducer from '../reducers/menuReducer';
 import userReducer from '../slices/userSlice';
+import menuReducer from '../slices/menuSlice';
 import storage from 'redux-persist/lib/storage';  // Default localStorage for web
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';

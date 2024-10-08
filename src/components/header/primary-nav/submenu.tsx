@@ -1,8 +1,16 @@
 import React from 'react';
 import { SubmenuWrapper, SubmenuItems, SubmenuItem, SubmenuLink } from './submenu.styles';
 
+// Define a separate interface for individual submenu items
+interface SubmenuItemProps {
+  label: string;
+  link: string;
+  imgSrc: string;
+}
+
+// Define props for Submenu using SubmenuItemProps[]
 interface SubmenuProps {
-  items: { label: string, link: string, imgSrc: string }[];
+  items: SubmenuItemProps[];
   show: boolean;
 }
 

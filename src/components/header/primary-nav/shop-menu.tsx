@@ -1,8 +1,15 @@
 import React from 'react';
 import { ShopWrapper, ShopItems, ShopItem, ShopLink } from './shop-menu.styles';
 
+// Define a separate interface for individual shop items
+interface ShopItemProps {
+  label: string;
+  link: string;
+}
+
+// Define props for ShopMenu using ShopItemProps[]
 interface ShopProps {
-  items: { label: string, link: string }[];
+  items: ShopItemProps[];
   show: boolean;
   backgroundImage: string;
 }

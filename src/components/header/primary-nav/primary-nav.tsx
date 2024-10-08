@@ -1,7 +1,8 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavItem, NavLink, NavContainer, LogoItem, Logo, LogoLink } from './primary-nav.styles';
-import { connect } from 'react-redux';
-import { showSubmenu, hideSubmenu } from '../../../reducers/menuReducer';
+import { RootState, AppDispatch } from '../../../store/store_index';
+import { showSubmenu, hideSubmenu } from '../../../slices/menuSlice';
 import Submenu from './submenu';
 import Logo_image from "../../../assets/icons/logo4.png";
 import timelineImg from "../../../assets/images/desktop/robrichclassic.png";
@@ -37,13 +38,10 @@ interface ShopItem {
   link: string;
 }
 
-interface PrimaryNavProps {
-  visibleSubmenu: string | null;
-  showSubmenu: (menu: string) => void;
-  hideSubmenu: () => void;
-}
+const PrimaryNav: React.FC = () => {
+  const dispatch: AppDispatch = useDispatch();
+  const visibleSubmenu = useSelector((state: RootState) => state.menu.visibleSubmenu);
 
-const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hideSubmenu }) => {
   const submenuItems: { [key: string]: SubmenuItem[] } = {
     band: [
       { label: 'TIMELINE', link: '/band/timeline', imgSrc: timelineImg },
@@ -93,22 +91,22 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
     <NavContainer>
         {/* band */}
         <NavItem
-          onMouseEnter={() => showSubmenu('band')}
-          onMouseLeave={hideSubmenu}
+          onMouseEnter={() => dispatch(showSubmenu('band'))}
+          onMouseLeave={() => dispatch(hideSubmenu())}
         >
           <NavLink href="/band/timeline">Band</NavLink>
           {visibleSubmenu === 'band' && <Submenu items={submenuItems.band} show />}
         </NavItem>
         {/* tour */}
         <NavItem
-          onMouseEnter={() => showSubmenu('tour')}
-          onMouseLeave={hideSubmenu}
+          onMouseEnter={() => dispatch(showSubmenu('tour'))}
+          onMouseLeave={() => dispatch(hideSubmenu())}
         >
           <NavLink href="/tour">Tour</NavLink>
           {visibleSubmenu === 'tour' && <Submenu items={submenuItems.tour} show />}
         </NavItem>
         {/* news  */}
-        <NavItem onMouseEnter={() => showSubmenu('news')} onMouseLeave={hideSubmenu}>
+        <NavItem onMouseEnter={() => dispatch(showSubmenu('news'))} onMouseLeave={() => dispatch(hideSubmenu())}>
           <NavLink href="/news">News</NavLink>
           {visibleSubmenu === 'news' && <Submenu items={submenuItems.news} show />}
         </NavItem>
@@ -119,26 +117,26 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
           </LogoLink>
         </LogoItem>
         {/* music  */}
-        <NavItem onMouseEnter={() => showSubmenu('music')}
-          onMouseLeave={hideSubmenu}>
+        <NavItem onMouseEnter={() => dispatch(showSubmenu('music'))}
+          onMouseLeave={() => dispatch(hideSubmenu())}>
           <NavLink href="/releases">Music</NavLink>
           {visibleSubmenu === 'music' && <Submenu items={submenuItems.music} show />}
         </NavItem>
         {/* media  */}
-        <NavItem onMouseEnter={() => showSubmenu('media')}
-          onMouseLeave={hideSubmenu}>
+        <NavItem onMouseEnter={() => dispatch(showSubmenu('media'))}
+          onMouseLeave={() => dispatch(hideSubmenu())}>
           <NavLink href="/media">Media</NavLink>
           {visibleSubmenu === 'media' && <Submenu items={submenuItems.media} show />}
         </NavItem>
         {/* fans  */}
-        <NavItem onMouseEnter={() => showSubmenu('fans')}
-          onMouseLeave={hideSubmenu}>
+        <NavItem onMouseEnter={() => dispatch(showSubmenu('fans'))}
+          onMouseLeave={() => dispatch(hideSubmenu())}>
           <NavLink href="/fans">Fan Club</NavLink>
             {visibleSubmenu === 'fans' && <FanClubMenu items={fanClubItems} show backgroundImage={fans} />}
         </NavItem>
         {/* shop  */}
-        <NavItem onMouseEnter={() => showSubmenu('shop')}
-          onMouseLeave={hideSubmenu}>
+        <NavItem onMouseEnter={() => dispatch(showSubmenu('shop'))}
+          onMouseLeave={() => dispatch(hideSubmenu())}>
         {/* <NavItem onMouseEnter={() => showSubmenu('shop')}> */}
           <NavLink href="/store-landing-page/home">Shop</NavLink>
           {visibleSubmenu === 'shop' && <ShopMenu items={shopItems} show backgroundImage={shop} />}
@@ -147,13 +145,4 @@ const PrimaryNav: React.FC<PrimaryNavProps> = ({ visibleSubmenu, showSubmenu, hi
   );
 };
 
-const mapStateToProps = (state: any) => ({
-  visibleSubmenu: state.menu.visibleSubmenu,
-});
-
-const mapDispatchToProps = {
-  showSubmenu,
-  hideSubmenu,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(PrimaryNav);
+export default PrimaryNav;
