@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavItem, NavLink, NavContainer, LogoItem, Logo, LogoLink } from './primary-nav.styles';
 import { connect } from 'react-redux';
-import { showSubmenu, hideSubmenu } from '../../../store/reducers/menuReducer';
+import { showSubmenu, hideSubmenu } from '../../../reducers/menuReducer';
 import Submenu from './submenu';
 import Logo_image from "../../../assets/icons/logo4.png";
 import timelineImg from "../../../assets/images/desktop/robrichclassic.png";

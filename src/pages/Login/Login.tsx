@@ -25,8 +25,8 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
-import { loginUser, forgotPassword  } from '../../store/actions/userActions';
-import { toggleForgotPasswordModal } from '../../store/reducers/menuReducer';
+import { loginUser, forgotPassword  } from '../../slices/userSlice';
+import { toggleForgotPasswordModal } from '../../reducers/menuReducer';
 import { RootState } from '../../store/store_index';
 
 declare global {
@@ -63,7 +63,8 @@ const Login: React.FC = () => {
       const response = await dispatch(loginUser(formData));  // Dispatch login action
   
       // Extract the token from the response
-      const { token } = response;
+      const { token } = response.payload as { token: string };
+
   
       // Store the token based on the 'Remember Me' selection
       if (formData.rememberMe) {

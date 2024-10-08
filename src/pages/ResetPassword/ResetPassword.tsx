@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
-import { resetPassword } from '../../store/actions/userActions';
+import { resetPassword } from '../../slices/userSlice';
 import {
     ResetPasswordWrapper,
     ResetPasswordForm,
@@ -41,7 +41,7 @@ const ResetPassword: React.FC = () => {
     }
 
     try {
-        await dispatch(resetPassword(token, newPassword));
+        await dispatch(resetPassword({token, newPassword}));
         setSuccess(true);
         setError('');
         navigate('/login');

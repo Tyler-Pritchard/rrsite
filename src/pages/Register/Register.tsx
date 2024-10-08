@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
-import { registerUser } from '../../store/actions/userActions';
+import { registerUser } from '../../slices/userSlice';
 import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, CheckboxLabel, InputLabel, CheckboxInput, SubmitButton, ErrorText, CallToAction, CallToActionMobile, ModalWrapper, ModalContent, ModalButton, ContentWrapper } from './register.styles';
 
 declare global {

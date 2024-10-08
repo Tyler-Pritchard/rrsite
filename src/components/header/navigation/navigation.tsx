@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../../store/store_index';
-import { logoutUser } from '../../../store/actions/userActions';
+import { logoutUser } from '../../../slices/userSlice';
 import {Container, IconWrapper, StyledIconButton, StyledAccountCircleIcon, StyledLogoutIcon, StyledShoppingCartIcon} from "./navigation.styles";
 
 
 const Navigation: React.FC = () => {
-    const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+    const isLoggedIn = useSelector<RootState, boolean>((state) => state.user.isLoggedIn);
     const dispatch: AppDispatch = useDispatch();
   
     const handleLogout = () => {

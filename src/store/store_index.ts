@@ -1,7 +1,7 @@
 // store.ts
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import menuReducer from './reducers/menuReducer';
-import userReducer from './reducers/userReducer';
+import menuReducer from '../reducers/menuReducer';
+import userReducer from '../slices/userSlice';
 import storage from 'redux-persist/lib/storage';  // Default localStorage for web
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
@@ -55,7 +55,7 @@ sagaMiddleware.run(rootSaga);
 export const persistor = persistStore(store as unknown as any);
 
 // Export RootState and AppDispatch types for use across the app
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof rootReducer>;
 export type AppDispatch = typeof store.dispatch;
 
 export default store;
