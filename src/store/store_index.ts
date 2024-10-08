@@ -43,7 +43,11 @@ const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }).concat(sagaMiddleware, errorMiddleware),
-  devTools: process.env.NODE_ENV !== 'production', // Enable Redux DevTools in development
+  devTools: process.env.NODE_ENV !== 'production' && {
+    name: 'RobRichSite',        // Custom name in DevTools
+    trace: true,               // Enable action tracing in DevTools
+    traceLimit: 25,            // Limit trace stack to 25 actions for performance
+  },
 });
 
 sagaMiddleware.run(rootSaga);

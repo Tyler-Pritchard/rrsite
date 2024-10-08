@@ -17,6 +17,8 @@ export const USER_FORGOT_PASSWORD_FAIL = 'USER_FORGOT_PASSWORD_FAIL';
 export const USER_RESET_PASSWORD_REQUEST = 'USER_RESET_PASSWORD_REQUEST';
 export const USER_RESET_PASSWORD_SUCCESS = 'USER_RESET_PASSWORD_SUCCESS';
 export const USER_RESET_PASSWORD_FAIL = 'USER_RESET_PASSWORD_FAIL';
+export const SET_RESET_EMAIL = 'SET_RESET_EMAIL';
+export const SEND_PASSWORD_RESET = 'SEND_PASSWORD_RESET';
 
 // TypeScript interfaces for each action
 interface GetUserCountAction {
@@ -80,6 +82,16 @@ interface UserResetPasswordFailAction {
   payload: string;
 }
 
+interface SetResetEmailAction {
+  type: typeof SET_RESET_EMAIL;
+  payload: string;
+}
+
+interface SendPasswordResetAction {
+  type: typeof SEND_PASSWORD_RESET;
+  payload: string;
+}
+
 
 // Union of all action types
 export type UserActionTypes =
@@ -95,7 +107,9 @@ export type UserActionTypes =
   | UserForgotPasswordFailAction
   | UserResetPasswordRequestAction
   | UserResetPasswordSuccessAction
-  | UserResetPasswordFailAction;
+  | UserResetPasswordFailAction
+  | SetResetEmailAction
+  | SendPasswordResetAction;
 
 // Action for getting user count
 export const getUserCount = () => async (dispatch: AppDispatch) => {
@@ -211,4 +225,14 @@ export const resetPassword = (token: string, newPassword: string) => async (disp
     dispatch({ type: 'USER_RESET_PASSWORD_FAIL', payload: error.response?.data?.msg || error.message });
   }
 };
+
+export const sendPasswordReset = (email: string) => ({
+  type: SEND_PASSWORD_RESET,
+  payload: email,
+});
+
+export const setResetEmail = (email: string): UserActionTypes => ({
+  type: SET_RESET_EMAIL,
+  payload: email,
+});
 

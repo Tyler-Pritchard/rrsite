@@ -13,6 +13,7 @@ import {
     USER_RESET_PASSWORD_REQUEST,
     USER_RESET_PASSWORD_SUCCESS,
     USER_RESET_PASSWORD_FAIL,
+    SET_RESET_EMAIL,
 } from '../actions/userActions';
 
 interface UserState {
@@ -22,6 +23,7 @@ interface UserState {
     totalUsers: number;
     isLoggedIn: boolean;
     success?: boolean;
+    resetEmail: string;
 }
 
 const initialState: UserState = {
@@ -30,6 +32,7 @@ const initialState: UserState = {
     error: null,
     totalUsers: 0,
     isLoggedIn: false,
+    resetEmail: '',
 };
 
 const userReducer = (state = initialState, action: UserActionTypes): UserState => {
@@ -60,6 +63,8 @@ const userReducer = (state = initialState, action: UserActionTypes): UserState =
             return { ...state, loading: false, success: true, };
         case USER_RESET_PASSWORD_FAIL:
             return { ...state, loading: false, error: action.payload, };
+        case SET_RESET_EMAIL:
+            return { ...state, resetEmail: action.payload, };
         default:
             return state;
     }
