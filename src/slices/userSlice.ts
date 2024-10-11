@@ -22,6 +22,11 @@ const initialState: UserState = {
   resetEmail: '',
 };
 
+interface ForgotPasswordPayload {
+  email: string;
+  captchaToken: string;
+}
+
 // Create async thunks for handling asynchronous operations
 export const getUserCount = createAsyncThunk(
   'user/getUserCount',
@@ -63,14 +68,14 @@ export const loginUser = createAsyncThunk(
   }
 );
 
-export const forgotPassword = createAsyncThunk(
+export const forgotPassword = createAsyncThunk<any, ForgotPasswordPayload, { rejectValue: string }>(
   'user/forgotPassword',
-  async (email: string, { rejectWithValue }) => {
+  async ({ email, captchaToken }: ForgotPasswordPayload, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.post('/password/forgot-password', { email });
-      return data;
-    } catch (error) {
-      return rejectWithValue('Error sending forgot password request');
+      const response = await axiosInstance.post('/api/password/forgot-password', { email, captchaToken });
+      return response.data;
+    } catch (error: any) {
+      return rejectWithValue(error.response.data || 'Unknown error occurred');
     }
   }
 );

@@ -23,13 +23,15 @@ import {
   ButtonBox
 } from './login.styles';
 import { useDispatch, useSelector } from 'react-redux';
+import { ThunkAction } from 'redux-thunk';
+import { AnyAction } from 'redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { loginUser, forgotPassword  } from '../../slices/userSlice';
 import { toggleForgotPasswordModal } from '../../reducers/menuReducer';
 import { RootState } from '../../store/store_index';
 
-// Define the structure for form data
+// Define the structure for form data to ensure correct types are used
 interface LoginFormData {
   email: string;
   password: string;
@@ -37,17 +39,20 @@ interface LoginFormData {
   captchaToken?: string | null;
 }
 
+// Define the structure of the response payload for login actions
 interface LoginResponse {
   token?: string;
   message?: string;
 }
 
-// Define the structure for errors
+// Define the structure for errors displayed in the UI
 interface ErrorState {
   email?: string;
   password?: string;
   login?: string;
 }
+
+// Declare the reCAPTCHA global interface to be used in the component
 
 declare global {
   interface Window {
@@ -177,27 +182,42 @@ const Login: React.FC = () => {
   // Function to handle sending the password reset email
   const handleSendPasswordReset = async () => {
     if (!email) {
-      // Handle empty email validation
+      setErrors({ email: 'Email is required' });
       return;
     }
-
+  
     try {
-      // Dispatch the forgot password action
-      await dispatch(forgotPassword(email));     
-      // Update state to show success message
-      setIsEmailSent(true);
-      setErrors({}); // Clear any existing errors
-    } catch (error: any) {
-      // Handle the error safely
-      if (error.response && error.response.data) {
-        setErrors({ email: error.response.data.msg });
-      } else {
-        setErrors({ email: 'Failed to send reset email. Please try again.' });
+      setIsSubmitting(true);
+      if (!window.grecaptcha) {
+        console.error('reCAPTCHA is not loaded');
+        setIsSubmitting(false);
+        return;
       }
+  
+      // Execute reCAPTCHA and include it in the forgotPassword dispatch
+      window.grecaptcha.ready(() => {
+        window.grecaptcha
+          .execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'forgot_password' })
+          .then(async (captchaToken: string) => {
+            if (!captchaToken) {
+              setErrors({ email: 'Failed to validate CAPTCHA.' });
+              setIsSubmitting(false);
+              return;
+            }
+  
+            dispatch(forgotPassword({ email, captchaToken })) as unknown as ThunkAction<void, RootState, unknown, AnyAction>;
+
+            setIsEmailSent(true);
+            setErrors({}); // Clear existing errors
+          });
+      });
+    } catch (error: any) {
+      setErrors({ email: 'Failed to send reset email. Please try again.' });
     } finally {
-      setIsSubmitting(false);  // Re-enable button or hide loader
+      setIsSubmitting(false);
     }
-  };
+  };  
+
 
   return (
     <LoginWrapper>
