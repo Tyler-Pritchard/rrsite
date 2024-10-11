@@ -72,7 +72,7 @@ export const forgotPassword = createAsyncThunk<any, ForgotPasswordPayload, { rej
   'user/forgotPassword',
   async ({ email, captchaToken }: ForgotPasswordPayload, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.post('/api/password/forgot-password', { email, captchaToken });
+      const response = await axiosInstance.post('/password/forgot-password', { email, captchaToken });
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response.data || 'Unknown error occurred');
