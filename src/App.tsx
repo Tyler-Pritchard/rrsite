@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import ResetPassword from './pages/ResetPassword/ResetPassword';
+import Timeline from './pages/About/Timeline';
 import Construction from './pages/Construction/Construction';
 import FAQ from './pages/FAQ/faq';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -28,7 +29,7 @@ const App: React.FC = () => {
           <Route path="/news" element={<Construction />} />
           <Route path="/press" element={<Construction />} />
           <Route path="/and-on-top-of-that" element={<Construction />} />
-          <Route path="/band/timeline" element={<Construction />} />
+          <Route path="/band/timeline" element={<Timeline />} />
           <Route path="/history" element={<Construction />} />
           <Route path="/releases" element={<Construction />} />
           <Route path="/media" element={<Construction />} />
