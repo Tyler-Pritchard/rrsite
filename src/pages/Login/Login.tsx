@@ -62,7 +62,7 @@ declare global {
 
 const Login: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const isModalOpen = useSelector((state: RootState) => state.menu.isForgotPasswordModalOpen);
   const [email, setEmail] = useState<string>('');
@@ -85,37 +85,31 @@ const Login: React.FC = () => {
   const processLogin = async (formData: LoginFormData) => {
     try {
       setIsSubmitting(true);
-  
-      // Properly type and destructure the response
+
       const response = await dispatch(loginUser(formData)) as { payload: LoginResponse };
-  
-      // Extract token and message from the response payload
       const { token, message } = response.payload;
-  
-      // If a message exists, handle it as an error
+
       if (message) {
         throw new Error(message);
       }
-  
-      // Validate that the token is a string and not empty
+
       if (!token || typeof token !== 'string') {
         throw new Error('Invalid login response, token missing or not a string.');
       }
-  
-      // Store the token based on the 'Remember Me' selection
+
       if (formData.rememberMe) {
-        localStorage.setItem('token', token);  // Use localStorage for 'Remember Me'
+        localStorage.setItem('token', token);
       } else {
-        sessionStorage.setItem('token', token);  // Use sessionStorage if 'Remember Me' is not checked
+        sessionStorage.setItem('token', token);
       }
-  
+
       handleDone();
     } catch (error: any) {
       setErrors((prev) => ({ ...prev, login: error.message || 'Failed to login. Please try again.' }));
     } finally {
       setIsSubmitting(false);
     }
-  };  
+  };
 
   // Form submission handler
   const handleSubmit = (event: React.FormEvent) => {
@@ -127,15 +121,10 @@ const Login: React.FC = () => {
       rememberMe,
       captchaToken
     };
-    
-    // Use ErrorState type directly
-    const newErrors: ErrorState = {};
 
-    if (!email) {
-      newErrors.email = 'Email is required';
-    } else if (!validateEmail(email)) {
-      newErrors.email = 'Invalid email format';
-    }
+    const newErrors: ErrorState = {};
+    if (!email) newErrors.email = 'Email is required';
+    else if (!validateEmail(email)) newErrors.email = 'Invalid email format';
     if (!password) newErrors.password = 'Password is required';
 
     setErrors(newErrors);
@@ -145,31 +134,30 @@ const Login: React.FC = () => {
       return;
     }
 
-    // Execute reCAPTCHA v3 to get the token
     setIsSubmitting(true);
+
+    // Execute reCAPTCHA Enterprise to get the token
     if (!window.grecaptcha) {
       console.error('reCAPTCHA is not loaded');
       setIsSubmitting(false);
       return;
     }
 
-    // Execute reCAPTCHA v3 to get the token
-    window.grecaptcha.ready(() => {
-      window.grecaptcha
+    window.grecaptcha.enterprise.ready(() => {
+      window.grecaptcha.enterprise
         .execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'login' })
         .then((captchaToken: string) => {
           console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
-          setCaptchaToken(captchaToken); // Store the token in state
+          setCaptchaToken(captchaToken);
 
           if (captchaToken) {
             formData.captchaToken = captchaToken ?? '';
-            // Proceed with login after captcha validation
             processLogin(formData);
-        } else {
-          console.error('Token is null or undefined.');
-          setIsSubmitting(false)
-        }
-      });
+          } else {
+            console.error('Token is null or undefined.');
+            setIsSubmitting(false);
+          }
+        });
     });
   };
 
@@ -179,13 +167,12 @@ const Login: React.FC = () => {
     dispatch(toggleForgotPasswordModal());
   };
 
-  // Function to handle sending the password reset email
   const handleSendPasswordReset = async () => {
     if (!email) {
       setErrors({ email: 'Email is required' });
       return;
     }
-  
+
     try {
       setIsSubmitting(true);
       if (!window.grecaptcha) {
@@ -193,10 +180,9 @@ const Login: React.FC = () => {
         setIsSubmitting(false);
         return;
       }
-  
-      // Execute reCAPTCHA and include it in the forgotPassword dispatch
-      window.grecaptcha.ready(() => {
-        window.grecaptcha
+
+      window.grecaptcha.enterprise.ready(() => {
+        window.grecaptcha.enterprise
           .execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'forgot_password' })
           .then(async (captchaToken: string) => {
             if (!captchaToken) {
@@ -204,11 +190,10 @@ const Login: React.FC = () => {
               setIsSubmitting(false);
               return;
             }
-  
-            dispatch(forgotPassword({ email, captchaToken })) as unknown as ThunkAction<void, RootState, unknown, AnyAction>;
 
+            dispatch(forgotPassword({ email, captchaToken })) as unknown as ThunkAction<void, RootState, unknown, AnyAction>;
             setIsEmailSent(true);
-            setErrors({}); // Clear existing errors
+            setErrors({});
           });
       });
     } catch (error: any) {
@@ -216,7 +201,7 @@ const Login: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };  
+  };
 
 
   return (

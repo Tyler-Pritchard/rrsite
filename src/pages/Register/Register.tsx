@@ -83,8 +83,8 @@ const Register: React.FC = () => {
       return;
     }
 
-    window.grecaptcha.ready(() => {
-      window.grecaptcha.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'submit' }).then((captchaToken: string) => {
+    window.grecaptcha.enterprise.ready(() => {
+      window.grecaptcha.enterprise.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'register' }).then((captchaToken: string) => {
         console.log("SUBMIT ACTION in Register: ", captchaToken)
         setCaptchaToken(captchaToken);
 
