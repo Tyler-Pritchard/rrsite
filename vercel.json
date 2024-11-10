@@ -3,7 +3,7 @@
     {
       "src": "/(.*)",
       "headers": {
-        "Content-Security-Policy": "frame-src *;"
+        "Content-Security-Policy": "frame-src 'self' https://cdn.knightlab.com;"
       }
     }
   ]
