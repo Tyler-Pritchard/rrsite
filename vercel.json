@@ -3,13 +3,8 @@
     {
       "src": "/(.*)",
       "headers": {
-        "Access-Control-Allow-Origin": "https://www.robrich.band",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        "Content-Security-Policy": "default-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; font-src *; connect-src *; frame-src *; img-src * data:;"
-      },
-      "methods": ["OPTIONS", "GET", "POST"]
+        "Content-Security-Policy": "frame-src *;"
+      }
     }
   ]
 }
-
