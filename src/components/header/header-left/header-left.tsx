@@ -23,12 +23,12 @@ interface MenuItem {
 
 const HeaderLeft: React.FC<HeaderLeftProps> = () => {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    // toggle modal state
-    const toggleModal = (): void => {
-    //   setIsModalOpen(!isModalOpen);
-    console.log("modal toggled!")
-    };
+    // const [isModalOpen, setIsModalOpen] = useState(false);
+    // // toggle modal state
+    // const toggleModal = (): void => {
+    // //   setIsModalOpen(!isModalOpen);
+    // console.log("modal toggled!")
+    // };
   
     const menuItems: MenuItem[] = [
         { title: 'Tour', link: '/tour' },
@@ -40,7 +40,7 @@ const HeaderLeft: React.FC<HeaderLeftProps> = () => {
 
     return (
         <Container>
-            <OpenButton onClick={toggleModal}>
+            {/* <OpenButton onClick={toggleModal}>
                 <StyledMenuIcon />
             </OpenButton>
             {isModalOpen && (
@@ -58,7 +58,7 @@ const HeaderLeft: React.FC<HeaderLeftProps> = () => {
                         </ModalMenu>
                     </Drawer>
                 </ModalContainer>
-            )}
+            )} */}
         </Container>
     );
   };
