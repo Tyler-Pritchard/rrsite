@@ -81,3 +81,5 @@
 // export const ModalFooterContainer = styled.div`
 //   width: 100vw;
 // `
+
+export {}
