@@ -3,7 +3,7 @@
     {
       "src": "/(.*)",
       "headers": {
-        "Content-Security-Policy": "default-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; font-src *; connect-src *; frame-src *; img-src * data:;"
+        "Content-Security-Policy": "default-src *; frame-src * https://www.google.com https://cdn.knightlab.com; script-src * 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com; style-src * 'unsafe-inline'; connect-src *;"
       }
     }
   ]
