@@ -1,20 +1,17 @@
 import React from 'react';
-import { TimelineWrapper, IframeContainer } from './Timeline.styles';
+import { TimelineContainer } from './Timeline.styles'; // Assuming TimelineContainer is a styled component
 
 const Timeline: React.FC = () => {
   return (
-    <TimelineWrapper>
-      <IframeContainer>
-        <iframe 
-          src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=123GOV6yO_5I0rvcqM-_eseb-zdVajJQUum5ZacGQApY&font=Default&lang=en&start_at_end=true&initial_zoom=2&height=650" 
-          width="100%" 
-          height="650" 
-          allowFullScreen 
-          frameBorder="0"
-          title="Rob Rich Timeline"
-        ></iframe>
-      </IframeContainer>
-    </TimelineWrapper>
+    <TimelineContainer>
+      <iframe 
+        src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Rbw8wpCESaQ-Dmmw4jyWc8zrbRekwBK1L2rRgbchDbI&font=Default&lang=en&start_at_end=true&debug=true&initial_zoom=2&height=650' 
+        width='100%' 
+        height='650' 
+        title="Rob Rich Band Timeline"
+        allowFullScreen
+      ></iframe>
+    </TimelineContainer>
   );
 };
 
