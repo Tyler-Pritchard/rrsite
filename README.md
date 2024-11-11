@@ -10,6 +10,9 @@ The website is built with React and Redux in TypeScript, following modern fronte
 - [Rob Rich Artist Website](#rob-rich-artist-website)
   - [Project Overview](#project-overview)
   - [Table of Contents](#table-of-contents)
+  - [Timeline Feature](#timeline-feature)
+    - [Description](#description)
+    - [Usage and Configuration](#usage-and-configuration)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Dependencies](#dependencies)
@@ -23,7 +26,34 @@ The website is built with React and Redux in TypeScript, following modern fronte
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
-   
+
+## Timeline Feature
+
+### Description
+
+The **Timeline** feature, accessible under the "History" section, provides a detailed view of Rob Rich’s journey and accomplishments. Built using Knight Lab’s Timeline.js library, it dynamically imports content from a Google Sheet, displaying text, images, and audio clips hosted on Soundcloud.
+
+### Usage and Configuration
+1. **Embedding the Timeline**: The timeline is embedded using an iframe that connects to Knight Lab’s external service, which reads directly from a designated Google Sheet. Each row in the sheet represents an event on the timeline, where you can define:
+
+- **Date**: Date of the event
+- **Headline**: Title of the event
+- **Text**: Description of the event
+- **Media URL**: Links to images or audio hosted on Soundcloud, which users can play directly within the timeline
+  
+2. **Updating the Timeline Content:**
+
+- Modify the Google Sheet associated with the timeline.
+- Add new rows to include additional events or edit existing rows to update content.
+- Ensure that images are publicly accessible URLs (we recommend Google Drive or other free hosting platforms) and that audio files are hosted via Soundcloud for compatibility.
+
+3. **Troubleshooting Common Issues**:
+
+- If the timeline is not loading or displaying correctly, verify the Content Security Policy (CSP) settings in `vercel.json` and `server.js`. Ensure the following directives are present:
+  - `"frame-src"` allows both `https://cdn.knightlab.com` and `https://soundcloud.com`.
+- If an audio or image link appears broken, ensure the link is public and formatted correctly in the Google Sheet.
+- Make a copy of the spreadsheet template at `https://timeline.knightlab.com/#make` and follow the instructions to create your own custome timeline.
+
 ## Getting Started
 To get started with this project, follow the instructions below for installation and setup.
 
