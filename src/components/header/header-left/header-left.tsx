@@ -17,6 +17,7 @@ type MenuItem = {
 
 // Menu items
 const MENU_ITEMS: MenuItem[] = [
+  { label: 'Home', href: '/' },
   { label: 'Tour', href: '/tour' },
   { label: 'News', href: '/news' },
   { label: 'Timeline', href: '/band/timeline' },
