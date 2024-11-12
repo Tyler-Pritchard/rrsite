@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// Full-screen modal overlay
 export const Overlay = styled.div`
   position: fixed;
   top: 0;
@@ -11,7 +10,6 @@ export const Overlay = styled.div`
   z-index: 9998;
 `;
 
-// Main container for modal
 export const ModalContainer = styled.div`
   position: fixed;
   top: 0;
@@ -26,7 +24,23 @@ export const ModalContainer = styled.div`
   z-index: 9999;
 `;
 
-// Toggle button for opening modal
+// Close button styling
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 10rem;
+  right: 20rem;
+  font-size: 5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    color: #ff6347; /* Match hover color for consistency */
+  }
+`;
+
 export const ModalToggleButton = styled.button`
   font-size: 3.5rem;
   background: none;
@@ -40,7 +54,6 @@ export const ModalToggleButton = styled.button`
   }
 `;
 
-// Menu list container
 export const ModalMenu = styled.ul`
   list-style: none;
   padding: 0;
@@ -48,12 +61,10 @@ export const ModalMenu = styled.ul`
   text-align: center;
 `;
 
-// Individual menu items
 export const ModalMenuItem = styled.li`
   margin: 1rem 0;
 `;
 
-// Link styling within menu items
 export const ModalMenuLink = styled.a`
   text-decoration: none;
   font-size: 3rem;
@@ -61,6 +72,6 @@ export const ModalMenuLink = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #ff6347; /* Highlight color */
+    color: #ff6347;
   }
 `;

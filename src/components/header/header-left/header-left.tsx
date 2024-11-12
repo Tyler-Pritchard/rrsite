@@ -7,9 +7,9 @@ import {
   ModalToggleButton,
   Overlay,
   ModalMenuLink,
+  CloseButton,
 } from './header-left.styles';
 
-// Define type for menu item
 type MenuItem = {
   label: string;
   href: string;
@@ -32,6 +32,9 @@ const Modal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onC
     <>
       <Overlay onClick={onClose} />
       <ModalContainer>
+        <CloseButton onClick={onClose} aria-label="Close Navigation Menu">
+          &times;
+        </CloseButton>
         <ModalMenu>
           {MENU_ITEMS.map((item, index) => (
             <ModalMenuItem key={index}>
@@ -56,7 +59,6 @@ const HeaderLeft: React.FC = () => {
   return (
     <>
       <ModalToggleButton onClick={toggleModal} aria-label="Open Navigation Menu">
-        {/* Replace this with your preferred icon */}
         ☰
       </ModalToggleButton>
       <Modal isOpen={isModalOpen} onClose={toggleModal} />
