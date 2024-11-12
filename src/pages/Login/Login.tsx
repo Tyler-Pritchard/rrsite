@@ -147,7 +147,7 @@ const Login: React.FC = () => {
       window.grecaptcha.enterprise
         .execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'login' })
         .then((captchaToken: string) => {
-          console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
+          // console.log("HANDLESUBMIT reCAPTCHA token in Login.tsx: ", captchaToken);
           setCaptchaToken(captchaToken);
 
           if (captchaToken) {

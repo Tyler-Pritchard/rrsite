@@ -14,7 +14,6 @@ import GlobalStyle from "./globalStyles";
 
 
 const App: React.FC = () => {
-  console.log("vercel test, force deploy");
   return (
     <HelmetProvider>
       <Helmet>
