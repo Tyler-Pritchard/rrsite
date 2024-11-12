@@ -10,11 +10,10 @@ export const TimelineContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative; 
-  top: 10rem;
 
   iframe {
     width: 100%;
-    height: 100%;
+    height: 90%;
     border: none;
   }
 
@@ -48,8 +47,9 @@ export const TimelineContainer = styled.div`
 
   /* Extra-large screens (1201px and up) */
   @media (min-width: 1201px) {
-    height: 75rem;
-    padding: 3.5rem;
-    padding-top: 25rem;
+    height: 95rem;
+    padding: 1.5rem;
+    top: 10rem;
+    padding-top: 1rem;
   }
 `;

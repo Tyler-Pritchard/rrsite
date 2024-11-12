@@ -1,6 +1,6 @@
 import React from 'react';
 import PrimaryNav from "./primary-nav/primary-nav";
-// import HeaderLeft from "./header-left/header-left";
+import HeaderLeft from "./header-left/header-left";
 import Navigation from "./navigation/navigation";
 import { AppBar,  HeaderLeftContainer, PrimaryNavContainer, NavigationContainer } from "./header.styles";
 
@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <AppBar>
       <HeaderLeftContainer>
-          {/* <HeaderLeft /> */}
+          <HeaderLeft />
       </HeaderLeftContainer>
       <PrimaryNavContainer>
           <PrimaryNav />

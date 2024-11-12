@@ -1,85 +1,66 @@
-// import styled from 'styled-components';
-// import { ReactComponent as MenuSvg } from '../../../assets/icons/menu-icon.svg';
-// import { ReactComponent as CloseSvg } from '../../../assets/icons/close-icon.svg';
+import styled from 'styled-components';
 
-// export const StyledMenuIcon = styled(MenuSvg)`
-//   background: none;
-//   background-color: transparent;
-//   border: none;
-//   height: 2.25rem;
-//   width: 2.25rem;
-// `;
+// Full-screen modal overlay
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+`;
 
-// export const StyledCloseIcon = styled(CloseSvg)`
-//   color: black;
-//   background: none;
-//   background-color: transparent;
-//   height: 2rem;
-//   width: 2rem;
-// `;
+// Main container for modal
+export const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+`;
 
-// export const Container = styled.div``;
+// Toggle button for opening modal
+export const ModalToggleButton = styled.button`
+  font-size: 3.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
 
-// export const OpenButton = styled.button`
-//   color: white;
-  
-//   @media (min-width: 768px) {
-//     height: 3rem;
-//     width: 3rem;
-//   }
-// `;
+  &:hover {
+    color: #bbbbbb;
+  }
+`;
 
-// export const Drawer = styled.div`
-//     background-color: white;
-//     width: 98vw;
-//     height: 98vh;
-//     padding-top: 6rem;
-//     padding-left: 3rem;
-//     border-radius: 8px; 
-//     z-index: 10002; 
-// `;
-  
-// export const ModalContainer = styled.div`
-//   height: 100vh;
-//   width: 100vw;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: 99999;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: rgba(0, 0, 0, 0.8);
-// `;
+// Menu list container
+export const ModalMenu = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+`;
 
-// export const ModalMenu = styled.ul`
-//   list-style-type: none;
-//   padding-left: 2rem;
-//   font-size: large;
-//   margin: 0;
-//   z-index: 99999;
-// `;
+// Individual menu items
+export const ModalMenuItem = styled.li`
+  margin: 1rem 0;
+`;
 
-// export const ModalMenuItem = styled.li`
-//   padding: 10px;
-//   cursor: pointer;
-//   color: black;
-  
-//   &:hover {
-//     background-color: lightgray;
-//   }
-// `;
+// Link styling within menu items
+export const ModalMenuLink = styled.a`
+  text-decoration: none;
+  font-size: 3rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
 
-// export const ModalMenuLink = styled.a`
-//   text-decoration: none;
-// `
-
-// export const MenuItemText = styled.header`
-//   color: black;
-// `;
-
-// export const ModalFooterContainer = styled.div`
-//   width: 100vw;
-// `
-
-export {}
+  &:hover {
+    color: #ff6347; /* Highlight color */
+  }
+`;

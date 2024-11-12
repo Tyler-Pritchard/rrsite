@@ -21,9 +21,9 @@ const Timeline: React.FC = () => {
       {/* Embedded iframe with essential attributes for accessibility and configuration */}
       <iframe 
         src={TIMELINE_URL}
-        width="100%" 
-        height="650" 
-        title="Rob Rich Band Timeline"
+        width="99%" 
+        height="300" 
+        title="Rob Rich Timeline"
         loading="lazy" // Defers loading for performance
         allowFullScreen
         frameBorder="0"
