@@ -25,7 +25,7 @@ const ResetPassword: React.FC = () => {
   const token = searchParams.get('token');
   
   useEffect(() => {
-    // console.log('Token from URL:', token);
+    console.log('Token from URL:', token);
   }, [token]);
   
   
@@ -33,7 +33,7 @@ const ResetPassword: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   
-    // console.log("RESET PASSWORD TOKEN:", token);
+    console.log("RESET PASSWORD TOKEN:", token);
 
     if (!newPassword || !token) {
       setError('Password and token are required');
