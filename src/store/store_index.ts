@@ -2,6 +2,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import userReducer from '../slices/userSlice';
 import menuReducer from '../slices/menuSlice';
+import productReducer from '../slices/productSlice';
 import storage from 'redux-persist/lib/storage';  // Default localStorage for web
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
@@ -20,6 +21,7 @@ const userPersistConfig = {
 const rootReducer = combineReducers({
   user: persistReducer(userPersistConfig, userReducer), // Persist user slice
   menu: menuReducer,  // No persistence for menu
+  product: productReducer,
 });
 
 // Custom Middleware for Error Logging
