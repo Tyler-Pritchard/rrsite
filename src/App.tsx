@@ -9,8 +9,8 @@ import ResetPassword from './pages/ResetPassword/ResetPassword';
 import Timeline from './pages/About/Timeline';
 import Construction from './pages/Construction/Construction';
 import FAQ from './pages/FAQ/faq';
-import ProductsPage from './pages/Shop/Products/Products';
-import ProductDetailsPage from './pages/Shop/Products/ProductDetails';
+import Products from './pages/Shop/Products/Products';
+import ProductDetails from './pages/Shop/Products/ProductDetails';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import GlobalStyle from "./globalStyles";
 
@@ -52,8 +52,8 @@ const App: React.FC = () => {
           <Route path="/photos/?category=Fifth Member Exclusives" element={<Construction />} />
           <Route path="https://www.forums.robrich.band" element={<Construction />} />
           <Route path="/fans/local-chapters" element={<Construction />} />
-          <Route path="/shop/products" element={<ProductsPage />} />
-          <Route path="/shop/products/:id" element={<ProductDetailsPage />} />
+          <Route path="/shop/products" element={<Products />} />
+          <Route path="/shop/products/:id" element={<ProductDetails />} />
           <Route path="/store-landing-page/home" element={<Construction />} />
           <Route path="/store/featured" element={<Construction />} />
           <Route path="/store/music" element={<Construction />} />

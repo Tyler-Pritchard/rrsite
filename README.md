@@ -7,12 +7,11 @@ Welcome to the official digital space of the artist & musician Rob Rich. This we
 The website is built with React and Redux in TypeScript, following modern frontend development practices. It offers a seamless experience for users to explore the artist’s content, interact with fan services, and make purchases.
 
 ## Table of Contents
+
+[Rob Rich Artist Website](#rob-rich-artist-website)
 - [Rob Rich Artist Website](#rob-rich-artist-website)
   - [Project Overview](#project-overview)
   - [Table of Contents](#table-of-contents)
-  - [Timeline Feature](#timeline-feature)
-    - [Description](#description)
-    - [Usage and Configuration](#usage-and-configuration)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Dependencies](#dependencies)
@@ -23,36 +22,15 @@ The website is built with React and Redux in TypeScript, following modern fronte
     - [Development Environment](#development-environment)
     - [Production Build](#production-build)
     - [Deployment](#deployment)
+  - [Lighthouse Integration](#lighthouse-integration)
+    - [Setup](#setup)
+    - [Usage](#usage)
+  - [Timeline Feature](#timeline-feature)
+    - [Description](#description)
+    - [Usage and Configuration](#usage-and-configuration)
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
-
-## Timeline Feature
-
-### Description
-
-The **Timeline** feature, accessible under the "History" section, provides a detailed view of Rob Rich’s journey and accomplishments. Built using Knight Lab’s Timeline.js library, it dynamically imports content from a Google Sheet, displaying text, images, and audio clips hosted on Soundcloud.
-
-### Usage and Configuration
-1. **Embedding the Timeline**: The timeline is embedded using an iframe that connects to Knight Lab’s external service, which reads directly from a designated Google Sheet. Each row in the sheet represents an event on the timeline, where you can define:
-
-- **Date**: Date of the event
-- **Headline**: Title of the event
-- **Text**: Description of the event
-- **Media URL**: Links to images or audio hosted on Soundcloud, which users can play directly within the timeline
-  
-2. **Updating the Timeline Content:**
-
-- Modify the Google Sheet associated with the timeline.
-- Add new rows to include additional events or edit existing rows to update content.
-- Ensure that images are publicly accessible URLs (we recommend Google Drive or other free hosting platforms) and that audio files are hosted via Soundcloud for compatibility.
-
-3. **Troubleshooting Common Issues**:
-
-- If the timeline is not loading or displaying correctly, verify the Content Security Policy (CSP) settings in `vercel.json` and `server.js`. Ensure the following directives are present:
-  - `"frame-src"` allows both `https://cdn.knightlab.com` and `https://soundcloud.com`.
-- If an audio or image link appears broken, ensure the link is public and formatted correctly in the Google Sheet.
-- Make a copy of the spreadsheet template at `https://timeline.knightlab.com/#make` and follow the instructions to create your own custome timeline.
 
 ## Getting Started
 To get started with this project, follow the instructions below for installation and setup.
@@ -142,6 +120,79 @@ npm run deploy
 ```
 
 Make sure to configure the ```homepage``` field in ```package.json``` for the correct URL (currently set to ```https://www.robrich.band/```).
+
+## Lighthouse Integration
+
+### Setup
+
+Lighthouse CI has been integrated into the project to monitor and improve the performance, accessibility, best practices, and SEO of the application. The setup includes:
+
+- A ``lhci-setup.js`` script to ensure ``globalThis.fetch`` is available in the node environment.
+- A ``lighthouserc.json`` configuration file with settings for testing local and production environments.
+
+### Usage
+1. Install Lighthouse CI:
+```
+npm install -g @lhci/cli
+```
+2. Run the Lighthouse CI tests:
+```
+npm run lhci:autorun
+```
+
+This will:
+
+- Start a local server.
+- Run Lighthouse tests on specified URLs.
+- Provide a detailed report for performance, accessibility, best practices, and SEO.
+
+3. Reports:
+
+- Reports are uploaded to temporary public storage and include detailed metrics for:
+  - Page load performance.
+  - Compliance with accessibility standards.
+  - Adherence to SEO best practices.
+
+4. Configuration:
+
+- The ``lighthouserc.json`` file defines thresholds for various metrics. For example:
+```
+"assert": {
+  "assertions": {
+    "categories:performance": ["error", { "minScore": 0.9 }],
+    "categories:seo": ["error", { "minScore": 0.9 }]
+  }
+}
+```
+
+- Adjust these values if needed for development.
+
+## Timeline Feature
+
+### Description
+
+The **Timeline** feature, accessible under the "History" section, provides a detailed view of Rob Rich’s journey and accomplishments. Built using Knight Lab’s Timeline.js library, it dynamically imports content from a Google Sheet, displaying text, images, and audio clips hosted on Soundcloud.
+
+### Usage and Configuration
+1. **Embedding the Timeline**: The timeline is embedded using an iframe that connects to Knight Lab’s external service, which reads directly from a designated Google Sheet. Each row in the sheet represents an event on the timeline, where you can define:
+
+- **Date**: Date of the event
+- **Headline**: Title of the event
+- **Text**: Description of the event
+- **Media URL**: Links to images or audio hosted on Soundcloud, which users can play directly within the timeline
+  
+2. **Updating the Timeline Content:**
+
+- Modify the Google Sheet associated with the timeline.
+- Add new rows to include additional events or edit existing rows to update content.
+- Ensure that images are publicly accessible URLs (we recommend Google Drive or other free hosting platforms) and that audio files are hosted via Soundcloud for compatibility.
+
+3. **Troubleshooting Common Issues**:
+
+- If the timeline is not loading or displaying correctly, verify the Content Security Policy (CSP) settings in `vercel.json` and `server.js`. Ensure the following directives are present:
+  - `"frame-src"` allows both `https://cdn.knightlab.com` and `https://soundcloud.com`.
+- If an audio or image link appears broken, ensure the link is public and formatted correctly in the Google Sheet.
+- Make a copy of the spreadsheet template at `https://timeline.knightlab.com/#make` and follow the instructions to create your own custome timeline.
 
 ## Contributing
 We welcome contributions to improve this project! Please follow the steps below:

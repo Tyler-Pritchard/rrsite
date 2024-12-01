@@ -3,7 +3,7 @@
   "homepage": "https://www.robrich.band/",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:8080/",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -19,6 +19,7 @@
     "axios": "^1.7.6",
     "babel-plugin-inline-react-svg": "^2.0.2",
     "gh-pages": "^6.1.1",
+    "node-fetch": "^2.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^3.1.0",
@@ -41,13 +42,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lhci:autorun": "node lhci-setup.js && lhci autorun"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "env": {
+      "es2020": true,
+      "node": true
+    }
   },
   "browserslist": {
     "production": [

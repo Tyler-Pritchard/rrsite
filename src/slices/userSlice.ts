@@ -32,7 +32,7 @@ export const getUserCount = createAsyncThunk(
   'user/getUserCount',
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.get(`/users/count`);
+      const { data } = await axiosInstance.get(`/auth/users/count`); // Update the endpoint
       return data.totalUsers;
     } catch (error) {
       return rejectWithValue('Error fetching user count');
