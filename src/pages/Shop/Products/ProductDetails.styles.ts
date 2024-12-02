@@ -4,6 +4,7 @@ export const ProductDetailsContainer = styled.div`
   display: flex;
   gap: 16px;
   padding: 24px;
+  padding-top: 15rem;
 `;
 
 export const ProductImage = styled.img`
