@@ -21,7 +21,7 @@ const MENU_ITEMS: MenuItem[] = [
   { label: 'Tour', href: '/tour' },
   { label: 'News', href: '/news' },
   { label: 'Timeline', href: '/band/timeline' },
-  { label: 'Store', href: '/store' },
+  { label: 'Shop', href: '/shop/products' },
   { label: 'Media', href: '/media' },
 ];
 
