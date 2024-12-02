@@ -1,5 +1,8 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import axios from '../axiosConfig';
+import { createAxiosInstance } from '../axiosConfig';
+
+// Create Axios instance for the `store` service
+const storeAPI = createAxiosInstance('store');
 
 // Define the product type
 interface Product {
@@ -29,12 +32,12 @@ const initialState: ProductState = {
 
 // Thunks
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-  const response = await axios.get('/products');
+  const response = await storeAPI.get('/products');
   return response.data as Product[];
 });
 
 export const fetchProduct = createAsyncThunk('products/fetchProduct', async (id: string) => {
-  const response = await axios.get(`/products/${id}`);
+  const response = await storeAPI.get(`/products/${id}`);
   return response.data as Product;
 });
 
