@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../../slices/productSlice';
-import { RootState, AppDispatch } from '../../../store/store_index'; // Import AppDispatch
+import { RootState, AppDispatch } from '../../../store/store_index';
 import { useParams } from 'react-router-dom';
 import { ProductDetailsContainer, ProductImage, ProductInfo } from './ProductDetails.styles';
 
@@ -12,7 +12,7 @@ const ProductDetailsPage: React.FC = () => {
 
   useEffect(() => {
     if (id) {
-      dispatch(fetchProduct(id)); // Dispatch the thunk
+      dispatch(fetchProduct(id)); // Dispatch the thunk to fetch product details
     }
   }, [dispatch, id]);
 

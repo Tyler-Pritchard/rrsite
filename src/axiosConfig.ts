@@ -2,30 +2,26 @@ import axios, { AxiosInstance } from 'axios';
 
 // Function to create an Axios instance with a dynamic base URL
 export const createAxiosInstance = (service: 'auth' | 'store' | 'payments' | 'gateway'): AxiosInstance => {
-  let baseURL: string;
+  // Define base URLs for different services
+  const baseURLs: Record<typeof service, string> = {
+    auth: process.env.REACT_APP_AUTH_URL || 'http://localhost:5000/',
+    store: process.env.REACT_APP_STORE_URL || 'http://localhost:8081/',
+    payments: process.env.REACT_APP_PAYMENTS_URL || 'http://localhost:8082/',
+    gateway: process.env.REACT_APP_GATEWAY_URL || 'http://localhost:8080/',
+  };
 
-  switch (service) {
-    case 'auth':
-      baseURL = process.env.REACT_APP_AUTH_URL || 'http://localhost:5000/';
-      break;
-    case 'store':
-      baseURL = process.env.REACT_APP_STORE_URL || 'http://localhost:8081/';
-      break;
-    case 'payments':
-      baseURL = process.env.REACT_APP_PAYMENTS_URL || 'http://localhost:8082/';
-      break;
-    case 'gateway':
-      baseURL = process.env.REACT_APP_GATEWAY_URL || 'http://localhost:8080/';
-      break;
-    default:
-      throw new Error(`Unknown service: ${service}`);
+  // Ensure the requested service is valid
+  const baseURL = baseURLs[service];
+  if (!baseURL) {
+    throw new Error(`Invalid service name: ${service}`);
   }
 
+  // Create and return the Axios instance
   return axios.create({
-    baseURL: baseURL,
+    baseURL,
     headers: {
       'Content-Type': 'application/json',
     },
-    withCredentials: true, // If needed for cross-origin requests
+    withCredentials: true, // Include cookies if required
   });
 };
