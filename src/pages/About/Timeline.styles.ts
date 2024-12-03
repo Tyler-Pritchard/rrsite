@@ -27,14 +27,14 @@ export const TimelineContainer = styled.div`
 
   /* Tablet: Small tablets and larger phones (481px to 768px) */
   @media (min-width: 481px) and (max-width: 768px) {
-    height: 85rem;
+    height: 90rem;
     padding: 1rem;
     top: 9rem;
   }
     
   /* Medium screens: tablets in landscape (769px to 992px) */
   @media (min-width: 769px) and (max-width: 992px) {
-    height: 85rem;
+    height: 90rem;
     padding: 1.5rem;
     top: 10rem;
   }
