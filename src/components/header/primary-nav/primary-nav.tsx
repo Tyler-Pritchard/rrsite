@@ -80,11 +80,11 @@ const PrimaryNav: React.FC = () => {
   ];
 
   const shopItems: ShopItem[] = [
-    { label: 'NEW & FEATURED', link: '/store/featured' },
-    { label: 'MEDIA', link: '/store/music' },
-    { label: 'APPAREL', link: '/store/clothing' },
-    { label: 'ACCESSORIES', link: '/store/accessories' },
-    { label: 'COLLECTIONS', link: '/store/collections' },
+    { label: 'NEW & FEATURED', link: '/shop/products' },
+    { label: 'MEDIA', link: '/shop/products' },
+    { label: 'APPAREL', link: '/shop/products' },
+    { label: 'ACCESSORIES', link: '/shop/products' },
+    { label: 'COLLECTIONS', link: '/shop/products' },
   ];
 
   return (
@@ -138,7 +138,7 @@ const PrimaryNav: React.FC = () => {
         <NavItem onMouseEnter={() => dispatch(showSubmenu('shop'))}
           onMouseLeave={() => dispatch(hideSubmenu())}>
         {/* <NavItem onMouseEnter={() => showSubmenu('shop')}> */}
-          <NavLink href="/store-landing-page/home">Shop</NavLink>
+          <NavLink href="/shop/products">Shop</NavLink>
           {visibleSubmenu === 'shop' && <ShopMenu items={shopItems} show backgroundImage={shop} />}
         </NavItem>
     </NavContainer>
