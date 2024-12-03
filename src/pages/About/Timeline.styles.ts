@@ -20,7 +20,7 @@ export const TimelineContainer = styled.div`
 
   /* Mobile: Small screens (up to 480px wide) */
   @media (max-width: 480px) {
-    height: 85rem;
+    height: 95rem;
     padding: .5rem;
     top: 8rem;
   }
