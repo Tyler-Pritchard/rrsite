@@ -4,7 +4,7 @@ import axios, { AxiosInstance } from 'axios';
 export const createAxiosInstance = (service: 'auth' | 'store' | 'payments' | 'gateway'): AxiosInstance => {
   // Define base URLs for different services
   const baseURLs: Record<typeof service, string> = {
-    auth: process.env.REACT_APP_AUTH_URL || 'http://localhost:5000/',
+    auth: process.env.REACT_APP_AUTH_URL || 'http://localhost:5000/api/',
     store: process.env.REACT_APP_STORE_URL || 'http://localhost:8080/',
     payments: process.env.REACT_APP_PAYMENTS_URL || 'http://localhost:8082/',
     gateway: process.env.REACT_APP_GATEWAY_URL || 'http://localhost:8081/',
