@@ -51,7 +51,7 @@ export const registerUser = createAsyncThunk(
   'user/registerUser',
   async (userData: any, { rejectWithValue }) => {
     try {
-      const res = await authAPI.post('/api/users/register', userData, {
+      const res = await authAPI.post('/users/register', userData, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -68,7 +68,7 @@ export const loginUser = createAsyncThunk(
   'user/loginUser',
   async (loginData: any, { rejectWithValue }) => {
     try {
-      const response = await authAPI.post('/api/auth/login', loginData);
+      const response = await authAPI.post('/auth/login', loginData);
       const decodedToken = jwtDecode<{ id: string; email: string }>(response.data.token);
       const userInfo = { token: response.data.token, ...decodedToken };
       saveUserInfo(userInfo); // Save user info
@@ -84,7 +84,7 @@ export const forgotPassword = createAsyncThunk<any, ForgotPasswordPayload, { rej
   'user/forgotPassword',
   async ({ email, captchaToken }: ForgotPasswordPayload, { rejectWithValue }) => {
     try {
-      const response = await authAPI.post('/api/auth/password/forgot-password', { email, captchaToken });
+      const response = await authAPI.post('/auth/password/forgot-password', { email, captchaToken });
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response.data || 'Unknown error occurred');
@@ -96,7 +96,7 @@ export const resetPassword = createAsyncThunk(
   'user/resetPassword',
   async ({ token, newPassword }: { token: string; newPassword: string }, { rejectWithValue }) => {
     try {
-      const res = await authAPI.post('/api/auth/password/reset-password', {
+      const res = await authAPI.post('/auth/password/reset-password', {
         headers: {
           'Content-Type': 'application/json',
           'Reset-Token': `${token}`,
