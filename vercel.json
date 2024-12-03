@@ -17,7 +17,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; frame-src 'self' https://cdn.knightlab.com https://www.google.com https://www.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://vercel.live https://vercel.live/_next-live/feedback/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://rr-auth-production.up.railway.app https://rr-store-production.up.railway.app https://www.robrich.band http://localhost:8080 http://localhost:3000 https://vercel.live;"
+          "value": "default-src 'self'; frame-src 'self' https://cdn.knightlab.com https://www.google.com https://www.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://vercel.live https://vercel.live/_next-live/feedback/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://rr-auth-production.up.railway.app https://rr-store-production.up.railway.app https://www.robrich.band http://localhost:8080 http://localhost:3000 https://vercel.live; img-src 'self' https://i.imgur.com data:;"
         }
       ]
     }
