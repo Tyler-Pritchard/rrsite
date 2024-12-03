@@ -39,7 +39,7 @@ export const getUserCount = createAsyncThunk(
   'user/getUserCount',
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await authAPI.get('/api/users/count');
+      const { data } = await authAPI.get('/users/count');
       return data.totalUsers;
     } catch (error) {
       return rejectWithValue('Error fetching user count');
