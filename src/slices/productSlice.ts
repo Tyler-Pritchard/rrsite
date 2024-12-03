@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { createAxiosInstance } from '../axiosConfig';
 
 const axiosInstance = createAxiosInstance('store');
+console.log('Axios Instance Base URL:', axiosInstance.defaults.baseURL);
 
 // Define Product type
 export interface Product {
