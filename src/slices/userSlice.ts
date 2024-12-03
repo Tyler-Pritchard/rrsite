@@ -3,6 +3,7 @@ import { jwtDecode } from 'jwt-decode'; // Correct import
 import { createAxiosInstance } from '../axiosConfig';
 
 const authAPI = createAxiosInstance('auth');
+console.log('Axios Base URL:', authAPI.defaults.baseURL);
 
 // Define the initial state structure
 interface UserState {

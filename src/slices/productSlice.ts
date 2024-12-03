@@ -34,6 +34,7 @@ const initialState: ProductState = {
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async (_, { rejectWithValue }) => {
   try {
     const response = await axiosInstance.get('/products');
+    console.log('Axios Base URL:', axiosInstance.defaults.baseURL);
     return response.data;
   } catch (error: any) {
     return rejectWithValue(error.response?.data || 'An error occurred while fetching products');
@@ -44,6 +45,7 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async (_
 export const fetchProduct = createAsyncThunk('products/fetchProduct', async (id: string, { rejectWithValue }) => {
   try {
     const response = await axiosInstance.get(`/products/${id}`);
+    console.log('Axios Base URL:', axiosInstance.defaults.baseURL);
     return response.data;
   } catch (error: any) {
     return rejectWithValue(error.response?.data || 'An error occurred while fetching the product');
