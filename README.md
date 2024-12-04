@@ -48,7 +48,6 @@ The project uses several libraries and dependencies, as listed in the ```package
 - React for UI development
 - Redux & Redux Thunk for state management
 - React Router for navigation
-- Material UI for design components
 - Styled Components and Emotion for CSS-in-JS styling
 - Axios for API requests
 - React Google Recaptcha for secure forms
