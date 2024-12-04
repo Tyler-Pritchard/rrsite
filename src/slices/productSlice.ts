@@ -33,7 +33,7 @@ const initialState: ProductState = {
 // Async thunk to fetch all products
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async (_, { rejectWithValue }) => {
   try {
-    const response = await axiosInstance.get('/products');
+    const response = await axiosInstance.get('api/products');
     console.log('Axios Base URL:', axiosInstance.defaults.baseURL);
     return response.data;
   } catch (error: any) {
@@ -44,7 +44,7 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async (_
 // Async thunk to fetch a single product
 export const fetchProduct = createAsyncThunk('products/fetchProduct', async (id: string, { rejectWithValue }) => {
   try {
-    const response = await axiosInstance.get(`/products/${id}`);
+    const response = await axiosInstance.get(`api/products/${id}`);
     console.log('Axios Base URL:', axiosInstance.defaults.baseURL);
     return response.data;
   } catch (error: any) {
