@@ -9,7 +9,7 @@ import {
   SectionTitle,
   ShowMoreButton,
 } from './faq.styles';
-import help from "../../assets/images/desktop/faq.jpg";
+import help from "../../assets/images/desktop/faq.webp";
 
 
 const faqData = [

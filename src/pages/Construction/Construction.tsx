@@ -1,6 +1,6 @@
 import React from 'react';
 import { ConstructionWrapper, ContentContainer, Image, Message } from "./Construction.styles";
-import construction from "../../assets/images/desktop/under_construction.png"
+import construction from "../../assets/images/desktop/under_construction.webp"
 
 const ConstructionPage: React.FC = () => {
   return (

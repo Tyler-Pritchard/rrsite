@@ -1,6 +1,6 @@
 import React from 'react';
 import {MiddleFooterWrapper, MiddleInner, MiddleMenu} from './footer-middle.styles';
-import Logo from "../../../assets/images/desktop/StandingGuitar.png";
+import Logo from "../../../assets/images/desktop/StandingGuitar.webp";
 import { MiddleLogo } from './footer-middle.styles';
 
 const FooterMiddle = () => {

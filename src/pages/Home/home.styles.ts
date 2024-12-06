@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../globalStyles';
-import MainImage from '../../assets/images/desktop/TacomaCrows.png';
+import MainImage from '../../assets/images/desktop/TacomaCrows.webp';
 
 export const MainWrapper = styled.div`
   background-image: url(${MainImage});
