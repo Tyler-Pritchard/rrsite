@@ -12,7 +12,7 @@ const HeroCarousel: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
