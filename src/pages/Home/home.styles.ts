@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../globalStyles';
-import MainImage from '../../assets/images/desktop/TacomaCrows.webp';
 
 export const MainWrapper = styled.div`
-  background-image: url(${MainImage});
   width: 100vw;
   height: auto;
   background-size: cover;

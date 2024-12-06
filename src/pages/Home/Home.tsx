@@ -1,11 +1,14 @@
-import React from 'react';
-import { MainWrapper, MainTitle } from './home.styles';
+import React from "react";
+import { MainWrapper, MainTitle } from "./home.styles";
+import HeroCarousel from "./components/HeroCarousel";
 
-const Main: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <MainWrapper>
-          <MainTitle>Rob Rich Official Website </MainTitle>
+      <HeroCarousel />
+      <MainTitle>Rob Rich Official Website</MainTitle>
     </MainWrapper>
   );
 };
-export default Main;
+
+export default Home;
