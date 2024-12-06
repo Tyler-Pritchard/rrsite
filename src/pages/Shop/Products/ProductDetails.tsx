@@ -71,7 +71,7 @@ const ProductDetailsPage: React.FC = () => {
         <button onClick={handleBackToProducts} style={{ marginBottom: "1rem" }}>
           Back to Products
         </button>
-        <ProductImage src={imageUrl} alt={name} />
+        <ProductImage src={imageUrl} alt={name} loading="lazy" />
         <ProductInfo>
           <h1>{name}</h1>
           <p>{description}</p>

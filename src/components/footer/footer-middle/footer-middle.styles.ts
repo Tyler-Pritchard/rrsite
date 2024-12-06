@@ -31,22 +31,22 @@ export const MiddleFooterWrapper = styled.div`
 export const MiddleInner = styled.div``;
 
 export const MiddleLogo = styled.img`
-  width: 50vw;
+  width: 40vw;
 
   @media (max-width: 480px) {
-    width: 95vw;
+    width: 85vw;
   }
   @media (min-width: 481px) and (max-width: 768px){
-    width: 70vw;
+    width: 60vw;
   }
   @media (min-width: 769px) and (max-width: 992px) {
-    width: 75vw;
+    width: 65vw;
   }
   @media (min-width: 993px) and (max-width: 1200px) {
-    width: 40vw;
+    width: 30vw;
   }
   @media (min-width: 1201px) {
-    width: 30vw;
+    width: 20vw;
   }
 `;
 

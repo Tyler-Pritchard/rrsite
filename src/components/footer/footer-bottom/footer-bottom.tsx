@@ -63,7 +63,7 @@ const FooterBottom = () => {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <BottomIcons src={link.iconSrc} alt={link.altText} />
+                <BottomIcons src={link.iconSrc} alt={link.altText} loading="lazy"/>
             </BottomIconLink>
             ))}
         </BottomIconsContainer>

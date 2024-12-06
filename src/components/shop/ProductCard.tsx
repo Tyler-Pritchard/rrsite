@@ -12,7 +12,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
 
   return (
     <ProductCardContainer onClick={onClick} role="button" tabIndex={0}>
-      <ProductImage src={imageUrl} alt={name} />
+      <ProductImage src={imageUrl} alt={name} loading="lazy" />
       <ProductInfo>
         <h3>{name}</h3>
         <p>${price.toFixed(2)}</p>

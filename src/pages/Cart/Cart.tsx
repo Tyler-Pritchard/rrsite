@@ -50,7 +50,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
           {items.length > 0 ? (
             items.map((item) => (
               <CartItem key={item.product.id}>
-                <CartItemImage src={item.product.imageUrl} alt={item.product.name} />
+                <CartItemImage src={item.product.imageUrl} alt={item.product.name} loading="lazy" />
                 <CartItemDetails>
                   <h3>{item.product.name}</h3>
                   <p>Size: {item.product.size || "N/A"}</p>
