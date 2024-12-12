@@ -1,6 +1,4 @@
 import axios, { AxiosInstance } from 'axios';
-import http from 'http';
-import https from 'https';
 
 // Function to create an Axios instance with a dynamic base URL
 export const createAxiosInstance = (service: 'auth' | 'store' | 'payments' | 'gateway'): AxiosInstance => {
@@ -25,8 +23,5 @@ export const createAxiosInstance = (service: 'auth' | 'store' | 'payments' | 'ga
       'Content-Type': 'application/json',
     },
     withCredentials: true, // Include cookies if required
-    // Add custom HTTP/1.1 agent for compatibility
-    httpAgent: new http.Agent({ keepAlive: true }),
-    httpsAgent: new https.Agent({ keepAlive: true }),
   });
 };
