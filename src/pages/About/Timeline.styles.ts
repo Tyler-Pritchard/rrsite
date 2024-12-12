@@ -14,7 +14,7 @@ export const TimelineContainer = styled.div`
 
   iframe {
     width: 100%;
-    height: 90%;
+    height: 95%;
     border: none;
   }
 
@@ -27,7 +27,7 @@ export const TimelineContainer = styled.div`
 
   /* Tablet: Small tablets and larger phones (481px to 768px) */
   @media (min-width: 481px) and (max-width: 768px) {
-    height: 90rem;
+    height: 95rem;
     padding: 1rem;
     top: 9rem;
   }
