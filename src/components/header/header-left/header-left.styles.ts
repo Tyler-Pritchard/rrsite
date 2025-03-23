@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, GlobalVariables } from '../../../globalStyles';
 
 export const Overlay = styled.div`
   position: fixed;
@@ -22,9 +23,10 @@ export const ModalContainer = styled.div`
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 9999;
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
 `;
 
-// Close button styling
 export const CloseButton = styled.button`
   position: absolute;
   top: 10rem;
@@ -32,12 +34,13 @@ export const CloseButton = styled.button`
   font-size: 5rem;
   background: none;
   border: none;
-  color: #ffffff;
+  color: ${colors.textPrimary};
   cursor: pointer;
   outline: none;
+  transition: color 0.3s ease;
 
   &:hover {
-    color: #ff6347; /* Match hover color for consistency */
+    color: ${colors.highlight};
   }
 `;
 
@@ -45,12 +48,14 @@ export const ModalToggleButton = styled.button`
   font-size: 3.5rem;
   background: none;
   border: none;
-  color: #ffffff;
+  color: ${colors.textPrimary};
+  font-family: ${GlobalVariables.paragraphFont};
   cursor: pointer;
   outline: none;
+  transition: color 0.3s ease;
 
   &:hover {
-    color: #bbbbbb;
+    color: ${colors.textSecondary};
   }
 `;
 
@@ -68,10 +73,11 @@ export const ModalMenuItem = styled.li`
 export const ModalMenuLink = styled.a`
   text-decoration: none;
   font-size: 3rem;
-  color: #ffffff;
+  color: ${colors.textPrimary};
+  font-family: ${GlobalVariables.paragraphFont};
   transition: color 0.3s ease;
 
   &:hover {
-    color: #ff6347;
+    color: ${colors.highlight};
   }
 `;
