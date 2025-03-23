@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { colors, GlobalVariables } from '../../globalStyles';
 
 export const AppBar = styled.div`
-  color: transparent;
+  color: ${colors.textPrimary}; /* fallback for accessibility */
+  font-family: ${GlobalVariables.paragraphFont};
   position: absolute;
   width: 100vw;
   display: flex;
@@ -9,37 +11,38 @@ export const AppBar = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color:  #21b571;
-  background-image: linear-gradient(180deg, #43724D 11%, #9ADBE0 61%, #f7E581 78%, #ffffff 95%);
+  background-color: #21b571;
+  background-image: linear-gradient(
+    180deg,
+    ${colors.primaryGreen} 10%,
+    ${colors.accentSkyBlue} 50%,
+    ${colors.primaryYellow} 75%,
+    ${colors.neutralOffWhite} 100%
+  );
   overflow: hidden;
   opacity: 96%;
 
   @media (max-width: 480px) {
-    // border: .3rem groove #f7E581;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     height: 8rem;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    // border: .5rem groove #f7E581;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     height: 10rem;
   }
   @media (min-width: 769px) and (max-width: 992px) {
-    // border: .5rem groove #f7E581;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     height: 12rem;
   }
   @media (min-width: 993px) and (max-width: 1200px) {
-    // border: .75rem groove #f7E581;
     padding-left: 4rem;
     padding-right: 4rem;
     height: 14rem;
   }
   @media (min-width: 1201px) {
-    // border: 1rem groove #f7E581;
     padding-left: 4rem;
     padding-right: 4rem;
     height: 14rem;
@@ -51,17 +54,17 @@ export const HeaderLeftContainer = styled.div`
 `;
 
 export const PrimaryNavContainer = styled.nav`
-    overflow: visible;
-    width: 100vw;
-    
-    @media (min-width: 1200px) {
-      width: 50vw;
-      font-weight: 600;
-      white-space: nowrap;
-      overflow: hidden;
-      padding: .11rem;
-      justify-content: space-evenly;
-    }
+  overflow: visible;
+  width: 100vw;
+
+  @media (min-width: 1200px) {
+    width: 50vw;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0.11rem;
+    justify-content: space-evenly;
+  }
 `;
 
 export const NavigationContainer = styled.div`

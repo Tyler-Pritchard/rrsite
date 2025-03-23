@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, GlobalVariables } from '../../../globalStyles';
 import { default as isPropValid } from '@emotion/is-prop-valid';
 
 interface FanClubItemProps {
@@ -8,57 +9,71 @@ interface FanClubItemProps {
 export const FanClubWrapper = styled.div.withConfig({
   shouldForwardProp: (prop) => isPropValid(prop) && prop !== 'show'
 })<{ show: boolean }>`
-    display: ${props => (props.show ? 'block' : 'none')};
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: #fff;
-    width: 100%;
-    height: 30rem;
+  display: ${props => (props.show ? 'block' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30rem;
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
+  z-index: 1000;
 `;
 
 export const FanClubItem = styled.li`
-    display: flex;
-    position: relative;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    padding-top: 4rem;
-    color: white;
-    overflow: hidden;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        opacity: 0.9;
-        z-index: -1;
-    }
-        
-    .content {}
-`;
-        
-export const FanClubItems = styled.ul.withConfig({shouldForwardProp: (prop) => isPropValid(prop) && prop !== 'backgroundImage'})<FanClubItemProps>`
-    display: flex;
-    background-image: url(${props => props.backgroundImage});
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 100%;
-`;
-    
-export const FanClubLink = styled.a`
-    color: #fff;
-    text-decoration: none;
-    margin: 0 2rem;
+  display: flex;
+  position: relative;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+`;
+
+export const FanClubItems = styled.ul.withConfig({
+  shouldForwardProp: (prop) => isPropValid(prop) && prop !== 'backgroundImage'
+})<FanClubItemProps>`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  background-image: url(${props => props.backgroundImage});
+  background-size: cover;
+  background-position: center;
+  font-family: ${GlobalVariables.paragraphFont};
+`;
+
+export const FanClubLink = styled.a`
+  color: ${colors.textPrimary};
+  font-family: ${GlobalVariables.paragraphFont};
+  text-decoration: none;
+  margin: 0 2rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: ${colors.highlight};
+    text-decoration: underline;
+  }
 `;
