@@ -29,6 +29,7 @@ export const Dots = styled.div`
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  z-index: 2;
 
   span {
     width: 10px;
@@ -36,8 +37,15 @@ export const Dots = styled.div`
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
     &.active {
-      background-color: white;
+      background-color: ${({ theme }) =>
+        theme?.colors?.highlight || "white"};
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.75);
     }
   }
 `;

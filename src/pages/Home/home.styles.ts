@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../globalStyles';
+import { colors, GlobalVariables } from '../../globalStyles';
 
 export const MainWrapper = styled.div`
   width: 100vw;
@@ -37,7 +37,8 @@ export const MainWrapper = styled.div`
 
 export const MainTitle = styled.h1`
   color: ${colors.primaryGreen};
-  background-color: ${colors.neutralOffWhite};
+  background-color: ${colors.primaryBeige};
+  font-family: ${GlobalVariables.titleFont};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,26 +48,26 @@ export const MainTitle = styled.h1`
   @media (max-width: 480px) {
     width: 75vw;
     height: 30vh;
-    border: .75rem double ${colors.primaryYellow};
+    border: .75rem double ${colors.highlight};
   }
   @media (min-width: 481px) and (max-width: 768px) {
     width: 95vw;
     height: 55vh;
-    border: 2rem double ${colors.primaryYellow};
+    border: 2rem double ${colors.highlight};
   }
   @media (min-width: 769px) and (max-width: 992px) {
     width: 90vw;
     height: 50vh;
-    border: 3rem double ${colors.primaryYellow};
+    border: 3rem double ${colors.highlight};
   }
   @media (min-width: 993px) and (max-width: 1200px) {
     width: 80vw;
     height: 40vh;
-    border: 3.5rem double ${colors.primaryYellow};
+    border: 3.5rem double ${colors.highlight};
   }
   @media (min-width: 1201px) {
     width: 80vw;
     height: 80vh;
-    border: 3.5rem double ${colors.primaryYellow};
+    border: 3.5rem double ${colors.highlight};
   }
 `;
