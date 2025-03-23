@@ -1,15 +1,48 @@
-body {
+/* index.css - Minimal Bootstrap & Fallbacks */
+
+/* Ensure box-sizing consistency across the app */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Apply basic resets */
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100%; /* Ensures full-page background when needed */
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Default body styles as a failsafe (but overridden by GlobalStyles) */
+body {
+  background-color: #121212; /* Dark neutral fallback */
+  color: #f2f2f2; /* Light text fallback */
+  font-family: sans-serif; /* Browser-safe fallback (overridden by GlobalStyles) */
 }
 
-/* trigger rebuild */
+/* Remove default list styling */
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Remove default button styling */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* Remove default anchor tag styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
