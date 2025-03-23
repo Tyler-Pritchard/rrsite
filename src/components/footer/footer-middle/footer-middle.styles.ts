@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, GlobalVariables } from '../../../globalStyles';
 
 export const MiddleFooterWrapper = styled.div`
   display: flex;
@@ -7,8 +8,10 @@ export const MiddleFooterWrapper = styled.div`
   width: 100vw;
   overflow-x: hidden;
   height: auto;
-  background-color: black;
-  
+  background-color: ${colors.backgroundBase};
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
+
   @media (max-width: 480px) {
     justify-content: center;
     padding: 1rem;
@@ -24,11 +27,14 @@ export const MiddleFooterWrapper = styled.div`
   @media (min-width: 993px) and (max-width: 1200px) {
     width: 100vw;
     justify-content: left;
-    align-items: start;
+    align-items: flex-start;
   }
 `;
 
-export const MiddleInner = styled.div``;
+export const MiddleInner = styled.div`
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
+`;
 
 export const MiddleLogo = styled.img`
   width: 40vw;
@@ -36,7 +42,7 @@ export const MiddleLogo = styled.img`
   @media (max-width: 480px) {
     width: 85vw;
   }
-  @media (min-width: 481px) and (max-width: 768px){
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 60vw;
   }
   @media (min-width: 769px) and (max-width: 992px) {
@@ -50,4 +56,7 @@ export const MiddleLogo = styled.img`
   }
 `;
 
-export const MiddleMenu = styled.div``;
+export const MiddleMenu = styled.div`
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
+`;

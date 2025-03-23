@@ -1,12 +1,15 @@
 import styled from 'styled-components';
+import { colors, GlobalVariables } from '../../../globalStyles';
 
 export const BottomFooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(0, 0, 0);
+  background-color: ${colors.backgroundBase};
   width: 100vw;
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
 
   @media (max-width: 480px) {
     padding-top: 2rem;
@@ -53,19 +56,24 @@ export const BottomIconsContainer = styled.div`
   }
 `;
 
-export const BottomIconLink = styled.a``;
+export const BottomIconLink = styled.a`
+  font-family: ${GlobalVariables.paragraphFont};
+`;
 
 export const BottomIcons = styled.img`
   width: 1.8rem;
   height: 1.8rem;
-  color: white;
+  filter: brightness(1); /* keeps white-on-dark consistent */
 
   @media (min-width: 769px) and (max-width: 992px) {
-    margin: .5rem;
+    margin: 0.5rem;
   }
 `;
 
-export const BottomLinksContainer = styled.div``;
+export const BottomLinksContainer = styled.div`
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
+`;
 
 export const FooterStack = styled.div`
   display: flex;
@@ -77,7 +85,7 @@ export const FooterStack = styled.div`
 
   @media (max-width: 480px) {
     width: 70vw;
-    gap: .5rem;
+    gap: 0.5rem;
     margin: 1.5rem 1.5rem;
   }    
   @media (min-width: 481px) and (max-width: 768px) {
@@ -100,7 +108,7 @@ export const FooterStack = styled.div`
     gap: 1rem;
     align-items: flex-end;
     justify-content: space-around;
-    margin: .5rem 0rem;
+    margin: 0.5rem 0;
   }
   @media (min-width: 1201px) {
     width: 60vw;
@@ -112,23 +120,26 @@ export const FooterStack = styled.div`
 
 export const BottomFooterLinks = styled.a<{ disabled?: boolean }>`
   font-size: x-small;
-  color: white;
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
   text-decoration: none;
-  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')}; /* Prevent click if disabled */
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)}; /* Dim the link if disabled */
+  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
+  opacity: ${({ disabled }) => (disabled ? 0.4 : 1)};
+  transition: color 0.2s ease;
 
   &:hover {
-    text-decoration: ${({ disabled }) => (disabled ? 'none' : 'underline')}; /* No hover effect if disabled */
+    color: ${({ disabled }) => (disabled ? colors.textPrimary : colors.highlight)};
+    text-decoration: ${({ disabled }) => (disabled ? 'none' : 'underline')};
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
-    margin: .25rem .75rem;
+    margin: 0.25rem 0.75rem;
   }
   @media (min-width: 769px) and (max-width: 850px) {
-    margin: .25rem 1.5rem;
+    margin: 0.25rem 1.5rem;
   }
   @media (min-width: 851px) and (max-width: 900px) {
-    margin: .25rem 1.5rem;
+    margin: 0.25rem 1.5rem;
   }
   @media (min-width: 901px) and (max-width: 992px) {
     margin: 1rem;
