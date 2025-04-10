@@ -11,6 +11,8 @@ import Construction from "./pages/Construction/Construction";
 import FAQ from "./pages/FAQ/faq";
 import Products from "./pages/Shop/Products/Products";
 import ProductDetails from "./pages/Shop/Products/ProductDetails";
+import Tour from "./pages/Tour/Tour";
+// import Past from "./pages/Tour/Past";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import GlobalStyle from "./globalStyles";
 
@@ -47,6 +49,10 @@ const App: React.FC = () => {
         <Route path="/photos" element={<Construction />} />
         <Route path="/podcast" element={<Construction />} />
         <Route path="/museum" element={<Construction />} />
+
+        {/* Fans and Community Routes */}
+        <Route path="/tour" element={<Tour />} />
+        {/* <Route path="/tour/past" element={<Past />} /> */}
 
         {/* Shop Routes */}
         <Route path="/shop/products" element={<Products />} />

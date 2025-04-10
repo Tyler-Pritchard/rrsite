@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from '../../../globalStyles';
 
 export const CarouselWrapper = styled.div`
   position: fixed; /* Ensures the carousel stays in the background */
@@ -40,8 +41,7 @@ export const Dots = styled.div`
     transition: background-color 0.3s ease;
 
     &.active {
-      background-color: ${({ theme }) =>
-        theme?.colors?.highlight || "white"};
+      background-color: ${colors.highlight};
     }
 
     &:hover {
