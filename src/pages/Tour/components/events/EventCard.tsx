@@ -16,6 +16,7 @@ import {
 export interface RobRichEvent {
   id: number;
   title: string;
+  slug: string; 
   description?: string;
   startTimeUtc: string;
   endTimeUtc: string;
@@ -26,7 +27,7 @@ export interface RobRichEvent {
 
 interface EventCardProps {
   event: RobRichEvent;
-  onNavigate: (id: number) => void;
+  onNavigate: (slug: string) => void;
 }
 
 const EventCard: React.FC<EventCardProps> = ({ event, onNavigate }) => {
@@ -37,7 +38,10 @@ const EventCard: React.FC<EventCardProps> = ({ event, onNavigate }) => {
 
   return (
     <CardWrapper>
-      <InfoWrapper onClick={() => onNavigate(event.id)}>
+      <InfoWrapper onClick={() => {
+        console.log("Navigating to:", event.slug);
+        onNavigate(event.slug);
+      }}>
         <DateText>{date}</DateText>
         <LocationText>{location}</LocationText>
         <VenueText>{venue}</VenueText>
@@ -50,7 +54,12 @@ const EventCard: React.FC<EventCardProps> = ({ event, onNavigate }) => {
             Buy Tickets
           </Button>
         )}
-        <Button onClick={() => onNavigate(event.id)}>More Info</Button>
+        <Button onClick={() => {
+          console.log("Button clicked:", event.slug);
+          onNavigate(event.slug);
+        }}>
+          More Info
+        </Button>
       </Actions>
     </CardWrapper>
   );

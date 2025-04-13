@@ -14,7 +14,7 @@ import {
 import { RobRichEvent } from './components/events/EventCard';
 
 const Event: React.FC = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [event, setEvent] = useState<RobRichEvent | null>(null);
   const navigate = useNavigate();
   const axios = createAxiosInstance('events');
@@ -22,15 +22,15 @@ const Event: React.FC = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await axios.get(`/api/events/${id}`);
+        const res = await axios.get(`/api/events/${slug}`);
         setEvent(res.data);
       } catch (err) {
         console.error('Error fetching event:', err);
       }
     };
 
-    if (id) fetchEvent();
-  }, [id, axios]);
+    if (slug) fetchEvent();
+  }, [slug, axios]);
 
   if (!event) return <div>Loading...</div>;
 

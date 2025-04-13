@@ -1,5 +1,3 @@
-// rrsite/src/pages/Tour/Tour.tsx
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createAxiosInstance } from '../../axiosConfig';
@@ -28,8 +26,8 @@ const Tour: React.FC = () => {
     fetchEvents();
   }, []);
 
-  const handleNavigate = (id: number) => {
-    navigate(`/tour/${id}`);
+  const handleNavigate = (slug: string) => {
+    navigate(`/tour/${slug}`);
   };
 
   return (

@@ -28,11 +28,6 @@ const Past: React.FC = () => {
     fetchEvents();
   }, []);
 
-  const formatDateSlug = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toISOString().split('T')[0]; // YYYY-MM-DD
-  };
-
   return (
     <PastWrapper>
       <PageTitle>Past Events</PageTitle>
@@ -40,7 +35,7 @@ const Past: React.FC = () => {
         {events.map(event => (
           <PastEventRow
             key={event.id}
-            onClick={() => navigate(`/tour/${formatDateSlug(event.startTimeUtc)}-${event.location.toLowerCase().replace(/\s|,/g, '-')}`)}
+            onClick={() => navigate(`/tour/${event.slug}`)}
           >
             {new Date(event.startTimeUtc).toLocaleDateString()} — {event.title} ({event.location})
           </PastEventRow>

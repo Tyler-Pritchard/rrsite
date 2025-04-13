@@ -13,6 +13,7 @@ import Products from "./pages/Shop/Products/Products";
 import ProductDetails from "./pages/Shop/Products/ProductDetails";
 import Tour from "./pages/Tour/Tour";
 import Past from "./pages/Tour/Past";
+import Event from './pages/Tour/Event';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import GlobalStyle from "./globalStyles";
 
@@ -53,6 +54,7 @@ const App: React.FC = () => {
         {/* Fans and Community Routes */}
         <Route path="/tour" element={<Tour />} />
         <Route path="/tour/past" element={<Past />} />
+        <Route path="/tour/:slug" element={<Event />} />
 
         {/* Shop Routes */}
         <Route path="/shop/products" element={<Products />} />
