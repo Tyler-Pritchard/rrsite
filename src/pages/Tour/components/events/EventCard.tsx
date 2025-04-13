@@ -1,5 +1,3 @@
-// rrsite/src/components/events/EventCard.tsx
-
 import React from 'react';
 import { format } from 'date-fns';
 import {

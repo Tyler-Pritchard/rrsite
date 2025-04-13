@@ -16,7 +16,8 @@ const Tour: React.FC = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get('/api/events/upcoming');
+        const res = await axios.get<RobRichEvent[]>('/api/events/upcoming');
+        console.log("Fetched events:", res.data); // Optional: view in console
         setEvents(res.data);
       } catch (err) {
         console.error('Error fetching events:', err);
