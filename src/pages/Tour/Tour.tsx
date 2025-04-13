@@ -26,7 +26,7 @@ const Tour: React.FC = () => {
     };
 
     fetchEvents();
-  }, [axios]);
+  }, []);
 
   const handleNavigate = (id: number) => {
     navigate(`/tour/${id}`);
