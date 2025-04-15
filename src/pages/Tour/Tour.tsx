@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createAxiosInstance } from '../../axiosConfig';
 import EventCard, { RobRichEvent } from './components/events/EventCard';
+import PastShowsCard from './components/events/PastShowsCard';
 import {
   TourPageWrapper,
   EventsGrid,
@@ -39,6 +40,7 @@ const Tour: React.FC = () => {
           <EventCard key={event.id} event={event} onNavigate={handleNavigate} />
         ))}
       </EventsGrid>
+      <PastShowsCard />
     </TourPageWrapper>
   );
 };

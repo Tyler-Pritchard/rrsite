@@ -15,7 +15,7 @@ const fadeIn = keyframes`
 export const CardWrapper = styled.div`
   width: 100%;
   max-width: 36rem;
-  background-color: ${colors.surfaceLight};
+  background-color: ${colors.primaryGreen};
   color: ${colors.textPrimary};
   border: 2px solid ${colors.borderLight};
   border-radius: 12px;
