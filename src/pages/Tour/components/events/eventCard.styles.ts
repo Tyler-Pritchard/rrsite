@@ -1,79 +1,102 @@
-// rrsite/src/components/events/eventCard.styles.ts
-
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors, GlobalVariables } from '../../../../globalStyles';
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 export const CardWrapper = styled.div`
+  width: 100%;
+  max-width: 36rem;
+  background-color: ${colors.surfaceLight};
+  color: ${colors.textPrimary};
+  border: 2px solid ${colors.borderLight};
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${colors.surfaceLight};
-  color: ${colors.textPrimary};
-  font-family: ${GlobalVariables.paragraphFont};
-  padding: 2rem;
-  margin: 1.5rem;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 36rem;
-  min-height: 22rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
 
-  @media (min-width: 768px) {
-    flex: 1 1 30%;
+  animation: ${fadeIn} 0.5s ease-out;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px ${colors.highlight};
   }
 
-  cursor: pointer;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const InfoWrapper = styled.div`
-  margin-bottom: 2rem;
-  line-height: 1.4;
+  padding: 2rem;
+  font-family: ${GlobalVariables.paragraphFont};
 `;
 
-export const DateText = styled.h2`
-  font-size: 1.6rem;
+export const DateText = styled.div`
+  font-size: ${GlobalVariables.fontSizeSmall};
   font-weight: bold;
+  text-transform: uppercase;
+  color: ${colors.highlight};
   margin-bottom: 0.5rem;
 `;
 
-export const LocationText = styled.h3`
-  font-size: 1.4rem;
+export const LocationText = styled.div`
+  font-size: ${GlobalVariables.fontSizeMedium};
+  font-weight: 600;
   margin-bottom: 0.25rem;
 `;
 
-export const VenueText = styled.p`
-  font-size: 1.2rem;
+export const VenueText = styled.div`
+  font-size: ${GlobalVariables.fontSizeSmall};
   color: ${colors.textSecondary};
+  margin-bottom: 1rem;
 `;
 
 export const Actions = styled.div`
+  padding: 1.5rem 2rem;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   gap: 1rem;
-  flex-wrap: wrap;
 `;
 
 export const Button = styled.button`
-  background-color: ${colors.primaryGreen};
+  background-color: ${colors.backgroundBase};
   color: ${colors.textPrimary};
-  padding: 0.75rem 1.25rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: ${GlobalVariables.paragraphFont};
+  border: 2px solid ${colors.highlight};
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: ${GlobalVariables.fontSizeSmall};
+  font-weight: 600;
+  text-transform: uppercase;
   cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s ease;
 
   &:hover {
     background-color: ${colors.highlight};
     color: ${colors.backgroundBase};
   }
+
+  &:focus {
+    outline: 2px solid ${colors.highlight};
+    outline-offset: 2px;
+  }
 `;
 
-export const SoldOutText = styled.span`
-  color: ${colors.textSecondary};
-  font-size: 1rem;
-  font-style: italic;
-  padding: 0.75rem 1rem;
+export const SoldOutText = styled.div`
+  font-size: ${GlobalVariables.fontSizeSmall};
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
 `;
