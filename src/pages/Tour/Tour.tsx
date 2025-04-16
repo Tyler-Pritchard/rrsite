@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createAxiosInstance } from '../../axiosConfig';
+
 import EventCard, { RobRichEvent } from './components/events/EventCard';
 import PastShowsCard from './components/events/PastShowsCard';
 import {
@@ -12,34 +13,53 @@ import {
 const Tour: React.FC = () => {
   const [events, setEvents] = useState<RobRichEvent[]>([]);
   const navigate = useNavigate();
-  const axios = createAxiosInstance('events');
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const res = await axios.get<RobRichEvent[]>('/api/events/upcoming');
-        console.log("Fetched events:", res.data); // Optional: view in console
-        setEvents(res.data);
-      } catch (err) {
-        console.error('Error fetching events:', err);
-      }
-    };
-
-    fetchEvents();
+  /**
+   * Fetch all upcoming events from the backend API.
+   * Backend handles filtering logic (`/api/events/upcoming`)
+   */
+  const fetchEvents = useCallback(async () => {
+    try {
+      const axios = createAxiosInstance('events');
+      const response = await axios.get<RobRichEvent[]>('/api/events/upcoming');
+      setEvents(response.data);
+    } catch (error) {
+      console.error('[Tour] Failed to fetch upcoming events:', error);
+    }
   }, []);
 
-  const handleNavigate = (slug: string) => {
-    navigate(`/tour/${slug}`);
-  };
+  /**
+   * Navigate to the dynamic detail page for a specific event.
+   * Example route: `/tour/2025-04-25-downtown-olympia-wa`
+   */
+  const handleNavigate = useCallback((slug: string) => {
+    if (slug) navigate(`/tour/${slug}`);
+  }, [navigate]);
+
+  /**
+   * Run on mount: load the initial event list.
+   * `fetchEvents` is memoized to avoid dependency loop warnings.
+   */
+  useEffect(() => {
+    fetchEvents();
+  }, [fetchEvents]);
 
   return (
     <TourPageWrapper>
       <PageTitle>Upcoming Tour Dates</PageTitle>
+
+      {/* Event Grid (Metallica-style card layout) */}
       <EventsGrid>
-        {events.map(event => (
-          <EventCard key={event.id} event={event} onNavigate={handleNavigate} />
+        {events.map((event) => (
+          <EventCard
+            key={event.id}
+            event={event}
+            onNavigate={handleNavigate}
+          />
         ))}
       </EventsGrid>
+
+      {/* CTA card linking to /tour/past */}
       <PastShowsCard />
     </TourPageWrapper>
   );
