@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, memo } from 'react';
 import { format } from 'date-fns';
 import {
   CardWrapper,
@@ -14,7 +14,7 @@ import {
 export interface RobRichEvent {
   id: number;
   title: string;
-  slug: string; 
+  slug: string;
   description?: string;
   startTimeUtc: string;
   endTimeUtc: string;
@@ -28,39 +28,45 @@ interface EventCardProps {
   onNavigate: (slug: string) => void;
 }
 
+/**
+ * Renders a summary card for an upcoming tour event.
+ */
 const EventCard: React.FC<EventCardProps> = ({ event, onNavigate }) => {
-  const date = format(new Date(event.startTimeUtc), 'MMMM d, yyyy');
-  const location = event.location;
-  const venue = event.title;
-  const isSoldOut = !event.ticketLink;
+  const {
+    slug,
+    title,
+    location,
+    startTimeUtc,
+    ticketLink
+  } = event;
+
+  const formattedDate = format(new Date(startTimeUtc), 'MMMM d, yyyy');
+  const isSoldOut = !ticketLink;
+
+  const handleNavigate = useCallback(() => {
+    onNavigate(slug);
+  }, [slug, onNavigate]); // ✅ No reference to full event object
 
   return (
     <CardWrapper>
-      <InfoWrapper onClick={() => {
-        console.log("Navigating to:", event.slug);
-        onNavigate(event.slug);
-      }}>
-        <DateText>{date}</DateText>
+      <InfoWrapper onClick={handleNavigate}>
+        <DateText>{formattedDate}</DateText>
         <LocationText>{location}</LocationText>
-        <VenueText>{venue}</VenueText>
+        <VenueText>{title}</VenueText>
       </InfoWrapper>
+
       <Actions>
         {isSoldOut ? (
           <SoldOutText>Tickets Sold Out</SoldOutText>
         ) : (
-          <Button as="a" href={event.ticketLink} target="_blank" rel="noopener noreferrer">
+          <Button as="a" href={ticketLink} target="_blank" rel="noopener noreferrer">
             Buy Tickets
           </Button>
         )}
-        <Button onClick={() => {
-          console.log("Button clicked:", event.slug);
-          onNavigate(event.slug);
-        }}>
-          More Info
-        </Button>
+        <Button onClick={handleNavigate}>More Info</Button>
       </Actions>
     </CardWrapper>
   );
 };
 
-export default EventCard;
+export default memo(EventCard);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { createAxiosInstance } from '../../axiosConfig';
 import {
@@ -16,35 +16,52 @@ import { RobRichEvent } from './components/events/EventCard';
 const axios = createAxiosInstance('events');
 
 const Event: React.FC = () => {
-  const { slug } = useParams();
-  const [event, setEvent] = useState<RobRichEvent | null>(null);
+  const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchEvent = async () => {
-      try {
-        const res = await axios.get(`/api/events/${slug}`);
-        setEvent(res.data);
-      } catch (err) {
-        console.error('Error fetching event:', err);
-      }
-    };
+  const [event, setEvent] = useState<RobRichEvent | null>(null);
+  const [loading, setLoading] = useState(true);
 
-    if (slug) fetchEvent();
+  /**
+   * Fetches event details by slug
+   */
+  const fetchEvent = useCallback(async () => {
+    if (!slug) return;
+
+    try {
+      const response = await axios.get<RobRichEvent>(`/api/events/${slug}`);
+      setEvent(response.data);
+    } catch (error) {
+      console.error(`[Event] Failed to load event "${slug}":`, error);
+    } finally {
+      setLoading(false);
+    }
   }, [slug]);
 
-  if (!event) return <div>Loading...</div>;
+  useEffect(() => {
+    fetchEvent();
+  }, [fetchEvent]);
+
+  if (loading) return <EventPageWrapper>Loading event details...</EventPageWrapper>;
+  if (!event) return <EventPageWrapper>Event not found.</EventPageWrapper>;
 
   return (
     <EventPageWrapper>
       <EventTitle>{event.title}</EventTitle>
       <EventDate>{new Date(event.startTimeUtc).toLocaleDateString()}</EventDate>
       <EventLocation>{event.location}</EventLocation>
-      <EventDescription>{event.description || 'No description available.'}</EventDescription>
+      <EventDescription>
+        {event.description?.trim() || 'No description available.'}
+      </EventDescription>
 
       <ButtonRow>
         {event.ticketLink ? (
-          <EventButton as="a" href={event.ticketLink} target="_blank" rel="noopener noreferrer">
+          <EventButton
+            as="a"
+            href={event.ticketLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Buy Tickets
           </EventButton>
         ) : (
