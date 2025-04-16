@@ -13,11 +13,12 @@ import {
 
 import { RobRichEvent } from './components/events/EventCard';
 
+const axios = createAxiosInstance('events');
+
 const Event: React.FC = () => {
   const { slug } = useParams();
   const [event, setEvent] = useState<RobRichEvent | null>(null);
   const navigate = useNavigate();
-  const axios = createAxiosInstance('events');
 
   useEffect(() => {
     const fetchEvent = async () => {
