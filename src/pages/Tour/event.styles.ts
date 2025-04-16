@@ -21,7 +21,7 @@ export const EventPageWrapper = styled.div`
   animation: ${fadeIn} 0.5s ease-out;
 
   @media (max-width: 768px) {
-    padding: 6rem 1.5rem 3rem 1.5rem;
+    padding: 10rem 1.5rem 3rem 1.5rem;
   }
 
   @media (max-width: 480px) {

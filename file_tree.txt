@@ -1,0 +1,244 @@
+.
+├── License.md
+├── README.md
+├── Untitled 3.rtf
+├── config-overrides.js
+├── file_tree.txt
+├── lhci-setup.js
+├── lighthouserc.json
+├── localhost_3000-20241205T174504.json
+├── package-lock.json
+├── package.json
+├── public
+│   ├── 404.html
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-512x512.png
+│   ├── apple-touch-icon.png
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── robots.txt
+│   └── site.webmanifest
+├── request.json
+├── screenshots
+│   ├── Footer1.png
+│   ├── Footer2.png
+│   └── Hero.png
+├── src
+│   ├── App.test.tsx
+│   ├── App.tsx
+│   ├── assets
+│   │   ├── icons
+│   │   │   ├── cart.svg
+│   │   │   ├── close-icon.svg
+│   │   │   ├── facebook.svg
+│   │   │   ├── instagram.svg
+│   │   │   ├── listen.svg
+│   │   │   ├── logo4.png
+│   │   │   ├── logo4.webp
+│   │   │   ├── logout.png
+│   │   │   ├── logout.svg
+│   │   │   ├── logout.webp
+│   │   │   ├── menu-icon.svg
+│   │   │   ├── text.svg
+│   │   │   ├── threads.svg
+│   │   │   ├── tiktok.svg
+│   │   │   ├── user.svg
+│   │   │   ├── x.svg
+│   │   │   └── youtube.svg
+│   │   └── images
+│   │       └── desktop
+│   │           ├── LandingArena.avif
+│   │           ├── LandingArena.jpg
+│   │           ├── LandingArena.webp
+│   │           ├── RobRich.avif
+│   │           ├── RobRich.png
+│   │           ├── RobRich.webp
+│   │           ├── StandingGuitar.avif
+│   │           ├── StandingGuitar.png
+│   │           ├── StandingGuitar.webp
+│   │           ├── TacomaCrows.avif
+│   │           ├── TacomaCrows.png
+│   │           ├── TacomaCrows.webp
+│   │           ├── fan_club_thumb.avif
+│   │           ├── fan_club_thumb.png
+│   │           ├── fan_club_thumb.webp
+│   │           ├── faq.avif
+│   │           ├── faq.jpg
+│   │           ├── faq.webp
+│   │           ├── newspaper.avif
+│   │           ├── newspaper.png
+│   │           ├── newspaper.webp
+│   │           ├── on_top_thumb.avif
+│   │           ├── on_top_thumb.png
+│   │           ├── on_top_thumb.webp
+│   │           ├── past_dates_thumb.avif
+│   │           ├── past_dates_thumb.png
+│   │           ├── past_dates_thumb.webp
+│   │           ├── photos_thumb.avif
+│   │           ├── photos_thumb.png
+│   │           ├── photos_thumb.webp
+│   │           ├── pngtree-five-crows-perched-on-a-fence-image_2925450.jpeg
+│   │           ├── podcast_thumb.avif
+│   │           ├── podcast_thumb.png
+│   │           ├── podcast_thumb.webp
+│   │           ├── press_thumb.avif
+│   │           ├── press_thumb.png
+│   │           ├── press_thumb.webp
+│   │           ├── releases_thumb.avif
+│   │           ├── releases_thumb.png
+│   │           ├── releases_thumb.webp
+│   │           ├── richhistory.avif
+│   │           ├── richhistory.jpg
+│   │           ├── richhistory.png
+│   │           ├── richhistory.webp
+│   │           ├── robrichclassic.avif
+│   │           ├── robrichclassic.jpg
+│   │           ├── robrichclassic.png
+│   │           ├── robrichclassic.webp
+│   │           ├── rr_news.avif
+│   │           ├── rr_news.png
+│   │           ├── rr_news.webp
+│   │           ├── savage.svg
+│   │           ├── shop_thumb.avif
+│   │           ├── shop_thumb.png
+│   │           ├── shop_thumb.webp
+│   │           ├── songs_thumb.avif
+│   │           ├── songs_thumb.png
+│   │           ├── songs_thumb.webp
+│   │           ├── under_construction.avif
+│   │           ├── under_construction.png
+│   │           ├── under_construction.webp
+│   │           ├── upcoming_dates_thumb.avif
+│   │           ├── upcoming_dates_thumb.png
+│   │           ├── upcoming_dates_thumb.webp
+│   │           ├── videos_thumb.avif
+│   │           ├── videos_thumb.png
+│   │           └── videos_thumb.webp
+│   ├── axiosConfig.ts
+│   ├── components
+│   │   ├── footer
+│   │   │   ├── Footer.tsx
+│   │   │   ├── footer-bottom
+│   │   │   │   ├── footer-bottom.styles.ts
+│   │   │   │   └── footer-bottom.tsx
+│   │   │   ├── footer-middle
+│   │   │   │   ├── footer-middle.styles.ts
+│   │   │   │   └── footer-middle.tsx
+│   │   │   ├── footer-top
+│   │   │   │   ├── footer-top.styles.ts
+│   │   │   │   └── footer-top.tsx
+│   │   │   └── footer.styles.ts
+│   │   ├── header
+│   │   │   ├── Header.tsx
+│   │   │   ├── header-left
+│   │   │   │   ├── header-left.styles.ts
+│   │   │   │   └── header-left.tsx
+│   │   │   ├── header.styles.ts
+│   │   │   ├── navigation
+│   │   │   │   ├── navigation.styles.ts
+│   │   │   │   └── navigation.tsx
+│   │   │   └── primary-nav
+│   │   │       ├── fan-club-menu.styles.ts
+│   │   │       ├── fan-club-menu.tsx
+│   │   │       ├── primary-nav.styles.ts
+│   │   │       ├── primary-nav.tsx
+│   │   │       ├── shop-menu.styles.ts
+│   │   │       ├── shop-menu.tsx
+│   │   │       ├── submenu.styles.ts
+│   │   │       └── submenu.tsx
+│   │   └── shop
+│   │       ├── CartIcon.tsx
+│   │       ├── ProductCard.styles.tsx
+│   │       ├── ProductCard.tsx
+│   │       └── ProductFilter.tsx
+│   ├── globalStyles.ts
+│   ├── index.css
+│   ├── index.d.ts
+│   ├── index.tsx
+│   ├── pages
+│   │   ├── About
+│   │   │   ├── About.tsx
+│   │   │   ├── Timeline.styles.ts
+│   │   │   └── Timeline.tsx
+│   │   ├── Cart
+│   │   │   ├── Cart.styles.ts
+│   │   │   ├── Cart.tsx
+│   │   │   ├── CartSummary.styles.ts
+│   │   │   └── CartSummary.tsx
+│   │   ├── Construction
+│   │   │   ├── Construction.styles.ts
+│   │   │   └── Construction.tsx
+│   │   ├── Contact
+│   │   │   └── Contact.tsx
+│   │   ├── FAQ
+│   │   │   ├── faq.styles.ts
+│   │   │   └── faq.tsx
+│   │   ├── FanClub
+│   │   │   └── FanClub.tsx
+│   │   ├── Home
+│   │   │   ├── Home.tsx
+│   │   │   ├── components
+│   │   │   │   ├── HeroCarousel.tsx
+│   │   │   │   └── heroCarousel.styles.ts
+│   │   │   └── home.styles.ts
+│   │   ├── Login
+│   │   │   ├── Login.tsx
+│   │   │   └── login.styles.ts
+│   │   ├── Media
+│   │   │   └── Media.tsx
+│   │   ├── Music
+│   │   │   └── Music.tsx
+│   │   ├── News
+│   │   │   └── News.tsx
+│   │   ├── PrivacyPolicy
+│   │   │   └── privacyPolicy.tsx
+│   │   ├── Register
+│   │   │   ├── Register.tsx
+│   │   │   └── register.styles.ts
+│   │   ├── ResetPassword
+│   │   │   ├── ResetPassword.tsx
+│   │   │   └── resetPassword.styles.ts
+│   │   ├── Shop
+│   │   │   ├── Products
+│   │   │   │   ├── ProductDetails.styles.ts
+│   │   │   │   ├── ProductDetails.tsx
+│   │   │   │   ├── Products.styles.ts
+│   │   │   │   └── Products.tsx
+│   │   │   └── Shop.tsx
+│   │   └── Tour
+│   │       ├── Event.tsx
+│   │       ├── Past.tsx
+│   │       ├── Tour.tsx
+│   │       ├── components
+│   │       │   └── events
+│   │       │       ├── EventCard.tsx
+│   │       │       ├── PastShowsCard.tsx
+│   │       │       ├── eventCard.styles.ts
+│   │       │       └── pastShowsCard.styles.ts
+│   │       ├── event.styles.ts
+│   │       ├── past.styles.ts
+│   │       └── tour.styles.ts
+│   ├── react-app-env.d.ts
+│   ├── reducers
+│   │   └── menuReducer.ts
+│   ├── slices
+│   │   ├── cartSlice.ts
+│   │   ├── menuSlice.ts
+│   │   ├── productSlice.ts
+│   │   └── userSlice.ts
+│   ├── store
+│   │   ├── sagas.ts
+│   │   └── store_index.ts
+│   ├── types
+│   │   ├── CartItem.ts
+│   │   └── Product.ts
+│   └── utils
+│       ├── calculateCartTotal.ts
+│       ├── formatCurrency.ts
+│       └── validation.ts
+├── tsconfig.json
+└── vercel.json
+
+44 directories, 198 files
