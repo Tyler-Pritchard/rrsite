@@ -57,7 +57,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, onNavigate }) => {
 
       <Actions>
         {isSoldOut ? (
-          <SoldOutText>Tickets Sold Out</SoldOutText>
+          <SoldOutText>Tickets Unavailable/Sold Out</SoldOutText>
         ) : (
           <Button as="a" href={ticketLink} target="_blank" rel="noopener noreferrer">
             Buy Tickets
