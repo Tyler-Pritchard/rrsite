@@ -31,7 +31,7 @@ const Event: React.FC = () => {
     };
 
     if (slug) fetchEvent();
-  }, [slug, axios]);
+  }, [slug]);
 
   if (!event) return <div>Loading...</div>;
 
