@@ -94,3 +94,20 @@ export const EventButton = styled.button`
     cursor: not-allowed;
   }
 `;
+
+export const EventImage = styled.img`
+  max-width: 350px;
+  height: auto;
+  float: right;
+  margin: 1rem 0 2rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  @media (max-width: 768px) {
+    float: none;
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    max-width: 100%;
+  }
+`;

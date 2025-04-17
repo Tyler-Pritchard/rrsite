@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createAxiosInstance } from '../../axiosConfig';
 
-import { RobRichEvent } from './components/events/EventCard';
+import { RobRichEvent } from '../../types/Event';
 import {
   PastWrapper,
   PageTitle,

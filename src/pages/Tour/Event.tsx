@@ -8,10 +8,11 @@ import {
   EventLocation,
   EventDescription,
   ButtonRow,
+  EventImage,
   EventButton
 } from './event.styles';
 
-import { RobRichEvent } from './components/events/EventCard';
+import { RobRichEvent } from '../../types/Event';
 
 const axios = createAxiosInstance('events');
 
@@ -47,6 +48,9 @@ const Event: React.FC = () => {
 
   return (
     <EventPageWrapper>
+      {event.eventImageUrl && (
+        <EventImage src={event.eventImageUrl} alt={event.title} />
+      )}
       <EventTitle>{event.title}</EventTitle>
       <EventDate>{new Date(event.startTimeUtc).toLocaleDateString()}</EventDate>
       <EventLocation>{event.location}</EventLocation>

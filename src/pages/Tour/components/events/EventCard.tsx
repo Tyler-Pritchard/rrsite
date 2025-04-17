@@ -10,18 +10,7 @@ import {
   Button,
   SoldOutText
 } from './eventCard.styles';
-
-export interface RobRichEvent {
-  id: number;
-  title: string;
-  slug: string;
-  description?: string;
-  startTimeUtc: string;
-  endTimeUtc: string;
-  location: string;
-  isPrivate: boolean;
-  ticketLink?: string;
-}
+import { RobRichEvent } from '../../../../types/Event';
 
 interface EventCardProps {
   event: RobRichEvent;

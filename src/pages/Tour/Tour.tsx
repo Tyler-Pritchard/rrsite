@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createAxiosInstance } from '../../axiosConfig';
-
-import EventCard, { RobRichEvent } from './components/events/EventCard';
+import { RobRichEvent } from '../../types/Event';
+import EventCard from './components/events/EventCard';
 import PastShowsCard from './components/events/PastShowsCard';
 import {
   TourPageWrapper,
