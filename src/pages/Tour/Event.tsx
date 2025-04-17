@@ -45,7 +45,8 @@ const Event: React.FC = () => {
 
   if (loading) return <EventPageWrapper>Loading event details...</EventPageWrapper>;
   if (!event) return <EventPageWrapper>Event not found.</EventPageWrapper>;
-
+  console.log('[Event Debug]', event);
+  
   return (
     <EventPageWrapper>
       {event.eventImageUrl && (
