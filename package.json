@@ -76,6 +76,8 @@
     "@types/node": "^22.10.2",
     "@types/react-google-recaptcha": "^2.1.9",
     "@types/react-helmet": "^6.1.11",
+    "ajv": "^8.20.0",
+    "ajv-keywords": "^5.1.0",
     "buffer": "^6.0.3",
     "https-browserify": "^1.0.0",
     "process": "^0.11.10",
