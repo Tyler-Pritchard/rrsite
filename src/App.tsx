@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
+import Tip from "./pages/Tip/Tip";
 import Timeline from "./pages/About/Timeline";
 import Construction from "./pages/Construction/Construction";
 import FAQ from "./pages/FAQ/faq";
@@ -40,6 +41,7 @@ const App: React.FC = () => {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/privacy-policy" element={<Construction />} />
         <Route path="/help" element={<FAQ />} />
+        <Route path="/tip" element={<Tip />} />
 
         {/* Band Information Routes */}
         <Route path="/band/timeline" element={<Timeline />} />
