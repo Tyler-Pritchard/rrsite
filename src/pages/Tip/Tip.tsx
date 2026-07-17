@@ -11,13 +11,15 @@ import {
   VideoWrapper,
   SocialRow,
   SocialLink,
+  ButtonIcon
 } from './Tip.styles';
 
 import heroPhoto from '../../assets/images/desktop/UmbrellaStage1.png';
+import venmoLogo from '../../assets/icons/venmo.svg';
+import paypalLogo from '../../assets/icons/paypal.svg';
 
-// PLACEHOLDERS — replace with real values before going live
-const VENMO_LINK = 'https://venmo.com/PLACEHOLDER';
-const PAYPAL_LINK = 'https://paypal.me/PLACEHOLDER';
+const VENMO_LINK = 'https://venmo.com/u/RobRichMusic';
+const PAYPAL_LINK = 'https://www.paypal.biz/RobRichUSA';
 const YOUTUBE_EMBED_URL = 'https://www.youtube.com/embed/videoseries?si=XF2ZZbU9wHhDKdO5&amp;list=PLGsq_SvGDamI';
 const INSTAGRAM_LINK = 'https://instagram.com/robrichusa/';
 const FACEBOOK_LINK = 'https://facebook.com/RobRichUSA/';
@@ -32,11 +34,11 @@ const Tip: React.FC = () => {
       </Tagline>
 
       <PaymentSection>
-        <PaymentButton href={VENMO_LINK} target="_blank" rel="noopener noreferrer">
-          Tip via Venmo
+        <PaymentButton brand="venmo" href={VENMO_LINK} target="_blank" rel="noopener noreferrer">
+          <ButtonIcon src={venmoLogo} alt="Venmo" />
         </PaymentButton>
-        <PaymentButton href={PAYPAL_LINK} target="_blank" rel="noopener noreferrer">
-          Tip via PayPal
+        <PaymentButton brand="paypal" href={PAYPAL_LINK} target="_blank" rel="noopener noreferrer">
+          <ButtonIcon src={paypalLogo} alt="PayPal" />
         </PaymentButton>
       </PaymentSection>
       <PaymentNote>Rob Rich (Tyler)</PaymentNote>

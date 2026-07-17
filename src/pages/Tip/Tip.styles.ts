@@ -57,23 +57,27 @@ export const PaymentSection = styled.div`
   margin-bottom: 2.5rem;
 `;
 
-export const PaymentButton = styled.a`
-  display: block;
-  background-color: ${colors.primaryGreen};
-  color: ${colors.textPrimary};
-  border: 2px solid ${colors.highlight};
+export const PaymentButton = styled.a<{ brand: 'venmo' | 'paypal' }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
-  padding: 1rem;
-  font-size: ${GlobalVariables.fontSizeMedium};
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
+  padding: 1rem 1.5rem;
+  transition: filter 0.2s ease;
+
+  background-color: ${({ brand }) =>
+    brand === 'venmo' ? '#3D95CE' : '#003087'};
 
   &:hover {
-    background-color: ${colors.highlight};
-    color: ${colors.backgroundBase};
+    filter: brightness(1.1);
   }
 `;
+
+export const ButtonIcon = styled.img`
+  height: 1.8rem;
+  width: auto;
+`;
+
 
 export const PaymentNote = styled.p`
   font-size: ${GlobalVariables.fontSizeXSmall};
