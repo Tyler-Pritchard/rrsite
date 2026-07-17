@@ -1,4 +1,6 @@
+// Tip.styles.ts
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { colors, GlobalVariables } from '../../globalStyles';
 
 export const TipWrapper = styled.div`
@@ -12,18 +14,10 @@ export const TipWrapper = styled.div`
   padding: 4rem 1.5rem 3rem 1.5rem;
   text-align: center;
 
-  @media (max-width: 480px) {
-    padding-top: 10rem;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    padding-top: 12rem;
-  }
-  @media (min-width: 769px) and (max-width: 992px) {
-    padding-top: 14rem;
-  }
-  @media (min-width: 993px) {
-    padding-top: 16rem;
-  }
+  @media (max-width: 480px) { padding-top: 10rem; }
+  @media (min-width: 481px) and (max-width: 768px) { padding-top: 12rem; }
+  @media (min-width: 769px) and (max-width: 992px) { padding-top: 14rem; }
+  @media (min-width: 993px) { padding-top: 16rem; }
 `;
 
 export const HeroImage = styled.img`
@@ -48,41 +42,12 @@ export const Tagline = styled.p`
   margin-bottom: 2.5rem;
 `;
 
-export const PaymentSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+export const Section = styled.section`
   width: 100%;
-  max-width: 320px;
-  margin-bottom: 2.5rem;
-`;
-
-export const PaymentButton = styled.a<{ brand: 'venmo' | 'paypal' }>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  transition: filter 0.2s ease;
-
-  background-color: ${({ brand }) =>
-    brand === 'venmo' ? '#3D95CE' : '#003087'};
-
-  &:hover {
-    filter: brightness(1.1);
-  }
-`;
-
-export const ButtonIcon = styled.img`
-  height: 1.8rem;
-  width: auto;
-`;
-
-
-export const PaymentNote = styled.p`
-  font-size: ${GlobalVariables.fontSizeXSmall};
-  color: ${colors.textSecondary};
+  max-width: 380px;
   margin-bottom: 3rem;
+
+  &:last-child { margin-bottom: 0; }
 `;
 
 export const SectionTitle = styled.h3`
@@ -91,11 +56,16 @@ export const SectionTitle = styled.h3`
   margin-bottom: 1rem;
 `;
 
+export const PaymentNote = styled.p`
+  font-size: ${GlobalVariables.fontSizeXSmall};
+  color: ${colors.textSecondary};
+  margin-top: 0.75rem;
+`;
+
 export const VideoWrapper = styled.div`
   width: 100%;
-  max-width: 480px;
   aspect-ratio: 16 / 9;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 
   iframe {
     width: 100%;
@@ -105,19 +75,69 @@ export const VideoWrapper = styled.div`
   }
 `;
 
-export const SocialRow = styled.div`
+export const RowList = styled.div`
   display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  gap: 0.85rem;
 `;
 
-export const SocialLink = styled.a`
+export const RowButton = styled.a<{ accent?: string }>`
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  height: 3.4rem;
+  background-color: ${colors.neutralDark};
+  border: 1px solid ${colors.borderLight};
+  border-left: 4px solid ${({ accent }) => accent || colors.borderLight};
+  border-radius: 8px;
+  padding: 0 1.2rem;
   font-size: ${GlobalVariables.fontSizeSmall};
+  font-weight: 600;
   color: ${colors.textPrimary};
-  border-bottom: 2px solid ${colors.highlight};
-  padding-bottom: 2px;
+  text-decoration: none;
+  transition: all 0.2s ease;
 
   &:hover {
-    color: ${colors.highlight};
+    border-color: ${colors.highlight};
   }
+  &:visited {
+    color: ${colors.textPrimary};
+  }
+`;
+
+export const RowIcon = styled.img`
+  height: 1.3rem;
+  width: 1.3rem;
+  flex-shrink: 0;
+  object-fit: contain;
+`;
+
+export const TimelineCard = styled(Link)`
+  display: block;
+  width: 100%;
+  background-color: ${colors.neutralDark};
+  border: 1px solid ${colors.borderLight};
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: ${colors.textPrimary};
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: ${colors.highlight};
+  }
+`;
+
+export const TimelineCardTitle = styled.h3`
+  font-family: ${GlobalVariables.titleFont};
+  font-size: ${GlobalVariables.fontSizeSmall};
+  color: ${colors.highlight};
+  margin-bottom: 0.3rem;
+`;
+
+export const TimelineCardSubtitle = styled.p`
+  font-size: ${GlobalVariables.fontSizeXSmall};
+  color: ${colors.textSecondary};
 `;

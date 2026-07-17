@@ -4,64 +4,137 @@ import {
   HeroImage,
   Name,
   Tagline,
-  PaymentSection,
-  PaymentButton,
-  PaymentNote,
+  Section,
   SectionTitle,
+  PaymentNote,
   VideoWrapper,
-  SocialRow,
-  SocialLink,
-  ButtonIcon
+  RowList,
+  RowButton,
+  RowIcon,
+  TimelineCard,
+  TimelineCardTitle,
+  TimelineCardSubtitle,
 } from './Tip.styles';
 
 import heroPhoto from '../../assets/images/desktop/UmbrellaStage1.png';
-import venmoLogo from '../../assets/icons/venmo.svg';
-import paypalLogo from '../../assets/icons/paypal.svg';
 
+// Payment icons — icon-only marks, not full wordmarks, to fit the uniform row
+import venmoIcon from '../../assets/icons/venmo.svg';
+import paypalIcon from '../../assets/icons/paypal.svg';
+import patreonIcon from '../../assets/icons/patreon.svg';
+
+// Existing site icons
+import youtubeIcon from '../../assets/icons/youtube.svg';
+import facebookIcon from '../../assets/icons/facebook.svg';
+import instagramIcon from '../../assets/icons/instagram.svg';
+import threadsIcon from '../../assets/icons/threads.svg';
+import xIcon from '../../assets/icons/x.svg';
+
+// PLACEHOLDERS — source and drop into assets/icons/
+import soundcloudIcon from '../../assets/icons/soundcloud.svg';
+import bandcampIcon from '../../assets/icons/bandcamp.svg';
+
+// Brand accent colors — used only as the thin left border, not a full fill
+const BRAND = {
+  venmo: '#3D95CE',
+  paypal: '#003087',
+  patreon: '#FF424D',
+};
+
+// PLACEHOLDERS — replace with real values
 const VENMO_LINK = 'https://venmo.com/u/RobRichMusic';
 const PAYPAL_LINK = 'https://www.paypal.biz/RobRichUSA';
-const YOUTUBE_EMBED_URL = 'https://www.youtube.com/embed/videoseries?si=XF2ZZbU9wHhDKdO5&amp;list=PLGsq_SvGDamI';
-const INSTAGRAM_LINK = 'https://instagram.com/robrichusa/';
+const PATREON_LINK = 'https://patreon.com/PLACEHOLDER';
+const YOUTUBE_EMBED_URL =
+  'https://www.youtube.com/embed/videoseries?si=XF2ZZbU9wHhDKdO5&list=PLGsq_SvGDamI';
+const YOUTUBE_CHANNEL_LINK = 'https://youtube.com/@PLACEHOLDER';
 const FACEBOOK_LINK = 'https://facebook.com/RobRichUSA/';
+const INSTAGRAM_LINK = 'https://instagram.com/robrichusa/';
+const THREADS_LINK = 'https://www.threads.net/@PLACEHOLDER';
+const X_LINK = 'https://x.com/PLACEHOLDER';
+const SOUNDCLOUD_LINK = 'https://soundcloud.com/PLACEHOLDER';
+const BANDCAMP_LINK = 'https://PLACEHOLDER.bandcamp.com';
 
 const Tip: React.FC = () => {
   return (
     <TipWrapper>
       <HeroImage src={heroPhoto} alt="Rob Rich performing" />
       <Name>ROB RICH</Name>
-      <Tagline>
-        Thank you for supporting local artists!
-      </Tagline>
+      <Tagline>Thank you for supporting local artists!</Tagline>
 
-      <PaymentSection>
-        <PaymentButton brand="venmo" href={VENMO_LINK} target="_blank" rel="noopener noreferrer">
-          <ButtonIcon src={venmoLogo} alt="Venmo" />
-        </PaymentButton>
-        <PaymentButton brand="paypal" href={PAYPAL_LINK} target="_blank" rel="noopener noreferrer">
-          <ButtonIcon src={paypalLogo} alt="PayPal" />
-        </PaymentButton>
-      </PaymentSection>
-      <PaymentNote>Rob Rich (Tyler)</PaymentNote>
+      <Section>
+        <SectionTitle>Support</SectionTitle>
+        <RowList>
+          <RowButton accent={BRAND.venmo} href={VENMO_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={venmoIcon} alt="" />
+            Venmo
+          </RowButton>
+          <RowButton accent={BRAND.paypal} href={PAYPAL_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={paypalIcon} alt="" />
+            PayPal
+          </RowButton>
+          <RowButton accent={BRAND.patreon} href={PATREON_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={patreonIcon} alt="" />
+            Patreon
+          </RowButton>
+        </RowList>
+        <PaymentNote>Rob Rich (Tyler)</PaymentNote>
+      </Section>
 
-      <SectionTitle>Latest Videos</SectionTitle>
-      <VideoWrapper>
-        <iframe
-          src={YOUTUBE_EMBED_URL}
-          title="Rob Rich - Latest Performance"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </VideoWrapper>
+      <Section>
+        <SectionTitle>Listen &amp; Watch</SectionTitle>
+        <VideoWrapper>
+          <iframe
+            src={YOUTUBE_EMBED_URL}
+            title="Rob Rich - Latest Performance"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </VideoWrapper>
+        <RowList>
+          <RowButton href={YOUTUBE_CHANNEL_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={youtubeIcon} alt="" />
+            YouTube
+          </RowButton>
+          <RowButton href={SOUNDCLOUD_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={soundcloudIcon} alt="" />
+            SoundCloud
+          </RowButton>
+          <RowButton href={BANDCAMP_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={bandcampIcon} alt="" />
+            BandCamp
+          </RowButton>
+        </RowList>
+      </Section>
 
-      <SectionTitle>Follow</SectionTitle>
-      <SocialRow>
-        <SocialLink href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer">
-          Instagram
-        </SocialLink>
-        <SocialLink href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer">
-          Facebook
-        </SocialLink>
-      </SocialRow>
+      <Section>
+        <SectionTitle>Follow</SectionTitle>
+        <RowList>
+          <RowButton href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={instagramIcon} alt="" />
+            Instagram
+          </RowButton>
+          <RowButton href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={facebookIcon} alt="" />
+            Facebook
+          </RowButton>
+          <RowButton href={THREADS_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={threadsIcon} alt="" />
+            Threads
+          </RowButton>
+          <RowButton href={X_LINK} target="_blank" rel="noopener noreferrer">
+            <RowIcon src={xIcon} alt="" />
+            X
+          </RowButton>
+        </RowList>
+      </Section>
+
+      <Section>
+        <TimelineCard to="/band/timeline">
+          <TimelineCardTitle>The Story So Far</TimelineCardTitle>
+          <TimelineCardSubtitle>25 years of music, one long timeline</TimelineCardSubtitle>
+        </TimelineCard>
+      </Section>
     </TipWrapper>
   );
 };
