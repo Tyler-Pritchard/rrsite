@@ -18,42 +18,40 @@ import {
 
 import heroPhoto from '../../assets/images/desktop/UmbrellaStage1.png';
 
-// Payment icons — icon-only marks, not full wordmarks, to fit the uniform row
+// Payment icons
 import venmoIcon from '../../assets/icons/venmo.svg';
 import paypalIcon from '../../assets/icons/paypal.svg';
 import patreonIcon from '../../assets/icons/patreon.svg';
 
-// Existing site icons
+// SM/media icons
 import youtubeIcon from '../../assets/icons/youtube.svg';
 import facebookIcon from '../../assets/icons/facebook.svg';
 import instagramIcon from '../../assets/icons/instagram.svg';
 import threadsIcon from '../../assets/icons/threads.svg';
 import xIcon from '../../assets/icons/x.svg';
-
-// PLACEHOLDERS — source and drop into assets/icons/
 import soundcloudIcon from '../../assets/icons/soundcloud.svg';
 import bandcampIcon from '../../assets/icons/bandcamp.svg';
 
-// Brand accent colors — used only as the thin left border, not a full fill
+// Brand accent colors — left border
 const BRAND = {
   venmo: '#3D95CE',
   paypal: '#003087',
   patreon: '#FF424D',
 };
 
-// PLACEHOLDERS — replace with real values
+// Account links
 const VENMO_LINK = 'https://venmo.com/u/RobRichMusic';
 const PAYPAL_LINK = 'https://www.paypal.biz/RobRichUSA';
-const PATREON_LINK = 'https://patreon.com/PLACEHOLDER';
+const PATREON_LINK = 'https://patreon.com/RobRichUSA?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink';
 const YOUTUBE_EMBED_URL =
   'https://www.youtube.com/embed/videoseries?si=XF2ZZbU9wHhDKdO5&list=PLGsq_SvGDamI';
-const YOUTUBE_CHANNEL_LINK = 'https://youtube.com/@PLACEHOLDER';
+const YOUTUBE_CHANNEL_LINK = 'https://youtube.com/@RobRichUSA';
 const FACEBOOK_LINK = 'https://facebook.com/RobRichUSA/';
 const INSTAGRAM_LINK = 'https://instagram.com/robrichusa/';
-const THREADS_LINK = 'https://www.threads.net/@PLACEHOLDER';
-const X_LINK = 'https://x.com/PLACEHOLDER';
-const SOUNDCLOUD_LINK = 'https://soundcloud.com/PLACEHOLDER';
-const BANDCAMP_LINK = 'https://PLACEHOLDER.bandcamp.com';
+const THREADS_LINK = 'https://www.threads.net/@robrichusa';
+const X_LINK = 'https://x.com/RobRichUSA';
+const SOUNDCLOUD_LINK = 'https://on.soundcloud.com/wktjNloOFCUWdh4Y4k';
+const BANDCAMP_LINK = 'https://robrich.bandcamp.com/';
 
 const Tip: React.FC = () => {
   return (
@@ -132,7 +130,7 @@ const Tip: React.FC = () => {
       <Section>
         <TimelineCard to="/band/timeline">
           <TimelineCardTitle>The Story So Far</TimelineCardTitle>
-          <TimelineCardSubtitle>25 years of music, one long timeline</TimelineCardSubtitle>
+          <TimelineCardSubtitle>26 years of music in one long sporadically updated timeline.</TimelineCardSubtitle>
         </TimelineCard>
       </Section>
     </TipWrapper>
