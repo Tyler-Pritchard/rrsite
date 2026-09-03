@@ -11,6 +11,7 @@ export const SubmenuWrapper = styled.div.withConfig({
 })<{ show: boolean }>`
   display: ${props => (props.show ? 'block' : 'none')};
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   max-width: 100vw;
@@ -20,23 +21,6 @@ export const SubmenuWrapper = styled.div.withConfig({
   box-sizing: border-box;
   font-family: ${GlobalVariables.paragraphFont};
   color: ${colors.textPrimary};
-
-  /* Drop in directly below the header instead of from the top of the
-     viewport — these match AppBar's own responsive heights in
-     header.styles.ts, so the submenu's top edge always lines up with
-     the header's bottom edge instead of overlapping the hero below it. */
-  @media (max-width: 480px) {
-    top: 8rem;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    top: 10rem;
-  }
-  @media (min-width: 769px) and (max-width: 992px) {
-    top: 12rem;
-  }
-  @media (min-width: 993px) {
-    top: 14rem;
-  }
 `;
 
 export const SubmenuItem = styled.li.withConfig({
