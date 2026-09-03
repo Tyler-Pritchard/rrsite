@@ -13,11 +13,11 @@ import profilePhoto from "../../../assets/images/desktop/ProfilePhoto.webp";
 
 // Add/reorder slides here. Drop in more `image` slides (e.g. sticker photos)
 // whenever they're ready — no other code needs to change.
-type Slide =
+type SlideItem =
   | { id: string; type: "video"; youtubeId: string; title: string }
   | { id: string; type: "image"; src: string; alt: string };
 
-const slides: Slide[] = [
+const slides: SlideItem[] = [
   {
     id: "video-live",
     type: "video",
