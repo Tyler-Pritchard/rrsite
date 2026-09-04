@@ -9,6 +9,25 @@ export const CarouselWrapper = styled.div`
   height: 100%;
   z-index: -1; /* Keeps it behind other content */
   pointer-events: auto;
+  // border: 10px solid red;
+
+  height: 85vh;
+
+  @media (max-width: 480px) {
+    height: 60vh;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    height: 65vh;
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    height: 70vh;
+  }
+  @media (min-width: 993px) and (max-width: 1200px) {
+    height: 75vh;
+  }
+  @media (min-width: 1201px) {
+    height: 100vh;
+  }
 `;
 
 export const Slide = styled.div<{ isActive: boolean }>`

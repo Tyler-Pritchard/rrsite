@@ -4,12 +4,12 @@ import image2 from "../../../assets/images/desktop/RR_ProfilePic.webp";
 import image1 from "../../../assets/images/desktop/UmbrellaStage1.webp";
 
 type SlideItem =
-  | { type: "image"; src: string }
+  | { type: "image"; src: string; position?: string }
   | { type: "video"; youtubeId: string };
 
 const slides: SlideItem[] = [
   { type: "video", youtubeId: "6HS4I6PTrxI" },
-  { type: "image", src: image1 }, { type: "image", src: image2 }
+  { type: "image", src: image1, position: "top center" }, { type: "image", src: image2, position: "top center" }
 ];
 
 const HeroCarousel: React.FC = () => {
@@ -47,11 +47,14 @@ const HeroCarousel: React.FC = () => {
         }
 
         return (
-          <Slide
-            key={index}
-            isActive={index === currentSlide}
-            style={{ backgroundImage: `url(${slide.src})` }}
-          />
+            <Slide
+              key={index}
+              isActive={index === currentSlide}
+              style={{
+                backgroundImage: `url(${slide.src})`,
+                backgroundPosition: slide.position || "center",
+              }}
+            />
         );
       })}
       <Dots>

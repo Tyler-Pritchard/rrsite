@@ -4,6 +4,23 @@ import { colors, GlobalVariables } from '../../globalStyles';
 export const HeroSpacer = styled.div`
   width: 100vw;
   height: 100vh;
+  // border: 10px solid lime;
+
+  @media (max-width: 480px) {
+    height: 45vh;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    height: 50vh;
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    height: 55vh;
+  }
+  @media (min-width: 993px) and (max-width: 1200px) {
+    height: 60vh;
+  }
+  @media (min-width: 1201px) {
+    height: 100vh;
+  }
 `;
 
 export const MainTitle = styled.h1`
