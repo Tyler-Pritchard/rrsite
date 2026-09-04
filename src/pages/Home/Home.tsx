@@ -1,5 +1,5 @@
 import React from "react";
-import { MainTitle, HeroSpacer } from "./home.styles";
+import { HeroSpacer } from "./home.styles";
 import HeroCarousel from "./components/HeroCarousel";
 
 const Home: React.FC = () => {
