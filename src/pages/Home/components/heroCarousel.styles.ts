@@ -8,6 +8,8 @@ export const CarouselWrapper = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1; /* Keeps it behind other content */
+  pointer-events: auto;
+  border: 15px solid lime;
 `;
 
 export const Slide = styled.div<{ isActive: boolean }>`
@@ -21,6 +23,31 @@ export const Slide = styled.div<{ isActive: boolean }>`
   background-repeat: no-repeat;
   transition: opacity 1s ease-in-out;
   opacity: ${(props) => (props.isActive ? 1 : 0)};
+  pointer-events: ${(props) => (props.isActive ? "auto" : "none")};
+`;
+
+export const PlayButton = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: ${colors.highlight};
+  }
 `;
 
 export const Dots = styled.div`
@@ -31,6 +58,7 @@ export const Dots = styled.div`
   display: flex;
   gap: 10px;
   z-index: 2;
+  pointer-events: auto;
 
   span {
     width: 10px;

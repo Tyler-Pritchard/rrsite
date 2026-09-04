@@ -1,13 +1,16 @@
 import React from "react";
-import { MainWrapper, MainTitle } from "./home.styles";
+import { MainWrapper, MainTitle, HeroSpacer } from "./home.styles";
 import HeroCarousel from "./components/HeroCarousel";
 
 const Home: React.FC = () => {
   return (
-    <MainWrapper>
+    <>
       <HeroCarousel />
-      <MainTitle>Rob Rich Official Website</MainTitle>
-    </MainWrapper>
+      <HeroSpacer />
+      {/* <MainWrapper> */}
+        {/* <MainTitle>Rob Rich, PNW Dilettante</MainTitle> */}
+      {/* </MainWrapper> */}
+    </>
   );
 };
 
