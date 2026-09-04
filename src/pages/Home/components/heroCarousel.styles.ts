@@ -9,7 +9,6 @@ export const CarouselWrapper = styled.div`
   height: 100%;
   z-index: -1; /* Keeps it behind other content */
   pointer-events: auto;
-  border: 15px solid lime;
 `;
 
 export const Slide = styled.div<{ isActive: boolean }>`

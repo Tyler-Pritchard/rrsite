@@ -1,42 +1,6 @@
 import styled from 'styled-components';
 import { colors, GlobalVariables } from '../../globalStyles';
 
-export const MainWrapper = styled.div`
-  width: 100vw;
-  height: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-    pointer-events: none;
-  border: 20px solid red;
-
-  @media (max-width: 480px) {
-    padding-top: 24rem;
-    padding-bottom: 10rem;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    padding-top: 36rem;
-    padding-bottom: 24rem;
-  }
-  @media (min-width: 769px) and (max-width: 992px){
-    padding-top: 38rem;
-    padding-bottom: 16rem;
-  }
-  @media (min-width: 993px) and (max-width: 1200px) {
-    padding-top: 42rem;
-    padding-bottom: 16rem;
-  }
-  @media (min-width: 1201px) {
-    padding-top: 32rem;
-    padding-bottom: 18rem;
-  }
-`;
-
 export const HeroSpacer = styled.div`
   width: 100vw;
   height: 100vh;

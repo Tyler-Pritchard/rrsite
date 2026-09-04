@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CarouselWrapper, Slide, Dots, PlayButton } from "./heroCarousel.styles";
-import image1 from "../../../assets/images/desktop/RR_ProfilePic.webp";
+import image2 from "../../../assets/images/desktop/RR_ProfilePic.webp";
+import image1 from "../../../assets/images/desktop/UmbrellaStage1.webp";
 
 type SlideItem =
   | { type: "image"; src: string }
@@ -8,7 +9,7 @@ type SlideItem =
 
 const slides: SlideItem[] = [
   { type: "video", youtubeId: "6HS4I6PTrxI" },
-  { type: "image", src: image1 },
+  { type: "image", src: image1 }, { type: "image", src: image2 }
 ];
 
 const HeroCarousel: React.FC = () => {
