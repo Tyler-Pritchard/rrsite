@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <HeroCarousel />
       <HeroSpacer />
       {/* <MainWrapper> */}
-        {/* <MainTitle>Rob Rich, PNW Dilettante</MainTitle> */}
+        {/* <MainTitle>Rob Rich, Warden of Wandering, PNW</MainTitle> */}
       {/* </MainWrapper> */}
     </>
   );

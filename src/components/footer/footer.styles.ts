@@ -12,6 +12,8 @@ export const FooterWrapper = styled.footer`
   font-family: ${GlobalVariables.paragraphFont};
   color: ${colors.textPrimary};
   overflow: hidden;
+  position: relative;
+  z-index: 10;
 
   /* Optional: Add a subtle top border or shadow */
   border-top: 1px solid ${colors.borderLight};
