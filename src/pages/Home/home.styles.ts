@@ -4,7 +4,7 @@ import { colors, GlobalVariables } from '../../globalStyles';
 export const HeroSpacer = styled.div`
   width: 100vw;
   height: 100vh;
-  // border: 10px solid lime;
+  pointer-events: none;
 
   @media (max-width: 480px) {
     height: 45vh;

@@ -53,6 +53,7 @@ const HeroCarousel: React.FC = () => {
               style={{
                 backgroundImage: `url(${slide.src})`,
                 backgroundPosition: slide.position || "center",
+                backgroundSize: "contain",
               }}
             />
         );

@@ -6,6 +6,7 @@ export const AppBar = styled.div`
   font-family: ${GlobalVariables.paragraphFont};
   position: absolute;
   width: 100vw;
+  z-index: 10; 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

@@ -2,15 +2,13 @@ import styled from "styled-components";
 import { colors } from '../../../globalStyles';
 
 export const CarouselWrapper = styled.div`
-  position: fixed; /* Ensures the carousel stays in the background */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Keeps it behind other content */
+  z-index: 0;
   pointer-events: auto;
-  // border: 10px solid red;
-
   height: 85vh;
 
   @media (max-width: 480px) {
@@ -36,6 +34,7 @@ export const Slide = styled.div<{ isActive: boolean }>`
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: ${colors.backgroundBase};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
