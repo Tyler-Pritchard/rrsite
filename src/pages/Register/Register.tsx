@@ -201,10 +201,6 @@ const Register: React.FC = () => {
           </ContentWrapper>
         </form>
       </FormWrapper>
-      {/* <CallToAction>
-        <h3>Become a Member of the Rich Robbers Club</h3>
-        <p>Join the Rich Robbers Club—our way of giving back to you, the most dedicated fans out there! As a member, you’ll get first dibs on tickets, access to giveaways, exclusive events, discounts, and so much more. All these perks are just for you, our amazing fans!</p>
-      </CallToAction> */}
 
       {showModal && (
         <ModalWrapper>

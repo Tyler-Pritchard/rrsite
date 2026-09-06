@@ -207,7 +207,6 @@ const Login: React.FC = () => {
   return (
     <LoginWrapper>
       <ContentWrapper>
-        {/* <Breadcrumb>MY ACCOUNT &gt; <span>LOGIN</span></Breadcrumb> */}
         <FormRow>
           <FormWrapper onSubmit={handleSubmit}>
             <TextBox>

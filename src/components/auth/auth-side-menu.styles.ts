@@ -33,20 +33,41 @@ export const SideMenu = styled.div`
     padding: 6rem;
     width: 40rem;
   };
+
+  h3 {
+    color: #000;
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 `;
 
 export const Breadcrumb = styled.div`
   font-size: 0.85rem;
-  color: ${colors.textSecondary};
+  color: #666;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
 
   span {
-    color: ${colors.textPrimary};
+    color: #000;
   }
 `;
 
+export const BreadcrumbLink = styled.a`
+  color: inherit;
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    color: ${colors.highlight};
+    text-decoration: underline;
+  }
+`;
 
 export const SideMenuItem = styled.a`
   display: block;
