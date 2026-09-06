@@ -10,6 +10,7 @@ const FooterTop = () => {
     const dispatch: AppDispatch = useDispatch();
     const [loading, setLoading] = useState(true);
     const totalUsers = useSelector<RootState, number>((state) => state.user.totalUsers);
+    const isLoggedIn = useSelector<RootState, boolean>((state) => state.user.isLoggedIn);
   
     useEffect(() => {
         dispatch(getUserCount()).then(() => setLoading(false));
@@ -21,14 +22,26 @@ const FooterTop = () => {
                 <TopFooterBrow>
                     <TopFooterCounter>{totalUsers} STRONG AND COUNTING</TopFooterCounter>
                 </TopFooterBrow>
-                <h2>JOIN MY FREE FAN CLUB EVENTUALLY!!</h2>
-                <TopFooterCta>
-                    <TopFooterLink href='/register'>
-                        <TopFooterButton>
-                            SIGN UP TODAY
-                        </TopFooterButton>
-                    </TopFooterLink>
-                </TopFooterCta>
+                {isLoggedIn ? (
+                    <>
+                    <h2>WELCOME BACK, FAM!</h2>
+                    <br/>
+                    <h4>COMING SOON: Interactive map, exclusive content, and more!</h4>
+                    </>
+                ) : (
+                    <>
+                        <h2>JOIN MY FREE FAN CLUB</h2>
+                        <br/>
+                        <h4>GET ACCESS TO EXCLUSIVE CONTENT, FEATURES AND UPDATES</h4>
+                        <TopFooterCta>
+                            <TopFooterLink href='/register'>
+                                <TopFooterButton>
+                                    SIGN UP TODAY
+                                </TopFooterButton>
+                            </TopFooterLink>
+                        </TopFooterCta>
+                    </>
+                )}
             </TopFooterBody>
         </TopFooterWrapper>
     )
