@@ -12,13 +12,14 @@ interface AuthSideMenuSection {
 }
 
 interface AuthSideMenuProps {
+  breadcrumbLabel: string;
   sections: AuthSideMenuSection[];
 }
 
-const AuthSideMenu: React.FC<AuthSideMenuProps> = ({ sections }) => {
+const AuthSideMenu: React.FC<AuthSideMenuProps> = ({ breadcrumbLabel, sections }) => {
   return (
     <SideMenu>
-      <Breadcrumb>MY ACCOUNT &gt; <span>LOGIN</span></Breadcrumb>
+      <Breadcrumb>MY ACCOUNT &gt; <span>{breadcrumbLabel}</span></Breadcrumb>
       {sections.map((section) => (
         <React.Fragment key={section.title}>
           <h3>{section.title}</h3>

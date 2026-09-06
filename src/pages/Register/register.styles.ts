@@ -32,63 +32,63 @@ export const RegisterWrapper = styled.div`
   };
 `;
 
-export const SideMenu = styled.div`
-  background-color: #f2f2f2;
+// export const SideMenu = styled.div`
+//   background-color: #f2f2f2;
 
-  @media (max-width: 480px) {
-    display: none;
-  };
+//   @media (max-width: 480px) {
+//     display: none;
+//   };
 
-  @media (min-width: 481px) {
-    display: flex;
-    flex-direction: column;
-  };
+//   @media (min-width: 481px) {
+//     display: flex;
+//     flex-direction: column;
+//   };
 
-  @media (min-width: 481px) and (max-width: 768px) {
-    padding: 2rem;
-    width: 25rem;
-  };
+//   @media (min-width: 481px) and (max-width: 768px) {
+//     padding: 2rem;
+//     width: 25rem;
+//   };
 
-  @media (min-width: 769px) and (max-width: 992px) {
-    padding: 4rem;
-    width: 25rem;
-  };
+//   @media (min-width: 769px) and (max-width: 992px) {
+//     padding: 4rem;
+//     width: 25rem;
+//   };
 
-  @media (min-width: 993px) and (max-width: 1200px) {
-    padding: 6rem;
-    width: 30rem;
-  };
+//   @media (min-width: 993px) and (max-width: 1200px) {
+//     padding: 6rem;
+//     width: 30rem;
+//   };
 
-  @media (min-width: 1201px) {
-    padding: 6rem;
-    width: 40rem;
-  };
-`;
+//   @media (min-width: 1201px) {
+//     padding: 6rem;
+//     width: 40rem;
+//   };
+// `;
 
-export const SideMenuItem = styled.a`
-  text-decoration: none;
-  color: #000;
+// export const SideMenuItem = styled.a`
+//   text-decoration: none;
+//   color: #000;
 
-  &:hover {
-    background-color: #e0e0e0;
-  };
+//   &:hover {
+//     background-color: #e0e0e0;
+//   };
 
-  @media (min-width: 481px) and (max-width: 768px){
-    padding: 1.5rem;
-  };
+//   @media (min-width: 481px) and (max-width: 768px){
+//     padding: 1.5rem;
+//   };
 
-  @media (min-width: 769px) and (max-width: 992px) {
-    padding: 2rem;
-  };
+//   @media (min-width: 769px) and (max-width: 992px) {
+//     padding: 2rem;
+//   };
 
-  @media (min-width: 993px) and (max-width: 1200px) {
-    padding: 2rem;
-  };
+//   @media (min-width: 993px) and (max-width: 1200px) {
+//     padding: 2rem;
+//   };
 
-  @media (min-width: 1201px) {
-    padding: 3rem;
-  };
-`;
+//   @media (min-width: 1201px) {
+//     padding: 3rem;
+//   };
+// `;
 
 export const ContentWrapper = styled.div`
   display: flex;

@@ -31,7 +31,6 @@ import { loginUser, forgotPassword  } from '../../slices/userSlice';
 import { toggleForgotPasswordModal } from '../../reducers/menuReducer';
 import { RootState } from '../../store/store_index';
 import Register from '../Register/Register';
-import AuthSideMenu from '../../components/auth/auth-side-menu';
 
 // Define the structure for form data to ensure correct types are used
 interface LoginFormData {
@@ -208,14 +207,8 @@ const Login: React.FC = () => {
 
   return (
     <LoginWrapper>
-      <AuthSideMenu
-        sections={[
-          { title: 'Account Settings', items: [{ label: 'Create Account', href: '/register' }] },
-          { title: 'Customer Service', items: [{ label: 'FAQ', href: '/help' }, { label: 'Privacy Policy', href: '/privacy-policy' }] },
-        ]}
-      />
       <ContentWrapper>
-        <Breadcrumb>MY ACCOUNT &gt; <span>LOGIN</span></Breadcrumb>
+        {/* <Breadcrumb>MY ACCOUNT &gt; <span>LOGIN</span></Breadcrumb> */}
         <FormRow>
           <FormWrapper onSubmit={handleSubmit}>
             <TextBox>
@@ -289,9 +282,9 @@ const Login: React.FC = () => {
           <h3>Free to join — early access, presale codes, and merch discounts.</h3>
         </CallToAction>
       </ContentWrapper>
-      {/* <FormRow>
+      <FormRow>
         <Register /> 
-      </FormRow> */}
+      </FormRow>
     </LoginWrapper>
   );
 };

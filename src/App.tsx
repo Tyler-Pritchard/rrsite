@@ -15,6 +15,7 @@ import ProductDetails from "./pages/Shop/Products/ProductDetails";
 import Tour from "./pages/Tour/Tour";
 import Past from "./pages/Tour/Past";
 import Event from './pages/Tour/Event';
+import AuthLayout from "./components/auth/AuthLayout";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import GlobalStyle from "./globalStyles";
 
@@ -36,9 +37,12 @@ const App: React.FC = () => {
       <Routes>
         {/* Home and Basic Routes */}
         <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+        </Route>
+
         <Route path="/privacy-policy" element={<Construction />} />
         <Route path="/help" element={<FAQ />} />
         <Route path="/tip" element={<Tip />} />

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../slices/userSlice';
-import { SideMenu, SideMenuItem, RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, CheckboxLabel, InputLabel, CheckboxInput, SubmitButton, ErrorText, CallToAction, CallToActionMobile, ModalWrapper, ModalContent, ModalButton, ContentWrapper } from './register.styles';
+import { RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, CheckboxLabel, InputLabel, CheckboxInput, SubmitButton, ErrorText, CallToAction, CallToActionMobile, ModalWrapper, ModalContent, ModalButton, ContentWrapper } from './register.styles';
 
 declare global {
   interface Window {
@@ -101,18 +101,11 @@ const Register: React.FC = () => {
 
   const handleDone = () => {
     setShowModal(false);
-    navigate('/'); // Navigate to the Home screen after clicking "Done"
+    navigate('/');
   };
 
   return (
     <RegisterWrapper>
-        <SideMenu>
-        <h3>Account Settings</h3>
-        <SideMenuItem href="/login">Sign In</SideMenuItem>
-        <h3>Customer Service</h3>
-        <SideMenuItem href="/help">FAQ</SideMenuItem>
-        <SideMenuItem href="/privacy-policy">Privacy Policy</SideMenuItem>
-      </SideMenu>
       <FormWrapper>
         <TextBox>
           <h1>CREATE AN ACCOUNT AND BECOME A MEMBER</h1>
@@ -208,11 +201,10 @@ const Register: React.FC = () => {
           </ContentWrapper>
         </form>
       </FormWrapper>
-      <CallToAction>
-        {/* Call-to-action text box content */}
+      {/* <CallToAction>
         <h3>Become a Member of the Rich Robbers Club</h3>
         <p>Join the Rich Robbers Club—our way of giving back to you, the most dedicated fans out there! As a member, you’ll get first dibs on tickets, access to giveaways, exclusive events, discounts, and so much more. All these perks are just for you, our amazing fans!</p>
-      </CallToAction>
+      </CallToAction> */}
 
       {showModal && (
         <ModalWrapper>
