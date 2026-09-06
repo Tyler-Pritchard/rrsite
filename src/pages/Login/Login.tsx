@@ -14,14 +14,13 @@ import {
   ModalContent,
   ModalButton,
   ModalMessage,
-  SideMenu,
-  SideMenuItem,
   CallToAction,
   RememberMeWrapper,
   RememberMeLabel,
   RememberMeCheckbox,
   ButtonBox,
-  Breadcrumb
+  Breadcrumb,
+  FormRow
 } from './login.styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkAction } from 'redux-thunk';
@@ -31,6 +30,8 @@ import { AppDispatch } from '../../store/store_index';
 import { loginUser, forgotPassword  } from '../../slices/userSlice';
 import { toggleForgotPasswordModal } from '../../reducers/menuReducer';
 import { RootState } from '../../store/store_index';
+import Register from '../Register/Register';
+import AuthSideMenu from '../../components/auth/auth-side-menu';
 
 // Define the structure for form data to ensure correct types are used
 interface LoginFormData {
@@ -207,53 +208,54 @@ const Login: React.FC = () => {
 
   return (
     <LoginWrapper>
-      <SideMenu>
-        <h3>Account Settings</h3>
-        <SideMenuItem href="/register">Create Account</SideMenuItem>
-        <h3>Customer Service</h3>
-        <SideMenuItem href="/help">FAQ</SideMenuItem>
-        <SideMenuItem href="/privacy-policy">Privacy Policy</SideMenuItem>
-      </SideMenu>
+      <AuthSideMenu
+        sections={[
+          { title: 'Account Settings', items: [{ label: 'Create Account', href: '/register' }] },
+          { title: 'Customer Service', items: [{ label: 'FAQ', href: '/help' }, { label: 'Privacy Policy', href: '/privacy-policy' }] },
+        ]}
+      />
       <ContentWrapper>
         <Breadcrumb>MY ACCOUNT &gt; <span>LOGIN</span></Breadcrumb>
-        <FormWrapper onSubmit={handleSubmit}>
-          <TextBox>
-            <h1>SIGN IN</h1>
-            <p>*REQUIRED</p>
-          </TextBox>
-          <Note>If you are already a Member, please enter your email and password.</Note>
-          <h3>EMAIL ADDRESS*</h3>
-          <FormField
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-          />
-          {errors.email && <ErrorText>{errors.email}</ErrorText>}
-          <h3>PASSWORD*</h3>
-          <FormField
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-          />
-          {errors.password && <ErrorText>{errors.password}</ErrorText>}
-
-          <RememberMeWrapper>
-            <RememberMeCheckbox
-              type="checkbox"
-              checked={rememberMe}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRememberMe(e.target.checked)}
+        <FormRow>
+          <FormWrapper onSubmit={handleSubmit}>
+            <TextBox>
+              <h1>SIGN IN</h1>
+              <p>*REQUIRED</p>
+            </TextBox>
+            <Note>If you are already a Member, please enter your email and password.</Note>
+            <h3>EMAIL ADDRESS*</h3>
+            <FormField
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             />
-            <RememberMeLabel>Remember Me</RememberMeLabel>
-          </RememberMeWrapper>
-          <ButtonBox>
-            <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
-            <ForgotPassword type="button" onClick={handleForgotPasswordClick}>
-              Forgot Password?
-            </ForgotPassword>
-          </ButtonBox>
-        </FormWrapper>
+            {errors.email && <ErrorText>{errors.email}</ErrorText>}
+            <h3>PASSWORD*</h3>
+            <FormField
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+            />
+            {errors.password && <ErrorText>{errors.password}</ErrorText>}
+
+            <RememberMeWrapper>
+              <RememberMeCheckbox
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRememberMe(e.target.checked)}
+              />
+              <RememberMeLabel>Remember Me</RememberMeLabel>
+            </RememberMeWrapper>
+            <ButtonBox>
+              <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
+              <ForgotPassword type="button" onClick={handleForgotPasswordClick}>
+                Forgot Password?
+              </ForgotPassword>
+            </ButtonBox>
+          </FormWrapper>
+        </FormRow>
 
         {isModalOpen && (
           <ModalOverlay onClick={handleForgotPasswordClick}>
@@ -287,6 +289,9 @@ const Login: React.FC = () => {
           <h3>Free to join — early access, presale codes, and merch discounts.</h3>
         </CallToAction>
       </ContentWrapper>
+      {/* <FormRow>
+        <Register /> 
+      </FormRow> */}
     </LoginWrapper>
   );
 };

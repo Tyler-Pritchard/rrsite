@@ -159,6 +159,19 @@ export const FormWrapper = styled.form`
   };
 `;
 
+export const FormRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+
+  @media (min-width: 993px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  };
+`;
+
 export const TextBox = styled.div`
   display: flex;
   flex-direction: row;
