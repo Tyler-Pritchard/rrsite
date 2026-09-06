@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, GlobalVariables } from '../../globalStyles';
 
 export const LoginWrapper = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ export const LoginWrapper = styled.div`
 
 export const SideMenu = styled.div`
   background-color: #f2f2f2;
+  gap: 0.5rem;
 
   @media (max-width: 480px) {
     display: none;
@@ -59,11 +61,13 @@ export const SideMenu = styled.div`
 `;
 
 export const SideMenuItem = styled.a`
+  display: block;
   text-decoration: none;
   color: #000;
+  padding: 0.5rem 0;
 
   &:hover {
-    background-color: #e0e0e0;
+    color: ${colors.highlight};
   };
 
   @media (min-width: 481px) and (max-width: 768px){
@@ -84,6 +88,9 @@ export const SideMenuItem = styled.a`
 `;
 
 export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: 481px) and (max-width: 768px){
     display: flex;
     flex-direction: column;
@@ -103,10 +110,24 @@ export const ContentWrapper = styled.div`
   };
 `;
 
+export const Breadcrumb = styled.div`
+  font-size: 0.85rem;
+  color: ${colors.textSecondary};
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+
+  span {
+    color: ${colors.textPrimary};
+  }
+`;
+
 export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 44rem;
 
   @media (max-width: 480px) {
     margin: 3rem 1rem 2rem 1rem;
@@ -143,6 +164,8 @@ export const TextBox = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: 1rem 0 1.5rem 0;
 
   @media (max-width: 480px) {
     margin: 1rem 0 1rem 0;
@@ -170,6 +193,10 @@ export const TextBox = styled.div`
 `;
 
 export const Note = styled.h4`
+font-weight: 400;
+  color: ${colors.textSecondary};
+  margin: 0 0 2rem 0;
+
   @media (max-width: 480px) {
     margin: .5rem 0 4rem 0;
   };
@@ -194,6 +221,12 @@ export const Note = styled.h4`
 export const FormField = styled.input`
   border: 1px solid #ccc;
   border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 3.5rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  margin: 0.5rem 0 1.5rem 0;
 
   @media (max-width: 480px) {
     width: 99%;
@@ -236,12 +269,14 @@ export const FormField = styled.input`
 export const ErrorText = styled.span`
   color: red;
   font-size: 0.875rem;
-  margin-top: 0.25rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 `;
 
 export const RememberMeWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin: 0 0 2rem 0;
 
   @media (max-width: 480px) {
     margin: 0 0 3rem 0;
@@ -289,6 +324,8 @@ export const ButtonBox = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
+  width: 100%;
 
   @media (max-width: 480px) {
     width: 90%;
@@ -312,17 +349,23 @@ export const ButtonBox = styled.div`
 `;
 
 export const SubmitButton = styled.button`
-  background-color: #007bff;
-  color: white;
+  background-color: ${colors.highlight};
+  color: ${colors.neutralOffWhite};
   border: none;
   border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  jusfify-content: center;
   cursor: pointer;
+  font-family: ${GlobalVariables.paragraphFont};
+  font-weight: 600;
+  width: 12rem;
+  height: 3.5rem;
+
   &:hover {
-    background-color: #0056b3;
+    background-color: ${colors.accentCopperOrange};
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   @media (max-width: 480px) {
@@ -357,6 +400,17 @@ export const SubmitButton = styled.button`
 `;
 
 export const ForgotPassword = styled.button`
+  background: none;
+  border: none;
+  color: ${colors.textSecondary};
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: ${GlobalVariables.paragraphFont};
+
+  &:hover {
+    color: ${colors.highlight};
+  }
+
   @media (max-width: 480px) {
     width: 12rem;
   };
@@ -388,6 +442,7 @@ export const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 `;
 
 export const ModalWrapper = styled.div`
@@ -406,7 +461,7 @@ export const ModalContent = styled.div`
 
 export const ModalMessage = styled.div`
   text-align: center;
-    margin: 1rem 0;
+  margin: 1rem 0;
 
   h2 {
     margin-bottom: 10px;
@@ -419,22 +474,36 @@ export const ModalMessage = styled.div`
 
 export const ModalButton = styled.a`
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: ${colors.highlight};
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.2s;
+
   &:hover {
-    background-color: #0056b3;
+    background-color: ${colors.accentCopperOrange};
   }
 `;
 
 export const CallToAction = styled.div`
-  background-color: #19857b;
-  color: white;
-  text-align: center;
+  border-top: 2px solid ${colors.highlight};
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  max-width: 44rem;
+
+  h2 {
+    font-size: 1.1rem;
+    color: ${colors.highlight};
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: ${colors.textSecondary};
+  }
   
   @media (max-width: 480px) {
     padding: 20px;

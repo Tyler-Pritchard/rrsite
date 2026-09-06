@@ -20,7 +20,8 @@ import {
   RememberMeWrapper,
   RememberMeLabel,
   RememberMeCheckbox,
-  ButtonBox
+  ButtonBox,
+  Breadcrumb
 } from './login.styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkAction } from 'redux-thunk';
@@ -214,6 +215,7 @@ const Login: React.FC = () => {
         <SideMenuItem href="/privacy-policy">Privacy Policy</SideMenuItem>
       </SideMenu>
       <ContentWrapper>
+        <Breadcrumb>MY ACCOUNT &gt; <span>LOGIN</span></Breadcrumb>
         <FormWrapper onSubmit={handleSubmit}>
           <TextBox>
             <h1>SIGN IN</h1>
@@ -281,9 +283,8 @@ const Login: React.FC = () => {
           </ModalOverlay>
         )}
         <CallToAction>
-          {/* Call-to-action text box content */}
-          <h2>NEW HERE? JOIN THE RICH ROBBER'S CLUB!</h2>
-          <h3>It’s totally free and super easy to sign up! Get in on presale tickets, exclusive content, early access to new releases, merch discounts, and so much more. Don’t miss out—become a part of the crew today!</h3>
+          <h2>New here? Join the Rich Robber's Club!</h2>
+          <h3>Free to join — early access, presale codes, and merch discounts.</h3>
         </CallToAction>
       </ContentWrapper>
     </LoginWrapper>
