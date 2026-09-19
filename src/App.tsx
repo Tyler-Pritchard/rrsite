@@ -1,5 +1,6 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home/Home";
@@ -19,6 +20,21 @@ import AuthLayout from "./components/auth/AuthLayout";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import GlobalStyle from "./globalStyles";
 
+const ScrollToTop: React.FC = () => {
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -34,6 +50,7 @@ const App: React.FC = () => {
       </Helmet>
       <GlobalStyle />
       <Header />
+      <ScrollToTop />
       <Routes>
         {/* Home and Basic Routes */}
         <Route path="/" element={<Home />} />
