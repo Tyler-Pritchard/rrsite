@@ -1,15 +1,17 @@
 import React from "react";
-import { HeroSpacer } from "./home.styles";
+import { HeroSpacer, MainWrapper, MainTitle } from "./home.styles";
 import HeroCarousel from "./components/HeroCarousel";
+import SightingsMap from "./components/SightingsMap";
 
 const Home: React.FC = () => {
   return (
     <>
       <HeroCarousel />
       <HeroSpacer />
-      {/* <MainWrapper> */}
-        {/* <MainTitle>Rob Rich, Warden of Wandering, PNW</MainTitle> */}
-      {/* </MainWrapper> */}
+      <MainWrapper>
+        {/* <MainTitle>Rob Rich, Force of Nature, PNW</MainTitle> */}
+        <SightingsMap />
+      </MainWrapper>
     </>
   );
 };

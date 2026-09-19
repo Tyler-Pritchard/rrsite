@@ -23,6 +23,17 @@ export const HeroSpacer = styled.div`
   }
 `;
 
+export const MainWrapper = styled.div`
+  background-color: ${colors.backgroundBase};
+  z-index: 1;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
 export const MainTitle = styled.h1`
   color: ${colors.primaryGreen};
   background-color: ${colors.primaryBeige};
