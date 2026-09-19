@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSpacer, MainWrapper, MainTitle } from "./home.styles";
+import { HeroSpacer, MainWrapper } from "./home.styles";
 import HeroCarousel from "./components/HeroCarousel";
 import SightingsMap from "./components/SightingsMap";
 
