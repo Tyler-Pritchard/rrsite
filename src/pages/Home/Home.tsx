@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <HeroCarousel />
       <HeroSpacer />
       <MainWrapper>
-        {/* <MainTitle>Rob Rich, Force of Nature, PNW</MainTitle> */}
+        {/* <MainTitle>Rob Rich. Maker & Musician.</MainTitle> */}
         <SightingsMap />
       </MainWrapper>
     </>
