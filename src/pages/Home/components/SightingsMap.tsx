@@ -57,14 +57,23 @@ const SIGHTINGS: RobRichSighting[] = [
     lat: 44.05108212299453,
     lng: -123.09195169468848,
   },
-    {
-    id: 3,
+  {
+    id: 4,
     city: "Seattle, WA",
     crossStreets: "Seattle Center",
     dateSeen: "2026-05-25",
     note: "Random empty stage at Folk Life Seattle",
     lat: 47.619818852944135,
     lng: -122.35099018697544,
+  },
+  {
+    id: 5,
+    city: "Tacoma, WA",
+    crossStreets: "54th St & S. Tacoma Way",
+    dateSeen: "2026-09-19",
+    note: "In front of the plant shop",
+    lat: 47.20821437627481,
+    lng: -122.48361704083773,
   },
 ];
 
