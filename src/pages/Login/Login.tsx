@@ -22,8 +22,6 @@ import {
   FormRow
 } from './login.styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { ThunkAction } from 'redux-thunk';
-import { AnyAction } from 'redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { loginUser, forgotPassword  } from '../../slices/userSlice';
@@ -191,15 +189,20 @@ const Login: React.FC = () => {
               return;
             }
 
-            dispatch(forgotPassword({ email, captchaToken })) as unknown as ThunkAction<void, RootState, unknown, AnyAction>;
-            setIsEmailSent(true);
-            setErrors({});
+            try {
+              // unwrap() throws on failure, so "Email Sent" only shows on success
+              await dispatch(forgotPassword({ email, captchaToken })).unwrap();
+              setIsEmailSent(true);
+              setErrors({});
+            } catch (err) {
+              setErrors({ email: typeof err === 'string' ? err : 'Failed to send reset email. Please try again.' });
+            } finally {
+              setIsSubmitting(false);
+            }
           });
       });
     } catch (error: any) {
       setErrors({ email: 'Failed to send reset email. Please try again.' });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 

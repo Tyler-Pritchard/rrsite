@@ -24,31 +24,31 @@ const ResetPassword: React.FC = () => {
   const [searchParams] = useSearchParams();
   const token = searchParams.get('token');
   
-  useEffect(() => {
-    console.log('Token from URL:', token);
-  }, [token]);
+  useEffect(() => {}, [token]);
   
   
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   
-    console.log("RESET PASSWORD TOKEN:", token);
-
     if (!newPassword || !token) {
       setError('Password and token are required');
       return;
     }
 
+    if (newPassword !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
     try {
-        await dispatch(resetPassword({token, newPassword}));
-        setSuccess(true);
-        setError('');
-        navigate('/login');
-      } catch (err) {
-        console.error(err);
-        setError('Failed to reset password. Please try again.');
-      }
+      // unwrap() throws if the request fails, so the catch block actually runs
+      await dispatch(resetPassword({ token, newPassword })).unwrap();
+      setSuccess(true);
+      setError('');
+      setTimeout(() => navigate('/login'), 2000); // Give the user a moment to see the success message
+    } catch (err) {
+      setError(typeof err === 'string' ? err : 'Failed to reset password. Please try again.');
+    }
   };
 
   return (
