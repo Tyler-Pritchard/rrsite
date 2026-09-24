@@ -85,28 +85,25 @@ export const forgotPassword = createAsyncThunk<any, ForgotPasswordPayload, { rej
   'user/forgotPassword',
   async ({ email, captchaToken }: ForgotPasswordPayload, { rejectWithValue }) => {
     try {
-      const response = await authAPI.post('api/auth/password/forgot-password', { email, captchaToken });
+      const response = await authAPI.post('api/password/forgot-password', { email, captchaToken });
       return response.data;
     } catch (error: any) {
-      return rejectWithValue(error.response.data || 'Unknown error occurred');
+      // Pass the server's message (e.g. "CAPTCHA verification failed") through to the UI
+      return rejectWithValue(error.response?.data?.msg || 'Unknown error occurred');
     }
   }
 );
 
-export const resetPassword = createAsyncThunk(
+export const resetPassword = createAsyncThunk<any, { token: string; newPassword: string }, { rejectValue: string }>(
   'user/resetPassword',
-  async ({ token, newPassword }: { token: string; newPassword: string }, { rejectWithValue }) => {
+  async ({ token, newPassword }, { rejectWithValue }) => {
     try {
-      const res = await authAPI.post('api/auth/password/reset-password', {
-        headers: {
-          'Content-Type': 'application/json',
-          'Reset-Token': `${token}`,
-        },
-        data: { newPassword },
-      });
+      // Body is { token, newPassword }, matching the backend's validation schema
+      const res = await authAPI.post('api/password/reset-password', { token, newPassword });
       return res.data;
-    } catch (error) {
-      return rejectWithValue('Error resetting password');
+    } catch (error: any) {
+      // e.g. "This reset link is invalid or has expired"
+      return rejectWithValue(error.response?.data?.msg || 'Error resetting password');
     }
   }
 );
