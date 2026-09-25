@@ -59,8 +59,8 @@ export const registerUser = createAsyncThunk(
       });
       saveUserInfo(res.data); // Save user info
       return res.data;
-    } catch (error) {
-      return rejectWithValue('Error registering user');
+    } catch (error: any) {
+      return rejectWithValue(error.response?.data?.msg || 'Error registering user');
     }
   }
 );
