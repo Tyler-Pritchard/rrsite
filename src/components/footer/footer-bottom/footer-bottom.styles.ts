@@ -145,3 +145,19 @@ export const BottomFooterLinks = styled.a<{ disabled?: boolean }>`
     margin: 1rem;
   }
 `;
+
+export const BottomFooterText = styled.p`
+  font-size: small;
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0 3rem;
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin-top: 1.5rem;
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    margin-top: 2rem;
+  }
+`;  

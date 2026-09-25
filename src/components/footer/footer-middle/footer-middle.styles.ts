@@ -60,3 +60,26 @@ export const MiddleMenu = styled.div`
   font-family: ${GlobalVariables.paragraphFont};
   color: ${colors.textPrimary};
 `;
+
+export const MiddleFooterText = styled.h3`
+  font-family: ${GlobalVariables.paragraphFont};
+  color: ${colors.textPrimary};
+  font-size: 3rem;
+  margin-top: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+`;

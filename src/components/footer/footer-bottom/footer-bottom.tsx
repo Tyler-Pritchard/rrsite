@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BottomFooterWrapper, BottomIconsContainer, BottomLinksContainer, FooterStack, BottomIconLink, BottomIcons, BottomFooterLinks
+    BottomFooterWrapper, BottomIconsContainer, BottomLinksContainer, FooterStack, BottomIconLink, BottomIcons, BottomFooterLinks, BottomFooterText
 } from "./footer-bottom.styles";
 import XIcon from '../../../assets/icons/x.svg';
 import FacebookIcon from '../../../assets/icons/facebook.svg';
@@ -83,6 +83,8 @@ const FooterBottom = () => {
                 ))}
             </FooterStack>
             </BottomLinksContainer>
+            <BottomFooterText>© 2026, Rob Rich. Powered by Rob Rich. This is a from-scratch micro-service application (i.e., not Squarespace, Wordpress, etc). Github repo available upon request if you want to build your own overkill clone of Metallica.com. Contact rob.rich.band@gmail.com for more information.  All rights reserved.
+            </BottomFooterText>
         </BottomFooterWrapper>
     );
 }
