@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
@@ -9,7 +9,11 @@ import {
     InputField,
     SubmitButton,
     ErrorText,
-    SuccessText
+    FormHeader,
+    PageTitle,
+    Description,
+    FieldGroup,
+    FieldLabel
   } from './resetPassword.styles';
 
 const ResetPassword: React.FC = () => {
@@ -17,6 +21,7 @@ const ResetPassword: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const dispatch: AppDispatch = useDispatch();
   const navigate = useNavigate();
@@ -24,53 +29,89 @@ const ResetPassword: React.FC = () => {
   const [searchParams] = useSearchParams();
   const token = searchParams.get('token');
   
-  useEffect(() => {}, [token]);
-  
-  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
-    if (!newPassword || !token) {
-      setError('Password and token are required');
+
+    if (!token) return; // the page shows an invalid-link view instead of the form
+
+    if (!newPassword || !confirmPassword) {
+      setError('Please enter and confirm your new password.');
       return;
     }
-
     if (newPassword !== confirmPassword) {
-      setError('Passwords do not match');
+      setError('Passwords do not match.');
       return;
     }
 
+    setError('');
+    setIsSubmitting(true);
     try {
       // unwrap() throws if the request fails, so the catch block actually runs
       await dispatch(resetPassword({ token, newPassword })).unwrap();
       setSuccess(true);
-      setError('');
-      setTimeout(() => navigate('/login'), 2000); // Give the user a moment to see the success message
     } catch (err) {
       setError(typeof err === 'string' ? err : 'Failed to reset password. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <ResetPasswordWrapper>
-      <ResetPasswordForm onSubmit={handleSubmit}>
-        <h2>Reset Password</h2>
-        {success && <SuccessText>Password reset successfully!</SuccessText>}
-        {error && <ErrorText>{error}</ErrorText>}
-        <InputField
-          type="password"
-          placeholder="New Password"
-          value={newPassword}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewPassword(e.target.value)}
-        />
-        <InputField
-          type="password"
-          placeholder="Confirm Password"
-          value={confirmPassword}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
-        />
-        <SubmitButton type="submit">Reset Password</SubmitButton>
-      </ResetPasswordForm>
+      {!token ? (
+        <ResetPasswordForm as="div">
+          <FormHeader>
+            <PageTitle>This link isn't valid</PageTitle>
+            <Description>
+              The reset link is missing or incomplete. Go to the sign-in page and use "Forgot Password?" to get a new one.
+            </Description>
+          </FormHeader>
+          <SubmitButton type="button" onClick={() => navigate('/login')}>
+            Go to sign in
+          </SubmitButton>
+        </ResetPasswordForm>
+      ) : success ? (
+        <ResetPasswordForm as="div">
+          <FormHeader>
+            <PageTitle>Password updated</PageTitle>
+            <Description>Your password has been reset. You can now sign in with your new password.</Description>
+          </FormHeader>
+          <SubmitButton type="button" onClick={() => navigate('/login')}>
+            Sign in
+          </SubmitButton>
+        </ResetPasswordForm>
+      ) : (
+        <ResetPasswordForm onSubmit={handleSubmit}>
+          <FormHeader>
+            <PageTitle>Reset your password</PageTitle>
+            <Description>Choose a new password for your account, then sign in with it.</Description>
+          </FormHeader>
+          <FieldGroup>
+            <FieldLabel htmlFor="new-password">New password*</FieldLabel>
+            <InputField
+              id="new-password"
+              type="password"
+              autoComplete="new-password"
+              value={newPassword}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewPassword(e.target.value)}
+            />
+          </FieldGroup>
+          <FieldGroup>
+            <FieldLabel htmlFor="confirm-password">Confirm new password*</FieldLabel>
+            <InputField
+              id="confirm-password"
+              type="password"
+              autoComplete="new-password"
+              value={confirmPassword}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
+            />
+          </FieldGroup>
+          {error && <ErrorText role="alert">{error}</ErrorText>}
+          <SubmitButton type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Resetting...' : 'Reset password'}
+          </SubmitButton>
+        </ResetPasswordForm>
+      )}
     </ResetPasswordWrapper>
   );
 };

@@ -12,13 +12,13 @@ export const AppBar = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #21b571;
+  background-color: ${colors.neutralDark}; /* fallback if gradients aren't supported */
   background-image: linear-gradient(
     180deg,
-    ${colors.primaryGreen} 10%,
-    ${colors.accentSkyBlue} 50%,
-    ${colors.primaryYellow} 75%,
-    ${colors.neutralOffWhite} 100%
+    ${colors.neutralDark} 0%,
+    #3a2212 40%,
+    ${colors.accentCopperOrange} 80%,
+    #d9a066 100%
   );
   overflow: hidden;
   opacity: 96%;
