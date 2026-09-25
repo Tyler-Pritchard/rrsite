@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, GlobalVariables } from '../../globalStyles';
 
 export const RegisterWrapper = styled.div`
   display: flex;
@@ -305,36 +306,69 @@ export const SubmitButton = styled.button`
 
 export const ModalWrapper = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  padding: 2rem;
+  z-index: 1000;
 `;
 
 export const ModalContent = styled.div`
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 52rem;
+  padding: 3.6rem 3.2rem 3.2rem;
+  background-color: ${colors.primaryBlue};
+  border: 1px solid ${colors.borderLight};
+  border-top: 2px solid ${colors.highlight};
+  border-radius: 2px;
+  color: ${colors.textPrimary};
+  text-align: left;
 `;
 
 export const ModalButton = styled.button`
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+  align-self: flex-start;
+  min-width: 12rem;
+  height: 4.4rem;
+  padding: 0 2.4rem;
+  margin-top: 2.4rem;
+  background-color: ${colors.highlight};
+  color: ${colors.neutralOffWhite};
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
-  &:hover {
-    background-color: #45a049;
+  font-family: ${GlobalVariables.paragraphFont};
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: filter 0.2s;
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.1);
   }
+`;
+
+export const ModalTitle = styled.h2`
+  font-family: ${GlobalVariables.titleFont};
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1.15;
+  color: ${colors.textPrimary};
+  margin: 0 0 1.2rem 0;
+`;
+
+export const ModalDescription = styled.p`
+  font-family: ${GlobalVariables.paragraphFont};
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: ${colors.textSecondary};
+  margin: 0;
 `;
 
 export const CallToAction = styled.div`

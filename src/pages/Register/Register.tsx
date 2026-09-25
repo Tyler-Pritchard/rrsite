@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppDispatch } from '../../store/store_index';
 import { registerUser } from '../../slices/userSlice';
-import { RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, CheckboxLabel, InputLabel, CheckboxInput, SubmitButton, ErrorText, CallToActionMobile, ModalWrapper, ModalContent, ModalButton, ContentWrapper } from './register.styles';
+import { RegisterWrapper, FormWrapper, TextBox, InputField, CheckboxContainer, CheckboxLabel, InputLabel, CheckboxInput, SubmitButton, ErrorText, CallToActionMobile, ModalWrapper, ModalContent, ModalButton, ModalTitle, ModalDescription,ContentWrapper } from './register.styles';
 
 declare global {
   interface Window {
@@ -204,9 +204,12 @@ const Register: React.FC = () => {
 
       {showModal && (
         <ModalWrapper>
-          <ModalContent>
-            <h2>Registration Successful!</h2>
-            <ModalButton onClick={handleDone}>Done</ModalButton>
+          <ModalContent role="dialog" aria-modal="true" aria-labelledby="register-success-title">
+            <ModalTitle id="register-success-title">Welcome to the club!</ModalTitle>
+            <ModalDescription>
+              Your account has been created. You're now a member of the Rich Rob Fan Club.
+            </ModalDescription>
+            <ModalButton type="button" onClick={handleDone}>Done</ModalButton>
           </ModalContent>
         </ModalWrapper>
       )}
