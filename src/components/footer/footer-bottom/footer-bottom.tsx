@@ -83,7 +83,7 @@ const FooterBottom = () => {
                 ))}
             </FooterStack>
             </BottomLinksContainer>
-            <BottomFooterText>© 2026, Rob Rich. Powered by Rob Rich. This is a from-scratch micro-service application (i.e., not Squarespace, Wordpress, etc). Github repo available upon request if you want to build your own overkill clone of Metallica.com. Contact rob.rich.band@gmail.com for more information.  All rights reserved.
+            <BottomFooterText>© 2026, Rob Rich. Powered by Rob Rich-- FR, this website is a micro-service application I engineered from scratch (i.e., not Squarespace, Wordpress, etc), mostly in JS, C#, Java and Golang; configured for Docker and Kubernetes. Github repo available upon request if you want to build your own overkill clone of Metallica.com. Contact rob.rich.band@gmail.com for more information.  All rights reserved.
             </BottomFooterText>
         </BottomFooterWrapper>
     );

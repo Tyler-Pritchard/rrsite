@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ContentWrapper,
   FormWrapper,
@@ -13,6 +13,12 @@ import {
   ModalWrapper,
   ModalContent,
   ModalButton,
+  ModalCloseButton,
+  ModalTitle,
+  ModalDescription,
+  ModalLabel,
+  ModalField,
+  ModalError,
   ModalMessage,
   CallToAction,
   RememberMeWrapper,
@@ -70,6 +76,9 @@ const Login: React.FC = () => {
   const [errors, setErrors] = useState<ErrorState>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
+  const [resetEmail, setResetEmail] = useState<string>('');
+  const [resetError, setResetError] = useState<string>('');
+  const [isSendingReset, setIsSendingReset] = useState<boolean>(false);
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -160,52 +169,74 @@ const Login: React.FC = () => {
   };
 
   // Forgot Password Handlers
-  const handleForgotPasswordClick = (e: React.MouseEvent) => {
+  const openForgotPassword = (e: React.MouseEvent) => {
     e.stopPropagation();
+    setResetEmail(email); // pre-fill with whatever they typed on the login form
+    setResetError('');
+    setIsEmailSent(false);
     dispatch(toggleForgotPasswordModal());
   };
 
-  const handleSendPasswordReset = async () => {
-    if (!email) {
-      setErrors({ email: 'Email is required' });
+  const closeForgotPassword = () => {
+    if (!isModalOpen) return;
+    dispatch(toggleForgotPasswordModal());
+    setIsEmailSent(false); // so reopening shows the form, not "Email Sent"
+    setResetError('');
+  };
+
+  // Close the modal on Escape
+  useEffect(() => {
+    if (!isModalOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeForgotPassword();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isModalOpen]);
+
+  const handleSendResetLink = (e: React.FormEvent) => {
+    e.preventDefault(); // the modal is a <form>, so Enter submits
+
+    if (!resetEmail) {
+      setResetError('Email is required');
+      return;
+    }
+    if (!validateEmail(resetEmail)) {
+      setResetError('Invalid email format');
+      return;
+    }
+    if (!window.grecaptcha) {
+      console.error('reCAPTCHA is not loaded');
+      setResetError('Something went wrong loading the page. Please refresh and try again.');
       return;
     }
 
-    try {
-      setIsSubmitting(true);
-      if (!window.grecaptcha) {
-        console.error('reCAPTCHA is not loaded');
-        setIsSubmitting(false);
-        return;
-      }
+    setResetError('');
+    setIsSendingReset(true);
 
-      window.grecaptcha.enterprise.ready(() => {
-        window.grecaptcha.enterprise
-          .execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'forgot_password' })
-          .then(async (captchaToken: string) => {
-            if (!captchaToken) {
-              setErrors({ email: 'Failed to validate CAPTCHA.' });
-              setIsSubmitting(false);
-              return;
-            }
-
-            try {
-              // unwrap() throws on failure, so "Email Sent" only shows on success
-              await dispatch(forgotPassword({ email, captchaToken })).unwrap();
-              setIsEmailSent(true);
-              setErrors({});
-            } catch (err) {
-              setErrors({ email: typeof err === 'string' ? err : 'Failed to send reset email. Please try again.' });
-            } finally {
-              setIsSubmitting(false);
-            }
-          });
-      });
-    } catch (error: any) {
-      setErrors({ email: 'Failed to send reset email. Please try again.' });
-    }
+    window.grecaptcha.enterprise.ready(() => {
+      // Promise.resolve guarantees .catch/.finally exist on whatever grecaptcha returns
+      Promise.resolve(
+        window.grecaptcha.enterprise.execute('6LfU8jIqAAAAAOAFm-eNXmW-uPrxqdH9xJLEfJ7R', { action: 'forgot_password' })
+      )
+        .then(async (token: string) => {
+          if (!token) {
+            setResetError('Failed to validate CAPTCHA.');
+            return;
+          }
+          try {
+            // unwrap() throws on failure, so "Email Sent" only shows on success
+            await dispatch(forgotPassword({ email: resetEmail, captchaToken: token })).unwrap();
+            setIsEmailSent(true);
+          } catch (err) {
+            setResetError(typeof err === 'string' ? err : 'Failed to send reset email. Please try again.');
+          }
+        })
+        .catch(() => setResetError('Failed to validate CAPTCHA.'))
+        .finally(() => setIsSendingReset(false));
+    });
   };
-
 
   return (
     <LoginWrapper>
@@ -244,7 +275,7 @@ const Login: React.FC = () => {
             </RememberMeWrapper>
             <ButtonBox>
               <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
-              <ForgotPassword type="button" onClick={handleForgotPasswordClick}>
+              <ForgotPassword type="button" onClick={openForgotPassword}>
                 Forgot Password?
               </ForgotPassword>
             </ButtonBox>
@@ -252,26 +283,45 @@ const Login: React.FC = () => {
         </FormRow>
 
         {isModalOpen && (
-          <ModalOverlay onClick={handleForgotPasswordClick}>
-            <ModalWrapper onClick={(e: React.MouseEvent) => e.stopPropagation()}>
+          <ModalOverlay onClick={closeForgotPassword}>
+            <ModalWrapper
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="forgot-password-title"
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
+            >
+              <ModalCloseButton type="button" aria-label="Close" onClick={closeForgotPassword}>
+                &times;
+              </ModalCloseButton>
+
               {isEmailSent ? (
                 <ModalMessage>
-                  <h2>Email Sent</h2>
-                  <p>Please check your inbox for further instructions.</p>
-                  <ModalButton onClick={handleForgotPasswordClick}>Done</ModalButton> {/* Closes modal */}
+                  <ModalTitle id="forgot-password-title">Check your email</ModalTitle>
+                  <ModalDescription>
+                    If an account exists for {resetEmail}, we've sent a link to reset your password.
+                  </ModalDescription>
+                  <ModalButton type="button" onClick={closeForgotPassword}>Done</ModalButton>
                 </ModalMessage>
               ) : (
-                <ModalContent>
-                  <h2>Forgot Password</h2>
-                  <FormField
+                <ModalContent onSubmit={handleSendResetLink} noValidate>
+                  <ModalTitle id="forgot-password-title">Reset your password</ModalTitle>
+                  <ModalDescription>
+                    Enter the email on your account and we'll send you a link to reset your password.
+                  </ModalDescription>
+                  <ModalLabel htmlFor="reset-email">Email*</ModalLabel>
+                  <ModalField
+                    id="reset-email"
                     type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+                    autoComplete="email"
+                    autoFocus
+                    value={resetEmail}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setResetEmail(e.target.value)}
+                    aria-invalid={!!resetError}
+                    aria-describedby={resetError ? 'reset-email-error' : undefined}
                   />
-                  {errors.email && <ErrorText>{errors.email}</ErrorText>}
-                  <ModalButton as="button" onClick={handleSendPasswordReset} disabled={isSubmitting}>
-                    {isSubmitting ? 'Sending...' : 'Send'}
+                  {resetError && <ModalError id="reset-email-error" role="alert">{resetError}</ModalError>}
+                  <ModalButton type="submit" disabled={isSendingReset}>
+                    {isSendingReset ? 'Sending...' : 'Send reset link'}
                   </ModalButton>
                 </ModalContent>
               )}

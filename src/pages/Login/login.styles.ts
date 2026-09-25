@@ -386,57 +386,140 @@ export const ForgotPassword = styled.button`
 
 export const ModalOverlay = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
   z-index: 1000;
 `;
 
 export const ModalWrapper = styled.div`
-  background-color: white;
-  padding: 20px;
-  border-radius: 4px;
-  width: 90%;
-  max-width: 500px;
+  position: relative;
+  width: 100%;
+  max-width: 52rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  padding: 3.6rem 3.2rem 3.2rem;
+  background-color: ${colors.primaryBlue};
+  border: 1px solid ${colors.borderLight};
+  border-top: 2px solid ${colors.highlight};
+  border-radius: 2px;
+  color: ${colors.textPrimary};
+  text-align: left;
 `;
 
-export const ModalContent = styled.div`
+export const ModalContent = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 `;
 
 export const ModalMessage = styled.div`
-  text-align: center;
-  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 
-  h2 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+export const ModalButton = styled.button`
+  align-self: flex-start;
+  min-width: 12rem;
+  height: 4.4rem;
+  padding: 0 2.4rem;
+  margin-top: 2.4rem;
+  background-color: ${colors.highlight};
+  color: ${colors.neutralOffWhite};
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: ${GlobalVariables.paragraphFont};
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: filter 0.2s;
+  
+  &:hover:not(:disabled) {
+    filter: brightness(1.1);
   }
-  p {
-    margin-bottom: 20px;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 `;
 
-export const ModalButton = styled.a`
-  padding: 10px 20px;
-  background-color: ${colors.highlight};
-  color: white;
+export const ModalCloseButton = styled.button`
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
   border: none;
-  border-radius: 4px;
+  color: ${colors.textSecondary};
+  font-size: 2.8rem;
+  line-height: 1;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.2s;
 
   &:hover {
-    background-color: ${colors.accentCopperOrange};
+    color: ${colors.highlight};
   }
+`;
+
+export const ModalTitle = styled.h2`
+  font-family: ${GlobalVariables.titleFont};
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1.15;
+  color: ${colors.textPrimary};
+  margin: 0 4rem 1.2rem 0; /* right margin keeps it clear of the close button */
+`;
+
+export const ModalDescription = styled.p`
+  font-family: ${GlobalVariables.paragraphFont};
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: ${colors.textSecondary};
+  margin: 0 0 2.4rem 0;
+`;
+
+export const ModalLabel = styled.label`
+  font-family: ${GlobalVariables.titleFont};
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: ${colors.textPrimary};
+  margin-bottom: 0.8rem;
+`;
+
+export const ModalField = styled.input`
+  width: 100%;
+  height: 4.8rem;
+  padding: 0 1.4rem;
+  font-family: ${GlobalVariables.paragraphFont};
+  font-size: 1.6rem;
+  color: ${colors.neutralDark};
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+
+  &::placeholder {
+    color: #8a8a8a;
+  }
+`;
+
+export const ModalError = styled.p`
+  font-family: ${GlobalVariables.paragraphFont};
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #ff8a80; /* lighter red: readable on the dark modal surface */
+  margin: 0.8rem 0 0 0;
 `;
 
 export const CallToAction = styled.div`
