@@ -219,8 +219,10 @@ export const FormField = styled.input`
 `;
 
 export const ErrorText = styled.span`
-  color: red;
-  font-size: 0.875rem;
+  font-family: ${GlobalVariables.paragraphFont};
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #ff8a80; /* lighter red: readable on the dark background */
   margin-top: -1rem;
   margin-bottom: 1rem;
 `;

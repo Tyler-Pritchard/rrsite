@@ -74,9 +74,9 @@ export const loginUser = createAsyncThunk(
       const userInfo = { token: response.data.token, ...decodedToken };
       saveUserInfo(userInfo); // Save user info
       return userInfo;
-    } catch (error) {
-      console.error('Failed to decode JWT:', error); // Use `error`
-      return rejectWithValue('Error logging in');
+    } catch (error: any) {
+      console.error('Login failed:', error);
+      return rejectWithValue(error.response?.data?.msg || 'Error logging in');
     }
   }
 );

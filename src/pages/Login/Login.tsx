@@ -43,12 +43,6 @@ interface LoginFormData {
   captchaToken?: string | null;
 }
 
-// Define the structure of the response payload for login actions
-interface LoginResponse {
-  token?: string;
-  message?: string;
-}
-
 // Define the structure for errors displayed in the UI
 interface ErrorState {
   email?: string;
@@ -93,15 +87,11 @@ const Login: React.FC = () => {
     try {
       setIsSubmitting(true);
 
-      const response = await dispatch(loginUser(formData)) as { payload: LoginResponse };
-      const { token, message } = response.payload;
-
-      if (message) {
-        throw new Error(message);
-      }
+      // unwrap() throws if the login request fails, so the catch block runs
+      const { token } = await dispatch(loginUser(formData)).unwrap();
 
       if (!token || typeof token !== 'string') {
-        throw new Error('Invalid login response, token missing or not a string.');
+        throw new Error('Invalid login response');
       }
 
       if (formData.rememberMe) {
@@ -111,8 +101,12 @@ const Login: React.FC = () => {
       }
 
       handleDone();
-    } catch (error: any) {
-      setErrors((prev) => ({ ...prev, login: error.message || 'Failed to login. Please try again.' }));
+    } catch (err) {
+      console.error('Login failed:', err);
+      setErrors((prev) => ({
+        ...prev,
+        login: "We couldn't sign you in. Check your email and password and try again.",
+      }));
     } finally {
       setIsSubmitting(false);
     }
@@ -273,6 +267,7 @@ const Login: React.FC = () => {
               />
               <RememberMeLabel>Remember Me</RememberMeLabel>
             </RememberMeWrapper>
+            {errors.login && <ErrorText role="alert">{errors.login}</ErrorText>}
             <ButtonBox>
               <SubmitButton type="submit" disabled={isSubmitting}>{isSubmitting ? 'Logging in...' : 'Login'}</SubmitButton>
               <ForgotPassword type="button" onClick={openForgotPassword}>
